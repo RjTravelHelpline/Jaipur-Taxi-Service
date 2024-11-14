@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  /* fonts */
+  --font-head: 'Poppins', sans-serif;
+  --font-logo: 'Lobster', sans-serif;
+  /* colors */
+  --color-body: #f5f1ec;
+  --color-primary: #ffffff;
+  --color-secondary: #2e2e2e;
+  --color-black: #000;
+  --color-tertary: #ff9c07;
+  --color-tertary-down: #ffe4a9;
+  --color-border: #dadada;
+  --color-gray: #dbdbdb4f;
+  --color-forth: #21cc63;
+  --bg-color-forth: #21cc636c;
+  /* Accent Colors */
+  --accent-color: #d37f00;
+  // bread crumb
+  --breadCrumb-color: #ffffff80;
+  --active-breadCrumb-color: #ffffff1f;
+  /* Font Sizes */
+  --font-size-h1: clamp(2rem, 3vw, 3rem);
+  --font-size-h2: clamp(1.4rem, 2vw, 2rem);
+  --font-size-h3: clamp(1rem, 1.5vw, 1.5rem);
+  --font-size-h4: clamp(0.9rem, 1.2vw, 1.5rem);
+  --font-size-p: clamp(0.9rem, 1.1vw, 1.5rem);
+
+  /* Font Sizes + Responsive Padding Sizes */
+  --font-size-a: clamp(0.9rem, 1.1vw, 1rem);
+  --font-size-button: clamp(0.9rem, 1.1vw, 1rem);
+  --padding-a: clamp(0.5rem, 0.5vw, 1rem);
+  --padding-button-inline: clamp(
+    1rem,
+    1.5vw,
+    2rem
+  ); /* Larger horizontal padding */
+  --padding-button-block: clamp(
+    0.5rem,
+    0.75vw,
+    1rem
+  ); /* Smaller vertical padding */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  // max-width: 100vw;
+  overflow-x: hidden;
+}
+// Browser scroller bar
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-tertary) !important;
+  border-radius: 999px;
+  // display: none;
+}
+
+::-webkit-scrollbar-button {
+  background-color: var(--color-black) !important;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+  // display: none;
+}
+
+::-webkit-scrollbar {
+  // display: none;
+  width: 4px;
+  max-width: 4px;
+  max-height: 4px;
+}
+
+body {
+  font-family: var(--font-head) !important;
+  background-color: var(--color-body) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.logo {
+  font-family: var(--font-logo);
+  font-size: clamp(1.2em, 2.4vw, 2em);
+  text-transform: capitalize;
+}
+
+.logo-subhead {
+  font-size: clamp(0.65em, 1.6vw, 0.8em) !important;
+  font-weight: bold !important;
+  font-family: var(--font-head);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+p {
+  font-size: var(--font-size-p);
+}
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border) !important;
+}
+
+a {
+  font-size: var(--font-size-a) !important;
+  width: max-content !important;
+  font-family: var(--font-head);
+  padding: var(--padding-a);
+  color: var(--color-tertary) !important;
+  text-decoration: none !important;
+  transition: 0.15s ease-out;
+  &:hover {
+    color: var(--accent-color) !important;
+  }
+}
+
+button {
+  font-size: var(--font-size-button) !important;
+  font-family: var(--font-head);
+  padding: var(--padding-button-block) var(--padding-button-inline);
+  background-color: var(--color-tertary);
+  border: none;
+  transition: 0.25s ease-out;
+  &:hover {
+    background-color: var(--accent-color);
+  }
+}
+
+// bootstrap classes
+
+// colors & more
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+.bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+.bg-tertary {
+  background-color: var(--color-tertary) !important;
+}
+.bg-forth {
+  background-color: var(--bg-color-forth) !important;
+}
+.bg-gray {
+  background-color: var(--color-gray) !important;
+}
+.text-primary {
+  color: var(--color-primary) !important;
+}
+.text-secondary {
+  color: var(--color-secondary) !important;
+}
+.text-tertary {
+  color: var(--color-tertary) !important;
+}
+// Custom padding values
+$padding-sizes: (
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 20px,
+  6: 24px,
+  7: 28px,
+  8: 32px,
+  9: 36px,
+  10: 40px,
+);
+
+// Generate padding classes for each type and breakpoint
+@each $key, $size in $padding-sizes {
+  /* Horizontal Padding */
+  .px-sm-#{$key} {
+    padding-left: $size !important;
+    padding-right: $size !important;
+  }
+  @media (min-width: 768px) {
+    // md breakpoint
+    .px-md-#{$key} {
+      padding-left: $size !important;
+      padding-right: $size !important;
+    }
+  }
+  @media (min-width: 992px) {
+    // lg breakpoint
+    .px-lg-#{$key} {
+      padding-left: $size !important;
+      padding-right: $size !important;
+    }
+  }
+  @media (min-width: 1200px) {
+    // xl breakpoint
+    .px-xl-#{$key} {
+      padding-left: $size !important;
+      padding-right: $size !important;
+    }
+  }
+
+  /* Vertical Padding */
+  .py-sm-#{$key} {
+    padding-top: $size !important;
+    padding-bottom: $size !important;
+  }
+  @media (min-width: 768px) {
+    // md breakpoint
+    .py-md-#{$key} {
+      padding-top: $size !important;
+      padding-bottom: $size !important;
+    }
+  }
+  @media (min-width: 992px) {
+    // lg breakpoint
+    .py-lg-#{$key} {
+      padding-top: $size !important;
+      padding-bottom: $size !important;
+    }
+  }
+  @media (min-width: 1200px) {
+    // xl breakpoint
+    .py-xl-#{$key} {
+      padding-top: $size !important;
+      padding-bottom: $size !important;
+    }
+  }
+
+  /* Block Padding (All Sides) */
+  .p-sm-#{$key} {
+    padding: $size !important;
+  }
+  @media (min-width: 768px) {
+    // md breakpoint
+    .p-md-#{$key} {
+      padding: $size !important;
+    }
+  }
+  @media (min-width: 992px) {
+    // lg breakpoint
+    .p-lg-#{$key} {
+      padding: $size !important;
+    }
+  }
+  @media (min-width: 1200px) {
+    // xl breakpoint
+    .p-xl-#{$key} {
+      padding: $size !important;
+    }
+  }
+}

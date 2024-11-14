@@ -1,0 +1,15 @@
+// navigation bar
+.nav {
+  position: fixed;
+  top: 0;
+  @media screen and (max-width: 768px) {
+    .row:first-child {
+      display: none !important;
+    }
+    .row:last-child {
+      .book-now {
+        display: none !important;
+      }
+    }
+  }
+}
