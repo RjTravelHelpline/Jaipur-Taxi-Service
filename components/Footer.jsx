@@ -3,6 +3,7 @@ import { carAndCoches, carRentalPackages, carRentalServices, oneWayCarRental, po
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
+import { FaArrowRight } from 'react-icons/fa';
 import { FaMinus, FaPlus } from 'react-icons/fa6';
 
 const Footer = () => {
@@ -17,8 +18,29 @@ const Footer = () => {
     return (
         <>
             {/* Packages and links */}
+            <div className="container-fluid bg-black py-lg-5 py-sm-3">
+                <div className="container py-4">
+                    <div className="row d-flex justify-content-center align-items-center flex-column">
+                        <div className="col-12 col-lg-6 mb-3 mb-lg-0">
+                            <h2 className="text-capitalize mb-2 text-tertary fw-bold text-center">
+                                Planning Your Next <span>Journey</span>?
+                            </h2>
+                            <p className="text-white text-capitalize fw-normal text-center">
+                                Let us help you customize the perfect ride package for your needs.
+                            </p>
+                        <hr />
+                        </div>
+                        <div className="col-12 col-lg-6 d-flex justify-content-center">
+                            <button className='rounded-5 d-flex justify-content-center align-items-center gap-2'>Request a Ride<FaArrowRight className='bg-black p-2 text-white rounded-5 fs-3'/></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="packages-footer py-3 bg-tertary-down">
                 <div className="container">
+                    <div className="row py-lg-4 py-sm-3">
+                        <h2 className='text-center fw-bold'>Explore Our <span className='text-tertary'>Taxi Services</span></h2>
+                    </div>
                     <div className="row accordians d-flex justify-content-center">
                         <div className="col-12 col-lg-10 col-sm-12">
                             <h3
@@ -248,7 +270,6 @@ const Footer = () => {
                 </div>
             </div>
             <div className="container-fluid bg-black">
-
                 <div className="row w-100 d-flex justify-content-center aiign-items-center">
                     <a
                         href="https://rajasthantourpackages.in/"

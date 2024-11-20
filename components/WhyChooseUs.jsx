@@ -5,21 +5,7 @@ import { MdSanitizer, MdSupportAgent } from 'react-icons/md'
 const WhyChooseUs = () => {
     return (
         <>
-            <div className="container why-us py-5" id="why-us">
-                <div className="row py-2 px-2 d-flex justify-content-center align-items-center">
-                    <div className="col-12 d-flex justify-content-center align-items-center">
-                        <h3 className="w-auto text-capitalize home-head fw-bold">
-                            <span className="fw-normal">why </span>choose us
-                        </h3>
-                    </div>
-                    <div className="col-lg-10 d-flex justify-content-center align-items-center">
-                        <hr />
-                        <span className='bg-tertary-down p-1 rounded-5 d-flex mx-2'>
-                            <FaSquare className='text-tertary p-1' style={{ rotate: '45deg' }} />
-                        </span>
-                        <hr />
-                    </div>
-                </div>
+            <div className="container why-us py-lg-3 py-sm-2" id="why-us">
                 <div className="row p-2">
                     <div className="col-lg-4 col-md-6 col-12 px-0 d-flex my-2 justify-content-between align-items-center">
                         <div className="why-us-card col1 d-flex w-100 justify-content-between align-items-start gap-3 flex-column">
@@ -100,7 +86,7 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

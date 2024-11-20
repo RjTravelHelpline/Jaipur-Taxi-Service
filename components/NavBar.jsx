@@ -59,12 +59,14 @@ const NavBar = () => {
                         {cabRental.map((category, index) => (
                             <div className="col" key={index}>
                                 <h4 className="text-tertary">{category.title}</h4>
-                                <hr style={{ borderColor: 'white' }} />
+                                <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
                                         <li key={idx} className='p-2'>
-                                            <Link href="#" className='text-white'> <span className="text-tertary">
-                                                ≻</span> {item}</Link>
+                                            <Link href="#" className="d-flex align-items-center text-white">
+                                                <span className="text-tertary me-2">≻</span>
+                                                {item}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -82,11 +84,14 @@ const NavBar = () => {
                         {tempoAndBus.map((category, index) => (
                             <div className="col" key={index}>
                                 <h4 className="text-tertary">{category.title}</h4>
+                                <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
                                         <li key={idx} className='p-2'>
-                                            <Link href="#" className='text-white'> <span className="text-tertary">
-                                                ≻</span> {item}</Link>
+                                            <Link href="#" className="d-flex align-items-center text-white">
+                                                <span className="text-tertary me-2">≻</span>
+                                                {item}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -102,13 +107,16 @@ const NavBar = () => {
                 <div className="mega-content">
                     <div className="row w-100">
                         {tourData.map((category, index) => (
-                            <div className="col" key={index}>
+                            <div className="col py-3" key={index}>
                                 <h4 className="text-tertary">{category.title}</h4>
+                                <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
                                         <li key={idx} className='p-2'>
-                                            <Link href="#" className='text-white'> <span className="text-tertary">
-                                                ≻</span> {item}</Link>
+                                            <Link href="#" className="d-flex align-items-center text-white">
+                                                <span className="text-tertary me-2">≻</span>
+                                                <span className='d-flex overflow-hidden'>{item}</span> 
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -126,11 +134,14 @@ const NavBar = () => {
                         {taxiFares.map((category, index) => (
                             <div className="col" key={index}>
                                 <h4 className="text-tertary">{category.title}</h4>
+                                <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
                                         <li key={idx} className='p-2'>
-                                            <Link href="#" className='text-white'> <span className="text-tertary">
-                                                ≻</span> {item}</Link>
+                                            <Link href="#" className="d-flex align-items-center text-white">
+                                                <span className="text-tertary me-2">≻</span>
+                                                {item}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -148,11 +159,14 @@ const NavBar = () => {
                         {placesToVisit.map((category, index) => (
                             <div className="col" key={index}>
                                 <h4 className="text-tertary">{category.title}</h4>
+                                <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
                                         <li key={idx} className='p-2'>
-                                            <Link href="#" className='text-white'> <span className="text-tertary">
-                                                ≻</span> {item}</Link>
+                                            <Link href="#" className="d-flex align-items-center text-white">
+                                                <span className="text-tertary me-2">≻</span>
+                                                {item}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -229,7 +243,7 @@ const NavBar = () => {
                                 onMouseEnter={() => handleMouseEnter(index)}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <Link href="#" className="text-white p-2 px-3">
+                                <Link href="#" className={`text-white nav-tab-link p-2 px-3 ${activeIndex === index ? 'nav-active-link' : ''}`}>
                                     {item.title}
                                 </Link>
                                 {activeIndex === index && (

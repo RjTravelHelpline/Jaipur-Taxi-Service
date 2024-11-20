@@ -1,13 +1,13 @@
 export const servicesData = [
-  { text: 'Car Rental', path: '/car-rental' },
-  { text: 'Bus & Coach Rental', path: '/bus-coach-rental' },
+  { text: 'Car Rental', path: '/car-rental-jaipur' },
+  { text: 'Bus & Coach Rental', path: '/bus-rental-service-in-jaipur' },
   { text: 'Guide Services', path: '/guide-services' },
   { text: 'Rajasthan Tour Packages', path: '/rajasthan-tour-packages' },
 ];
 
 export const company = [
   // Company
-  { text: 'About Us', path: '/about-us' },
+  { text: 'About Us', path: '/about-jaipur-taxi-service' },
   { text: 'Disclaimer', path: '/disclaimer' },
   { text: 'Privacy Policy', path: '/privacy-policy' },
   { text: 'Terms & Conditions', path: '/terms-and-conditions' },
@@ -15,16 +15,19 @@ export const company = [
 
 export const carAndCoches = [
   // Car & Coaches
-  { text: 'Swift Dzire', path: '/car-coaches/swift-dzire' },
-  { text: 'Toyota Etios', path: '/car-coaches/toyota-etios' },
-  { text: 'Toyota Innova', path: '/car-coaches/toyota-innova' },
-  { text: 'Toyota Innova Crysta', path: '/car-coaches/toyota-innova-crysta' },
-  { text: 'Maruti Ertiga', path: '/car-coaches/maruti-ertiga' },
+  { text: 'Swift Dzire', path: '/swift-dzire-cab-rental-in-jaipur' },
+  { text: 'Toyota Etios', path: '/toyota-etios-cab-rental-jaipur' },
+  { text: 'Toyota Innova', path: '/toyota-innova-car-rental-in-jaipur' },
+  {
+    text: 'Toyota Innova Crysta',
+    path: '/toyota-innova-crysta-cab-hire-in-jaipur',
+  },
+  { text: 'Maruti Ertiga', path: '/maruti-ertiga-cab-hire-in-jaipur' },
   {
     text: '10-15 Seater Tempo Traveller',
-    path: '/car-coaches/10-15-seater-tempo-traveller',
+    path: '/12-seater-tempo-traveller-rental-service-in-jaipur',
   },
-  { text: '18-27 Seater Mini Bus', path: '/car-coaches/18-27-seater-mini-bus' },
+  { text: '18-27 Seater Mini Bus', path: '/bus-rental-service-in-jaipur' },
 ];
 
 export const carRentalServices = [

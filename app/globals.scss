@@ -30,16 +30,8 @@
   --font-size-a: clamp(0.9rem, 1.1vw, 1rem);
   --font-size-button: clamp(0.9rem, 1.1vw, 1rem);
   --padding-a: clamp(0.5rem, 0.5vw, 1rem);
-  --padding-button-inline: clamp(
-    1rem,
-    1.5vw,
-    2rem
-  );
-  --padding-button-block: clamp(
-    0.5rem,
-    0.75vw,
-    1rem
-  );
+  --padding-button-inline: clamp(1rem, 1.5vw, 2rem);
+  --padding-button-block: clamp(0.5rem, 0.75vw, 1rem);
 }
 
 * {
@@ -115,7 +107,7 @@ p {
 hr {
   width: 100%;
   border: none !important;
-  border-top: 1px solid #000000 !important;
+  border-top: 1px solid #7c7c7c !important;
 }
 
 a {
@@ -171,6 +163,9 @@ button {
 }
 .text-tertary {
   color: var(--color-tertary) !important;
+}
+.text-justify {
+  text-align: justify !important;
 }
 // Custom padding values
 $padding-sizes: (
@@ -262,6 +257,122 @@ $padding-sizes: (
     // xl breakpoint
     .p-xl-#{$key} {
       padding: $size !important;
+    }
+  }
+}
+
+// Generate margin classes for each type and breakpoint
+@each $key, $size in $padding-sizes {
+  /* Horizontal Margin */
+  .mx-sm-#{$key} {
+    margin-left: $size !important;
+    margin-right: $size !important;
+  }
+  @media (min-width: 768px) {
+    // md breakpoint
+    .mx-md-#{$key} {
+      margin-left: $size !important;
+      margin-right: $size !important;
+    }
+  }
+  @media (min-width: 992px) {
+    // lg breakpoint
+    .mx-lg-#{$key} {
+      margin-left: $size !important;
+      margin-right: $size !important;
+    }
+  }
+  @media (min-width: 1200px) {
+    // xl breakpoint
+    .mx-xl-#{$key} {
+      margin-left: $size !important;
+      margin-right: $size !important;
+    }
+  }
+
+  /* Vertical Margin */
+  .my-sm-#{$key} {
+    margin-top: $size !important;
+    margin-bottom: $size !important;
+  }
+  @media (min-width: 768px) {
+    // md breakpoint
+    .my-md-#{$key} {
+      margin-top: $size !important;
+      margin-bottom: $size !important;
+    }
+  }
+  @media (min-width: 992px) {
+    // lg breakpoint
+    .my-lg-#{$key} {
+      margin-top: $size !important;
+      margin-bottom: $size !important;
+    }
+  }
+  @media (min-width: 1200px) {
+    // xl breakpoint
+    .my-xl-#{$key} {
+      margin-top: $size !important;
+      margin-bottom: $size !important;
+    }
+  }
+
+  /* Single Side Margin */
+  .mt-sm-#{$key} {
+    margin-top: $size !important;
+  }
+  .mb-sm-#{$key} {
+    margin-bottom: $size !important;
+  }
+  .ml-sm-#{$key} {
+    margin-left: $size !important;
+  }
+  .mr-sm-#{$key} {
+    margin-right: $size !important;
+  }
+  @media (min-width: 768px) {
+    // md breakpoint
+    .mt-md-#{$key} {
+      margin-top: $size !important;
+    }
+    .mb-md-#{$key} {
+      margin-bottom: $size !important;
+    }
+    .ml-md-#{$key} {
+      margin-left: $size !important;
+    }
+    .mr-md-#{$key} {
+      margin-right: $size !important;
+    }
+  }
+  @media (min-width: 992px) {
+    // lg breakpoint
+    .mt-lg-#{$key} {
+      margin-top: $size !important;
+    }
+    .mb-lg-#{$key} {
+      margin-bottom: $size !important;
+    }
+    .ml-lg-#{$key} {
+      margin-left: $size !important;
+    }
+    .mr-lg-#{$key} {
+      margin-right: $size !important;
+    }
+  }
+  @media (min-width: 1200px) {
+    // xl breakpoint
+    .mt-xl-#{$key} {
+      margin-top: $size !important;
+    }
+    .mb-xl-#{$key} {
+      margin-bottom: $size !important;
+    }
+    .ml-xl-#{$key} {
+      margin-left: $size !important;
+    }
+    .mr-xl-#{$key} {
+      margin-right: $size !important;
     }
   }
 }
