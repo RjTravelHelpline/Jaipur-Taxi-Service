@@ -4,7 +4,7 @@ const page = () => {
   return (
     <>
       <div className="container-fluid py-5">
-        <h1 className='text-center'>02-days-jaipur-to-ajmer-and-pushkar-tour-by-car</h1>
+        <h1 className='text-center'>02-days-jaipur-to-mandawa-tour-by-car</h1>
       </div>
     </>
   )

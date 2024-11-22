@@ -2,41 +2,92 @@ export const cabRental = [
   {
     title: 'Hatchback Car Rental',
     items: [
-      'Maruti Swift Car',
-      'Tata Indica Car',
-      'Hyundai i20 Car',
-      'Hyundai Santro Car',
-      'Maruti WagonR Car',
+      {
+        name: 'Maruti Swift Car',
+        path: '/maruti-swift-car-rental-in-jaipur',
+      },
+      {
+        name: 'Tata Indica Car',
+        path: '/tata-indica-car-hire-in-jaipur',
+      },
+      {
+        name: 'Hyundai i20 Car',
+        path: '/hyundai-i20-cab-hire-in-jaipur',
+      },
+      {
+        name: 'Hyundai Santro Car',
+        path: '/hyundai-santro-car-hire-in-jaipur',
+      },
+      {
+        name: 'Maruti WagonR Car',
+        path: '/maruti-wagonr-car-rental-in-jaipur',
+      },
     ],
   },
   {
     title: 'Sedan Car Rental',
     items: [
-      'Maruti Swift Dzire Car',
-      'Toyota Etios Car',
-      'Ambassador Car',
-      'Maruti Ciaz Car',
-      'Hyundai Xcent Car',
+      {
+        name: 'Maruti Swift Dzire Car',
+        path: '/swift-dzire-cab-rental-in-jaipur',
+      },
+      {
+        name: 'Toyota Etios Car',
+        path: '/toyota-etios-cab-rental-jaipur',
+      },
+      {
+        name: 'Ambassador Car',
+        path: '/ambassador-car-hire-in-jaipur',
+      },
+      {
+        name: 'Maruti Ciaz Car',
+        path: '/maruti-ciaz-car-rental-in-jaipur',
+      },
+      {
+        name: 'Hyundai Xcent Car',
+        path: '/hyundai-xcent-car-hire-in-jaipur',
+      },
     ],
   },
   {
     title: 'SUV Car Rental',
     items: [
-      'Toyota Innova Car',
-      'Toyota Innova Crysta Car',
-      'Maruti Ertiga Car',
-      'Tata Sumo Car',
-      'Mahindra Xylo Car',
+      {
+        name: 'Toyota Innova Car',
+        path: '/toyota-innova-car-rental-in-jaipur',
+      },
+      {
+        name: 'Toyota Innova Crysta Car',
+        path: '/toyota-innova-crysta-cab-hire-in-jaipur',
+      },
+      {
+        name: 'Maruti Ertiga Car',
+        path: '/maruti-ertiga-cab-hire-in-jaipur',
+      },
+      {
+        name: 'Tata Sumo Car',
+        path: '/tata-sumo-cab-hire-in-jaipur',
+      },
+      {
+        name: 'Mahindra Xylo Car',
+        path: '/mahindra-xylo-car-hire-in-jaipur',
+      },
     ],
   },
   {
     title: 'Luxury Car Rental',
     items: [
-      'Toyota Corolla Car',
-      'Toyota Fortuner Car',
-      'Mercedes S Class Car',
-      'BMW Car',
-      'Audi Car',
+      {
+        name: 'Toyota Corolla Car',
+        path: '/toyota-corolla-car-rental-in-jaipur',
+      },
+      {
+        name: 'Toyota Fortuner Car',
+        path: '/toyota-fortuner-car-rental-in-jaipur',
+      },
+      { name: 'Mercedes S Class Car', path: '/mercedes-car-hire-in-jaipur' },
+      { name: 'BMW Car', path: '/bmw-car-rental-in-jaipur' },
+      { name: 'Audi Car', path: '/audi-car-rental-in-jaipur' },
     ],
   },
 ];
@@ -45,130 +96,280 @@ export const tempoAndBus = [
   {
     title: 'Tempo Traveller Rental Service',
     items: [
-      '8 Seater Maharaja Tempo Traveller',
-      '10 Seater Luxury Tempo Traveller',
-      '12 Seater',
-      '15 Seater',
-      '20 Seater',
+      {
+        name: '8 Seater Maharaja Tempo Traveller',
+        path: '/8-seater-maharaja-tempo-traveller-rental-service-in-jaipur',
+      },
+      {
+        name: '10 Seater Luxury Tempo Traveller',
+        path: '/10-seater-luxury-tempo-traveller-rental-service-in-jaipur',
+      },
+      {
+        name: '12 Seater',
+        path: '/12-seater-tempo-traveller-rental-service-in-jaipur',
+      },
+      {
+        name: '15 Seater',
+        path: '/15-seater-tempo-traveller-rental-service-in-jaipur',
+      },
+      {
+        name: '20 Seater',
+        path: '/20-seater-tempo-traveller-rental-service-in-jaipur',
+      },
     ],
   },
   {
     title: 'Bus & Coach Rental Service',
     items: [
-      '18 Seater Bus',
-      '27 Seater Bus',
-      '35 Seater Bus',
-      '45 Seater Bus',
-      '52 Seater Bus',
+      {
+        name: '18 Seater Bus',
+        path: '/18-seater-bus-rental-service-jaipur',
+      },
+      {
+        name: '27 Seater Bus',
+        path: '/27-seater-bus-rental-service-jaipur',
+      },
+      {
+        name: '35 Seater Bus',
+        path: '/35-seater-bus-rental-service-in-jaipur',
+      },
+      {
+        name: '45 Seater Bus',
+        path: '/45-seater-bus-rental-service-in-jaipur',
+      },
+      {
+        name: '52 Seater Bus',
+        path: '/52-seater-bus-rental-service-in-jaipur',
+      },
     ],
   },
   {
     title: 'Super Luxury Bus Rental Service',
-    items: ['45 Seater Volvo Bus', '45 Seater Scania Bus'],
+    items: [
+      {
+        name: '45 Seater Volvo Bus',
+        path: '/45-seater-volvo-bus-rental-jaipur',
+      },
+      {
+        name: '45 Seater Scania Bus',
+        path: '/45-seater-scania-bus-rental-jaipur',
+      },
+    ],
   },
 ];
+
 export const tourData = [
   {
     title: 'Jaipur Sightseeing Tours',
     items: [
-      'Guided Jaipur Tour By Car',
-      'Full Day Jaipur City Tour by Bus',
-      'Jhalana Leopard Safari Tour',
-      'Jaipur Heritage Walk with Guide',
-      'Sunrise to Sunset Jaipur Tour with Guide',
+      {
+        name: 'Guided Jaipur Tour By Car',
+        path: '/guided-jaipur-city-tour',
+      },
+      {
+        name: 'Full Day Jaipur City Tour by Bus',
+        path: '/full-day-jaipur-city-tour-by-bus',
+      },
+      {
+        name: 'Jhalana Leopard Safari Tour',
+        path: '/jhalana-leopard-safari-tour-jaipur',
+      },
+      {
+        name: 'Jaipur Heritage Walk with Guide',
+        path: '/jaipur-heritage-walk-with-guide',
+      },
+      {
+        name: 'Sunrise to Sunset Jaipur Tour with Guide',
+        path: '/jaipur-city-tour-with-guide',
+      },
     ],
   },
   {
     title: 'Day Tours From Jaipur',
     items: [
-      'Bhangarh Taxi Tour',
-      'Ajmer & Pushkar Tour',
-      'Ranthambhore Tour',
-      'Samode Village Tour',
-      'Sariska Tiger Reserve Tour from Jaipur',
+      {
+        name: 'Bhangarh Taxi Tour',
+        path: '/bhangarh-day-tour-from-jaipur',
+      },
+      {
+        name: 'Ajmer & Pushkar Tour',
+        path: '/ajmer-and-pushkar-day-trip',
+      },
+      {
+        name: 'Ranthambhore Tour',
+        path: '/ranthambhore-tiger-reserve-tour-from-jaipur',
+      },
+      {
+        name: 'Samode Village Tour',
+        path: '/samode-village-tour-from-jaipur',
+      },
+      {
+        name: 'Sariska Tiger Reserve Tour from Jaipur',
+        path: '/sariska-tiger-reserve-tour-from-jaipur',
+      },
     ],
   },
   {
     title: 'Rajasthan Tours by Car',
     items: [
-      '02 Days Jaipur to Ranthambhore Taxi Tour',
-      '03 Days Jodhpur - Jaisalmer Taxi Tour',
-      '05 Days Jaipur - Chittorgarh - Udaipur - Jodhpur - Jaisalmer Taxi Tour',
-      '08 Days Rajasthan Taxi Tour',
-      '10 Days Rajasthan Taxi Tour',
+      {
+        name: '02 Days Jaipur to Ranthambhore Taxi Tour',
+        path: '/02-days-jaipur-to-ranthambhore-tour-by-car',
+      },
+      {
+        name: '03 Days Jodhpur - Jaisalmer Taxi Tour',
+        path: '/03-days-jodhpur-jaisalmer-tour-by-car',
+      },
+      {
+        name: '05 Days Jaipur - Chittorgarh - Udaipur - Jodhpur - Jaisalmer Taxi Tour',
+        path: '/05-days-rajasthan-tour-by-car',
+      },
+      {
+        name: '08 Days Rajasthan Taxi Tour',
+        path: '/08-days-rajasthan-tour-by-car',
+      },
+      {
+        name: '10 Days Rajasthan Taxi Tour',
+        path: '/10-days-rajasthan-tour-by-car',
+      },
     ],
   },
 ];
+
 export const taxiFares = [
   {
     title: 'Jaipur Local Use',
     items: [
-      'Jaipur Airport Pickup / Drop',
-      'Jaipur Railway Station Pickup / Drop',
-      '04 Hours Jaipur Local Use',
-      '08 Hours Jaipur Local Use',
-      '12 Hours Jaipur Local Use',
+      {
+        name: 'Jaipur Airport Pickup / Drop',
+        path: '/airport-cab-service',
+      },
+      {
+        name: 'Jaipur Railway Station Pickup / Drop',
+        path: '/taxi-from-railway-station',
+      },
+      {
+        name: '04 Hours Jaipur Local Use',
+        path: '/taxi-for-04-hours',
+      },
+      {
+        name: '08 Hours Jaipur Local Use',
+        path: '/taxi-for-08-hours',
+      },
+      {
+        name: '12 Hours Jaipur Local Use',
+        path: '/taxi-for-12-hours',
+      },
     ],
   },
   {
     title: 'Outstation Cab From Jaipur',
     items: [
-      'Jaipur to Khatu Shyam Ji',
-      'Jaipur to Kota',
-      'Jaipur to Bikaner',
-      'Jaipur to Jaisalmer',
-      'Jaipur to Udaipur',
+      {
+        name: 'Jaipur to Khatu Shyam Ji',
+        path: '/jaipur-to-khatu-shyamji-taxi',
+      },
+      {
+        name: 'Jaipur to Kota',
+        path: '/jaipur-to-kota-taxi',
+      },
+      {
+        name: 'Jaipur to Bikaner',
+        path: '/jaipur-to-bikaner-taxi',
+      },
+      {
+        name: 'Jaipur to Jaisalmer',
+        path: '/jaipur-to-jaisalmer-taxi',
+      },
+      {
+        name: 'Jaipur to Udaipur',
+        path: '/jaipur-to-udaipur-taxi',
+      },
     ],
   },
   {
     title: 'One Way Car Rental',
     items: [
-      'Jaipur to Delhi',
-      'Jaipur to Jodhpur',
-      'Jaipur to Ajmer',
-      'Jaipur to Barmer',
-      'Jaipur to Jaisalmer',
+      {
+        name: 'Jaipur to Delhi',
+        path: '/jaipur-to-delhi-oneway-cab',
+      },
+      {
+        name: 'Jaipur to Jodhpur',
+        path: '/ranthambhore-national-park',
+      },
+      {
+        name: 'Jaipur to Ajmer',
+        path: '/jaipur-to-ajmer-oneway-taxi',
+      },
+      {
+        name: 'Jaipur to Barmer',
+        path: '/ranthambhore-national-park',
+      },
+      {
+        name: 'Jaipur to Jaisalmer',
+        path: '/ranthambhore-national-park',
+      },
     ],
   },
   {
     title: 'City Wise Taxi Fares',
-    items: ['Jodhpur', 'Jaisalmer', 'Udaipur', 'Bikaner', 'Ajmer'],
+    items: [
+      { name: 'Jodhpur', path: '/jodhpur-taxi-service' },
+      { name: 'Jaisalmer', path: '/jaisalmer-taxi-service' },
+      { name: 'Udaipur', path: '/udaipur-taxi-service' },
+      { name: 'Bikaner', path: '/bikaner-taxi-service' },
+      { name: 'Ajmer', path: '/ajmer-taxi-service' },
+    ],
   },
 ];
+
 export const placesToVisit = [
-    {
-      title: "Places to Visit in Jaipur",
-      items: [
-        "Amer Fort",
-        "Jaigarh Fort",
-        "Nahargarh Fort",
-        "City Palace of Jaipur",
-        "Hawa Mahal",
-        "Sargasuli",
-        "Garh Ganesh Temple",
-        "Jhalana Leopard Safari",
-        "Gaitore",
-        "Galta Ji (Monkey Temple)",
-      ],
-    },
-    {
-      title: "Excursion Places Around Jaipur",
-      items: [
-        "Bhangarh Fort",
-        "Sambhar Salt Lake",
-        "Ajmer & Pushkar",
-        "Ranthambhore National Park",
-        "Siliserh",
-      ],
-    },
-    {
-      title: "Tourist Cities of Rajasthan",
-      items: [
-        "Jaisalmer",
-        "Jodhpur",
-        "Udaipur",
-        "Mount Abu",
-        "Bikaner",
-      ],
-    },
-  ];
+  {
+    title: 'Places to Visit in Jaipur',
+    items: [
+      {
+        name: 'Amer Fort',
+        path: '/amer-fort-jaipur',
+      },
+      { name: 'Jaigarh Fort', path: '/jaigarh-fort-jaipur' },
+      { name: 'Nahargarh Fort', path: '/nahargarh-fort-jaipur' },
+      { name: 'City Palace of Jaipur', path: '/city-palace-jaipur' },
+      { name: 'Hawa Mahal', path: '/hawa-mahal-jaipur' },
+      { name: 'Sargasuli', path: '/sargasuli-isarlat-jaipur' },
+      { name: 'Garh Ganesh Temple', path: '/garh-ganesh-temple-jaipur' },
+      {
+        name: 'Jhalana Leopard Safari',
+        path: '/jhalana-leopard-safari-jaipur',
+      },
+      { name: 'Gaitore', path: '/gaitore-jaipur' },
+      {
+        name: 'Galta Ji (Monkey Temple)',
+        path: '/galtaji-monkey-temple-jaipur',
+      },
+    ],
+  },
+  {
+    title: 'Excursion Places Around Jaipur',
+    items: [
+      { name: 'Bhangarh Fort', path: '/bhangarh-ghost-fort' },
+      { name: 'Sambhar Salt Lake', path: '/sambhar-salt-lake' },
+      { name: 'Ajmer & Pushkar', path: '/ajmer-and-pushkar' },
+      {
+        name: 'Ranthambhore National Park',
+        path: '/ranthambhore-national-park',
+      },
+      { name: 'Siliserh', path: '/siliserh-lake-alwar' },
+    ],
+  },
+  {
+    title: 'Tourist Cities of Rajasthan',
+    items: [
+      { name: 'Jaisalmer', path: '/jaisalmer' },
+      { name: 'Jodhpur', path: '/jodhpur' },
+      { name: 'Udaipur', path: '/udaipur' },
+      { name: 'Mount Abu', path: '/mount-abu' },
+      { name: 'Bikaner', path: '/bikaner' },
+    ],
+  },
+];

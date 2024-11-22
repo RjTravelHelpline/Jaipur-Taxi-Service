@@ -54,33 +54,18 @@ const Home = () => {
           <h2 className="text-uppercase fw-normal text-center">
             popular <span className="fw-bold">cabs</span>
           </h2>
-          <div className="col-8 d-flex justify-content-center align-items-center gap-2">
-            <hr style={{ borderColor: 'var(--color-black)' }} />
-            <p className="mb-0 text-tertary p-1 d-flex bg-tertary rounded-5"> </p>
-            <hr style={{ borderColor: 'var(--color-black)' }} />
-          </div>
           <RentalSlider rentals={allCabRentals} />
         </div>
         <div className="row py-5 d-flex justify-content-center align-items-center px-2 packages">
           <h2 className="text-uppercase fw-normal text-center">
             tour <span className="fw-bold">packages</span>
           </h2>
-          <div className="col-8 d-flex justify-content-center align-items-center gap-2">
-            <hr style={{ borderColor: 'var(--color-black)' }} />
-            <p className="mb-0 text-tertary p-1 d-flex bg-tertary rounded-5"> </p>
-            <hr style={{ borderColor: 'var(--color-black)' }} />
-          </div>
           <PackagesSlider packages={PopularTourPackages} />
         </div>
         <div className="row py-5 px-2 d-flex justify-content-center align-items-center">
           <h2 className="text-uppercase fw-normal text-center">
             why <span className="fw-bold">choose us</span>
           </h2>
-          <div className="col-8 d-flex justify-content-center align-items-center gap-2">
-            <hr style={{ borderColor: 'var(--color-black)' }} />
-            <p className="mb-0 text-tertary p-1 d-flex bg-tertary rounded-5"> </p>
-            <hr style={{ borderColor: 'var(--color-black)' }} />
-          </div>
           <WhyChooseUs />
         </div>
       </div>

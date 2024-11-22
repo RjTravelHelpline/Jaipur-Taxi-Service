@@ -11,6 +11,7 @@
   --color-tertary: #ff9c07;
   --color-tertary-down: #ffae0038;
   --color-border: #dadada;
+  --color-hr: #7c7c7c;
   --color-gray: #dbdbdb4f;
   --color-forth: #21cc63;
   --bg-color-forth: #21cc636c;
@@ -107,7 +108,7 @@ p {
 hr {
   width: 100%;
   border: none !important;
-  border-top: 1px solid #7c7c7c !important;
+  border-top: 1px solid var(--color-hr) !important;
 }
 
 a {
@@ -164,9 +165,17 @@ button {
 .text-tertary {
   color: var(--color-tertary) !important;
 }
+.color-border {
+  color: var(--color-hr);
+}
 .text-justify {
   text-align: justify !important;
 }
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+
 // Custom padding values
 $padding-sizes: (
   1: 4px,
