@@ -34,9 +34,9 @@ const Home = () => {
       <div className="container-fluid bg-tertary-down">
         <div className="container">
           <div className="row py-4 d-flex justify-content-center align-items-center px-2">
-            <h1 className='text-center fw-bold'>Jaipur <span className='text-tertary'>Taxi Service</span></h1>
+            <h1 className='text-center fw-bold text-uppercase'>Jaipur <span className='text-tertary'>Taxi </span>Service</h1>
             <h2 className="text-center py-lg-3 py-sm-2 d-flex justify-content-center align-items-start"><FaQuoteLeft className="quote-left text-tertary mx-1" />
-              Reliable Taxi Services Across India – Your Journey, Our Priority!
+              Reliable Taxi Services Across India – Your Journey, Our Priority
               <FaQuoteRight className="quote-right text-tertary mx-1" />
             </h2>
             <p className="text-justify">
@@ -49,7 +49,7 @@ const Home = () => {
           </div>
         </div>
       </div >
-      <div className="container">
+      <div className="container py-lg-3 py-sm-2">
         <div className="row py-5 d-flex justify-content-center align-items-center px-2 packages rental-container">
           <h2 className="text-uppercase fw-normal text-center">
             popular <span className="fw-bold">cabs</span>

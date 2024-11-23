@@ -300,6 +300,7 @@
     text-align: justify;
     // display: none;
   }
+
   .footer-end {
     a:hover {
       transform: scale(1) !important;
@@ -308,6 +309,16 @@
       div {
         justify-content: center !important;
       }
+    }
+  }
+}
+.footer-container {
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 50% !important;
     }
   }
 }
@@ -356,7 +367,6 @@
 .packages {
   .card {
     flex-grow: 1 !important;
-    // box-shadow: 0 28px 44px -4px #00000015;
     background: var(--color-primary) !important;
     border: 1px solid var(--color-border);
     overflow: hidden;
@@ -367,7 +377,7 @@
     cursor: pointer;
     background-color: var(--color-primary) !important;
     .card-image-container {
-      height: 260px;
+      height: 220px;
       overflow: hidden;
       img {
         width: 100%;
@@ -385,14 +395,16 @@
       padding-block: 16px !important;
       color: var(--color-primary);
       gap: 8px;
+      flex-grow: 1; /* Allow body to expand */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      // white-space: nowrap; /* Truncate long text */
     }
-
     button,
     a {
       text-wrap: nowrap !important;
       font-size: clamp(0.9em, 1.58vw, 1em) !important;
     }
-
     p {
       font-weight: normal !important;
     }
@@ -401,17 +413,45 @@
       transform: scale(1.1);
     }
     .card-header {
+      flex-grow: 1 !important;
       border-radius: 16px;
       border: none !important;
       padding-inline: 0 !important;
-      background-color: transparent !important;
     }
     .price {
-      background-color: var(--color-tertary);
-      border-radius: 8px;
-      color: var(--color-primary);
-      font-family: var(--font-btn-link);
-      box-shadow: var(--color-shadow-tertary);
+      width: 100% !important;
+      background: linear-gradient(
+        90deg,
+        var(--color-black) 0%,
+        var(--color-tertary) 50%,
+        var(--color-black) 100%
+      );
+      background-size: 200% 100%;
+      padding: 6px;
+      font-weight: bold !important;
+      text-align: center;
+      font-family: var(--font-head);
+      border-radius: 999px;
+      box-shadow: none;
+      text-transform: capitalize !important;
+      animation: gradient-flash 1.5s linear infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @keyframes gradient-flash {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 0%;
+      }
+    }
+    .covered-places {
+      border: 1px solid var(--color-border);
+      color: var(--color-black);
+      padding: 2px 4px;
+      font-size: 0.8em !important;
+      border-radius: 9px;
     }
     .package-duration {
       color: var(--color-tertary);
@@ -422,7 +462,6 @@
     .package-title {
       font-weight: bold !important;
     }
-
     .whatsapp-logo {
       display: flex;
       justify-content: center;
@@ -454,7 +493,6 @@
         }
       }
     }
-
     button {
       width: 100% !important;
     }
@@ -475,13 +513,13 @@
   }
 }
 .rental-container {
+  flex-grow: 1 !important;
   overflow: visible !important;
   .card {
-    // box-shadow: 0 28px 44px -4px #00000015;
     background: var(--color-primary) !important;
     border: 1px solid var(--color-border);
     .card-image-container {
-      height: 240px;
+      // height: 200px !important;
       img {
         border-radius: 0;
       }
@@ -506,32 +544,27 @@
       }
       .package-category {
         p {
-          font-size: clamp(0.85em, 1vw, 0.85em);
+          font-size: 0.8em !important;
           color: var(--color-black);
           font-weight: 500 !important;
         }
         .icon {
-          padding: 10px;
-          font-size: 2.5em;
+          padding: 8px;
+          font-size: 2em !important;
           color: var(--color-tertary);
           background-color: var(--color-tertary-down);
           border-radius: 999px;
         }
       }
     }
-    .price {
+    .price-rental {
       width: 100% !important;
-      background-color: transparent;
-      padding: 6px;
-      text-align: center;
+      padding: 4px !important;
+      font-size: 0.8em !important;
+      background-color: var(--color-tertary-down) !important;
       color: var(--color-tertary) !important;
-      font-family: var(--font-head);
-      border-radius: 999px;
-      background-color: var(--color-tertary-down);
-      box-shadow: none;
-      text-transform: capitalize !important;
+      font-weight: 500 !important;
     }
-
     .whatsapp-logo {
       display: flex;
       justify-content: center;

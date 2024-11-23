@@ -11,6 +11,7 @@ const MountAbu = '/Images/Card/mount-abu.jpg';
 export const PopularTourPackages = [
   {
     title: 'Jaipur City Tour',
+    placesCovered: ['amer fort', 'hawa mahal', 'nahargarh fort', 'city palace'],
     price: 499,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -22,6 +23,7 @@ export const PopularTourPackages = [
   },
   {
     title: 'Ajmer & Pushkar Day Trip',
+    placesCovered: ['Dargah Sharif', 'Brahma Temple', 'Pushkar Lake'],
     price: 799,
     duration: null,
     imgSrc: AjmerPushkar,
@@ -33,6 +35,7 @@ export const PopularTourPackages = [
   },
   {
     title: '10 Days Rajasthan Tour',
+    placesCovered: ['Jaipur', 'Udaipur', 'Mount Abu', 'Jaisalmer'],
     price: 5555,
     duration: null,
     imgSrc: SonarFort,
@@ -44,6 +47,7 @@ export const PopularTourPackages = [
   },
   {
     title: 'Bhangarh (Ghost Fort) Tour',
+    placesCovered: ['Bhangarh Fort', 'Abhaneri Step Well', 'Chaand Bawdi'],
     price: 599,
     duration: null,
     imgSrc: BhangarhFort,
@@ -55,6 +59,7 @@ export const PopularTourPackages = [
   },
   {
     title: 'Sunrise to Sunset Jaipur Tour with Guide',
+    placesCovered: ['World Pink City', 'Forts', 'Palaces', 'Museums'],
     price: 699,
     duration: null,
     imgSrc: Sunset,
@@ -66,6 +71,7 @@ export const PopularTourPackages = [
   },
   {
     title: '05 Days Rajasthan Tour',
+    placesCovered: ['Chittorgarh', 'Udaipur', 'Jodhpur', 'Jaisalmer'],
     price: 3999,
     duration: null,
     imgSrc: UdaipurLake,
@@ -77,6 +83,7 @@ export const PopularTourPackages = [
   },
   {
     title: '08 Days Rajasthan Tour',
+    placesCovered: ['Jaipur', 'Udaipur', 'Jaisalmer', 'Bikaner'],
     price: 4999,
     duration: null,
     imgSrc: Jaisamer,
@@ -88,6 +95,7 @@ export const PopularTourPackages = [
   },
   {
     title: '04 Days Desert Tour',
+    placesCovered: ['Jaipur', 'Bikaner', 'Jaisalmer'],
     price: 3999,
     duration: null,
     imgSrc: JaisamerDesert,
@@ -99,6 +107,7 @@ export const PopularTourPackages = [
   },
   {
     title: '12 Days Complete Rajasthan Tour',
+    placesCovered: ['Jaipur', 'Pushkar', 'Mandawa', 'Jaisalmer', 'Udaipur'],
     price: 6999,
     duration: null,
     imgSrc: MountAbu,
@@ -114,6 +123,7 @@ export const PopularTourPackages = [
 export const JaipurSightSeeingTours = [
   {
     title: '08 Hours Jaipur City Tour by Car',
+    placesCovered: ['Amer Fort', 'Hawa Mahal', 'City Palace', 'Nahargarh Fort'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -125,6 +135,19 @@ export const JaipurSightSeeingTours = [
   },
   {
     title: '12 Hours jaipur City Tour by Car',
+    placesCovered: ['Amer Fort', 'Hawa Mahal', 'City Palace', 'Nahargarh Fort'],
+    price: null,
+    duration: null,
+    imgSrc: JaipurCityTour,
+    alt: '',
+    imgTitle: '',
+    navigate: '/',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Half Day Jaipur City Tour by Bus',
+    placesCovered: ['Amer Fort', 'Hawa Mahal', 'City Palace', 'Nahargarh Fort'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -136,6 +159,7 @@ export const JaipurSightSeeingTours = [
   },
   {
     title: 'Full Day Jaipur City Tour by Bus',
+    placesCovered: ['Amer Fort', 'Hawa Mahal', 'City Palace', 'Nahargarh Fort'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -147,6 +171,7 @@ export const JaipurSightSeeingTours = [
   },
   {
     title: 'Jaipur by Night Guided Tour',
+    placesCovered: ['Amer Fort', 'Hawa Mahal', 'City Palace', 'Nahargarh Fort'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -158,6 +183,7 @@ export const JaipurSightSeeingTours = [
   },
   {
     title: 'Guided Rickshaw Tour of Jaipur',
+    placesCovered: ['Amer Fort', 'Hawa Mahal', 'City Palace', 'Nahargarh Fort'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -169,6 +195,7 @@ export const JaipurSightSeeingTours = [
   },
   {
     title: 'Guided Tuk-Tuk Tour of Jaipur',
+    placesCovered: ['Amer Fort', 'Hawa Mahal', 'City Palace', 'Nahargarh Fort'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -180,6 +207,7 @@ export const JaipurSightSeeingTours = [
   },
   {
     title: 'Jhalana Leopard Safari Tour',
+    placesCovered: ['Jhalana Doongri', 'Jhalna Forest', 'Leopard Safari'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -191,6 +219,7 @@ export const JaipurSightSeeingTours = [
   },
   {
     title: 'Jaipur Heritage Walk with Guide',
+    placesCovered: ['Amer Fort', 'Hawa Mahal', 'City Palace', 'Nahargarh Fort'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -202,6 +231,7 @@ export const JaipurSightSeeingTours = [
   },
   {
     title: 'Jaipur Cuisine Tour with Guide',
+    placesCovered: ['Masala Chowk', 'Walled Pink City', 'Jaipur Markets'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -213,6 +243,11 @@ export const JaipurSightSeeingTours = [
   },
   {
     title: 'Jaipur Temple Tour with Guide',
+    placesCovered: [
+      'Govind Devji Temple',
+      'Birla Mandir',
+      'Garh Ganesh Temple',
+    ],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -224,6 +259,7 @@ export const JaipurSightSeeingTours = [
   },
   {
     title: 'Jaipur Shopping Tour',
+    placesCovered: ['Jaipur Johri Market', 'Bapu Bazaar', 'Chandpole'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -235,6 +271,7 @@ export const JaipurSightSeeingTours = [
   },
   {
     title: 'Sunrise to Sunset Jaipur Tour with Guide',
+    placesCovered: ['Amer Fort', 'Hawa Mahal', 'City Palace', 'Nahargarh Fort'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -250,6 +287,7 @@ export const JaipurSightSeeingTours = [
 export const JaipurDayTours = [
   {
     title: 'Abhaneri Stepwell Taxi Tour from Jaipur',
+    placesCovered: ['Abhaneri Stepwell', 'Chand Bawdi', 'Local Village Visit'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -261,6 +299,7 @@ export const JaipurDayTours = [
   },
   {
     title: 'Bhangarh Ghost Fort Taxi Tour from Jaipur',
+    placesCovered: ['Bhangarh Haunted Palace', 'Local Village Visit'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -272,6 +311,7 @@ export const JaipurDayTours = [
   },
   {
     title: 'Samode Village Tour from Jaipur',
+    placesCovered: ['Samode Village Visit', 'Samode Haweli'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -283,6 +323,7 @@ export const JaipurDayTours = [
   },
   {
     title: 'Sariska Tiger Reserve Tour from Jaipur',
+    placesCovered: ['Sariska Tiger Reserve', 'Local Temples and Forest Area'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -294,6 +335,7 @@ export const JaipurDayTours = [
   },
   {
     title: 'Ranthambhore Tiger Reserve Tour from Jaipur',
+    placesCovered: ['Ranthambhore Tiger Reserve', 'Jungle Safari'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -305,6 +347,7 @@ export const JaipurDayTours = [
   },
   {
     title: 'Agra Tour from Jaipur',
+    placesCovered: ['Tajmahal', 'Red Fort', 'Fatehpur Sikri'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -316,6 +359,7 @@ export const JaipurDayTours = [
   },
   {
     title: 'Ajmer & Pushkar Tour from Jaipur',
+    placesCovered: ['Ajmer Dargah Sharif', 'Anasagar Lake', 'Pushkar'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -327,6 +371,7 @@ export const JaipurDayTours = [
   },
   {
     title: 'Mandawa Tour from Jaipur',
+    placesCovered: ['Mandawa Village', 'Mandawa Haweli'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -342,6 +387,7 @@ export const JaipurDayTours = [
 export const RajasthanTourByCars = [
   {
     title: '02 Days Jaipur to Ajmer & Pushkar Taxi Tour',
+    placesCovered: ['Amer Fort', 'Ajmer Dargah', 'Pushkar Lake'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -353,6 +399,7 @@ export const RajasthanTourByCars = [
   },
   {
     title: '02 Days Jaipur to Ranthambhore Taxi Tour',
+    placesCovered: ['Amer Fort', 'Hawa Mahal', 'Ranthambhore National Park'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -364,6 +411,7 @@ export const RajasthanTourByCars = [
   },
   {
     title: '02 Days Jaipur to Mandawa Taxi Tour',
+    placesCovered: ['Amer Fort', 'Hawa Mahal', 'Mandawa Haweli'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -375,6 +423,7 @@ export const RajasthanTourByCars = [
   },
   {
     title: '03 Days Rajasthan Taxi Tour - 01',
+    placesCovered: ['Jaipur', 'Ajmer', 'Pushkar', 'Jodhpur'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -386,6 +435,7 @@ export const RajasthanTourByCars = [
   },
   {
     title: '03 Days Jodhpur-Jaisalmer Taxi Tour',
+    placesCovered: ['Jodhpur', 'Jaisalmer', 'Thar Desert'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -397,6 +447,7 @@ export const RajasthanTourByCars = [
   },
   {
     title: '03 Days Rajasthan Taxi Tour - 02',
+    placesCovered: ['Jaipur', 'Ajmer', 'Pushkar', 'Chittorgarh', 'Udaipur'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -408,6 +459,7 @@ export const RajasthanTourByCars = [
   },
   {
     title: '04 Days Rajasthan Taxi Tour - 01',
+    placesCovered: ['Jaipur', 'Chittorgarh', 'Udaipur', 'Mount Abu'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -419,6 +471,7 @@ export const RajasthanTourByCars = [
   },
   {
     title: '04 Days Rajasthan Taxi Tour - 02',
+    placesCovered: ['Jaipur', 'Ajmer', 'Pushkar', 'Jodhpur', 'Jaisalmer'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -430,6 +483,7 @@ export const RajasthanTourByCars = [
   },
   {
     title: '04 Days Desert Taxi Tour',
+    placesCovered: ['Jaipur', 'Bikaner', 'Jaisalmer'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -441,6 +495,7 @@ export const RajasthanTourByCars = [
   },
   {
     title: '05 Days Rajasthan Taxi Tour - 01',
+    placesCovered: ['Jaipur', 'Chittorgarh', 'Udaipur', 'Jodhpur', 'Jaisalmer'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -452,6 +507,7 @@ export const RajasthanTourByCars = [
   },
   {
     title: '05 Days Rajasthan Taxi Tour - 02',
+    placesCovered: ['Jaipur', 'Ajmer', 'Pushkar', 'Udaipur', 'Mount Abu'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -463,6 +519,7 @@ export const RajasthanTourByCars = [
   },
   {
     title: '05 Days Rajasthan Taxi Tour - 02',
+    placesCovered: ['Jaipur', 'Bikaner', 'Jaisalmer', 'Jodhpur'],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -474,6 +531,14 @@ export const RajasthanTourByCars = [
   },
   {
     title: '05 Days Rajasthan Taxi Tour - 03',
+    placesCovered: [
+      'Jaipur',
+      'Udaipur',
+      'Mount Abu',
+      'Jaisalmer',
+      'Jodhpur',
+      'Bikaner',
+    ],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -485,6 +550,14 @@ export const RajasthanTourByCars = [
   },
   {
     title: '08 Days Rajasthan Taxi Tour - 01',
+    placesCovered: [
+      'Jaipur',
+      'Udaipur',
+      'Mount Abu',
+      'Jaisalmer',
+      'Jodhpur',
+      'Bikaner',
+    ],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -496,6 +569,37 @@ export const RajasthanTourByCars = [
   },
   {
     title: '08 Days Rajasthan Taxi Tour - 02',
+    placesCovered: [
+      'Jaipur',
+      'Bikaner',
+      'Jaisalmer',
+      'Jodhpur',
+      'Udaipur',
+      'Chittorgarh',
+      'Pushkar',
+    ],
+    price: null,
+    duration: null,
+    imgSrc: JaipurCityTour,
+    alt: '',
+    imgTitle: '',
+    navigate: '/',
+    category: null,
+    destination: null,
+  },
+  {
+    title: '10 Days Rajasthan Taxi Tour',
+    placesCovered: [
+      'Jaipur',
+      'Ajmer',
+      'Pushkar',
+      'Chittorgarh',
+      'Udaipur',
+      'Mount Abu',
+      'Jodhpur',
+      'Jaisalmer',
+      'Bikaner',
+    ],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -507,6 +611,20 @@ export const RajasthanTourByCars = [
   },
   {
     title: '12 Days Complete Rajasthan Taxi Tour',
+    placesCovered: [
+      'Jaipur',
+      'Mandawa',
+      'Bikaner',
+      'Jaisalmer',
+      'Jodhpur',
+      'Mount Abu',
+      'Ranakpur',
+      'Kumbhalgarh',
+      'Udaipur',
+      'Chittorgarh',
+      'Ajmer',
+      'Pushkar',
+    ],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -516,12 +634,9 @@ export const RajasthanTourByCars = [
     category: null,
     destination: null,
   },
-];
-
-// 11 packages
-export const ExcursionTours = [
   {
     title: 'Abhaneri Stepwell',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -533,6 +648,7 @@ export const ExcursionTours = [
   },
   {
     title: 'Bhangarh - Ghost Fort',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -544,6 +660,7 @@ export const ExcursionTours = [
   },
   {
     title: 'Sariska Tiger Reserve',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -555,6 +672,7 @@ export const ExcursionTours = [
   },
   {
     title: 'Siliserh',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -566,6 +684,7 @@ export const ExcursionTours = [
   },
   {
     title: 'Ranthambhore National Park',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -577,6 +696,7 @@ export const ExcursionTours = [
   },
   {
     title: 'Samode Village',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -588,6 +708,7 @@ export const ExcursionTours = [
   },
   {
     title: 'Ajmer & Pushkar',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -599,6 +720,7 @@ export const ExcursionTours = [
   },
   {
     title: 'Sambhar Salt Lake',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -610,6 +732,7 @@ export const ExcursionTours = [
   },
   {
     title: 'Khatu Shyam Ji Temple',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -621,6 +744,7 @@ export const ExcursionTours = [
   },
   {
     title: 'Salasar Balaji Temple',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -632,6 +756,7 @@ export const ExcursionTours = [
   },
   {
     title: 'Mandawa Shekhawati',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -647,6 +772,7 @@ export const ExcursionTours = [
 export const OneWayTaxiTours = [
   {
     title: 'Jaipur to Delhi',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -658,6 +784,7 @@ export const OneWayTaxiTours = [
   },
   {
     title: 'Jaipur to Ajmer',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -669,6 +796,7 @@ export const OneWayTaxiTours = [
   },
   {
     title: 'Delhi to Jaipur',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -680,6 +808,7 @@ export const OneWayTaxiTours = [
   },
   {
     title: 'Delhi to Ajmer',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -691,6 +820,7 @@ export const OneWayTaxiTours = [
   },
   {
     title: 'Ajmer to Jaipur',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,
@@ -702,6 +832,7 @@ export const OneWayTaxiTours = [
   },
   {
     title: 'Ajmer to Delhi',
+    placesCovered: [''],
     price: null,
     duration: null,
     imgSrc: JaipurCityTour,

@@ -1,9 +1,7 @@
 "use client"
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { useState } from 'react'
 import { Card } from 'react-bootstrap';
-import { IoLogoWhatsapp } from 'react-icons/io';
 import SlickSlider from './SlickSlider';
 import { FaArrowRight } from 'react-icons/fa6';
 
@@ -15,20 +13,22 @@ const PackagesSlider = ({ packages, href }) => {
         setSelectedPackage(title);
         setShow(true);
     }
-
-    const [selectedPackage, setSelectedPackage] = useState(''); // To store selected package title
+    const [selectedPackage, setSelectedPackage] = useState('');
     return (
         <>
 
-            <SlickSlider>
+            <SlickSlider settings={{
+                slidesToShow: 3,
+                autoplay: false,
+            }}>
                 {packages.map((pkg, index) => {
                     const whatsappLink = `https://wa.me/919166555888?text=I am interested in the ${pkg.title} package for ₹${pkg.price}/-. Please provide more details.`;
                     return (
                         <div
                             key={index}
-                            className="col-12 col-sm-12 col-md-8 col-lg-4 py-lg-3 py-sm-2 mb-lg-4 mb-sm-0 d-flex justify-content-start px-2"
+                            className="col-12 col-sm-12 col-md-8 col-lg-4 py-0 mb-lg-4 mb-sm-1 d-flex justify-content-start align-items-stretch px-2"
                         >
-                            <Card className="card bg-transparent">
+                            <Card className="card bg-transparent d-flex justify-content-between h-full">
                                 <div className="card-image-container">
                                     <Image src={pkg.imgSrc} alt="Card Package" width={600}
                                         height={800} />
@@ -39,22 +39,29 @@ const PackagesSlider = ({ packages, href }) => {
                                         <p className="fw-normal text-left package-duration w-auto d-none">
                                             {pkg.duration}
                                         </p>
-                                        <p className="price px-2 text-capitalize mb-1 w-auto">
-                                            ₹{pkg.price}/-
+                                        <p className="price px-2 text-capitalize mb-0 w-auto">
+                                            starting from ₹{pkg.price}/-
                                         </p>
                                     </div>
-                                    <div className="w-100 card-header d-flex justify-content-center flex-column align-items-start pt-0">
-                                        <h4 className="text-capitalize w-100 text-black">
+                                    <div className="w-100 card-header d-flex justify-content-center flex-column align-items-center pt-0 pb-0">
+                                        <h4 className="text-capitalize w-100 text-black text-center fw-bold">
                                             {pkg.title}
                                         </h4>
                                     </div>
+                                    <div className="w-100 card-header d-flex align-items-center justify-content-center pt-0 gap-2 flex-wrap">
+                                        {pkg.placesCovered.length > 0
+                                            ? pkg.placesCovered.map((item, index) => (
+                                                <p key={index} className='text-tertary covered-places'>{item}</p>
+                                            ))
+                                            : "No places covered mentioned."}
+                                    </div>
                                     <div className="col-12 d-flex px-0">
                                         <div className="w-100 d-flex justify-content-center align-items-center gap-1">
-                                            <button className="w-100 rounded-5 bg-black text-white">
+                                            <button className="w-100 rounded-5 bg-black text-white text-capitalize">
                                                 view <FaArrowRight />
                                             </button>
                                             <button
-                                                className="w-100 rounded-5"
+                                                className="w-100 rounded-5 text-capitalize"
                                             >
                                                 Enquire <FaArrowRight />
                                             </button>

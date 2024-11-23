@@ -9,26 +9,29 @@ const RentalSlider = ({ rentals }) => {
 
     return (
         <>
-
-            <SlickSlider>
+            <SlickSlider
+                settings={{
+                    slidesToShow: 3,
+                    autoplay: false,
+                }}>
                 {rentals.map((rental, index) => {
                     const whatsappLink = `https://wa.me/919166555888?text=I am interested in the ${rental.title} package for ₹${rental.price}/-. Please provide more details.`;
                     return (
                         <div
                             key={index}
-                            className="col-12 col-sm-12 col-md-6 col-lg-4 py-lg-3 py-sm-2 mb-lg-4 mb-sm-0 d-flex align-items-stretch px-2 rental-container"
+                            className="col-12 col-sm-12 col-md-12 col-lg-4 py-0 mb-lg-4 mb-sm-1 d-flex justify-content-start px-2"
                         >
                             <Card className="card bg-transparent">
                                 <div className="card-image-container">
-                                    <Image width={400} height={400} src={rental.imgSrc} alt={rental.alt} title={rental.title} />
+                                    <Image width={600} height={800} src={rental.imgSrc} alt={rental.alt} title={rental.title} />
                                 </div>
-                                <div className="row card-content d-flex align-items-center justify-content-center gap-0">
-                                    <div className="w-100 card-header d-flex justify-content-center flex-column align-items-start pt-0">
-                                        <h3 className="text-capitalize w-100 package-title text-center text-black">
+                                <div className="row card-content d-flex align-items-center justify-content-center">
+                                    <div className="w-100 card-header d-flex justify-content-between align-items-start pt-0 pb-0">
+                                        <h4 className="text-capitalize w-100 text-black text-center fw-bold">
                                             {rental.title}
-                                        </h3>
+                                        </h4>
                                     </div>
-                                    <div className="w-100 card-header d-flex justify-content-center gap-4 align-items-start pt-0 package-category py-3">
+                                    <div className="w-100 card-header d-flex justify-content-center gap-4 align-items-start pt-0 package-category py-2">
                                         <div className="d-flex flex-column justify-content-between align-items-center">
                                             {' '}
                                             <FaUserFriends className="icon" />
@@ -48,21 +51,21 @@ const RentalSlider = ({ rentals }) => {
                                             <p className="pt-2">Heater</p>
                                         </div>
                                     </div>
-                                    <div className="w-100 card-header d-flex justify-content-between align-items-start flex-column pt-0 pb-0 mb-2">
-                                        <p className="price px-2 text-capitalize mb-2 w-auto">
+                                    <div className="w-100 card-header d-flex justify-content-between align-items-start flex-column gap-2">
+                                        <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-5">
                                             {rental.priceOne}
                                         </p>
-                                        <p className="price px-2 text-capitalize mb-2 w-auto">
+                                        <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-5">
                                             {rental.priceTwo}
                                         </p>
                                     </div>
                                     <div className="col-12 d-flex px-0">
                                         <div className="w-100 d-flex justify-content-center align-items-center gap-1">
-                                            <button className="w-100 rounded-5 bg-black text-white">
+                                            <button className="w-100 rounded-5 bg-black text-white text-capitalize">
                                                 view <FaArrowRight />
                                             </button>
                                             <button
-                                                className="w-100 rounded-5"
+                                                className="w-100 rounded-5 text-capitalize"
                                             >
                                                 Enquire <FaArrowRight />
                                             </button>

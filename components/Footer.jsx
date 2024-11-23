@@ -272,9 +272,6 @@ const Footer = () => {
                 </div>
             </div>
             <div className="container-fluid bg-black">
-                {/* <div className="row justify-content-center align-items-center pt-5">
-                    <h4 className='text-center color-border text-capitalize'>Reliable <strong className='text-white'>taxi services</strong> for <strong className='text-white'>seamless travel experiences</strong></h4>
-                </div> */}
                 <div className="row d-flex justify-content-center aiign-items-center pt-4">
                     <Logo childStyle='text-center text-white' parentStyle='text-center' />
                 </div>
@@ -283,16 +280,20 @@ const Footer = () => {
                         <hr />
                     </div>
                 </div>
-                <div className="row d-flex justify-content-center aiign-items-center">
+                <div className="row d-flex justify-content-center aiign-items-center footer-links">
                     <p className='text-center color-border text-uppercase'>presented by</p>
-                    <a
-                        href="https://rajasthantourpackages.in/"
-                        target="_blank"
-                        className="d-flex justify-content-center aiign-items-center footer-link"
-                        aria-label='rajasthan travel helpline'
-                    >
-                        <Image width={500} height={300} src={footerLogo} alt="Rajasthan Travel Helpline" layout='responsive' title='Rajasthan Travel Helpline Contact Details' />
-                    </a>
+                    <div className="col-12 d-flex flex-column footer-links justify-content-center align-items-center">
+                        <div className="footer-logo w-100 d-flex justify-content-center aiign-items-center">
+                            <a
+                                href="https://rajasthantourpackages.in/"
+                                target="_blank"
+                                className="d-flex justify-content-center aiign-items-center footer-link"
+                                aria-label='rajasthan travel helpline'
+                            >
+                                <Image width={400} height={200} src={footerLogo} alt="Rajasthan Travel Helpline" title='Rajasthan Travel Helpline Contact Details' />
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div className="row py-0 d-flex justify-content-center aiign-items-center">
                     <div className="col-lg-8 col-sm-12">

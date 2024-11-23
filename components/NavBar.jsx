@@ -61,7 +61,7 @@ const NavBar = () => {
                     <div className="row w-100">
                         {cabRental.map((category, index) => (
                             <div className="col py-2" key={index}>
-                                <h4 className="text-tertary">{category.title}</h4>
+                                <p className="text-tertary fw-bold">{category.title}</p>
                                 <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
@@ -89,7 +89,7 @@ const NavBar = () => {
                     <div className="row w-100">
                         {tempoAndBus.map((category, index) => (
                             <div className="col py-2" key={index}>
-                                <h4 className="text-tertary">{category.title}</h4>
+                                <p className="text-tertary fw-bold">{category.title}</p>
                                 <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
@@ -117,7 +117,7 @@ const NavBar = () => {
                     <div className="row w-100">
                         {tourData.map((category, index) => (
                             <div className="col py-2" key={index}>
-                                <h4 className="text-tertary">{category.title}</h4>
+                                <p className="text-tertary fw-bold">{category.title}</p>
                                 <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
@@ -145,7 +145,7 @@ const NavBar = () => {
                     <div className="row w-100">
                         {taxiFares.map((category, index) => (
                             <div className="col py-2" key={index}>
-                                <h4 className="text-tertary">{category.title}</h4>
+                                <p className="text-tertary fw-bold">{category.title}</p>
                                 <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
@@ -173,7 +173,7 @@ const NavBar = () => {
                     <div className="row w-100">
                         {placesToVisit.map((category, index) => (
                             <div className="col py-2" key={index}>
-                                <h4 className="text-tertary">{category.title}</h4>
+                                <p className="text-tertary fw-bold">{category.title}</p>
                                 <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (

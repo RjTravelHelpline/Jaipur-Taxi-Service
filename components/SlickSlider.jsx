@@ -23,7 +23,7 @@ const PrevArrow = ({ onClick }) => {
 
 const SlickSlider = ({ settings, children }) => {
   const defaultSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -37,6 +37,12 @@ const SlickSlider = ({ settings, children }) => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
         },
       },
       {
