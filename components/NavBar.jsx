@@ -13,6 +13,7 @@ import Link from 'next/link';
 import { cabRental, placesToVisit, taxiFares, tempoAndBus, tourData } from '@/data/HeaderData';
 import { IoCallSharp } from "react-icons/io5";
 import { RiWhatsappFill } from "react-icons/ri";
+import { company } from '@/data/FooterData';
 
 const NavBar = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -193,7 +194,7 @@ const NavBar = () => {
                     </div>
                 </div>
             ),
-        }
+        },
     ];
     return (
         <>

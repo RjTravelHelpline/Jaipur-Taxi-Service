@@ -148,16 +148,17 @@
   color: var(--color-tertary);
 }
 .mega-menu {
+  margin: auto;
   transition: 0.3s ease;
   position: absolute;
   left: 0;
   right: 0;
-  width: 100% !important;
-  max-width: 100vw !important;
+  max-width: 1600px !important;
   padding: 20px;
   z-index: 999;
   > div {
-    max-height: 600px;
+    width: auto !important;
+    max-height: 400px !important;
     overflow-y: auto;
     background-color: var(--color-black);
     border-radius: 24px;
@@ -324,41 +325,39 @@
 }
 
 .why-us {
-  .row {
-    .col1,
-    .col2 {
-      height: 100%;
-      border-radius: 24px;
-      padding: 24px;
-      margin-inline: 8px;
-      user-select: none;
-      .about-icon {
-        font-size: 2.5em;
-      }
+  .col1,
+  .col2 {
+    height: 100%;
+    border-radius: 24px;
+    padding: 24px;
+    margin-inline: 8px;
+    user-select: none;
+    .about-icon {
+      font-size: 2.5em;
     }
   }
-}
-.why-us-card {
-  background-color: var(--color-primary);
-  border-radius: 24px;
-  border: 1px solid var(--color-border);
-  color: var(--color-black);
-  box-shadow: var(--color-shadow);
-  overflow: hidden;
-  .card-icon {
-    background-color: var(--color-tertary);
-    box-shadow: var(--color-shadow-tertary);
-    color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3.65em !important;
-    border-bottom-right-radius: 16px;
-  }
-  h3 {
-    span {
-      color: var(--color-tertary);
-      border-radius: 8px;
+  .why-us-card {
+    background-color: var(--color-primary);
+    border-radius: 24px;
+    border: 1px solid var(--color-border);
+    color: var(--color-black);
+    box-shadow: var(--color-shadow);
+    overflow: hidden;
+    .card-icon {
+      background-color: var(--color-tertary);
+      box-shadow: var(--color-shadow-tertary);
+      color: var(--color-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3.65em !important;
+      border-bottom-right-radius: 16px;
+    }
+    h3 {
+      span {
+        color: var(--color-tertary);
+        border-radius: 8px;
+      }
     }
   }
 }
@@ -410,13 +409,17 @@
     }
 
     &:hover img {
-      transform: scale(1.1);
+      transform: scale(1.01);
+    }
+    &:hover {
+      transform: translateY(2px);
     }
     .card-header {
       flex-grow: 1 !important;
       border-radius: 16px;
       border: none !important;
       padding-inline: 0 !important;
+      background-color: transparent !important;
     }
     .price {
       width: 100% !important;
@@ -604,13 +607,13 @@
 
 .custom-arrow {
   position: absolute;
-  bottom: -60px;
-  transform: translateY(-50%);
+  top: 40%;
   z-index: 1;
   cursor: pointer;
   color: var(--color-black);
   background-color: var(--color-tertary-down);
-  padding: clamp(0.6rem, 1vw, 1rem) !important;
+  backdrop-filter: blur(20px);
+  padding: clamp(0.6rem, 0.95vw, 0.85rem) !important;
   border-radius: 999px;
   box-sizing: border-box !important;
   display: flex;
@@ -623,15 +626,12 @@
 }
 
 .custom-prev {
-  right: 70px;
+  left: 0;
   transition: 0.16s ease-in-out;
-  @media screen and (max-width: 768px) {
-    right: 60px;
-  }
 }
 
 .custom-next {
-  right: 20px;
+  right: 0;
   transition: 0.16s ease-in-out;
 }
 
@@ -687,33 +687,34 @@
 
 // carousel
 .home-banner {
-  // position: relative;
   .carousel-item {
+    padding-block: 44px !important;
     overflow: hidden;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
+    width: 100% !important;
+    max-height: 600px !important;
+    display: flex !important;
+    justify-content: center !important;
     align-items: center;
     opacity: 0;
     transition: 0.8s ease-in-out;
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
-    @media screen and (max-width: 768px) {
-      height: 40vh;
-    }
+    background: linear-gradient(
+      to bottom,
+      var(--color-tertary-down) 50%,
+      var(--color-primary)
+    );
   }
   .carousel-item.active {
     opacity: 1;
   }
   .carousel-item img {
-    shape-outside: margin-box;
-    filter: brightness(0.55);
     background-position: center;
-    // background-size: 100%;
     height: 100%;
-    width: 100%;
+    width: 60%;
     object-fit: cover;
   }
+
   h2 {
     // position: relative;
     font-size: clamp(1.6em, 4vw, 5em) !important;
@@ -721,10 +722,6 @@
     span {
       color: var(--color-tertary);
     }
-  }
-
-  img {
-    filter: brightness(0.45);
   }
   .col-12 {
     position: absolute;

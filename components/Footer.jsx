@@ -1,5 +1,5 @@
 "use client"
-import { carAndCoches, carRentalPackages, carRentalServices, oneWayCarRental, popularTours, servicesData, usefulLinks } from '@/data/FooterData';
+import { carAndCoches, carRentalPackages, carRentalServices, company, oneWayCarRental, popularTours, servicesData, usefulLinks } from '@/data/FooterData';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="packages-footer py-3">
+            <div className="container-fluid packages-footer py-3">
                 <div className="container">
                     <div className="row py-lg-4 py-sm-3">
                         <h2 className='text-center fw-bold text-black'>Our <span className='text-tertary'> Services</span></h2>
@@ -170,7 +170,7 @@ const Footer = () => {
                             </h3>
                             {activeSection === 'company' && (
                                 <div className="bg-white mb-2 rounded-3 footer-links d-flex w-100 justify-content-start align-items-center flex-wrap">
-                                    {usefulLinks.map((link) => (
+                                    {company.map((link) => (
                                         <Link
                                             href={link.path}
                                             className="footer-link text-black"

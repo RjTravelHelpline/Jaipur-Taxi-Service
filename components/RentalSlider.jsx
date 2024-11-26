@@ -4,9 +4,9 @@ import { Card } from 'react-bootstrap';
 import { FaArrowRight, FaFire, FaSnowflake, FaSuitcase, FaUserFriends } from 'react-icons/fa';
 import SlickSlider from './SlickSlider';
 import Image from 'next/image';
+import { RiWhatsappFill } from 'react-icons/ri';
 
 const RentalSlider = ({ rentals }) => {
-
     return (
         <>
             <SlickSlider
@@ -19,7 +19,7 @@ const RentalSlider = ({ rentals }) => {
                     return (
                         <div
                             key={index}
-                            className="col-12 col-sm-12 col-md-12 col-lg-4 py-0 mb-lg-4 mb-sm-1 d-flex justify-content-start px-2"
+                            className="col-12 col-sm-12 col-md-12 col-lg-4 py-0 d-flex justify-content-start px-2"
                         >
                             <Card className="card bg-transparent">
                                 <div className="card-image-container">
@@ -61,16 +61,23 @@ const RentalSlider = ({ rentals }) => {
                                     </div>
                                     <div className="col-12 d-flex px-0">
                                         <div className="w-100 d-flex justify-content-center align-items-center gap-1">
-                                            <button className="w-100 rounded-5 bg-black text-white text-capitalize">
+                                            <button className="w-100 rounded-4 bg-border text-black text-capitalize">
                                                 view <FaArrowRight />
                                             </button>
                                             <button
-                                                className="w-100 rounded-5 text-capitalize"
+                                                className="w-100 rounded-4 text-capitalize"
                                             >
                                                 Enquire <FaArrowRight />
                                             </button>
-                                        </div>
+                                            <a href={whatsappLink}>
+                                                <button
+                                                    className="rounded-4 p w-auto text-capitalize bg-black" style={{ color: '#00E777' }}
+                                                >
+                                                    <RiWhatsappFill className='fs-4' />
 
+                                                </button>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </Card>

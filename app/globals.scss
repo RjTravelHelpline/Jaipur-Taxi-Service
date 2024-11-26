@@ -4,7 +4,7 @@
   --font-head: 'Poppins', sans-serif;
   --font-logo: 'Lobster', sans-serif;
   /* colors */
-  --color-body: #f5f1ec;
+  --color-body: #fcf5f5;
   --color-primary: #ffffff;
   --color-secondary: #272727;
   --color-black: #000000;
@@ -73,6 +73,7 @@ body {
   background-color: var(--color-body) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #000 !important;
 }
 .logo {
   font-family: var(--font-logo);
@@ -156,6 +157,9 @@ button {
 .bg-gray {
   background-color: var(--color-gray) !important;
 }
+.bg-border {
+  background-color: var(--color-border) !important;
+}
 .text-primary {
   color: var(--color-primary) !important;
 }
@@ -171,11 +175,16 @@ button {
 .text-justify {
   text-align: justify !important;
 }
+.text-right {
+  text-align: right !important;
+}
 .cursor-pointer {
   cursor: pointer !important;
 }
 
-
+.container-fluid {
+  max-width: 1600px !important;
+}
 // Custom padding values
 $padding-sizes: (
   1: 4px,

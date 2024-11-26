@@ -1,14 +1,19 @@
 const ToyotaInnova = '/Images/Cabs/toyota-innova.png';
 const ToyotaInnovaCrysta = '/Images/Cabs/toyota-innova-crysta.png';
 const Bmw = '/Images/Cabs/BMW.png';
-const HomeBanner03 = '/Images/Banners/home-taxi-02.jpg';
+const Audi = '/Images/Cabs/audi.png';
+const SwiftDesire = '/Images/Cabs/swift-dzire.jpg';
+const Mercedes = '/Images/Cabs/mercedes-e-class.png';
+const ToyotaCorolla = '/Images/Cabs/toyota-corolla.png';
+const TempoTraveller = '/Images/Cabs/tempo-traveller.png';
+const ToyotaEtios = '/Images/Cabs/toyota-etios.png';
 export const allCabRentals = [
   {
     title: 'Toyota Innova',
     priceOne: 'Jaipur Local @  ₹300 / HOUR',
     priceTwo: 'Outstation @  ₹15 / KM',
     href: '/toyota-innova-car-rental-in-jaipur',
-    imgSrc: HomeBanner03,
+    imgSrc: ToyotaInnova,
     alt: '',
     imgTitle: '',
     category: null,
@@ -18,7 +23,7 @@ export const allCabRentals = [
     priceOne: 'Jaipur Local @  ₹325 / HOUR',
     priceTwo: 'Outstation @  ₹17 / KM',
     href: '/toyota-innova-crysta-cab-hire-in-jaipur',
-    imgSrc: HomeBanner03,
+    imgSrc: ToyotaInnovaCrysta,
     alt: '',
     imgTitle: '',
     category: null,
@@ -28,7 +33,7 @@ export const allCabRentals = [
     priceOne: 'Jaipur Local @ ₹500 / HOUR',
     priceTwo: 'Outstation @  ₹30 / KM',
     href: '/toyota-corolla-car-rental-in-jaipur',
-    imgSrc: HomeBanner03,
+    imgSrc: ToyotaCorolla,
     alt: '',
     imgTitle: '',
     category: null,
@@ -38,7 +43,7 @@ export const allCabRentals = [
     priceOne: 'Jaipur Local @ ₹450 / HOUR',
     priceTwo: 'Outstation @  ₹24 / KM',
     href: '/12-seater-tempo-traveller-rental-service-in-jaipur',
-    imgSrc: HomeBanner03,
+    imgSrc: TempoTraveller,
     alt: '',
     imgTitle: '',
     category: null,
@@ -48,7 +53,7 @@ export const allCabRentals = [
     priceOne: 'Jaipur Local @ ₹200 / HOUR',
     priceTwo: 'Outstation @  ₹11 / KM',
     href: '/toyota-etios-cab-rental-jaipur',
-    imgSrc: HomeBanner03,
+    imgSrc: ToyotaEtios,
     alt: '',
     imgTitle: '',
     category: null,
@@ -58,7 +63,7 @@ export const allCabRentals = [
     priceOne: 'Jaipur Local @ ₹200 / HOUR',
     priceTwo: 'Outstation @  ₹10 / KM',
     href: '/swift-dzire-cab-rental-in-jaipur',
-    imgSrc: HomeBanner03,
+    imgSrc: SwiftDesire,
     alt: '',
     imgTitle: '',
     category: null,
@@ -68,7 +73,7 @@ export const allCabRentals = [
     priceOne: 'Jaipur Local @ On Request',
     priceTwo: 'Outstation @ On Request',
     href: '/bmw-car-rental-in-jaipur',
-    imgSrc: HomeBanner03,
+    imgSrc: Bmw,
     alt: '',
     imgTitle: '',
     category: null,
@@ -78,7 +83,7 @@ export const allCabRentals = [
     priceOne: 'Jaipur Local @ On Request',
     priceTwo: 'Outstation @ On Request',
     href: '/mercedes-car-hire-in-jaipur',
-    imgSrc: HomeBanner03,
+    imgSrc: Mercedes,
     alt: '',
     imgTitle: '',
     category: null,
@@ -88,7 +93,7 @@ export const allCabRentals = [
     priceOne: 'Jaipur Local @ On Request',
     priceTwo: 'Outstation @ On Request',
     href: '/audi-car-rental-in-jaipur',
-    imgSrc:HomeBanner03,
+    imgSrc: Audi,
     alt: '',
     imgTitle: '',
     category: null,
