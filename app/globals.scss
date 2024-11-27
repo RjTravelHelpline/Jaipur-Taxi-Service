@@ -10,6 +10,7 @@
   --color-black: #000000;
   --color-tertary: #ff9c07;
   --color-tertary-down: #ffae0038;
+  --color-tertary-down2: #ffc3403d;
   --color-border: #dadada;
   --color-hr: #7c7c7c;
   --color-gray: #dbdbdb4f;
@@ -133,6 +134,9 @@ button {
   transition: 0.25s ease-out;
   &:hover {
     background-color: var(--accent-color);
+  }
+  &:active {
+    transform: scale(0.95);
   }
 }
 

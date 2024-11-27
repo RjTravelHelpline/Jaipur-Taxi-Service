@@ -7,6 +7,61 @@ const Mercedes = '/Images/Cabs/mercedes-e-class.png';
 const ToyotaCorolla = '/Images/Cabs/toyota-corolla.png';
 const TempoTraveller = '/Images/Cabs/tempo-traveller.png';
 const ToyotaEtios = '/Images/Cabs/toyota-etios.png';
+
+const HatchBack = '/Images/Cabs/hyundai-i20.jpg';
+const Sedan = '/Images/Cabs/maruti-ciaz.jpg';
+const Bus = '/Images/Cabs/18-seater-bus.jpg';
+const LuxuryBus = '/Images/Cabs/45-seater-volvo-bus.jpg';
+
+export const CarRentalsByCategory = [
+  {
+    duration: null,
+    imgSrc: HatchBack,
+    title: 'Hatchback Car Rental',
+    navigate: '/cheapest-car-rental-jaipur',
+  },
+
+  {
+    duration: null,
+    imgSrc: Sedan,
+    title: 'Sedan Car Rental',
+    navigate: '/sedan-car-rental-jaipur',
+  },
+  {
+    duration: null,
+    imgSrc: ToyotaInnovaCrysta,
+    title: 'SUV Car Rental',
+    navigate: '/suv-car-rental-jaipur',
+  },
+  {
+    duration: null,
+    imgSrc: Mercedes,
+    title: 'Luxury Car Rental',
+
+    navigate: '/luxury-car-rental-jaipur',
+  },
+  {
+    duration: null,
+    imgSrc: TempoTraveller,
+    title: 'Tempo Traveller Rental',
+
+    navigate: '/tempo-traveller-rental-in-jaipur',
+  },
+  {
+    duration: null,
+    imgSrc: Bus,
+    title: 'Bus & Coach Rental',
+
+    navigate: '/bus-rental-service-in-jaipur',
+  },
+  {
+    duration: null,
+    imgSrc: LuxuryBus,
+    title: 'Luxury Bus Rental',
+
+    navigate: '/08-10-days-rajasthan-tours',
+  },
+];
 export const allCabRentals = [
   {
     title: 'Toyota Innova',

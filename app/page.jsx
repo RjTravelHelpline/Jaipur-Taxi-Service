@@ -62,7 +62,7 @@ const Home = () => {
             <h2 className='text-capitalize text-center fw-bold'>tour packages</h2>
             <p className='text-center text-capitalize'>explore Jaipur taxi tour packages & tourist cab packages</p>
           </div>
-          <PackagesSlider packages={PopularTourPackages} />
+          <PackagesSlider packages={PopularTourPackages} showPrice={true}/>
           <div className="col-12 d-flex justify-content-between align-items-center gap-2 px-4 mt-3">
             <hr />
             <Link href='/tour-packages-rajasthan'>

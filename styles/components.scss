@@ -790,3 +790,168 @@
     }
   }
 }
+
+// navbar
+.tour-packages-nav {
+  margin: auto !important;
+  position: sticky;
+  z-index: 99;
+  width: 100% !important;
+  display: flex;
+  flex-wrap: nowrap !important;
+  justify-content: center;
+  align-items: center;
+  top: 110px;
+  background-color: #000;
+  box-shadow: var(--color-shadow);
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  a {
+    width: auto;
+    padding: 10px 20px;
+    border-bottom: 2px solid transparent;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    &:hover {
+      border-bottom: 2px solid var(--color-tertary);
+      color: var(--color-tertary);
+      filter: brightness(1) !important;
+    }
+    &.active {
+      background-color: var(--color-tertary-down) !important;
+      border-bottom: 2px solid var(--color-tertary);
+      color: var(--color-primary);
+      filter: brightness(1) !important;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    // display: none;
+    top: 70px;
+    justify-content: start;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
+  }
+}
+
+.bydayspackages {
+  a:not(.explore) {
+    width: 100% !important;
+  }
+  .card {
+    border-radius: 24px;
+    overflow: hidden;
+    transition: 0.25s ease-in-out;
+    position: relative;
+    height: 200px;
+    width: 100% !important;
+    border: none !important;
+    &:hover {
+      box-shadow: var(--color-shadow);
+    }
+    &:hover {
+      .go-link {
+        background-color: var(--color-tertary) !important;
+        color: var(--color-black) !important;
+      }
+    }
+    .go-link {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: auto !important;
+      height: auto !important;
+    }
+    img {
+      width: 100%;
+      height: 100%; /* Make sure image covers the card's height */
+      object-fit: cover !important;
+      background-position: center;
+      transition: 0.25s ease-in-out;
+      filter: brightness(0.85);
+      background-position: center !important;
+      background-size: 50% !important;
+      filter: brightness(0.65);
+    }
+    .card-content {
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      left: 12px;
+      gap: 0;
+      background: linear-gradient(
+        to top,
+        var(--color-black) 40%,
+        #00000000 100%
+      );
+      h3 {
+        width: auto !important;
+        padding: 6px 10px;
+        font-weight: bolder !important;
+        border-radius: 8px;
+        color: var(--color-primary) !important;
+        box-shadow: var(--color-shadow);
+      }
+      p {
+        color: var(--color-tertary);
+        font-weight: bold;
+        width: auto !important;
+      }
+    }
+    &:hover img {
+      filter: blur(2px) brightness(0.6);
+      background-color: var(--color-tertary-down);
+      transform: scale(1.01);
+    }
+  }
+  .tours {
+    p {
+      span {
+        color: var(--color-tertary);
+      }
+    }
+  }
+}
+.carRentalsCard {
+  .card {
+    height: 260px;
+    .price {
+      width: 100% !important;
+      background: linear-gradient(
+        45deg,
+        var(--color-primary) 0%,
+        var(--color-tertary) 50%,
+        var(--color-tertary-down) 100%
+      );
+      background-size: 200% 100%;
+      font-weight: bold !important;
+      text-align: center;
+      font-family: var(--font-head);
+      border-radius: 999px;
+      box-shadow: none;
+      text-transform: capitalize !important;
+      animation: gradient-flash 1.5s linear infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @keyframes gradient-flash {
+      0% {
+        background-position: 50% 0%;
+      }
+      50% {
+        background-position: 50% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}
