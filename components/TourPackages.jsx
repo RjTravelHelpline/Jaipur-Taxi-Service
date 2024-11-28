@@ -2,8 +2,8 @@
 import { Card } from 'react-bootstrap';
 import { useState } from 'react';
 import Image from 'next/image';
-import { FaArrowRight } from 'react-icons/fa6';
 import { RiWhatsappFill } from 'react-icons/ri';
+import Link from 'next/link';
 
 const TourPackages = ({ pkg, showPrice = false }) => {
     const [show, setShow] = useState(false);
@@ -57,9 +57,11 @@ const TourPackages = ({ pkg, showPrice = false }) => {
                         </div>
                         <div className="col-12 d-flex px-0">
                             <div className="w-100 d-flex justify-content-center align-items-center gap-1">
-                                <button className="w-100 rounded-4 bg-border text-black text-capitalize">
-                                    view
-                                </button>
+                                <Link href={pkg.navigate} className='w-100'>
+                                    <button className="w-100 rounded-4 bg-border text-black text-capitalize">
+                                        view
+                                    </button>
+                                </Link>
                                 <button
                                     className="w-100 rounded-4 text-capitalize"
                                 >

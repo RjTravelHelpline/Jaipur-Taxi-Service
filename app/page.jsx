@@ -1,17 +1,23 @@
 "use client"
 import RentalSlider from '@/components/RentalSlider';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import { allCabRentals } from '@/data/cabRentalData';
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Button, Carousel, Modal } from 'react-bootstrap';
 import Image from 'next/image';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa6';
 import PackagesSlider from '@/components/PackagesSlider';
 import { PopularTourPackages } from '@/data/TourPackagesData';
 import Link from 'next/link';
 import { MdOutlineArrowOutward } from 'react-icons/md';
+import { getPackagesByCategory } from '@/utils/utils';
+import { allCabRentals } from '@/data/cabRentalData';
+import SearchBar from '@/components/SearchBar';
+import { useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
+import { IoClose } from 'react-icons/io5';
 const HomeBanner01 = '/Images/Banners/home-banner.png';
 const Home = () => {
+
+  const popularRentals = getPackagesByCategory(allCabRentals, 'popular')
   return (
 
     <>
@@ -49,7 +55,7 @@ const Home = () => {
             <h2 className='text-capitalize text-center fw-bold'>popular cabs</h2>
             <p className='text-center text-capitalize'>experience our excellent services at the lowest Car Hire</p>
           </div>
-          <RentalSlider rentals={allCabRentals} />
+          <RentalSlider rentals={popularRentals} />
           <div className="col-12 d-flex justify-content-between align-items-center gap-2 px-4 mt-3">
             <hr />
             <Link href='/car-rental-jaipur'>
@@ -62,7 +68,7 @@ const Home = () => {
             <h2 className='text-capitalize text-center fw-bold'>tour packages</h2>
             <p className='text-center text-capitalize'>explore Jaipur taxi tour packages & tourist cab packages</p>
           </div>
-          <PackagesSlider packages={PopularTourPackages} showPrice={true}/>
+          <PackagesSlider packages={PopularTourPackages} showPrice={true} />
           <div className="col-12 d-flex justify-content-between align-items-center gap-2 px-4 mt-3">
             <hr />
             <Link href='/tour-packages-rajasthan'>
@@ -84,6 +90,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
     </>
   );
 };

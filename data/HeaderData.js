@@ -23,6 +23,7 @@ export const cabRental = [
         path: '/maruti-wagonr-car-rental-in-jaipur',
       },
     ],
+    more: '/cheapest-car-rental-jaipur',
   },
   {
     title: 'Sedan Car Rental',
@@ -48,6 +49,7 @@ export const cabRental = [
         path: '/hyundai-xcent-car-hire-in-jaipur',
       },
     ],
+    more: '/sedan-car-rental-jaipur',
   },
   {
     title: 'SUV Car Rental',
@@ -73,6 +75,7 @@ export const cabRental = [
         path: '/mahindra-xylo-car-hire-in-jaipur',
       },
     ],
+    more: '/suv-car-rental-jaipur',
   },
   {
     title: 'Luxury Car Rental',
@@ -89,6 +92,7 @@ export const cabRental = [
       { name: 'BMW Car', path: '/bmw-car-rental-in-jaipur' },
       { name: 'Audi Car', path: '/audi-car-rental-in-jaipur' },
     ],
+    more: '/luxury-car-rental-jaipur',
   },
 ];
 
@@ -117,6 +121,7 @@ export const tempoAndBus = [
         path: '/20-seater-tempo-traveller-rental-service-in-jaipur',
       },
     ],
+    more: '/tempo-traveller-rental-in-jaipur',
   },
   {
     title: 'Bus & Coach Rental Service',
@@ -142,9 +147,10 @@ export const tempoAndBus = [
         path: '/52-seater-bus-rental-service-in-jaipur',
       },
     ],
+    more: '/bus-rental-service-in-jaipur',
   },
   {
-    title: 'Super Luxury Bus Rental Service',
+    title: 'Luxury Bus Rental Service',
     items: [
       {
         name: '45 Seater Volvo Bus',
@@ -155,6 +161,7 @@ export const tempoAndBus = [
         path: '/45-seater-scania-bus-rental-jaipur',
       },
     ],
+    more: '/luxury-bus-hire-service-in-jaipur',
   },
 ];
 
@@ -183,6 +190,7 @@ export const tourData = [
         path: '/jaipur-city-tour-with-guide',
       },
     ],
+    more: '/jaipur-sightseeing-tours',
   },
   {
     title: 'Day Tours From Jaipur',
@@ -208,6 +216,7 @@ export const tourData = [
         path: '/sariska-tiger-reserve-tour-from-jaipur',
       },
     ],
+    more: '/private-day-tours-from-jaipur',
   },
   {
     title: 'Rajasthan Tours by Car',
@@ -233,6 +242,7 @@ export const tourData = [
         path: '/10-days-rajasthan-tour-by-car',
       },
     ],
+    more: '/rajasthan-tours-by-car',
   },
 ];
 
@@ -261,6 +271,7 @@ export const taxiFares = [
         path: '/taxi-for-12-hours',
       },
     ],
+    more: '/jaipur-local-taxi-fare',
   },
   {
     title: 'Outstation Cab From Jaipur',
@@ -286,6 +297,7 @@ export const taxiFares = [
         path: '/jaipur-to-udaipur-taxi',
       },
     ],
+    more: '/outstation-cab-from-jaipur',
   },
   {
     title: 'One Way Car Rental',
@@ -311,6 +323,7 @@ export const taxiFares = [
         path: '/ranthambhore-national-park',
       },
     ],
+    more: '/one-way-car-rental-jaipur',
   },
   {
     title: 'City Wise Taxi Fares',
@@ -321,6 +334,7 @@ export const taxiFares = [
       { name: 'Bikaner', path: '/bikaner-taxi-service' },
       { name: 'Ajmer', path: '/ajmer-taxi-service' },
     ],
+    more: '/taxi-service-rajasthan',
   },
 ];
 
@@ -348,6 +362,7 @@ export const placesToVisit = [
         path: '/galtaji-monkey-temple-jaipur',
       },
     ],
+    more: '/places-to-visit-in-jaipur',
   },
   {
     title: 'Excursion Places Around Jaipur',
@@ -361,6 +376,7 @@ export const placesToVisit = [
       },
       { name: 'Siliserh', path: '/siliserh-lake-alwar' },
     ],
+    more: '/places-to-visit-around-jaipur',
   },
   {
     title: 'Tourist Cities of Rajasthan',
@@ -371,5 +387,6 @@ export const placesToVisit = [
       { name: 'Mount Abu', path: '/mount-abu' },
       { name: 'Bikaner', path: '/bikaner' },
     ],
+    more: '/tourist-cities-of-rajasthan',
   },
 ];

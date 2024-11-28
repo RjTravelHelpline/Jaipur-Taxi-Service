@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react'
 import {
+    FaArrowUpRightDots,
     FaGripLines,
     FaTaxi,
 } from 'react-icons/fa6';
@@ -11,11 +12,21 @@ import {
 import Logo from './Logo'
 import Link from 'next/link';
 import { cabRental, placesToVisit, taxiFares, tempoAndBus, tourData } from '@/data/HeaderData';
-import { IoCallSharp } from "react-icons/io5";
+import { IoCallSharp, IoClose } from "react-icons/io5";
 import { RiWhatsappFill } from "react-icons/ri";
 import { company } from '@/data/FooterData';
+import { FaArrowRight, FaSearch } from 'react-icons/fa';
+import { Button, Modal } from 'react-bootstrap';
+import SearchBar from './SearchBar';
 
 const NavBar = () => {
+
+
+    const [showSearch, setShowSearch] = useState(false);
+    const handleCloseSearch = () => setShowSearch(false);
+    const handleShowSearch = () => setShowSearch(true);
+
+
     const [activeIndex, setActiveIndex] = useState(null);
     const [ismobile, setIsmobile] = useState(false);
     const [showNavigation, setShowNavigation] = useState(false);
@@ -37,6 +48,10 @@ const NavBar = () => {
     const handleMobileDropdown = (index) => {
         setActiveIndex(activeIndex === index ? null : index); // Toggle the active class
     };
+
+    const handleClose = () => {
+        setActiveIndex(null);
+    }
     // Handle window resize events
     useEffect(() => {
         const handleResize = () => {
@@ -70,12 +85,15 @@ const NavBar = () => {
                                             <Link
                                                 href={item.path} // Use the dynamic path here
                                                 className="d-flex align-items-center text-white"
+                                                onClick={handleClose}
                                             >
                                                 <span className="text-tertary me-2">≻</span>
                                                 {item.name} {/* Use the `name` dynamically */}
                                             </Link>
                                         </li>
                                     ))}
+                                    <hr />
+                                    <Link href={category.more} className='rounded-3 px-3 p-1 mx-2 text-' style={{ border: '1px solid var(--color-tertary-down)' }} onClick={handleClose}>explore more </Link>
                                 </ul>
                             </div>
                         ))}
@@ -98,12 +116,15 @@ const NavBar = () => {
                                             <Link
                                                 href={item.path} // Use the dynamic path here
                                                 className="d-flex align-items-center text-white"
+                                                onClick={handleClose}
                                             >
                                                 <span className="text-tertary me-2">≻</span>
                                                 {item.name} {/* Use the `name` dynamically */}
                                             </Link>
                                         </li>
                                     ))}
+                                    <hr />
+                                    <Link href={category.more} className='rounded-3 px-3 p-1 mx-2 text-' style={{ border: '1px solid var(--color-tertary-down)' }} onClick={handleClose}>explore more </Link>
                                 </ul>
                             </div>
                         ))}
@@ -126,12 +147,15 @@ const NavBar = () => {
                                             <Link
                                                 href={item.path} // Use the dynamic path here
                                                 className="d-flex align-items-center text-white"
+                                                onClick={handleClose}
                                             >
                                                 <span className="text-tertary me-2">≻</span>
                                                 {item.name} {/* Use the `name` dynamically */}
                                             </Link>
                                         </li>
                                     ))}
+                                    <hr />
+                                    <Link href={category.more} className='rounded-3 px-3 p-1 mx-2 text-' style={{ border: '1px solid var(--color-tertary-down)' }} onClick={handleClose}>explore more </Link>
                                 </ul>
                             </div>
                         ))}
@@ -154,12 +178,15 @@ const NavBar = () => {
                                             <Link
                                                 href={item.path} // Use the dynamic path here
                                                 className="d-flex align-items-center text-white"
+                                                onClick={handleClose}
                                             >
                                                 <span className="text-tertary me-2">≻</span>
                                                 {item.name} {/* Use the `name` dynamically */}
                                             </Link>
                                         </li>
                                     ))}
+                                    <hr />
+                                    <Link href={category.more} className='rounded-3 px-3 p-1 mx-2 text-' style={{ border: '1px solid var(--color-tertary-down)' }} onClick={handleClose}>explore more </Link>
                                 </ul>
                             </div>
                         ))}
@@ -182,12 +209,15 @@ const NavBar = () => {
                                             <Link
                                                 href={item.path} // Use the dynamic path here
                                                 className="d-flex align-items-center text-white"
+                                                onClick={handleClose}
                                             >
                                                 <span className="text-tertary me-2">≻</span>
                                                 {item.name} {/* Use the `name` dynamically */}
                                             </Link>
                                         </li>
                                     ))}
+                                    <hr />
+                                    <Link href={category.more} className='rounded-3 px-3 p-1 mx-2 text-' style={{ border: '1px solid var(--color-tertary-down)' }} onClick={handleClose}>explore more </Link>
                                 </ul>
                             </div>
                         ))}
@@ -215,12 +245,15 @@ const NavBar = () => {
                             </button>
                         </div>) : (
                         <div className="book-now col-6 d-flex justify-content-end align-items-center">
-                            <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none text-black w-auto me-2">
+                            <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none bg-black text-white me-2" onClick={handleShowSearch}>
+                                <FaSearch />
+                            </button>
+                            {/* <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none text-black w-auto me-2">
                                 <IoCallSharp className='text-black' />
                             </button>
                             <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none text-black w-auto me-2">
                                 <RiWhatsappFill className='text-black' />
-                            </button>
+                            </button> */}
                             <button className="rounded-4 text-black text-uppercase d-flex align-items-center justify-content-center gap-2">
                                 <FaTaxi className='text-white' /> book now
                             </button>
@@ -481,6 +514,23 @@ const NavBar = () => {
                     <Logo childStyle='text-white text-center' parentStyle='text-tertary text-center' />
                 </div>
             </div>
+
+
+            {/* search model */}
+            <Modal size='lg' show={showSearch} style={{ padding: '16px' }} onHide={handleCloseSearch} className='search-modal'>
+                <div className='d-flex flex-column w-auto'>
+                    <h2 className='text-capitalize w-100 text-center fw-normal d-flex justify-content-center align-items-center gap-2'> <hr style={{ borderColor: 'var(--color-tertary)' }} />quick <span className='color-tertary fw-bold'>search</span> <hr style={{ borderColor: 'var(--color-tertary)' }} /></h2>
+                    <p>what exactly you are looking for?</p>
+                </div>
+                <Modal.Dialog style={{ width: '100%' }} >
+                    <Modal.Body style={{ width: '100%' }}>
+                        <SearchBar />
+                    </Modal.Body>
+                </Modal.Dialog>
+                <Button onClick={handleCloseSearch} className='bg-black rounded-5 text-white d-flex jutify-content-center align-items center p-3 border-0'>
+                    <IoClose />
+                </Button>
+            </Modal >
         </>
     )
 }

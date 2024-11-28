@@ -1,79 +1,93 @@
-const JaipurCityTour = '/Images/Card/jaipur-amer-fort.jpg';
-const AjmerPushkar = '/Images/Card/ajmer-pushkar.jpg';
-const BhangarhFort = '/Images/Card/bhangarh-ghost-fort.jpg';
-const SonarFort = '/Images/Card/Sonar-Fort.jpg';
-const Sunset = '/Images/Card/nahargarh-fort.jpg';
-const UdaipurLake = '/Images/Card/udaipur-lake.jpg';
-const Jaisamer = '/Images/Card/jaisalmer-tent-stay.jpg';
-const JaisamerDesert = '/Images/Card/sam-sand-dunes.jpg';
-const MountAbu = '/Images/Card/mount-abu.jpg';
-
-const dayTours = '/Images/Card/day-tour-ranthambore.jpg';
-const sightseeingTours = '/Images/Card/sightseeing-amer.jpg';
-const rajasthanTourByCar = '/Images/Card/jaisalmer-camels.jpg';
-
-// for outstation
-const AnasagarLake = '/Images/card/anasagar-lake.jpg';
-const Beawar = '/Images/card/beawar.jpg';
-const Bundi = '/Images/card/bundi.jpg';
-const Kota = '/Images/card/kota.jpg';
-const Jhalawar = '/Images/card/jhalawar.jpg';
-const Jalor = '/Images/card/jalore.jpg';
-const Bharatpur = '/Images/card/bharatpur.jpg';
-const Barmer = '/Images/card/barmer.jpg';
-const Chittorgarh = '/Images/card/chittorgarh-tour.jpg';
-const Nasirabad = '/Images/card/nasirabad.jpg';
-const Nagaur = '/Images/card/nagaur.png';
-const khatushyamji = '/Images/card/khatushyamji.jpeg';
-const Salasar = '/Images/card/salasar.jpg';
-const MehandipurBalaij = '/Images/card/mehandipur-balaji.jpg';
-const Jodhpur = '/Images/card/jodhpur-tour.jpg';
-const PushkarLake = '/Images/card/pushkar-lake.jpg';
-const Jaisalmer = '/Images/card/jaisalmer-tour.jpg';
-const Ranthambhore = '/Images/card/ranthambore.jpg';
-const Jhunjhunu = '/Images/card/jhunjhunu.jpg';
-const Churu = '/Images/card/churu.jpg';
-const Bikaner = '/Images/card/bikaner-tour.jpg';
-const AgraFort = '/Images/card/agra-fort.jpg';
-const Delhi = '/Images/card/delhi.jpg';
-const Banasthali = '/Images/card/Banasthali2.jpg';
-const Laxmangarh = '/Images/card/laxmangarh2.jpg';
-const Pilani = '/Images/card/pilani2.jpg';
-const Vaishnodevi = '/Images/card/vaishnodevi2.jpg';
-const Manali = '/Images/card/manali2.jpg';
-const Amarnath = '/Images/card/amarnath2.jpg';
-const Chardham = '/Images/card/chardham2.jpeg';
-const Alwar = '/Images/card/alwar2.jpg';
-const Dausa = '/Images/card/dausa2.jpg';
-const Shimla = '/Images/card/shimla2.jpg';
-const Nainital = '/Images/card/nainital2.jpg';
-const Udaipur = '/Images/card/udaipur-tour.jpg';
-const Kuchaman = '/Images/card/kuchaman2.jpg';
-const RaniSethi = '/Images/card/Rani-sati-temple2.jpg';
-const Gurugram = '/Images/card/gurugram2.jpg';
-const JimCorbett = '/Images/card/jim-corbett2.jpg';
-const Baran = '/Images/card/baran2.jpg';
-const Sariska = '/Images/card/sariska-alwar.jpg';
-const Ujjain = '/Images/card/ujjain2.jpg';
-const Haridwar = '/Images/card/haridwar2.jpg';
-const JaipurAirport = '/Images/card/jaipur-airport.jpg';
-const JaipurRailwayStation = '/Images/card/jaipur-railway-station.jpg';
-const CityPalace = '/Images/card/city-palace-jaipur.jpg';
-const JaipurHawaMahal = '/Images/card/Hawa-Mahal-Jaipur.jpg';
-const AbhaneriStepWall = '/Images/card/abhaneri-stepwell-jaipur.jpg';
-const Bhangarh = '/Images/card/bhangarh-jaipur.jpg';
-const Samode = '/Images/card/samode-village-jaipur.jpg';
-const MandawaHaweli = '/Images/card/mandawa-haweli.png';
-const JaipurAmberFort = '/Images/card/Amer-Fort-Jaipur.webp';
-const JaipurNahargarh = '/Images/card/Nahargarh-fort-jaipur.webp';
-const JaipurAlberthall = '/Images/card/albert-hall-jaipur.webp';
-const JaipurJalmahal = '/Images/card/jal-mahal-jaipur.webp';
-const JaipurJhalana = '/Images/card/jhalana-safari-jaipur.webp';
-const JaipurPatrikaGate = '/Images/card/patrika-gate-jaipur.webp';
-const JaipurMasalaChouk = '/Images/card/masala-chowk-jaipur.webp';
-const JaipurTemple = '/Images/card/govind-devji-jaipur.webp';
-const JaipurPinkCity = '/Images/card/pinkcity-jaipur.webp';
-const JaipurJantarMantar = '/Images/card/jantar-mantar-jaipur.webp';
+export const JaipurCityTour = '/Images/Card/jaipur-amer-fort.jpg';
+export const AjmerPushkar = '/Images/Card/ajmer-pushkar.jpg';
+export const BhangarhFort = '/Images/Card/bhangarh-ghost-fort.jpg';
+export const SonarFort = '/Images/Card/Sonar-Fort.jpg';
+export const Sunset = '/Images/Card/nahargarh-fort.jpg';
+export const UdaipurLake = '/Images/Card/udaipur-lake.jpg';
+export const Jaisamer = '/Images/Card/jaisalmer-tent-stay.jpg';
+export const JaisamerDesert = '/Images/Card/sam-sand-dunes.jpg';
+export const MountAbu = '/Images/Card/mount-abu.jpg';
+export const dayTours = '/Images/Card/day-tour-ranthambore.jpg';
+export const sightseeingTours = '/Images/Card/sightseeing-amer.jpg';
+export const rajasthanTourByCar = '/Images/Card/jaisalmer-camels.jpg';
+export const AnasagarLake = '/Images/Card/anasagar-lake.jpg';
+export const Beawar = '/Images/Card/beawar.jpg';
+export const Bundi = '/Images/Card/bundi.jpg';
+export const Kota = '/Images/Card/kota.jpg';
+export const Jhalawar = '/Images/Card/jhalawar.jpg';
+export const Jalor = '/Images/Card/jalore.jpg';
+export const Bharatpur = '/Images/Card/bharatpur.jpg';
+export const Barmer = '/Images/Card/barmer.jpg';
+export const Chittorgarh = '/Images/Card/chittorgarh-tour.jpg';
+export const Nasirabad = '/Images/Card/nasirabad.jpg';
+export const Nagaur = '/Images/Card/nagaur.png';
+export const khatushyamji = '/Images/Card/khatushyamji.jpeg';
+export const Salasar = '/Images/Card/salasar.jpg';
+export const MehandipurBalaij = '/Images/Card/mehandipur-balaji.jpg';
+export const Jodhpur = '/Images/Card/jodhpur-tour.jpg';
+export const PushkarLake = '/Images/Card/pushkar-lake.jpg';
+export const Jaisalmer = '/Images/Card/jaisalmer-tour.jpg';
+export const Ranthambhore = '/Images/Card/ranthambore.jpg';
+export const Jhunjhunu = '/Images/Card/jhunjhunu.jpg';
+export const Churu = '/Images/Card/churu.jpg';
+export const Bikaner = '/Images/Card/bikaner-tour.jpg';
+export const AgraFort = '/Images/Card/agra-fort.jpg';
+export const Delhi = '/Images/Card/delhi.jpg';
+export const Banasthali = '/Images/Card/Banasthali2.jpg';
+export const Laxmangarh = '/Images/Card/laxmangarh2.jpg';
+export const Pilani = '/Images/Card/pilani2.jpg';
+export const Vaishnodevi = '/Images/Card/vaishnodevi2.jpg';
+export const Manali = '/Images/Card/manali2.jpg';
+export const Amarnath = '/Images/Card/amarnath2.jpg';
+export const Chardham = '/Images/Card/chardham2.jpeg';
+export const Alwar = '/Images/Card/alwar2.jpg';
+export const Dausa = '/Images/Card/dausa2.jpg';
+export const Shimla = '/Images/Card/shimla2.jpg';
+export const Nainital = '/Images/Card/nainital2.jpg';
+export const Udaipur = '/Images/Card/udaipur-tour.jpg';
+export const Kuchaman = '/Images/Card/kuchaman2.jpg';
+export const RaniSethi = '/Images/Card/Rani-sati-temple2.jpg';
+export const Gurugram = '/Images/Card/gurugram2.jpg';
+export const JimCorbett = '/Images/Card/jim-corbett2.jpg';
+export const Baran = '/Images/Card/baran2.jpg';
+export const Sariska = '/Images/Card/sariska-alwar.jpg';
+export const Ujjain = '/Images/Card/ujjain2.jpg';
+export const Haridwar = '/Images/Card/haridwar2.jpg';
+export const JaipurAirport = '/Images/Card/jaipur-airport.jpg';
+export const JaipurRailwayStation = '/Images/Card/jaipur-railway-station.jpg';
+export const CityPalace = '/Images/Card/city-palace-jaipur.jpg';
+export const JaipurHawaMahal = '/Images/Card/Hawa-Mahal-Jaipur.jpg';
+export const AbhaneriStepWall = '/Images/Card/abhaneri-stepwell-jaipur.jpg';
+export const Bhangarh = '/Images/Card/bhangarh-jaipur.jpg';
+export const Samode = '/Images/Card/samode-village-jaipur.jpg';
+export const MandawaHaweli = '/Images/Card/mandawa-haweli.png';
+export const JaipurAmberFort = '/Images/Card/Amer-Fort-Jaipur.webp';
+export const JaipurNahargarh = '/Images/Card/Nahargarh-fort-jaipur.webp';
+export const JaipurAlberthall = '/Images/Card/albert-hall-jaipur.webp';
+export const JaipurJalmahal = '/Images/Card/jal-mahal-jaipur.webp';
+export const JaipurJhalana = '/Images/Card/jhalana-safari-jaipur.webp';
+export const JaipurPatrikaGate = '/Images/Card/patrika-gate-jaipur.webp';
+export const JaipurMasalaChouk = '/Images/Card/masala-chowk-jaipur.webp';
+export const JaipurTemple = '/Images/Card/govind-devji-jaipur.webp';
+export const JaipurPinkCity = '/Images/Card/pinkcity-jaipur.webp';
+export const JaipurJantarMantar = '/Images/Card/jantar-mantar-jaipur.webp';
+export const MountAbu2 = '/Images/Card/mount-abu-tour2.jpg';
+export const Kumbhalgarh = '/Images/Card/kumbhalgarh-fort.jpg';
+export const Bhiwadi = '/Images/Card/bhiwadi2.jpg';
+export const Bhilwara = '/Images/Card/bhilwara2.jpg';
+export const Neemrana = '/Images/Card/neemrana.jpg';
+export const Pali = '/Images/Card/pali.jpg';
+export const Ranakpur = '/Images/Card/ranakpur2.jpg';
+export const Jaigarh = '/Images/Card/jaigarh-fort-jaipur.jpg';
+export const Sargasuli = '/Images/Card/sargasuli-jaipur.jpg';
+export const SisodiyaRaniBagh = '/Images/Card/sisodiya-garden-jaipur.jpg';
+export const GarhGanesh = '/Images/Card/garh-ganesh-jaipur.jpg';
+export const JaipurGator = '/Images/Card/gaitore-jaipur.jpg';
+export const JaipurGalta = '/Images/Card/galtaji-jaipur.jpg';
+export const JaipurRamniwas = '/Images/Card/ramniwas-bag-jaipur.jpg';
+export const JaipurBiological = '/Images/Card/biological-park-jaipur.jpg';
+export const JaipurLionSafari = '/Images/Card/lion-safari-jaipur.jpg';
+export const JaipurChokhiDhaani = '/Images/Card/chokhi-dhani-jaipur.jpg';
 
 // 6 Packages
 export const TourPackagesByCategory = [
@@ -498,7 +512,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Amer Fort', 'Ajmer Dargah', 'Pushkar Lake'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: AjmerPushkar,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -510,7 +524,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Amer Fort', 'Hawa Mahal', 'Ranthambhore National Park'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Ranthambhore,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -522,7 +536,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Amer Fort', 'Hawa Mahal', 'Mandawa Haweli'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: MandawaHaweli,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -534,7 +548,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Jaipur', 'Ajmer', 'Pushkar', 'Jodhpur'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Jodhpur,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -546,7 +560,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Jodhpur', 'Jaisalmer', 'Thar Desert'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Jaisalmer,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -558,7 +572,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Jaipur', 'Ajmer', 'Pushkar', 'Chittorgarh', 'Udaipur'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: UdaipurLake,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -570,7 +584,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Jaipur', 'Chittorgarh', 'Udaipur', 'Mount Abu'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: MountAbu,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -582,7 +596,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Jaipur', 'Ajmer', 'Pushkar', 'Jodhpur', 'Jaisalmer'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: AnasagarLake,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -594,7 +608,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Jaipur', 'Bikaner', 'Jaisalmer'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: JaisamerDesert,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -606,7 +620,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Jaipur', 'Chittorgarh', 'Udaipur', 'Jodhpur', 'Jaisalmer'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Chittorgarh,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -618,7 +632,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Jaipur', 'Ajmer', 'Pushkar', 'Udaipur', 'Mount Abu'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: JaipurAmberFort,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -630,7 +644,7 @@ export const RajasthanTourByCars = [
     placesCovered: ['Jaipur', 'Bikaner', 'Jaisalmer', 'Jodhpur'],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Jodhpur,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -649,7 +663,7 @@ export const RajasthanTourByCars = [
     ],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Jaisalmer,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -668,7 +682,7 @@ export const RajasthanTourByCars = [
     ],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Bikaner,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -710,7 +724,7 @@ export const RajasthanTourByCars = [
     ],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: MountAbu2,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -735,7 +749,7 @@ export const RajasthanTourByCars = [
     ],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Kumbhalgarh,
     alt: null,
     imgTitle: null,
     navigate: '/',
@@ -747,11 +761,11 @@ export const RajasthanTourByCars = [
     placesCovered: [''],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: AbhaneriStepWall,
     alt: null,
     imgTitle: null,
     navigate: '/',
-    category: null,
+    category: 'excursion',
     destination: null,
   },
   {
@@ -759,11 +773,11 @@ export const RajasthanTourByCars = [
     placesCovered: [''],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: BhangarhFort,
     alt: null,
     imgTitle: null,
     navigate: '/',
-    category: null,
+    category: 'excursion',
     destination: null,
   },
   {
@@ -771,11 +785,11 @@ export const RajasthanTourByCars = [
     placesCovered: [''],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Sariska,
     alt: null,
     imgTitle: null,
     navigate: '/',
-    category: null,
+    category: 'excursion',
     destination: null,
   },
   {
@@ -787,7 +801,7 @@ export const RajasthanTourByCars = [
     alt: null,
     imgTitle: null,
     navigate: '/',
-    category: null,
+    category: 'excursion',
     destination: null,
   },
   {
@@ -795,11 +809,11 @@ export const RajasthanTourByCars = [
     placesCovered: [''],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Ranthambhore,
     alt: null,
     imgTitle: null,
     navigate: '/',
-    category: null,
+    category: 'excursion',
     destination: null,
   },
   {
@@ -807,11 +821,11 @@ export const RajasthanTourByCars = [
     placesCovered: [''],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Samode,
     alt: null,
     imgTitle: null,
     navigate: '/',
-    category: null,
+    category: 'excursion',
     destination: null,
   },
   {
@@ -819,11 +833,11 @@ export const RajasthanTourByCars = [
     placesCovered: [''],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: AjmerPushkar,
     alt: null,
     imgTitle: null,
     navigate: '/',
-    category: null,
+    category: 'excursion',
     destination: null,
   },
   {
@@ -835,7 +849,7 @@ export const RajasthanTourByCars = [
     alt: null,
     imgTitle: null,
     navigate: '/',
-    category: null,
+    category: 'excursion',
     destination: null,
   },
   {
@@ -843,11 +857,11 @@ export const RajasthanTourByCars = [
     placesCovered: [''],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: khatushyamji,
     alt: null,
     imgTitle: null,
     navigate: '/',
-    category: null,
+    category: 'excursion',
     destination: null,
   },
   {
@@ -855,11 +869,11 @@ export const RajasthanTourByCars = [
     placesCovered: [''],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: Salasar,
     alt: null,
     imgTitle: null,
     navigate: '/',
-    category: null,
+    category: 'excursion',
     destination: null,
   },
   {
@@ -867,11 +881,11 @@ export const RajasthanTourByCars = [
     placesCovered: [''],
     price: null,
     duration: null,
-    imgSrc: JaipurCityTour,
+    imgSrc: MandawaHaweli,
     alt: null,
     imgTitle: null,
     navigate: '/',
-    category: null,
+    category: 'excursion',
     destination: null,
   },
 ];
@@ -974,7 +988,7 @@ export const OutStationTourPackages = [
     imgSrc: Beawar,
     alt: null,
     imgTitle: null,
-    navigate: '//jaipur-to-beawar-taxi',
+    navigate: '/jaipur-to-beawar-taxi',
     category: null,
     destination: null,
   },
@@ -986,7 +1000,7 @@ export const OutStationTourPackages = [
     imgSrc: Bundi,
     alt: null,
     imgTitle: null,
-    navigate: '//jaipur-to-bundi-taxi',
+    navigate: '/jaipur-to-bundi-taxi',
     category: null,
     destination: null,
   },
@@ -998,7 +1012,7 @@ export const OutStationTourPackages = [
     imgSrc: Kota,
     alt: null,
     imgTitle: null,
-    navigate: '//jaipur-to-kota-taxi',
+    navigate: '/jaipur-to-kota-taxi',
     category: null,
     destination: null,
   },
@@ -1494,7 +1508,7 @@ export const JaipurLocalTaxiTours = [
     imgSrc: JaipurAirport,
     alt: null,
     imgTitle: null,
-    navigate: '//airport-cab-service',
+    navigate: '/airport-cab-service',
     category: null,
     destination: null,
   },
@@ -1549,3 +1563,438 @@ export const JaipurLocalTaxiTours = [
 ];
 
 // Net: 113 packages
+
+export const allTourPackages = [
+  ...JaipurSightSeeingTours,
+  ...JaipurDayTours,
+  ...RajasthanTourByCars,
+  ...OneWayTaxiTours,
+  ...OutStationTourPackages,
+  ...JaipurLocalTaxiTours,
+];
+
+export const PlacesToVisitInJaipur = [
+  {
+    title: 'Amer Fort',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurAmberFort,
+    alt: null,
+    imgTitle: null,
+    navigate: '/amer-fort-jaipur',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Jaigarh Fort',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Jaigarh,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Nahargarh Fort',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurNahargarh,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'City Palace',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: CityPalace,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Hawa Mahal',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurHawaMahal,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Walled Pinkcity',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurPinkCity,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Jal Mahal',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurJalmahal,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Sargasuli',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Sargasuli,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Sisodiya Rani Garden',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: SisodiyaRaniBagh,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Garh Ganesh Temple',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: GarhGanesh,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Gaitore',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurGator,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Govind Dev Ji',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurTemple,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Monkey Temple - Galta Ji',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurGalta,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Albert Hall Museum',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurAlberthall,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Ram Niwas Garden',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurRamniwas,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Masala Chowk',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurMasalaChouk,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Patrika Gate',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurPatrikaGate,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Jhalana Leopard Safari',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurJhalana,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Nahargarh Biological Park',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurBiological,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Lion Safari',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurLionSafari,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Chokhi Dhani - Ethinic Village Resort',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurChokhiDhaani,
+    alt: null,
+    imgTitle: null,
+    navigate: '/airport-cab-service',
+    category: null,
+    destination: null,
+  },
+];
+
+export const PlacesToVisitInRajasthan = [
+  {
+    title: 'Jaipur',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurAmberFort,
+    alt: null,
+    imgTitle: null,
+    navigate: '/jaipur',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Bikaner',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Bikaner,
+    alt: null,
+    imgTitle: null,
+    navigate: '/bikaner',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Jaisalmer',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Jaisalmer,
+    alt: null,
+    imgTitle: null,
+    navigate: '/jaisalmer',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Jodhpur',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Jodhpur,
+    alt: null,
+    imgTitle: null,
+    navigate: '/jodhpur',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Udaipur',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Udaipur,
+    alt: null,
+    imgTitle: null,
+    navigate: '/udaipur',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Mount Abu',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: MountAbu,
+    alt: null,
+    imgTitle: null,
+    navigate: '/mount-abu',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Ranthambhore',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Ranthambhore,
+    alt: null,
+    imgTitle: null,
+    navigate: '/ranthambore',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Alwar',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Alwar,
+    alt: null,
+    imgTitle: null,
+    navigate: '/alwar',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Bharatpur',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Bharatpur,
+    alt: null,
+    imgTitle: null,
+    navigate: '/bharatpur',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Kota',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Kota,
+    alt: null,
+    imgTitle: null,
+    navigate: '/kota',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Bundi',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Bundi,
+    alt: null,
+    imgTitle: null,
+    navigate: '/bundi',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Ranakpur',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Ranakpur,
+    alt: null,
+    imgTitle: null,
+    navigate: '/ranakpur',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Mandawa',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: MandawaHaweli,
+    alt: null,
+    imgTitle: null,
+    navigate: '/mandawa',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Pali',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Pali,
+    alt: null,
+    imgTitle: null,
+    navigate: '/pali',
+    category: null,
+    destination: null,
+  },
+];

@@ -20,7 +20,7 @@ const page = () => {
               </div>
             </div>
             <div className="w-100 d-flex justify-content-center align-items-center flex-wrap">
-              {CarRentalsByCategory.slice(0, 6).map((pkg, index) => (
+              {CarRentalsByCategory.map((pkg, index) => (
                 <div
                   key={index}
                   className="col-12 col-sm-6 col-md-6 col-lg-4 my-2 d-flex align-items-center px-2"

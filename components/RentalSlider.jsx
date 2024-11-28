@@ -5,6 +5,7 @@ import { FaArrowRight, FaFire, FaSnowflake, FaSuitcase, FaUserFriends } from 're
 import SlickSlider from './SlickSlider';
 import Image from 'next/image';
 import { RiWhatsappFill } from 'react-icons/ri';
+import Link from 'next/link';
 
 const RentalSlider = ({ rentals }) => {
     return (
@@ -32,42 +33,37 @@ const RentalSlider = ({ rentals }) => {
                                         </h4>
                                     </div>
                                     <div className="w-100 card-header d-flex justify-content-center gap-4 align-items-start pt-0 package-category py-2">
-                                        <div className="d-flex flex-column justify-content-between align-items-center">
-                                            {' '}
-                                            <FaUserFriends className="icon" />
-                                            <p className="pt-2">4+1</p>
-                                        </div>
-                                        <div className="d-flex flex-column justify-content-center align-items-center">
-                                            <FaSuitcase className="icon" />
-                                            <p className="pt-2">3</p>
-                                        </div>
-                                        <div className="d-flex flex-column justify-content-center align-items-center">
-                                            <FaSnowflake className="icon" />
-                                            <p className="pt-2">AC</p>
-                                        </div>
-                                        <div className="d-flex flex-column justify-content-center align-items-center">
-                                            {' '}
-                                            <FaFire className="icon" />
-                                            <p className="pt-2">Heater</p>
-                                        </div>
+                                        {rental.features.map((feature, index) => (
+                                            <div
+                                                key={index}
+                                                className="d-flex flex-column justify-content-center align-items-center"
+                                            >
+                                                {feature.icon}
+                                                <p className="pt-2">{feature.label}</p>
+                                            </div>
+                                        ))}
                                     </div>
                                     <div className="w-100 card-header d-flex justify-content-between align-items-start flex-column gap-2">
                                         <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-5">
-                                            {rental.priceOne}
+                                            Jaipur local @ ₹{rental.priceOne !== null ? rental.priceOne : "on request"} {rental.priceOne !== null && "per hour"}
                                         </p>
+
                                         <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-5">
-                                            {rental.priceTwo}
+                                            Outstation @ ₹{rental.priceTwo !== null ? rental.priceTwo : "on request"} {rental.priceTwo !== null && "per km"}
                                         </p>
+
                                     </div>
                                     <div className="col-12 d-flex px-0">
                                         <div className="w-100 d-flex justify-content-center align-items-center gap-1">
-                                            <button className="w-100 rounded-4 bg-border text-black text-capitalize">
-                                                view <FaArrowRight />
-                                            </button>
+                                            <Link href={rental.href} className='w-100'>
+                                                <button className="w-100 rounded-4 bg-border text-black text-capitalize">
+                                                    view
+                                                </button>
+                                            </Link>
                                             <button
                                                 className="w-100 rounded-4 text-capitalize"
                                             >
-                                                Enquire <FaArrowRight />
+                                                Enquire
                                             </button>
                                             <a href={whatsappLink}>
                                                 <button
