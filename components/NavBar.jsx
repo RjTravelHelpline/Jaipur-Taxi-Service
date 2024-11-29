@@ -254,7 +254,7 @@ const NavBar = () => {
                             <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none text-black w-auto me-2">
                                 <RiWhatsappFill className='text-black' />
                             </button> */}
-                            <button className="rounded-4 text-black text-uppercase d-flex align-items-center justify-content-center gap-2">
+                            <button className="rounded-3 text-black text-uppercase d-flex align-items-center justify-content-center gap-2">
                                 <FaTaxi className='text-white' /> book now
                             </button>
                         </div>
@@ -263,13 +263,13 @@ const NavBar = () => {
                 {/* header three */}
                 <div className="nav-child row py-2 w-100 bg-black">
                     <ul className="list-inline d-flex justify-content-center align-items-center gap-0 mb-0">
-                        <li className="nav-item text-uppercase">
+                        <li className="nav-item text-capitalize">
                             <Link href="/" className="text-white p-2 px-3">
                                 home
                             </Link>
 
                         </li>
-                        <li className="nav-item text-uppercase">
+                        <li className="nav-item text-capitalize">
                             <Link href="/about-jaipur-taxi-service" className="text-white p-2 px-3">
                                 about us
                             </Link>
@@ -278,7 +278,7 @@ const NavBar = () => {
                         {navItems.map((item, index) => (
                             <li
                                 key={index}
-                                className="nav-item text-uppercase"
+                                className="nav-item text-capitalize"
                                 onMouseEnter={() => handleMouseEnter(index)}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -293,7 +293,7 @@ const NavBar = () => {
                                     </div>
                                 )}
                             </li>))}
-                        <li className="nav-item text-uppercase">
+                        <li className="nav-item text-capitalize">
                             <Link href="/contact-us" className="text-white p-2 px-3">
                                 contact us
                             </Link>
@@ -527,9 +527,9 @@ const NavBar = () => {
                         <SearchBar />
                     </Modal.Body>
                 </Modal.Dialog>
-                <Button onClick={handleCloseSearch} className='bg-black rounded-5 text-white d-flex jutify-content-center align-items center p-3 border-0'>
+                {/* <Button onClick={handleCloseSearch} className='bg-black rounded-5 text-white d-flex jutify-content-center align-items center p-3 border-0'>
                     <IoClose />
-                </Button>
+                </Button> */}
             </Modal >
         </>
     )

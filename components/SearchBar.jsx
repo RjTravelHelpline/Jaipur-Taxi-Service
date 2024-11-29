@@ -5,6 +5,7 @@ import { getPackagesByCategory } from '@/utils/utils';
 import Link from 'next/link';
 import { useState } from 'react';
 import { IoClose } from 'react-icons/io5';
+import { MdOutlineArrowOutward } from 'react-icons/md';
 
 const SearchBar = () => {
     const filteredSuggestions = getPackagesByCategory(allCabRentals, 'popular')
@@ -64,7 +65,7 @@ const SearchBar = () => {
                     </div>
                     <div className="search-suggestions d-flex flex-wrap">
                         {filteredSuggestions.map((suggestion, index) => (
-                            <Link href={suggestion.href} key={index} className="suggestion-item">{suggestion.title}</Link>
+                            <Link href={suggestion.navigate} key={index} className="suggestion-item">{suggestion.title} <span><MdOutlineArrowOutward className='text-tertary' /></span></Link>
                         ))}
                     </div>
                 </>
@@ -72,8 +73,8 @@ const SearchBar = () => {
             {filteredBlogs.length > 0 && (
                 <ul className="search-results mt-3">
                     {filteredBlogs.map((data, index) => (
-                        <li key={index} onClick={() => handleBlogClick(data.navigate)} className="search-item">
-                            {data.title}
+                        <li key={index} onClick={() => handleBlogClick(data.navigate)} className="search-item d-flex justify-content-start gap-2 align-items-center text-capitalize" style={{textDecoration:'underline'}}>
+                            <span><MdOutlineArrowOutward className='text-tertary bg-tertary-down p-2 fs-2 rounded-5' /></span>{data.title}
                         </li>
                     ))}
                 </ul>

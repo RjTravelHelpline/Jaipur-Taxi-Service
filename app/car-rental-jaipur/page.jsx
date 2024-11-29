@@ -1,32 +1,40 @@
+import HeroBanner from '@/components/HeroBanner'
 import { CarRentalsByCategory } from '@/data/cabRentalData'
-import { OutStationTourPackages, TourPackagesByCategory } from '@/data/TourPackagesData'
+import { TourPackagesByCategory } from '@/data/TourPackagesData'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { MdOutlineArrowOutward } from 'react-icons/md'
+const HomeBanner01 = '/Images/Cabs/cab-rental-banner.jpg';
 
 const page = () => {
+  const slides = [
+    {
+      image: HomeBanner01,
+      alt: 'Jaipur Taxi',
+      title: '',
+      heading: 'Jaipur Cab Rental Service',
+      subheading: 'Comfort & Convenience for Every Journey',
+    },
+  ]
   return (
     <>
-      <div className="container-fluid py-5">
+      <HeroBanner slides={slides} />
+      <div className="container-fluid py-4">
         <div className="container">
-          <div className="row justify-content-center align-items-center bydayspackages carRentalsCard px-2">
-            <div className="col-12 col-lg-10 col-sm-12 px-2">
-              <div className="insider rounded-3 p-3">
-                <h1 className='text-capitalize fw-bold text-center'>jaipur car rental</h1>
-                <hr />
-                <h2 className='text-center text-capitalize mb-3'>Affordable car rentals in jaipur</h2>
-              </div>
-            </div>
-            <div className="w-100 d-flex justify-content-center align-items-center flex-wrap">
-              {CarRentalsByCategory.map((pkg, index) => (
+          <div className="row justify-content-center align-items-center  py-4">
+            <h3 className='text-capitalize fw-bold'>our taxi services</h3>
+            <p className='mb-2'>Curated tours designed to suit every travel need and budget</p>
+            <hr />
+            <div className="w-100 d-flex justify-content-between align-items-center flex-wrap px-0 bydayspackages carRentalsCard">
+              {CarRentalsByCategory.slice(0, 6).map((pkg, index) => (
                 <div
                   key={index}
-                  className="col-12 col-sm-6 col-md-6 col-lg-4 my-2 d-flex align-items-center px-2"
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 my-1 d-flex align-items-center pe-2"
                 >
                   <Link href={pkg.navigate} className="text-capitalize">
-                    <Card className="card bg-transparent">
+                    <Card className="card bg-transparent rounded-4">
                       <Image
                         variant="top"
                         src={pkg.imgSrc}
@@ -49,22 +57,20 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid py-4" style={{ background: 'var(--color-tertary-down2)' }}>
+      <div className="container-fluid py-4 bg-tertary-down" >
         <div className="container">
-          <div className="row justify-content-center align-items-center bydayspackages carRentalsCard px-2">
-            <div className="insider rounded-3 p-3">
-              <h3 className='text-capitalize fw-bold'>Featured Tour Packages</h3>
-              <p className='mb-3'>Curated tours designed to suit every travel need and budget</p>
-              <hr />
-            </div>
-            <div className="w-100 d-flex justify-content-center align-items-center flex-wrap">
+          <div className="row justify-content-center align-items-center bydayspackages carRentalsCard py-4">
+            <h3 className='text-capitalize fw-bold'>featured tour packages</h3>
+            <p className='mb-2'>Curated tours designed to suit every travel need and budget</p>
+            <hr />
+            <div className="w-100 d-flex justify-content-between align-items-center flex-wrap px-0">
               {TourPackagesByCategory.slice(3).map((pkg, index) => (
                 <div
                   key={index}
-                  className="col-12 col-sm-6 col-md-6 col-lg-4 my-2 d-flex align-items-center px-2"
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 my-1 d-flex align-items-center pe-2"
                 >
                   <Link href={pkg.navigate} className="text-capitalize">
-                    <Card className="card bg-transparent">
+                    <Card className="card bg-transparent rounded-4">
                       <Image
                         variant="top"
                         src={pkg.imgSrc}
@@ -78,7 +84,6 @@ const page = () => {
                         <h3 className="w-100 text-capitalize mx-1">
                           {pkg.title}
                         </h3>
-
                       </div>
                     </Card>
                   </Link>

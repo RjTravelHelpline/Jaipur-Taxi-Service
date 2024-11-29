@@ -203,7 +203,6 @@ const page = () => {
           </div>
         </div>
       </div>
-
       {/* jaipur taxi for locals */}
       <div className="container-fluid" style={{ background: 'var(--color-tertary-down2)' }}>
         <div className="container">

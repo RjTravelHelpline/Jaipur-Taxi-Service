@@ -22,8 +22,8 @@
   --breadCrumb-color: #ffffff80;
   --active-breadCrumb-color: #ffffff1f;
   /* Font Sizes */
-  --font-size-h1: clamp(2rem, 3vw, 2rem);
-  --font-size-h2: clamp(1.4rem, 2vw, 2rem);
+  --font-size-h1: clamp(2rem, 2.4vw, 1.8rem);
+  --font-size-h2: clamp(1.4rem, 2vw, 1.65rem);
   --font-size-h3: clamp(1.1rem, 1.56vw, 1.5rem);
   --font-size-h4: clamp(0.95rem, 1.25vw, 1.2rem);
   --font-size-p: clamp(0.85rem, 1.1vw, 1rem);
@@ -397,4 +397,66 @@ $padding-sizes: (
       margin-right: $size !important;
     }
   }
+}
+
+/* Rounded Top Corners */
+.rounded-top-0 {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.rounded-top-1 {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+}
+
+.rounded-top-2 {
+  border-top-left-radius: 0.375rem !important;
+  border-top-right-radius: 0.375rem !important;
+}
+
+.rounded-top-3 {
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+}
+
+.rounded-top-4 {
+  border-top-left-radius: 0.75rem !important;
+  border-top-right-radius: 0.75rem !important;
+}
+
+.rounded-top-5 {
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
+}
+
+/* Rounded Bottom Corners */
+.rounded-bottom-0 {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.rounded-bottom-1 {
+  border-bottom-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+
+.rounded-bottom-2 {
+  border-bottom-left-radius: 0.375rem !important;
+  border-bottom-right-radius: 0.375rem !important;
+}
+
+.rounded-bottom-3 {
+  border-bottom-left-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+}
+
+.rounded-bottom-4 {
+  border-bottom-left-radius: 0.75rem !important;
+  border-bottom-right-radius: 0.75rem !important;
+}
+
+.rounded-bottom-5 {
+  border-bottom-left-radius: 1rem !important;
+  border-bottom-right-radius: 1rem !important;
 }

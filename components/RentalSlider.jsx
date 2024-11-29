@@ -55,7 +55,7 @@ const RentalSlider = ({ rentals }) => {
                                     </div>
                                     <div className="col-12 d-flex px-0">
                                         <div className="w-100 d-flex justify-content-center align-items-center gap-1">
-                                            <Link href={rental.href} className='w-100'>
+                                            <Link href={rental.navigate} className='w-100'>
                                                 <button className="w-100 rounded-4 bg-border text-black text-capitalize">
                                                     view
                                                 </button>
