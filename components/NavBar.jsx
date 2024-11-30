@@ -1,8 +1,10 @@
 "use client";
 import React, { useEffect, useState } from 'react'
 import {
-    FaArrowUpRightDots,
+    FaArrowRightToCity,
+    FaChevronDown,
     FaGripLines,
+    FaRegBookmark,
     FaTaxi,
 } from 'react-icons/fa6';
 import {
@@ -12,12 +14,11 @@ import {
 import Logo from './Logo'
 import Link from 'next/link';
 import { cabRental, placesToVisit, taxiFares, tempoAndBus, tourData } from '@/data/HeaderData';
-import { IoCallSharp, IoClose } from "react-icons/io5";
-import { RiWhatsappFill } from "react-icons/ri";
-import { company } from '@/data/FooterData';
-import { FaArrowRight, FaSearch } from 'react-icons/fa';
-import { Button, Modal } from 'react-bootstrap';
+import { FaSearch } from 'react-icons/fa';
+import { Modal } from 'react-bootstrap';
 import SearchBar from './SearchBar';
+import { BiChevronDown, BiTaxi } from 'react-icons/bi';
+import { PiTaxiFill } from 'react-icons/pi';
 
 const NavBar = () => {
 
@@ -228,7 +229,6 @@ const NavBar = () => {
     ];
     return (
         <>
-
             <div className="m-auto nav container-fluid d-flex justify-content-center flex-column align-items-center px-0">
                 {/* header two */}
                 <div className="nav-child w-100 row bg-white px-lg-3 px-sm-2 py-lg-2 py-sm-2 justify-content-center align-items-center">
@@ -237,6 +237,9 @@ const NavBar = () => {
                     </div>
                     {ismobile ? (
                         <div className="col-6 d-flex justify-content-end align-items-center">
+                            <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none me-1 search-button bg-tertary-down" onClick={handleShowSearch}>
+                                <FaSearch className=' text-tertary' />
+                            </button>
                             <button
                                 className="d-flex justify-content-center align-items-center p-3 rounded-5 bg-black shadow-none mobile-ham w-auto"
                                 onClick={handleNavigation}
@@ -245,61 +248,64 @@ const NavBar = () => {
                             </button>
                         </div>) : (
                         <div className="book-now col-6 d-flex justify-content-end align-items-center">
-                            <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none bg-black text-white me-2" onClick={handleShowSearch}>
-                                <FaSearch />
+                            <button className="d-flex justify-content-center align-items-center rounded-3 shadow-none me-2 search-button bg-border w-50" onClick={handleShowSearch}>
+                                <FaSearch className='me-2 text-tertary' />
+                                <div className="w-100 d-flex justify-content-start align-items-center">
+                                    <p className='mb-0 text-capitalize w-auto'>search from here</p>
+                                </div>
                             </button>
-                            {/* <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none text-black w-auto me-2">
-                                <IoCallSharp className='text-black' />
-                            </button>
-                            <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none text-black w-auto me-2">
-                                <RiWhatsappFill className='text-black' />
-                            </button> */}
-                            <button className="rounded-3 text-black text-uppercase d-flex align-items-center justify-content-center gap-2">
-                                <FaTaxi className='text-white' /> book now
+                            <button className="rounded-3 text-black text-capitalize d-flex align-items-center justify-content-center" style={{ fontWeight: '500' }}>
+                                <PiTaxiFill className='text-white me-2' /> book now
+                                <div className="lens-flare"></div>
                             </button>
                         </div>
                     )}
                 </div>
                 {/* header three */}
-                <div className="nav-child row py-2 w-100 bg-black">
-                    <ul className="list-inline d-flex justify-content-center align-items-center gap-0 mb-0">
-                        <li className="nav-item text-capitalize">
-                            <Link href="/" className="text-white p-2 px-3">
-                                home
-                            </Link>
-
-                        </li>
-                        <li className="nav-item text-capitalize">
-                            <Link href="/about-jaipur-taxi-service" className="text-white p-2 px-3">
-                                about us
-                            </Link>
-
-                        </li>
-                        {navItems.map((item, index) => (
-                            <li
-                                key={index}
-                                className="nav-item text-capitalize"
-                                onMouseEnter={() => handleMouseEnter(index)}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <Link href="#" className={`text-white nav-tab-link p-2 px-3 ${activeIndex === index ? 'nav-active-link' : ''}`}>
-                                    {item.title}
+                <div className="nav-child row py-2 w-100 bg-white" style={{ borderTop: '1px solid var(--color-border)' }}>
+                    <div className="col-4 nav-right">
+                        <ul className="list-inline d-flex justify-content-start align-items-center gap-0 mb-0 px-2">
+                            <li className="nav-item text-capitalize">
+                                <Link href="/" className="text-white p-2 px-3 nav-tab-link">
+                                    home
                                 </Link>
-                                {activeIndex === index && (
-                                    <div className="mega-menu">
-                                        <div className="insider p-5">
-                                            {item.content}
+                            </li>
+                            <li className="nav-item text-capitalize">
+                                <Link href="/about-jaipur-taxi-service" className="text-white p-2 px-3 nav-tab-link">
+                                    about us
+                                </Link>
+                            </li>
+                            <li className="nav-item text-capitalize">
+                                <Link href="/contact-us" className="text-white p-2 px-3 nav-tab-link">
+                                    contact us
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="col-8 nav-right">
+                        <ul className="list-inline d-flex justify-content-end align-items-center gap-0 mb-0 px-2">
+                            {navItems.map((item, index) => (
+                                <li
+                                    key={index}
+                                    className="nav-item text-capitalize"
+                                    onMouseEnter={() => handleMouseEnter(index)}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    <Link href="#" className={`text-nowrap text-white nav-tab-link p-2 px-3 ${activeIndex === index ? 'nav-active-link' : ''}`}>
+                                        {item.title}  <BiChevronDown
+                                            className={`chevron-icon ${activeIndex === index ? 'rotated' : ''}`}
+                                        />
+                                    </Link>
+                                    {activeIndex === index && (
+                                        <div className="mega-menu">
+                                            <div className="insider p-5">
+                                                {item.content}
+                                            </div>
                                         </div>
-                                    </div>
-                                )}
-                            </li>))}
-                        <li className="nav-item text-capitalize">
-                            <Link href="/contact-us" className="text-white p-2 px-3">
-                                contact us
-                            </Link>
-
-                        </li>
-                    </ul>
+                                    )}
+                                </li>))}
+                        </ul>
+                    </div>
                 </div>
             </div>
             {/* mobile navigation */}
@@ -515,14 +521,9 @@ const NavBar = () => {
                 </div>
             </div>
 
-
             {/* search model */}
             <Modal size='lg' show={showSearch} style={{ padding: '16px' }} onHide={handleCloseSearch} className='search-modal'>
-                <div className='d-flex flex-column w-auto'>
-                    <h2 className='text-capitalize w-100 text-center fw-normal d-flex justify-content-center align-items-center gap-2'> <hr style={{ borderColor: 'var(--color-tertary)' }} />quick <span className='color-tertary fw-bold'>search</span> <hr style={{ borderColor: 'var(--color-tertary)' }} /></h2>
-                    <p>what exactly you are looking for?</p>
-                </div>
-                <Modal.Dialog style={{ width: '100%' }} >
+                <Modal.Dialog style={{ width: '100%' }} className='my-0' >
                     <Modal.Body style={{ width: '100%' }}>
                         <SearchBar />
                     </Modal.Body>

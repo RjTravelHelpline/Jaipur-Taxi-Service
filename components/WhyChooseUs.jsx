@@ -12,8 +12,8 @@ const WhyChooseUs = () => {
                     autoplay: false,
                 }}
             >
-                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-center">
-                    <div className="why-us-card col1 d-flex w-100 justify-content-between align-items-start gap-3 flex-column">
+                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-stretch why-us-col">
+                    <div className="why-us-card col1 d-flex w-100 justify-content-between align-items-start gap-3 flex-column rounded-4 h-100" style={{height:'100% !important'}}>
                         <div className="icon bg-black p-3 d-flex text-tertary rounded-5">
                             <MdSanitizer className="" />
                         </div>
@@ -25,8 +25,8 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-center">
-                    <div className="why-us-card col2 d-flex w-100 justify-content-between align-items-start gap-3 flex-column">
+                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-stretch why-us-col">
+                    <div className="why-us-card col2 d-flex w-100 justify-content-between align-items-start gap-3 flex-column rounded-4 h-100" style={{height:'100% !important'}}>
                         <div className="icon bg-black p-3 d-flex text-tertary rounded-5">
                             <FaCar className="" />
                         </div>
@@ -38,8 +38,8 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-center">
-                    <div className="why-us-card col2 d-flex w-100 justify-content-between align-items-start gap-3 flex-column">
+                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-stretch why-us-col">
+                    <div className="why-us-card col2 d-flex w-100 justify-content-between align-items-start gap-3 flex-column rounded-4 h-100" style={{height:'100% !important'}}>
                         <div className="icon bg-black p-3 d-flex text-tertary rounded-5">
                             <FaUserTie className="" />
                         </div>
@@ -51,8 +51,8 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-center">
-                    <div className="why-us-card col1 d-flex w-100 h-100 justify-content-between align-items-start gap-3 flex-column">
+                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-stretch why-us-col">
+                    <div className="why-us-card col1 d-flex w-100 h-100 justify-content-between align-items-start gap-3 flex-column rounded-4 h-100" style={{height:'100% !important'}}>
                         <div className="icon bg-black p-3 d-flex text-tertary rounded-5">
                             <FaMoneyBillWave className="" />
                         </div>
@@ -64,8 +64,8 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-center">
-                    <div className="why-us-card col1 d-flex w-100 h-100 justify-content-between align-items-start gap-3 flex-column">
+                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-stretch why-us-col">
+                    <div className="why-us-card col1 d-flex w-100 h-100 justify-content-between align-items-start gap-3 flex-column rounded-4 h-100" style={{height:'100% !important'}}>
                         <div className="icon bg-black p-3 d-flex text-tertary rounded-5">
                             <FaPlane className="" />
                         </div>
@@ -77,8 +77,8 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-center">
-                    <div className="why-us-card col1 d-flex w-100 h-100 justify-content-between align-items-start gap-3 flex-column">
+                <div className="col-lg-4 col-md-6 col-12 mb-lg-4 mb-sm-1 px-0 d-flex justify-content-between align-items-stretch why-us-col">
+                    <div className="why-us-card col1 d-flex w-100 h-100 justify-content-between align-items-start gap-3 flex-column rounded-4 h-100" style={{height:'100% !important'}}>
                         <div className="icon bg-black p-3 d-flex text-tertary rounded-5">
                             <MdSupportAgent className="" />
                         </div>

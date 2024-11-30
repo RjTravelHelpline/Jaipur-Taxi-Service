@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import { Card } from 'react-bootstrap';
-import { FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image';
 import { RiWhatsappFill } from 'react-icons/ri';
 import Link from 'next/link';

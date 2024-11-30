@@ -13,7 +13,7 @@ const RentalSlider = ({ rentals }) => {
             <SlickSlider
                 settings={{
                     slidesToShow: 3,
-                    autoplay: false,
+                    autoPlay: true
                 }}>
                 {rentals.map((rental, index) => {
                     const whatsappLink = `https://wa.me/919166555888?text=I am interested in the ${rental.title} package for ₹${rental.price}/-. Please provide more details.`;
@@ -22,7 +22,7 @@ const RentalSlider = ({ rentals }) => {
                             key={index}
                             className="col-12 col-sm-12 col-md-12 col-lg-4 py-0 d-flex justify-content-start px-2"
                         >
-                            <Card className="card bg-transparent">
+                            <Card className="card bg-transparent rounded-4">
                                 <div className="card-image-container">
                                     <Image width={600} height={800} src={rental.imgSrc} alt={rental.alt} title={rental.title} />
                                 </div>
@@ -44,11 +44,11 @@ const RentalSlider = ({ rentals }) => {
                                         ))}
                                     </div>
                                     <div className="w-100 card-header d-flex justify-content-between align-items-start flex-column gap-2">
-                                        <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-5">
+                                        <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-3">
                                             Jaipur local @ ₹{rental.priceOne !== null ? rental.priceOne : "on request"} {rental.priceOne !== null && "per hour"}
                                         </p>
 
-                                        <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-5">
+                                        <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-3">
                                             Outstation @ ₹{rental.priceTwo !== null ? rental.priceTwo : "on request"} {rental.priceTwo !== null && "per km"}
                                         </p>
 
@@ -56,18 +56,18 @@ const RentalSlider = ({ rentals }) => {
                                     <div className="col-12 d-flex px-0">
                                         <div className="w-100 d-flex justify-content-center align-items-center gap-1">
                                             <Link href={rental.navigate} className='w-100'>
-                                                <button className="w-100 rounded-4 bg-border text-black text-capitalize">
+                                                <button className="w-100 rounded-3 bg-border text-black text-capitalize">
                                                     view
                                                 </button>
                                             </Link>
                                             <button
-                                                className="w-100 rounded-4 text-capitalize"
+                                                className="w-100 rounded-3 text-capitalize"
                                             >
                                                 Enquire
                                             </button>
                                             <a href={whatsappLink}>
                                                 <button
-                                                    className="rounded-4 p w-auto text-capitalize bg-black" style={{ color: '#00E777' }}
+                                                    className="rounded-3 p w-auto text-capitalize bg-black" style={{ color: '#00E777' }}
                                                 >
                                                     <RiWhatsappFill className='fs-4' />
 
