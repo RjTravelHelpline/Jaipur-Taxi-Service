@@ -8,7 +8,7 @@ import { IoClose } from 'react-icons/io5';
 import { MdOutlineArrowOutward } from 'react-icons/md';
 import { RiSearch2Fill } from 'react-icons/ri';
 
-const SearchBar = ({displaySuggestions=true, disabled=false, autoFocus=true}) => {
+const SearchBar = ({ displaySuggestions = true, disabled = false, autoFocus = true }) => {
     const filteredSuggestions = getPackagesByCategory(allCabRentals, 'popular')
     const [query, setQuery] = useState('');
     const [filteredBlogs, setFilteredBlogs] = useState([]);
@@ -47,7 +47,7 @@ const SearchBar = ({displaySuggestions=true, disabled=false, autoFocus=true}) =>
                     onChange={handleInputChange}
                     placeholder='Find car rentals, tour packages & more!'
                     className=''
-                    disabled={disabled} 
+                    disabled={disabled}
                     autoFocus={autoFocus}
                     onFocus={() => setShowSuggestions(true)}
                 /> {query && (
@@ -56,18 +56,18 @@ const SearchBar = ({displaySuggestions=true, disabled=false, autoFocus=true}) =>
                     </button>
                 )}
             </div>
-                    { displaySuggestions && showSuggestions && !query && (
-                        <>
-                            <div className="col-12 col-lg-10 col-sm-8">
-                                <hr />
-                            </div>
-                            <div className="search-suggestions d-flex flex-wrap bg-white p-4">
-                                {filteredSuggestions.map((suggestion, index) => (
-                                    <Link href={suggestion.navigate} key={index} className="suggestion-item">{suggestion.title} <span><MdOutlineArrowOutward className='text-black' /></span></Link>
-                                ))}
-                            </div>
-                        </>
-                    )}
+            {displaySuggestions && showSuggestions && !query && (
+                <>
+                    <div className="col-12 col-lg-10 col-sm-8">
+                        <hr />
+                    </div>
+                    <div className="search-suggestions d-flex flex-wrap bg-white p-4">
+                        {filteredSuggestions.map((suggestion, index) => (
+                            <Link href={suggestion.navigate} key={index} className="suggestion-item">{suggestion.title} <span><MdOutlineArrowOutward className='text-black' /></span></Link>
+                        ))}
+                    </div>
+                </>
+            )}
             {filteredBlogs.length > 0 && (
                 <>
                     <hr />

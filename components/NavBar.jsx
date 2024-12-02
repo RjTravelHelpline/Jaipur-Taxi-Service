@@ -462,7 +462,6 @@ const NavBar = () => {
                                 <div key={categoryIndex} className="dropdown-category mb-2 w-100 py-2">
                                     {/* Category Title */}
                                     <h4 className="category-title fw-bold text-start w-100 text-black">{category.title}</h4>
-
                                     {/* Items */}
                                     {category.items.map((item, itemIndex) => (
                                         <Link
@@ -520,17 +519,13 @@ const NavBar = () => {
                     <Logo childStyle='text-white text-center' parentStyle='text-tertary text-center' />
                 </div>
             </div>
-
             {/* search model */}
-            <Modal size='lg' show={showSearch} style={{ padding: '16px' }} onHide={handleCloseSearch} className='search-modal'>
+            <Modal size='xl' show={showSearch} onHide={handleCloseSearch} className='search-modal'>
                 <Modal.Dialog style={{ width: '100%' }} className='my-0' >
                     <Modal.Body style={{ width: '100%' }}>
                         <SearchBar />
                     </Modal.Body>
                 </Modal.Dialog>
-                {/* <Button onClick={handleCloseSearch} className='bg-black rounded-5 text-white d-flex jutify-content-center align-items center p-3 border-0'>
-                    <IoClose />
-                </Button> */}
             </Modal >
         </>
     )

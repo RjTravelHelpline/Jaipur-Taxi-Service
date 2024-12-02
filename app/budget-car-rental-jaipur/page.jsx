@@ -1,11 +1,19 @@
+import HeroBanner from '@/components/HeroBanner'
 import React from 'react'
 
 const page = () => {
+  const slides = [
+    {
+      image: '',
+      alt: 'Jaipur Taxi',
+      title: '',
+      heading: 'budget car rental jaipur',
+      subheading: 'Comfort & Convenience for Every Journey',
+    },
+  ]
   return (
     <>
-      <div className="container-fluid py-5">
-        <h1 className='text-center'>page exists</h1>
-      </div>
+      <HeroBanner slides={slides} />
     </>
   )
 }

@@ -1,3 +1,4 @@
+import HeroBanner from '@/components/HeroBanner'
 import PackagesSlider from '@/components/PackagesSlider'
 import { JaipurDayTours, JaipurLocalTaxiTours, JaipurSightSeeingTours, OneWayTaxiTours, OutStationTourPackages, RajasthanTourByCars, TourPackagesByCategory } from '@/data/TourPackagesData'
 import Image from 'next/image'
@@ -7,17 +8,21 @@ import { Card } from 'react-bootstrap'
 import { MdOutlineArrowOutward } from 'react-icons/md'
 
 const page = () => {
+  const slides = [
+    {
+      image: '',
+      alt: 'Jaipur Taxi',
+      title: '',
+      heading: 'rajasthan tour packages',
+      subheading: 'Comfort & Convenience for Every Journey',
+    },
+  ]
   return (
     <>
+      <HeroBanner slides={slides} />
       <div className="container-fluid py-5">
         <div className="container">
           <div className="row justify-content-center align-items-center bydayspackages px-2">
-            <div className="col-12 col-lg-10 col-sm-12 px-2">
-              <div className="insider rounded-3 p-3">
-                <h1 className='text-capitalize fw-bold text-center'>rajasthan tour packages</h1>
-                <hr />
-              </div>
-            </div>
             <div className="w-100 d-flex justify-content-center align-items-center flex-wrap rounded-4 py-2">
               {TourPackagesByCategory.map((pkg, index) => (
                 <div

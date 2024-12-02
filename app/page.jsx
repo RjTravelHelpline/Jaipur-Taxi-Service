@@ -33,7 +33,7 @@ const Home = () => {
       <div className="container-fluid bg-white pb-4">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0">
-            <h2 className='text-capitalize text-center mb-0'>Reliable taxi services across rajasthan</h2>
+            <h1 className='text-capitalize text-center mb-0 fw-bold'>Reliable taxi services across rajasthan</h1>
             <div className="col-12 d-flex flex-column justify-content-center align-items-center">
               <hr />
               <p className="text-justify">

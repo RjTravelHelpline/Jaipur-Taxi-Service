@@ -1,4 +1,5 @@
 "use client"
+import HeroBanner from '@/components/HeroBanner'
 import { OutStationTourPackages, TourPackagesByCategory } from '@/data/TourPackagesData'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,18 +8,20 @@ import { Card } from 'react-bootstrap'
 import { MdExpandLess, MdExpandMore, MdOutlineArrowOutward } from 'react-icons/md'
 
 const page = () => {
+  const slides = [
+    {
+      image: '',
+      alt: 'Jaipur Taxi',
+      title: '',
+      heading: 'outstation cab from jaipur',
+      subheading: 'Comfort & Convenience for Every Journey',
+    },
+  ]
   return (
     <>
+      <HeroBanner slides={slides} />
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row justify-content-center align-items-center px-2">
-            <div className="col-12 col-lg-10 col-sm-12 px-2">
-              <div className="insider rounded-3 p-3">
-                <h1 className='text-capitalize fw-bold text-center'>outstation cab from jaipur</h1>
-                <hr />
-              </div>
-            </div>
-          </div>
           <div className="row justify-content-center align-items-center bydayspackages carRentalsCard">
             {OutStationTourPackages.map((pkg, index) => (
               <div

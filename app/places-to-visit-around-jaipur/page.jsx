@@ -1,3 +1,4 @@
+import HeroBanner from '@/components/HeroBanner'
 import TourPackages from '@/components/TourPackages'
 import { allTourPackages } from '@/data/TourPackagesData'
 import { getPackagesByCategory } from '@/utils/utils'
@@ -9,18 +10,20 @@ import { MdOutlineArrowOutward } from 'react-icons/md'
 
 const page = () => {
   const filteredTours = getPackagesByCategory(allTourPackages, 'excursion')
+  const slides = [
+    {
+      image: '',
+      alt: 'Jaipur Taxi',
+      title: '',
+      heading: 'places to visit around jaipur',
+      subheading: 'Comfort & Convenience for Every Journey',
+    },
+  ]
   return (
     <>
+      <HeroBanner slides={slides} />
       <div className="container-fluid py-5">
         <div className="container">
-          <div className="row justify-content-center align-items-center px-2">
-            <div className="col-12 col-lg-10 col-sm-12 px-2">
-              <div className="insider rounded-3 p-3">
-                <h1 className='text-capitalize fw-bold text-center'>excursions around jaipur</h1>
-                <hr />
-              </div>
-            </div>
-          </div>
           <div className="row justify-content-center align-items-center bydayspackages carRentalsCard">
             {filteredTours.map((pkg, index) => (
               <div
