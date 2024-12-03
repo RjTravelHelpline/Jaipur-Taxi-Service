@@ -58,10 +58,20 @@ const SearchBar = ({ displaySuggestions = true, disabled = false, autoFocus = tr
             </div>
             {displaySuggestions && showSuggestions && !query && (
                 <>
-                    <div className="col-12 col-lg-10 col-sm-8">
+                    <div className="col-12">
                         <hr />
+                        <h3 className='text-capitalize web-title'>Most searched</h3>
                     </div>
-                    <div className="search-suggestions d-flex flex-wrap bg-white p-4">
+                    <div className="search-suggestions d-flex flex-wrap justify-content-start bg-white py-lg-3 py-sm-2">
+                        {filteredSuggestions.map((suggestion, index) => (
+                            <Link href={suggestion.navigate} key={index} className="suggestion-item">{suggestion.title} <span><MdOutlineArrowOutward className='text-black' /></span></Link>
+                        ))}
+                    </div>
+                    <div className="col-12">
+                        <hr />
+                        <h3 className='text-capitalize web-title'>popular & trendings</h3>
+                    </div>
+                    <div className="search-suggestions d-flex flex-wrap justify-content-start bg-white py-lg-3 py-sm-2">
                         {filteredSuggestions.map((suggestion, index) => (
                             <Link href={suggestion.navigate} key={index} className="suggestion-item">{suggestion.title} <span><MdOutlineArrowOutward className='text-black' /></span></Link>
                         ))}

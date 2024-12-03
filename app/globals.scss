@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Parkinsans:wght@300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Parkinsans:wght@300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Parkinsans:wght@300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   /* fonts */
   --font-head: 'Poppins', sans-serif;
   --font-logo: 'Lobster', sans-serif;
-  --font-head_2: 'Bebas Neue', sans-serif;
-  --font-lux: 'calgaryDemo';
+  --font-para: 'Raleway', sans-serif;
   /* colors */
   --color-body: #fcf5f5;
   --color-primary: #ffffff;
@@ -32,7 +30,7 @@
   --font-size-h2: clamp(1.4rem, 2vw, 1.65rem);
   --font-size-h3: clamp(1.1rem, 1.56vw, 1.5rem);
   --font-size-h4: clamp(0.95rem, 1.25vw, 1.2rem);
-  --font-size-p: clamp(0.85rem, 1.1vw, 1rem);
+  --font-size-p: clamp(0.85rem, 1.2vw, 1.01rem);
 
   /* Font Sizes + Responsive Padding Sizes */
   --font-size-a: clamp(0.9rem, 1.1vw, 1rem);
@@ -109,11 +107,6 @@ body {
 h1 {
   font-size: var(--font-size-h1) !important;
 }
-// body h1:not(.logo),
-// h2 {
-//   font-family: 'Glens City', sans-serif !important;
-//   font-weight: 800 !important;
-// }
 
 h2 {
   font-size: var(--font-size-h2) !important;
@@ -125,9 +118,38 @@ h3 {
 h4 {
   font-size: var(--font-size-h4) !important;
 }
+//
+.web-title {
+  font-family: var(--font-para) !important;
+}
+.web-subhead {
+  font-family: var(--font-head) !important;
+}
+.web-desc {
+  font-family: var(--font-head) !important;
+}
+.banner-title {
+  font-size: clamp(1.8em, 4vw, 4em) !important;
+}
+.banner-title-2 {
+  font-size: clamp(1.8em, 2.5vw, 2.5em) !important;
+}
+.box-shadow-tertary {
+  box-shadow: 0 12px 24px 5px #8b56059d;
+}
+.bg-linear-modal {
+  background: linear-gradient(
+    45deg,
+    var(--color-tertary-down) 50%,
+    var(--color-primary)
+  ) !important;
+}
 
 p {
   font-size: var(--font-size-p);
+}
+input::placeholder {
+  font-size: var(--font-size-p) !important;
 }
 hr {
   width: 100%;
@@ -209,7 +231,7 @@ button {
 }
 
 .container-fluid {
-  max-width: 1600px !important;
+  max-width: 1800px !important;
 }
 // Custom padding values
 $padding-sizes: (

@@ -15,10 +15,11 @@ import Logo from './Logo'
 import Link from 'next/link';
 import { cabRental, placesToVisit, taxiFares, tempoAndBus, tourData } from '@/data/HeaderData';
 import { FaSearch } from 'react-icons/fa';
-import { Modal } from 'react-bootstrap';
+import { Modal, ModalFooter } from 'react-bootstrap';
 import SearchBar from './SearchBar';
 import { BiChevronDown, BiTaxi } from 'react-icons/bi';
 import { PiTaxiFill } from 'react-icons/pi';
+import Image from 'next/image';
 
 const NavBar = () => {
 
@@ -78,7 +79,7 @@ const NavBar = () => {
                     <div className="row w-100">
                         {cabRental.map((category, index) => (
                             <div className="col py-2" key={index}>
-                                <p className="text-tertary fw-bold">{category.title}</p>
+                                <p className="text-tertary fw-bolder web-title">{category.title}</p>
                                 <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
@@ -109,7 +110,7 @@ const NavBar = () => {
                     <div className="row w-100">
                         {tempoAndBus.map((category, index) => (
                             <div className="col py-2" key={index}>
-                                <p className="text-tertary fw-bold">{category.title}</p>
+                                <p className="text-tertary fw-bolder web-title">{category.title}</p>
                                 <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
@@ -140,7 +141,7 @@ const NavBar = () => {
                     <div className="row w-100">
                         {tourData.map((category, index) => (
                             <div className="col py-2" key={index}>
-                                <p className="text-tertary fw-bold">{category.title}</p>
+                                <p className="text-tertary fw-bolder web-title">{category.title}</p>
                                 <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
@@ -171,7 +172,7 @@ const NavBar = () => {
                     <div className="row w-100">
                         {taxiFares.map((category, index) => (
                             <div className="col py-2" key={index}>
-                                <p className="text-tertary fw-bold">{category.title}</p>
+                                <p className="text-tertary fw-bolder web-title">{category.title}</p>
                                 <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
@@ -202,7 +203,7 @@ const NavBar = () => {
                     <div className="row w-100">
                         {placesToVisit.map((category, index) => (
                             <div className="col py-2" key={index}>
-                                <p className="text-tertary fw-bold">{category.title}</p>
+                                <p className="text-tertary fw-bolder web-title">{category.title}</p>
                                 <hr />
                                 <ul>
                                     {category.items.map((item, idx) => (
@@ -248,14 +249,14 @@ const NavBar = () => {
                             </button>
                         </div>) : (
                         <div className="book-now col-6 d-flex justify-content-end align-items-center">
-                            <button className="d-flex justify-content-center align-items-center rounded-3 shadow-none me-2 search-button bg-border w-50" onClick={handleShowSearch}>
+                            <button className="d-flex justify-content-center align-items-center rounded-5 shadow-none me-2 search-button bg-gray w-50" style={{ cursor: 'text !important' }} onClick={handleShowSearch}>
                                 <FaSearch className='me-2 text-tertary' />
                                 <div className="w-100 d-flex justify-content-start align-items-center">
-                                    <p className='mb-0 text-capitalize w-auto'>search from here</p>
+                                    <p className='mb-0 text-capitalize w-auto'>search here</p>
                                 </div>
                             </button>
-                            <button className="rounded-3 text-black text-capitalize d-flex align-items-center justify-content-center" style={{ fontWeight: '500' }}>
-                                <PiTaxiFill className='text-white me-2' /> book now
+                            <button className="rounded-5 text-white text-capitalize d-flex align-items-center justify-content-center" style={{ fontWeight: '500' }}>
+                                <PiTaxiFill className='text-black me-2' /> book now
                                 <div className="lens-flare"></div>
                             </button>
                         </div>
@@ -523,9 +524,15 @@ const NavBar = () => {
             <Modal size='xl' show={showSearch} onHide={handleCloseSearch} className='search-modal'>
                 <Modal.Dialog style={{ width: '100%' }} className='my-0' >
                     <Modal.Body style={{ width: '100%' }}>
+                        <h2 className="fw-bold web-title text-capitalize mb-3">
+                            explore more, <span className='text-tertary'>worry less</span>
+                        </h2>
                         <SearchBar />
                     </Modal.Body>
                 </Modal.Dialog>
+                {/* <div className="image-container rounded-bottom-4" style={{ height: '200px', width: '100%', overflow: 'hidden' }}>
+                    <Image width={1200} height={200} src="/Images/Banners/home-taxi-01.jpg" alt="Image" style={{ width: '100% !important', height: '100%', objectFit: 'cover' }} />
+                </div> */}
             </Modal >
         </>
     )

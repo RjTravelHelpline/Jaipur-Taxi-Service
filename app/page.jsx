@@ -3,16 +3,16 @@ import RentalSlider from '@/components/RentalSlider';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import { Carousel, CarouselCaption, Modal } from 'react-bootstrap';
 import Image from 'next/image';
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa6';
 import PackagesSlider from '@/components/PackagesSlider';
 import { PopularTourPackages } from '@/data/TourPackagesData';
 import Link from 'next/link';
 import { MdOutlineArrowOutward } from 'react-icons/md';
 import { getPackagesByCategory } from '@/utils/utils';
 import { allCabRentals } from '@/data/cabRentalData';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import SearchBar from '@/components/SearchBar';
-const HomeBanner01 = '/Images/Banners/home-banner.png';
+import { FaSearch } from 'react-icons/fa';
+const HomeBannerFig = '/Images/Banners/home-banner-fig.jpg';
 const Home = () => {
 
   const [showSearch, setShowSearch] = useState(false);
@@ -26,14 +26,29 @@ const Home = () => {
       <div className="container-fluid home-banner px-0">
         <Carousel fade pause={false} controls={false} interval={4000}>
           <Carousel.Item>
-            <Image src={HomeBanner01} alt="Rajasthan Shotmen also Camel during sunset in desert" title='India is a country of Temples, Tradition and Scenic beauty' width={1500} height={1000} priority={true} />
+            <Image src={HomeBannerFig} alt="Rajasthan Shotmen also Camel during sunset in desert" title='India is a country of Temples, Tradition and Scenic beauty' width={1500} height={1000} priority={true} />
+            <CarouselCaption>
+              <div className="home-banner-search w-100 flex-column">
+                <h3 className='text-capitalize text-white fw-bold web-title banner-title'>Ride Through <span className='fw-bold'>Rajasthan&apos;s </span>Wonders</h3>
+                <hr />
+                <div
+                  className="pseudo-input rounded-5 bg-white text-muted d-flex justify-content-start align-items-center"
+                  onClick={handleShowSearch}
+                >
+                  <span className='me-2 text-white bg-tertary rounded-5 p-3 d-flex' >
+                    <FaSearch />
+                  </span>
+                  <p className='mb-0 text-capitalize home-banner-input'>Search for taxis, tours, and travel packages & more..</p>
+                </div>
+              </div>
+            </CarouselCaption>
           </Carousel.Item>
         </Carousel>
       </div>
       <div className="container-fluid bg-white pb-4">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0">
-            <h1 className='text-capitalize text-center mb-0 fw-bold'>Reliable taxi services across rajasthan</h1>
+            <h1 className='text-capitalize text-center mb-0 fw-bold web-title'>Reliable taxi services across rajasthan</h1>
             <div className="col-12 d-flex flex-column justify-content-center align-items-center">
               <hr />
               <p className="text-justify">
@@ -52,11 +67,11 @@ const Home = () => {
         </div>
       </div >
       {/* popular tour packages */}
-      <div className="container-fluid py-5 bg-tertary-down">
+      <div className="container-fluid py-5 bg-linear-modal">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 packages rental-container">
             <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
-              <h2 className='text-capitalize text-center fw-bold'>popular cab rental</h2>
+              <h2 className='text-capitalize text-center fw-bold web-title'>popular cab rental</h2>
               <p className='text-center text-capitalize'>explore Jaipur taxi tour packages & tourist cab packages</p>
             </div>
             <RentalSlider rentals={popularRentals} />
@@ -71,11 +86,11 @@ const Home = () => {
       </div>
 
       {/* popular tour packages */}
-      <div className="container-fluid py-5">
+      <div className="container-fluid py-5 bg-white">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center  px-lg-2 px-sm-0 packages">
             <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
-              <h2 className='text-capitalize text-center fw-bold'>popular tour packages</h2>
+              <h2 className='text-capitalize text-center fw-bold web-title'>popular tour packages</h2>
               <p className='text-center text-capitalize'>explore Jaipur taxi tour packages & tourist cab packages</p>
             </div>
             <PackagesSlider packages={PopularTourPackages} showPrice={true} />
@@ -90,11 +105,11 @@ const Home = () => {
       </div>
 
       {/* jaipur taxi for locals */}
-      <div className="container-fluid py-5" style={{ background: 'var(--color-tertary-down2)' }}>
+      <div className="container-fluid py-5 bg-linear-modal">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center  px-lg-2 px-sm-0 why-us">
             <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
-              <h2 className='text-capitalize text-center fw-bold'>why choose us</h2>
+              <h2 className='text-capitalize text-center fw-bold web-title'>why choose us</h2>
               <p className='text-center text-capitalize'>Discover the Benefits of Choosing Our Jaipur Taxi Services</p>
             </div>
             <WhyChooseUs />
@@ -107,19 +122,16 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-
-
       {/* search model */}
-      <Modal size='lg' show={showSearch} style={{ padding: '16px' }} onHide={handleCloseSearch} className='search-modal'>
+      <Modal size='xl' show={showSearch} onHide={handleCloseSearch} className='search-modal'>
         <Modal.Dialog style={{ width: '100%' }} className='my-0' >
           <Modal.Body style={{ width: '100%' }}>
+            <h2 className="fw-bold web-title text-capitalize mb-3">
+              explore more, <span className='text-tertary'>worry less</span>
+            </h2>
             <SearchBar />
           </Modal.Body>
         </Modal.Dialog>
-        {/* <Button onClick={handleCloseSearch} className='bg-black rounded-5 text-white d-flex jutify-content-center align-items center p-3 border-0'>
-                    <IoClose />
-                </Button> */}
       </Modal >
     </>
   );

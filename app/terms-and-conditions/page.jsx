@@ -8,8 +8,8 @@ const page = () => {
         <div className="row justify-content-center align-items-center">
           <div className="col-12 col-lg-8 px-2">
             <div className="insider bg-white rounded-3 p-3">
-              <p className='text-tertary fw-bold text-uppercase mb-0'>Jaipur Taxi Service</p>
-              <h1 className='text-capitalize'>terms & conditions</h1>
+              <p className='text-tertary fw-bold text-uppercase mb-0 '>Jaipur Taxi Service</p>
+              <h1 className='text-capitalize web-title fw-bold'>terms & conditions</h1>
               <hr />
               <p className='text-right'>Last Updated: {date.toLocaleDateString('en-US', {
                 year: 'numeric',

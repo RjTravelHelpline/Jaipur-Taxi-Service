@@ -20,7 +20,7 @@ const page = () => {
   return (
     <>
       <HeroBanner slides={slides} />
-      <div className="container-fluid py-5">
+      <div className="container-fluid py-5 bg-linear-modal">
         <div className="container">
           <div className="row justify-content-center align-items-center bydayspackages px-2">
             <div className="w-100 d-flex justify-content-center align-items-center flex-wrap rounded-4 py-2">
@@ -40,7 +40,7 @@ const page = () => {
                         height={800}
                       />
                       <div className="row p-3 card-content d-flex align-items-center  justfiy-content-center flex-column">
-                        <h3 className="w-100 text-capitalize mx-1">
+                        <h3 className="w-100 text-capitalize mx-1 web-title">
                           {pkg.title}
                         </h3>
                       </div>
@@ -54,13 +54,12 @@ const page = () => {
       </div>
 
       {/* jaipur sightseeing tours */}
-      <div className="container-fluid">
+      <div className="container-fluid py-5 bg-white">
         <div className="container">
-          <div className="row py-5 d-flex justify-content-center align-items-center px-2 packages">
-            <div className="col-12 col-lg-8 col-sm-10 px-5">
-              <h3 className='text-capitalize fw-bold text-center'>jaipur sightseeing tours</h3>
+          <div className="row d-flex justify-content-center align-items-center px-2 packages">
+            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
+              <h3 className='text-capitalize fw-bold text-center web-title'>jaipur sightseeing tours</h3>
               <p className='text-center text-capitalize'>explore Jaipur taxi tour packages & tourist cab packages</p>
-              <hr />
             </div>
             <PackagesSlider packages={JaipurSightSeeingTours} />
             <div className="col-12 d-flex justify-content-between align-items-center gap-2 px-4 mt-3">
@@ -74,13 +73,13 @@ const page = () => {
       </div>
 
       {/* day tours from jaipur */}
-      <div className="container-fluid" style={{ background: 'var(--color-tertary-down2)' }}>
+      <div className="container-fluid py-5 bg-linear-modal">
         <div className="container">
-          <div className="row py-5 d-flex justify-content-center align-items-center px-2 packages">
-            <div className="col-12 col-lg-8 col-sm-10 px-5">
-              <h3 className='text-capitalize fw-bold text-center'>Day Tours From Jaipur</h3>
+          <div className="row d-flex justify-content-center align-items-center px-2 packages">
+            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
+              <h3 className='text-capitalize fw-bold text-center web-title'>Day Tours From Jaipur</h3>
               <p className='text-center text-capitalize'>explore Jaipur taxi tour packages & tourist cab packages</p>
-              <hr />
+
             </div>
             <PackagesSlider packages={JaipurDayTours} />
             <div className="col-12 d-flex justify-content-between align-items-center gap-2 px-4 mt-3">
@@ -94,13 +93,13 @@ const page = () => {
       </div>
 
       {/* one way car rental */}
-      <div className="container-fluid">
+      <div className="container-fluid py-5 bg-white">
         <div className="container">
-          <div className="row py-5 d-flex justify-content-center align-items-center px-2 packages">
-            <div className="col-12 col-lg-8 col-sm-10 px-5">
-              <h3 className='text-capitalize fw-bold text-center'>rajasthan tour by car</h3>
+          <div className="row d-flex justify-content-center align-items-center px-2 packages">
+            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
+              <h3 className='text-capitalize fw-bold text-center web-title'>rajasthan tour by car</h3>
               <p className='text-center text-capitalize'>experience our excellent services at the lowest Car Hire</p>
-              <hr />
+
             </div>
             <PackagesSlider packages={RajasthanTourByCars} />
             <div className="col-12 d-flex w-100 align-items-center gap-2 px-4 mt-3">
@@ -114,13 +113,13 @@ const page = () => {
       </div>
 
       {/* one way car rental */}
-      <div className="container-fluid" style={{ background: 'var(--color-tertary-down2)' }}>
+      <div className="container-fluid py-5 bg-linear-modal">
         <div className="container">
-          <div className="row py-5 d-flex justify-content-center align-items-center px-2 bydayspackages carRentalsCard">
-            <div className="col-12 col-lg-8 col-sm-10 px-5">
-              <h3 className='text-capitalize fw-bold text-center'>one way car rentals</h3>
+          <div className="row d-flex justify-content-center align-items-center px-2 bydayspackages carRentalsCard">
+            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
+              <h3 className='text-capitalize fw-bold text-center web-title'>one way car rentals</h3>
               <p className='text-center text-capitalize'>experience our excellent services at the lowest Car Hire</p>
-              <hr />
+
             </div>
             <div className="w-100 d-flex justify-content-center align-items-center flex-wrap">
               {OneWayTaxiTours.slice(3).map((pkg, index) => (
@@ -140,7 +139,7 @@ const page = () => {
                       />
                       <Link href={pkg.navigate} className="text-capitalize go-link bg-white p-3 rounded-5 d-flex"><MdOutlineArrowOutward className='' /></Link>
                       <div className="row p-3 card-content d-flex align-items-center  justfiy-content-center flex-column">
-                        <h3 className="w-100 text-capitalize mx-1">
+                        <h3 className="w-100 text-capitalize mx-1 web-title">
                           {pkg.title}
                         </h3>
                       </div>
@@ -160,13 +159,12 @@ const page = () => {
       </div>
 
       {/* outstation cab rentals */}
-      <div className="container-fluid">
+      <div className="container-fluid py-5 bg-white">
         <div className="container">
-          <div className="row py-5 d-flex justify-content-center align-items-center px-2 bydayspackages carRentalsCard">
-            <div className="col-12 col-lg-8 col-sm-10 px-5">
-              <h3 className='text-capitalize fw-bold text-center'>Outstation Cab from Jaipur</h3>
+          <div className="row d-flex justify-content-center align-items-center px-2 bydayspackages carRentalsCard">
+            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
+              <h3 className='text-capitalize fw-bold text-center web-title'>Outstation Cab from Jaipur</h3>
               <p className='text-center text-capitalize'>experience our excellent services at the lowest Car Hire</p>
-              <hr />
             </div>
             <div className="w-100 d-flex justify-content-center align-items-center flex-wrap">
               {OutStationTourPackages.slice(0, 3).map((pkg, index) => (
@@ -186,7 +184,7 @@ const page = () => {
                       />
                       <Link href={pkg.navigate} className="text-capitalize go-link bg-white p-3 rounded-5 d-flex"><MdOutlineArrowOutward className='' /></Link>
                       <div className="row p-3 card-content d-flex align-items-center  justfiy-content-center flex-column">
-                        <h3 className="w-100 text-capitalize mx-1">
+                        <h3 className="w-100 text-capitalize mx-1 web-title">
                           {pkg.title}
                         </h3>
                         <hr />
@@ -208,14 +206,15 @@ const page = () => {
           </div>
         </div>
       </div>
+
       {/* jaipur taxi for locals */}
-      <div className="container-fluid" style={{ background: 'var(--color-tertary-down2)' }}>
+      <div className="container-fluid py-5 bg-linear-modal">
         <div className="container">
-          <div className="row py-5 d-flex justify-content-center align-items-center px-2 bydayspackages carRentalsCard">
-            <div className="col-12 col-lg-8 col-sm-10 px-5">
-              <h3 className='text-capitalize fw-bold text-center'>Jaipur Local Taxi Fares</h3>
+          <div className="row d-flex justify-content-center align-items-center px-2 bydayspackages carRentalsCard">
+            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
+              <h3 className='text-capitalize fw-bold text-center web-title'>Jaipur Local Taxi Fares</h3>
               <p className='text-center text-capitalize'>experience our excellent services at the lowest Car Hire</p>
-              <hr />
+
             </div>
             <div className="w-100 d-flex justify-content-center align-items-center flex-wrap">
               {JaipurLocalTaxiTours.slice(0, 3).map((pkg, index) => (
@@ -235,7 +234,7 @@ const page = () => {
                       />
                       <Link href={pkg.navigate} className="text-capitalize go-link bg-white p-3 rounded-5 d-flex"><MdOutlineArrowOutward className='' /></Link>
                       <div className="row p-3 card-content d-flex align-items-center  justfiy-content-center flex-column">
-                        <h3 className="w-100 text-capitalize mx-1 text-center">
+                        <h3 className="w-100 text-capitalize mx-1 text-center web-title">
                           {pkg.title}
                         </h3>
                       </div>

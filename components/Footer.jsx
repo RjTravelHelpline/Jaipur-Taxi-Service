@@ -22,17 +22,17 @@ const Footer = () => {
             <div className="container-fluid bg-black py-lg-5 py-sm-3">
                 <div className="container py-4">
                     <div className="row d-flex justify-content-center align-items-center flex-column">
+                        <h3 className="text-capitalize mb-3 text-tertary fw-bold text-center  web-title banner-title-2">
+                            Planning Your  <span className='text-white'>Next Journey</span>?
+                        </h3>
+                        <p className="text-white text-capitalize fw-normal text-center">
+                            Let us help you customize the perfect ride package for your needs.
+                        </p>
                         <div className="col-12 col-lg-6 mb-3 mb-lg-0">
-                            <h2 className="text-capitalize mb-2 text-tertary fw-bold text-center">
-                                Planning Your Next <span>Journey</span>?
-                            </h2>
-                            <p className="text-white text-capitalize fw-normal text-center">
-                                Let us help you customize the perfect ride package for your needs.
-                            </p>
                             <hr />
                         </div>
                         <div className="col-12 col-lg-6 d-flex justify-content-center">
-                            <button className='rounded-5 d-flex justify-content-center align-items-center gap-2'>Request a Ride<FaArrowRight className='bg-black p-2 text-white rounded-5 fs-3' /></button>
+                            <button className='rounded-5 d-flex justify-content-between align-items-center gap-2 box-shadow-tertary'>Request a Ride<FaArrowRight className='bg-black p-2 text-white rounded-5 fs-3' /></button>
                         </div>
                     </div>
                 </div>
@@ -40,13 +40,13 @@ const Footer = () => {
             <div className="container-fluid packages-footer py-3">
                 <div className="container">
                     <div className="row py-lg-4 py-sm-3">
-                        <h2 className='text-center fw-bold text-black'>Our <span className='text-tertary'> Services</span></h2>
-                        <p className='text-center text-capitalize text-black'>Explore our convenient services tailored for you</p>
+                        <h2 className='text-center text-capitalize fw-bold text-black web-title'>what we <span className='text-tertary'> offer</span></h2>
+                        <p className='text-center text-capitalize text-black fw-normal'>Explore our convenient services tailored for you</p>
                     </div>
                     <div className="row accordians d-flex justify-content-center">
                         <div className="col-12 col-lg-10 col-sm-12">
                             <h3
-                                className="text-capitalize bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
+                                className="text-capitalize web-title fw-bold bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
                                 onClick={() => toggleSection('services')}
                             >
                                 services
@@ -74,7 +74,7 @@ const Footer = () => {
                         </div>
                         <div className="col-12 col-lg-10 col-sm-12">
                             <h3
-                                className="text-capitalize bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
+                                className="text-capitalize web-title fw-bold bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
                                 onClick={() => toggleSection('carRentalPackages')}
                             >
                                 car rental packages
@@ -102,7 +102,7 @@ const Footer = () => {
                         </div>
                         <div className="col-12 col-lg-10 col-sm-12">
                             <h3
-                                className="text-capitalize bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
+                                className="text-capitalize web-title fw-bold bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
                                 onClick={() => toggleSection('popularTours')}
                             >
                                 popular tours
@@ -130,7 +130,7 @@ const Footer = () => {
                         </div>
                         <div className="col-12 col-lg-10 col-sm-12">
                             <h3
-                                className="text-capitalize bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
+                                className="text-capitalize web-title fw-bold bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
                                 onClick={() => toggleSection('usefulLinks')}
                             >
                                 useful links
@@ -158,7 +158,7 @@ const Footer = () => {
                         </div>
                         <div className="col-12 col-lg-10 col-sm-12">
                             <h3
-                                className="text-capitalize bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
+                                className="text-capitalize web-title fw-bold bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
                                 onClick={() => toggleSection('company')}
                             >
                                 company
@@ -186,7 +186,7 @@ const Footer = () => {
                         </div>
                         <div className="col-12 col-lg-10 col-sm-12">
                             <h3
-                                className="text-capitalize bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
+                                className="text-capitalize web-title fw-bold bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
                                 onClick={() => toggleSection('oneWayCarRental')}
                             >
                                 one way car rental
@@ -214,7 +214,7 @@ const Footer = () => {
                         </div>
                         <div className="col-12 col-lg-10 col-sm-12">
                             <h3
-                                className="text-capitalize bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
+                                className="text-capitalize web-title fw-bold bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
                                 onClick={() => toggleSection('carRentalServices')}
                             >
                                 car rental services
@@ -242,7 +242,7 @@ const Footer = () => {
                         </div>
                         <div className="col-12 col-lg-10 col-sm-12">
                             <h3
-                                className="text-capitalize bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
+                                className="text-capitalize web-title fw-bold bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
                                 onClick={() => toggleSection('carAndCoaches')}
                             >
                                 Car & Coaches

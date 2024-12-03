@@ -1,4 +1,5 @@
 import HeroBanner from '@/components/HeroBanner'
+import Image from 'next/image';
 import React from 'react'
 import { FaCar, FaMoneyBillWave, FaPlane, FaUserTie } from 'react-icons/fa6';
 import { MdSanitizer, MdSupportAgent } from 'react-icons/md';
@@ -46,7 +47,7 @@ const page = () => {
             </div>
           </div>
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us why-us-screen">
-            <div className="col-lg-6 col-12 mb-3 px-0 d-flex justify-content-between align-items-stretch why-us-col">
+            <div className="col-lg-6 col-12 mb-3 px-0 d-flex justify-content-between align-items-stretch why-us-col gap-0">
               <div className="why-us-card col1 d-flex w-100 justify-content-between align-items-start flex-column rounded-4 h-100" style={{ height: '100% !important' }}>
                 <div className="icon bg-black p-3 d-flex text-tertary rounded-5">
                   <MdSanitizer className="" />
