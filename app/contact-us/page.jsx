@@ -4,6 +4,7 @@ import { BiLogoInstagramAlt, BiLogoSkype, BiLogoTwitter, BiMailSend, BiWorld } f
 import { IoBrowsers, IoMail } from 'react-icons/io5';
 import { RiMailFill, RiWhatsappFill } from 'react-icons/ri';
 import { MdMail } from 'react-icons/md';
+import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap';
 
 const page = () => {
   const date = new Date()
@@ -12,6 +13,12 @@ const page = () => {
       <div className="container-fluid py-lg-5 py-sm-3">
         <div className="row justify-content-center align-items-center">
           <div className="col-12 col-lg-8 col-sm-12 px-2">
+            <div className="insider rounded-3 px-3">
+              <Breadcrumb>
+                <BreadcrumbItem href="/">Home</BreadcrumbItem>
+                <BreadcrumbItem active>contact us</BreadcrumbItem>
+              </Breadcrumb>
+            </div>
             <div className="insider bg-white rounded-3 p-3">
               <p className='text-tertary fw-bold text-uppercase mb-0'>Jaipur Taxi Service</p>
               <h1 className='text-capitalize web-title fw-bold'>contact us</h1>

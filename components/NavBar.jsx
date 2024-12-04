@@ -20,6 +20,7 @@ import SearchBar from './SearchBar';
 import { BiChevronDown, BiTaxi } from 'react-icons/bi';
 import { PiTaxiFill } from 'react-icons/pi';
 import Image from 'next/image';
+import { IoClose } from 'react-icons/io5';
 
 const NavBar = () => {
 
@@ -521,18 +522,22 @@ const NavBar = () => {
                 </div>
             </div>
             {/* search model */}
-            <Modal size='xl' show={showSearch} onHide={handleCloseSearch} className='search-modal'>
-                <Modal.Dialog style={{ width: '100%' }} className='my-0' >
-                    <Modal.Body style={{ width: '100%' }}>
-                        <h2 className="fw-bold web-title text-capitalize mb-3">
-                            explore more, <span className='text-tertary'>worry less</span>
-                        </h2>
-                        <SearchBar />
-                    </Modal.Body>
-                </Modal.Dialog>
+            <Modal size='xl' show={showSearch} onHide={handleCloseSearch} style={{ width: '100% !important', padding: '0 !important' }} className='search-modal'>
+                <div className="w-100 d-flex justify-content-end">
+                    <button onClick={handleCloseSearch} className='rounded-5 text-black bg-gray p-lg-3 p-sm-2 d-flex'><IoClose /></button>
+                </div>
+                <Modal.Body style={{ width: '100%' }}>
+                    <h2 className="fw-bold web-title text-capitalize mb-3">
+                        explore more, <span className='text-tertary'>worry less</span>
+                    </h2>
+                    <SearchBar />
+                </Modal.Body>
                 {/* <div className="image-container rounded-bottom-4" style={{ height: '200px', width: '100%', overflow: 'hidden' }}>
                     <Image width={1200} height={200} src="/Images/Banners/home-taxi-01.jpg" alt="Image" style={{ width: '100% !important', height: '100%', objectFit: 'cover' }} />
                 </div> */}
+                <Modal.Footer style={{ width: '100%', display: 'flex', }}>
+                    <p className='text-capitalize text-muted'>powered by <span className="text-tertary">jaipur taxi service</span></p>
+                </Modal.Footer>
             </Modal >
         </>
     )

@@ -1,11 +1,10 @@
 import HeroBanner from '@/components/HeroBanner'
-import TourPackages from '@/components/TourPackages'
 import { allTourPackages } from '@/data/TourPackagesData'
 import { getPackagesByCategory } from '@/utils/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Breadcrumb, BreadcrumbItem, Card } from 'react-bootstrap'
 import { MdOutlineArrowOutward } from 'react-icons/md'
 
 const page = () => {
@@ -22,6 +21,17 @@ const page = () => {
   return (
     <>
       <HeroBanner slides={slides} />
+      <div className="container-fluid">
+        <div className="container">
+          <div className="row px-2">
+            <Breadcrumb>
+              <BreadcrumbItem href="/">Home</BreadcrumbItem>
+              <BreadcrumbItem href="/tour-packages-rajasthan">rajasthan tour packages</BreadcrumbItem>
+              <BreadcrumbItem active>places to visit around jaipur</BreadcrumbItem>
+            </Breadcrumb>
+          </div>
+        </div>
+      </div>
       <div className="container-fluid py-5">
         <div className="container">
           <div className="row justify-content-center align-items-center bydayspackages carRentalsCard">

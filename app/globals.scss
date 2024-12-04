@@ -34,6 +34,7 @@
 
   /* Font Sizes + Responsive Padding Sizes */
   --font-size-a: clamp(0.9rem, 1.1vw, 1rem);
+  --font-size-bread: clamp(0.8rem, 1vw, 0.9rem);
   --font-size-button: clamp(0.9rem, 1.1vw, 1rem);
   --padding-a: clamp(0.5rem, 0.5vw, 1rem);
   --padding-button-inline: clamp(1rem, 1.5vw, 2rem);
@@ -186,6 +187,20 @@ button {
 
 // bootstrap classes
 
+.breadcrumb {
+  margin-bottom: 0 !important;
+  margin-block: 12px !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  a {
+    font-size: var(--font-size-bread) !important;
+  }
+  .breadcrumb-item {
+    font-size: var(--font-size-bread) !important;
+    text-transform: capitalize;
+  }
+}
 // colors & more
 .bg-primary-c {
   background-color: var(--color-primary) !important;

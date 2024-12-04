@@ -25,17 +25,17 @@ const RentalPackages = ({ rentals }) => {
                                         {rental.title}
                                     </h4>
                                 </div>
-                                <div className="w-100 card-header d-flex justify-content-center gap-4 align-items-start pt-0 package-category py-2">
-                                    {rental.features.map((feature, index) => (
-                                        <div
-                                            key={index}
-                                            className="d-flex flex-column justify-content-center align-items-center"
-                                        >
-                                            {feature.icon}
-                                            <p className="pt-2">{feature.label}</p>
-                                        </div>
-                                    ))}
-                                </div>
+                                <div className="w-100 card-header d-flex justify-content-center gap-4 align-items-start py-lg-3 py-sm-2 package-category bg-linear-modal">
+                                        {rental.features.map((feature, index) => (
+                                            <div
+                                                key={index}
+                                                className="d-flex flex-column justify-content-center align-items-center"
+                                            >
+                                                {feature.icon}
+                                                <p className="pt-2">{feature.label}</p>
+                                            </div>
+                                        ))}
+                                    </div>
                                 <div className="w-100 card-header d-flex justify-content-between align-items-start flex-column gap-2">
                                     <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-5">
                                         Jaipur local @ ₹{rental.priceOne !== null ? rental.priceOne : "on request"} {rental.priceOne !== null && "per hour"}
@@ -48,7 +48,7 @@ const RentalPackages = ({ rentals }) => {
                                 <div className="col-12 d-flex px-0">
                                     <div className="w-100 d-flex justify-content-center align-items-center gap-1">
                                         <Link href={rental.navigate} className='w-100'>
-                                            <button className="w-100 rounded-4 bg-border text-black text-capitalize">
+                                            <button className="w-100 rounded-4 bg-gray text-black text-capitalize">
                                                 view
                                             </button>
                                         </Link>
@@ -62,7 +62,6 @@ const RentalPackages = ({ rentals }) => {
                                                 className="rounded-4 p w-auto text-capitalize bg-black" style={{ color: '#00E777' }}
                                             >
                                                 <RiWhatsappFill className='fs-4' />
-
                                             </button>
                                         </a>
                                     </div>

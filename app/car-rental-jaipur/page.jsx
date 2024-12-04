@@ -4,7 +4,7 @@ import { TourPackagesByCategory } from '@/data/TourPackagesData'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Breadcrumb, BreadcrumbItem, Card } from 'react-bootstrap'
 import { MdOutlineArrowOutward } from 'react-icons/md'
 const HomeBanner01 = '/Images/Cabs/cab-rental-banner.jpg';
 
@@ -21,6 +21,16 @@ const page = () => {
   return (
     <>
       <HeroBanner slides={slides} />
+      <div className="container-fluid">
+        <div className="container">
+          <div className="row px-2">
+            <Breadcrumb>
+              <BreadcrumbItem href="/">Home</BreadcrumbItem>
+              <BreadcrumbItem active>car rental jaipur</BreadcrumbItem>
+            </Breadcrumb>
+          </div>
+        </div>
+      </div>
       <div className="container-fluid py-4">
         <div className="container">
           <div className="row justify-content-center align-items-center  py-4">

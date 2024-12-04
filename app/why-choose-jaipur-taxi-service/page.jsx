@@ -1,6 +1,7 @@
 import HeroBanner from '@/components/HeroBanner'
 import Image from 'next/image';
 import React from 'react'
+import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap';
 import { FaCar, FaMoneyBillWave, FaPlane, FaUserTie } from 'react-icons/fa6';
 import { MdSanitizer, MdSupportAgent } from 'react-icons/md';
 const HomeBanner01 = '/Images/Cabs/cab-rental-banner.jpg';
@@ -18,6 +19,16 @@ const page = () => {
   return (
     <>
       <HeroBanner slides={slides} />
+      <div className="container-fluid">
+        <div className="container">
+          <div className="row px-2">
+            <Breadcrumb>
+              <BreadcrumbItem href="/">Home</BreadcrumbItem>
+              <BreadcrumbItem active>why choose jaipur taxi service</BreadcrumbItem>
+            </Breadcrumb>
+          </div>
+        </div>
+      </div>
       <div className="container-fluid py-5">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
