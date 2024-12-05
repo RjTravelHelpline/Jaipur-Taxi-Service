@@ -37,7 +37,7 @@ const TourPackages = ({ pkg, showPrice = false }) => {
                             }
                         </div>
                         <div className="w-100 card-header d-flex justify-content-center flex-column align-items-center pt-0 pb-0">
-                            <h4 className="text-capitalize w-100 text-black text-center fw-bold">
+                            <h4 className="text-capitalize w-100 text-black text-center fw-bold  web-title">
                                 {pkg.title}
                             </h4>
                         </div>
@@ -58,18 +58,18 @@ const TourPackages = ({ pkg, showPrice = false }) => {
                         <div className="col-12 d-flex px-0">
                             <div className="w-100 d-flex justify-content-center align-items-center gap-1">
                                 <Link href={pkg.navigate} className='w-100'>
-                                    <button className="w-100 rounded-4 bg-gray text-black text-capitalize">
+                                    <button className="w-100 rounded-5 bg-gray text-black text-capitalize">
                                         view
                                     </button>
                                 </Link>
                                 <button
-                                    className="w-100 rounded-4 text-capitalize"
+                                    className="w-100 rounded-5 text-capitalize text-white"
                                 >
                                     Enquire
                                 </button>
                                 <a href={whatsappLink}>
                                     <button
-                                        className="rounded-4 p w-auto text-capitalize bg-black" style={{ color: '#00E777' }}
+                                        className="rounded-5 p-2 w-auto text-capitalize bg-black" style={{ color: '#00E777' }}
                                     >
                                         <RiWhatsappFill className='fs-4' />
 

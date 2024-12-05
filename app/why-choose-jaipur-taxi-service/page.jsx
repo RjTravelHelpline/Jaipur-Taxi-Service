@@ -18,7 +18,10 @@ const page = () => {
   ]
   return (
     <>
+      {/* banner */}
       <HeroBanner slides={slides} />
+
+      {/* breadcrumb */}
       <div className="container-fluid">
         <div className="container">
           <div className="row px-2">
@@ -29,11 +32,13 @@ const page = () => {
           </div>
         </div>
       </div>
+
+      {/* content */}
       <div className="container-fluid py-5">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
             <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column">
-              <h2 className='text-capitalize fw-bold'>overview</h2>
+              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>overview</h3>
               <hr />
               <p className='text-justify mb-0'>Jaipur Taxi Service is a top choice for reliable and comfortable transportation in Jaipur. Their offerings cater to various needs, including airport transfers, local sightseeing, outstation trips, and corporate travel solutions. With a fleet of well-maintained vehicles, customers can select from economical options to luxury cars, ensuring a safe and comfortable ride, giving you peace of mind during your journey.</p>
               <hr />
@@ -48,6 +53,8 @@ const page = () => {
           </div>
         </div>
       </div>
+
+      {/* pacakges */}
       <div className="container-fluid py-5 bg-tertary-down">
         <div className="container">
           <div className="row">

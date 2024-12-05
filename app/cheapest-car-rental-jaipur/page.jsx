@@ -1,5 +1,8 @@
+'use client'
 import HeroBanner from '@/components/HeroBanner'
 import RentalPackages from '@/components/RentalPackages'
+import ToggleShowAllButton from '@/components/ToggleShowAllButton'
+import useShowAllToggle from '@/components/useShowAllToggle'
 import { CarRentalsByCategory, cheapestCabRentals } from '@/data/cabRentalData'
 import { JaipurAirport } from '@/data/ImagesData'
 import Image from 'next/image'
@@ -8,7 +11,8 @@ import React from 'react'
 import { Breadcrumb, BreadcrumbItem, Card } from 'react-bootstrap'
 import { MdOutlineArrowOutward } from 'react-icons/md'
 
-const page = () => {
+const Page = () => {
+  const { showAll, displayedItems, toggleShowAll } = useShowAllToggle(cheapestCabRentals, 3);
   const slides = [
     {
       image: JaipurAirport,
@@ -20,41 +24,85 @@ const page = () => {
   ]
   return (
     <>
+
+      {/* banner */}
       <HeroBanner slides={slides} />
+
+      {/* breadcrumb */}
       <div className="container-fluid">
         <div className="container">
           <div className="row px-2">
             <Breadcrumb>
               <BreadcrumbItem href="/">Home</BreadcrumbItem>
+              <BreadcrumbItem href="/car-rental-jaipur">jaipur cab rental</BreadcrumbItem>
               <BreadcrumbItem active>cheapest car rental jaipur</BreadcrumbItem>
             </Breadcrumb>
           </div>
         </div>
       </div>
-      <div className="container-fluid">
+
+      {/* content */}
+      <div className="container-fluid py-5 bg-white">
         <div className="container">
-          <div className="row py-5 d-flex justify-content-center align-items-center px-0">
-            <h3 className='text-capitalize fw-bold'>Deals</h3>
-            <p className='text-capitalize'>experience our excellent services at the lowest Car Hire</p>
-            <div className="w-100 d-flex justify-content-center align-items-center flex-wrap packages rental-container px-0">
-              <RentalPackages rentals={cheapestCabRentals} />
+          <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
+            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column">
+              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>overview</h3>
+              <hr />
+              <p className='text-justify'>Jaipur Taxi Service offers 24 X 7 cheapest cab hiring services. We put our best efforts into providing our customers with the utmost comfort and satisfaction at the cheapest cab fares in Jaipur. Travellers from around the world come to Jaipur and start their trip to other parts of Rajasthan. Outstation cabs in Jaipur are readily available with us at the lowest prices.</p>
+              <hr />
+              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>6 REASONS - Which make us Special While finding a Cheapest Cab in Jaipur ?</h3>
+              <hr />
+              <p className='text-justify'>
+                <strong>Professional & Experienced Drivers: </strong>Jaipur Taxi Service provides professional drivers who can act as a guide during your trip. A well-experienced driver is very important for a convenient trip, and we fully care about this thing. If your driver knows about the place and the trip plan, he can fully guide you on places to visit, what time to visit, and all other relevant information related to that. The driver who is smart and knowledgeable is always helpful to the customers, so we fully care about it.
+              </p>
+              <p className="text-justify">
+                <strong>Easy Payment Methods: </strong>Payment processing is one of the major concerns for all travellers, and for that, Jaipur Taxi Service provides easy methods of payment. Customers can make the payment online through Debit / Credit Card, Paytm, Phone Pe, Bank Transfers and also in Cash.
+              </p>
+              <p className="text-justify">
+                <strong>Reliability in Jaipur Cab Services: </strong>Travelers who want to avail of cab services in Jaipur need to have reliability and utmost trust in the company. So, we provide very reliable & cheapest cab booking deals where you can get the best choice of cab hire. Jaipur Taxi Service has earned the trust of its customers. Customers can book a cab in Jaipur fully assured of travelling with us also on time and safely & securely.
+              </p>
+              <p className="text-justify">
+                <strong>No Hide & Seek in Fare: </strong> It&apos;s very important to have 100% transparency between travellers & cab service providers - for a hassle-free, smooth journey. At the time of Cab Booking, we explain all terms, conditions, inclusions & exclusions to our customers. In the case of any further clarification regarding a cab booking service, customers can call Jaipur Taxi Service 24 x 7 No. +91 9166-555-888 or mail us.</p>
+              <p className="text-justify">
+                <strong>Resolving Customer Issues: </strong>When booking a cab in Jaipur, we are just a call away from resolving any type of issue regarding your travel that you can face before or after the trip.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="container-fluid [y-5 bg-tertary-down">
+
+      {/* packges */}
+      <div className="container-fluid bg-linear-modal">
         <div className="container">
           <div className="row py-5 d-flex justify-content-center align-items-center px-0">
-            <h3 className='text-capitalize fw-bold'>what for?</h3>
-            <p className='text-capitalize'>looking for something else</p>
+            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
+              <h3 className='text-capitalize fw-bold text-center web-title'>Cheapest cab deals </h3>
+              <p className='text-center text-capitalize'>Hassle-Free chepest Cab Services by jaipur taxi</p>
+            </div>
+            <div className="w-100 d-flex justify-content-center align-items-center flex-wrap packages rental-container px-0">
+              <RentalPackages rentals={displayedItems} />
+            </div>
+            <ToggleShowAllButton showAll={showAll} toggleShowAll={toggleShowAll} />
+          </div>
+        </div>
+      </div>
+
+      {/* categories */}
+      <div className="container-fluid py-5 bg-white">
+        <div className="container">
+          <div className="row d-flex justify-content-center align-items-center px-2">
+            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
+              <h3 className='text-capitalize fw-bold text-center web-title'>explore rentals by category</h3>
+              <p className='text-center text-capitalize'>Curated tours designed to suit every travel need and budget</p>
+            </div>
             <div className="w-100 d-flex justify-content-between align-items-center flex-wrap px-0 bydayspackages carRentalsCard">
-              {CarRentalsByCategory.slice(0, 3).map((pkg, index) => (
+              {CarRentalsByCategory.slice(1, 4).map((pkg, index) => (
                 <div
                   key={index}
-                  className="col-12 col-sm-6 col-md-6 col-lg-4 my-1 d-flex align-items-center px-2"
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 my-2 d-flex align-items-center px-2"
                 >
                   <Link href={pkg.navigate} className="text-capitalize">
-                    <Card className="card bg-transparent rounded-4">
+                    <Card className="card bg-transparent">
                       <Image
                         variant="top"
                         src={pkg.imgSrc}
@@ -76,7 +124,7 @@ const page = () => {
             </div>
             <div className="col-12 d-flex w-100 align-items-center gap-2 mt-3">
               <hr />
-              <Link href='/cheapest-car-rental-jaipur' className='explore'>
+              <Link href='/car-rental-jaipur' className='explore'>
                 <button className='bg-tertary-down rounded-5 d-flex justify-content-between align-items-center gap-2 d-flex text-nowrap text-right text-capitalize'>explore more<MdOutlineArrowOutward className='text-tertary' /></button>
               </Link>
             </div>
@@ -87,4 +135,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

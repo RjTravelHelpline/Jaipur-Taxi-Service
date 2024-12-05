@@ -19,7 +19,10 @@ const page = () => {
   ]
   return (
     <>
+      {/* banner */}
       <HeroBanner slides={slides} />
+
+      {/* breadcrumb */}
       <div className="container-fluid">
         <div className="container">
           <div className="row px-2">
@@ -30,9 +33,38 @@ const page = () => {
           </div>
         </div>
       </div>
+
+      {/* content */}
+      <div className="container-fluid py-5 bg-white">
+        <div className="container">
+          <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
+            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column">
+              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>overview</h3>
+              <hr />
+              <h4 className="text-center text-capitalize mb-0">
+                Comprehensive and Affordable Car Rental Services for Exploring Rajasthan
+              </h4>
+              <hr />
+              <p className='text-justify'>Jaipur Car Rental Service provides a large number of tour packages at the lowest price. We provide affordable local sightseeing tours and outstation trips of Rajasthan with guides. We offer day tours from Jaipur to Ajmer, Pushkar, Bhangarh Fort, Abhaneri Stepwell and Ranthambhore National Park. We also provide complete Rajasthan tour covering all the forts of Rajasthan, Palaces, Lakes, Bawdi&apos;s, village tours and thar desert of Jaisalmer.</p>
+              <p className='text-justify'>
+                Professional drivers enhance the travel experience, providing punctual and courteous service while being well-versed with local routes. Jaipur Taxi Service&apos;s transparent pricing policy ensures no hidden charges, making it easier for travelers to plan their budgets. The user-friendly online booking system simplifies the process, allowing customers to book rides conveniently from their devices.
+              </p>
+              <p className="text-justify">
+                Customer satisfaction is paramount, evidenced by their 24/7 customer support, which addresses queries and concerns promptly. This commitment to service quality has garnered positive reviews and repeat customers, solidifying its reputation as a trustworthy taxi service in Jaipur.
+              </p>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* tour pakages category */}
       <div className="container-fluid py-5 bg-linear-modal">
         <div className="container">
           <div className="row justify-content-center align-items-center bydayspackages px-2">
+            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
+              <h3 className='text-capitalize fw-bold text-center web-title'>packages we offer</h3>
+            </div>
             <div className="w-100 d-flex justify-content-center align-items-center flex-wrap rounded-4 py-2">
               {TourPackagesByCategory.map((pkg, index) => (
                 <div
@@ -89,7 +121,6 @@ const page = () => {
             <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
               <h3 className='text-capitalize fw-bold text-center web-title'>Day Tours From Jaipur</h3>
               <p className='text-center text-capitalize'>explore Jaipur taxi tour packages & tourist cab packages</p>
-
             </div>
             <PackagesSlider packages={JaipurDayTours} />
             <div className="col-12 d-flex justify-content-between align-items-center gap-2 px-4 mt-3">
@@ -102,7 +133,7 @@ const page = () => {
         </div>
       </div>
 
-      {/* one way car rental */}
+      {/* rajasthan tour by car rental */}
       <div className="container-fluid py-5 bg-white">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-2 packages">
