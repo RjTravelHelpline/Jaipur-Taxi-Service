@@ -58,6 +58,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 // Browser scroller bar
 ::-webkit-scrollbar-thumb {
@@ -186,10 +187,9 @@ button {
 }
 
 // bootstrap classes
-
 .breadcrumb {
   margin-bottom: 0 !important;
-  margin-block: 12px !important;
+  padding-block: 12px !important;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

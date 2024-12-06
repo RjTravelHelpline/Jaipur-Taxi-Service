@@ -27,9 +27,9 @@ const Page = () => {
       <HeroBanner slides={slides} />
 
       {/* breadcrumb */}
-      <div className="container-fluid">
-        <div className="container">
-          <div className="row px-2">
+      <div className="container-fluid bg-white bread-container-fluid">
+        <div className="container bread-container">
+          <div className="row px-lg-2 px-sm-0 bread-row">
             <Breadcrumb>
               <BreadcrumbItem href="/">Home</BreadcrumbItem>
               <BreadcrumbItem href="/car-rental-jaipur">jaipur cab rental</BreadcrumbItem>
@@ -40,10 +40,10 @@ const Page = () => {
       </div>
 
       {/* content */}
-      <div className="container-fluid py-5 bg-white">
+      <div className="container-fluid py-lg-5 py-sm-4 bg-white">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
-            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column">
+            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-2">
               <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>overview</h3>
               <hr />
               <p className='text-justify'>
@@ -72,6 +72,7 @@ const Page = () => {
                 <strong>Explore Jaipur with Ease: </strong>
                 Jaipur has historical landmarks, vibrant markets, and cultural experiences. With our sedan car rental jaipur service, you can explore famous attractions like the Amber Fort, City Palace, Hawa Mahal, and more at your own pace. Say goodbye to the hassles of public transportation and hello to the freedom of a Rental Car.
               </p>
+              <hr />
             </div>
           </div>
         </div>

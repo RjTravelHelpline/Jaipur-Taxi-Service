@@ -1,12 +1,11 @@
 import React from 'react';
 import { Carousel, CarouselItem, CarouselCaption } from 'react-bootstrap';
-import Image from 'next/image';
 
 const HeroBanner = ({ slides }) => {
     return (
-        <div className="container-fluid px-0 car-rental-banner">
+        <div className="container-fluid car-rental-banner">
             <div className="container">
-                <div className="row justify-content-center align-items-center px-2">
+                <div className="row justify-content-center align-items-center px-lg-2 px-sm-0">
                     <Carousel fade pause={false} indicators={false} controls={false} interval={4000} className="w-100">
                         {slides.map((slide, index) => (
                             <CarouselItem key={index}>
@@ -22,7 +21,7 @@ const HeroBanner = ({ slides }) => {
                                 <CarouselCaption style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
                                     <h1 className="text-black fw-bold web-title fw-bold text-capitalize text-left mb-0 text-capitalize" style={{ textAlign: 'left !important' }}>{slide.heading}</h1>
                                     <hr style={{ width: '60%' }} />
-                                    <h3 className="text-tertary fw-normal text-capitalize text-left">{slide.subheading}</h3>
+                                    <h3 className="text-black fw-normal" style={{ textAlign: 'left !important' }}>{slide.subheading}</h3>
                                 </CarouselCaption>
                             </CarouselItem>
                         ))}

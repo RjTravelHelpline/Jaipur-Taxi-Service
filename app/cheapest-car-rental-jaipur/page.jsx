@@ -29,9 +29,9 @@ const Page = () => {
       <HeroBanner slides={slides} />
 
       {/* breadcrumb */}
-      <div className="container-fluid">
-        <div className="container">
-          <div className="row px-2">
+      <div className="container-fluid bg-white bread-container-fluid">
+        <div className="container bread-container">
+          <div className="row px-lg-2 px-sm-0 bread-row">
             <Breadcrumb>
               <BreadcrumbItem href="/">Home</BreadcrumbItem>
               <BreadcrumbItem href="/car-rental-jaipur">jaipur cab rental</BreadcrumbItem>
@@ -42,15 +42,15 @@ const Page = () => {
       </div>
 
       {/* content */}
-      <div className="container-fluid py-5 bg-white">
+      <div className="container-fluid py-lg-5 py-sm-4 bg-white">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
-            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column">
+            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-2">
               <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>overview</h3>
               <hr />
               <p className='text-justify'>Jaipur Taxi Service offers 24 X 7 cheapest cab hiring services. We put our best efforts into providing our customers with the utmost comfort and satisfaction at the cheapest cab fares in Jaipur. Travellers from around the world come to Jaipur and start their trip to other parts of Rajasthan. Outstation cabs in Jaipur are readily available with us at the lowest prices.</p>
               <hr />
-              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>6 REASONS - Which make us Special While finding a Cheapest Cab in Jaipur ?</h3>
+              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>reasons to choosing our Cheapest Cabs in Jaipur</h3>
               <hr />
               <p className='text-justify'>
                 <strong>Professional & Experienced Drivers: </strong>Jaipur Taxi Service provides professional drivers who can act as a guide during your trip. A well-experienced driver is very important for a convenient trip, and we fully care about this thing. If your driver knows about the place and the trip plan, he can fully guide you on places to visit, what time to visit, and all other relevant information related to that. The driver who is smart and knowledgeable is always helpful to the customers, so we fully care about it.
@@ -66,6 +66,7 @@ const Page = () => {
               <p className="text-justify">
                 <strong>Resolving Customer Issues: </strong>When booking a cab in Jaipur, we are just a call away from resolving any type of issue regarding your travel that you can face before or after the trip.
               </p>
+              <hr />
             </div>
           </div>
         </div>

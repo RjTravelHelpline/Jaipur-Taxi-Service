@@ -13,6 +13,7 @@ import { useState } from 'react';
 import SearchBar from '@/components/SearchBar';
 import { FaSearch } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
+import BackToTop from '@/components/BackToTop';
 const HomeBannerFig = '/Images/Banners/home-banner-fig.jpg';
 const Home = () => {
 
@@ -24,6 +25,7 @@ const Home = () => {
   return (
 
     <>
+      
       <div className="container-fluid home-banner px-0">
         <Carousel fade pause={false} controls={false} interval={4000}>
           <Carousel.Item>

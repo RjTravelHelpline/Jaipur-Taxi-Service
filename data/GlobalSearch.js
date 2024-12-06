@@ -6,18 +6,23 @@ export const company_insights = [
     category: null,
   },
   {
-    title: 'privacy policy',
+    title: 'Jaipur Taxi Service privacy policy',
     navigate: '/privacy-policy',
     category: null,
   },
   {
-    title: 'terms & conditions',
+    title: 'Jaipur Taxi Service terms & conditions',
     navigate: '/terms-and-conditions',
     category: null,
   },
   {
     title: 'contact us',
     navigate: '/contact-us',
+    category: null,
+  },
+  {
+    title: 'why choose us',
+    navigate: '/why-choose-jaipur-taxi-service',
     category: null,
   },
 ];

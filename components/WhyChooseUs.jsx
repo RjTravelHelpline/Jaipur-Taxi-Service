@@ -18,7 +18,7 @@ const WhyChooseUs = () => {
                             <MdSanitizer className="" />
                         </div>
                         <div className="content">
-                            <h4 className="text-capitalize fw-bold">Sanitized Cars</h4>
+                            <h4 className="text-capitalize fw-bold web-title">Sanitized Cars</h4>
                             <p className="text-capitalize mb-0">
                                 Jaipur Taxi Service provides fully sanitized taxi car for Jaipur Local & Outstation Trips.
                             </p>
@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
                             <FaCar className="" />
                         </div>
                         <div className="content">
-                            <h4 className="text-capitalize fw-bold">Well-Maintained Car</h4>
+                            <h4 className="text-capitalize fw-bold web-title">Well-Maintained Car</h4>
                             <p className="text-capitalize mb-0">
                                 Jaipur Taxi Service provide well maintained taxi car for Local & Outstation trip.
                             </p>
@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
                             <FaUserTie className="" />
                         </div>
                         <div className="content">
-                            <h4 className="text-capitalize fw-bold">Professional Car Driver</h4>
+                            <h4 className="text-capitalize fw-bold web-title">Professional Car Driver</h4>
                             <p className="text-capitalize mb-0">
                                 All our drivers are experienced, well-behaved, courteus, police verified.
                             </p>
@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
                             <FaMoneyBillWave className="" />
                         </div>
                         <div className="content">
-                            <h4 className="text-capitalize fw-bold">Affordable Taxi Services</h4>
+                            <h4 className="text-capitalize fw-bold web-title">Affordable Taxi Services</h4>
                             <p className="text-capitalize mb-0">
                                 Jaipur Taxi Service assure you best & lowest car rental fare in Jaipur.
                             </p>
@@ -70,7 +70,7 @@ const WhyChooseUs = () => {
                             <FaPlane className="" />
                         </div>
                         <div className="content">
-                            <h4 className="text-capitalize fw-bold">20 Years of Experience </h4>
+                            <h4 className="text-capitalize fw-bold web-title">20 Years of Experience </h4>
                             <p className="text-capitalize mb-0">
                                 We are working since 2002 with same team.
                             </p>
@@ -83,7 +83,7 @@ const WhyChooseUs = () => {
                             <MdSupportAgent className="" />
                         </div>
                         <div className="content">
-                            <h4 className="text-capitalize fw-bold">Travel Assistance</h4>
+                            <h4 className="text-capitalize fw-bold web-title">Travel Assistance</h4>
                             <p className="text-capitalize mb-0">
                                 provides 24x7 assistance over call, whatsapp & email to all guests.
                             </p>

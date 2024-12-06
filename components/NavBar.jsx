@@ -230,8 +230,8 @@ const NavBar = () => {
         },
     ];
     return (
-        <>
-            <div className="m-auto nav container-fluid d-flex justify-content-center flex-column align-items-center px-0">
+        <>  <div className="w-100 nav">
+            <div className="container-fluid d-flex justify-content-center flex-column align-items-center px-0 bg-transparent">
                 {/* header two */}
                 <div className="nav-child w-100 row bg-white px-lg-3 px-sm-2 py-lg-2 py-sm-2 justify-content-center align-items-center">
                     <div className="col-6 d-flex justify-content-start align-items-center">
@@ -539,6 +539,7 @@ const NavBar = () => {
                     <p className='text-capitalize text-muted'>powered by <span className="text-tertary">jaipur taxi service</span></p>
                 </Modal.Footer>
             </Modal >
+        </div>
         </>
     )
 }

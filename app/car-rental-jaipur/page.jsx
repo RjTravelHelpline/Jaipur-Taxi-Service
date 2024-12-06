@@ -3,15 +3,13 @@ import HeroBanner from '@/components/HeroBanner'
 import ToggleShowAllButton from '@/components/ToggleShowAllButton'
 import useShowAllToggle from '@/components/useShowAllToggle'
 import { CarRentalsByCategory } from '@/data/cabRentalData'
-import { carRentalPackages } from '@/data/FooterData'
 import { TourPackagesByCategory } from '@/data/TourPackagesData'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Breadcrumb, BreadcrumbItem, Card } from 'react-bootstrap'
-import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
 import { MdOutlineArrowOutward } from 'react-icons/md'
-const HomeBanner01 = '/Images/Cabs/toyota-camry.jpg';
+const HomeBanner01 = '/Images/Banners/home-taxi-02.jpg';
 
 const Page = () => {
   const { showAll, displayedItems, toggleShowAll } = useShowAllToggle(CarRentalsByCategory, 6);
@@ -31,9 +29,9 @@ const Page = () => {
       <HeroBanner slides={slides} />
 
       {/* Breadcrumb  */}
-      <div className="container-fluid">
-        <div className="container">
-          <div className="row px-2">
+      <div className="container-fluid bg-white bread-container-fluid">
+        <div className="container bread-container">
+          <div className="row px-lg-2 px-sm-0 bread-row">
             <Breadcrumb>
               <BreadcrumbItem href="/">Home</BreadcrumbItem>
               <BreadcrumbItem active>car rental jaipur</BreadcrumbItem>
@@ -43,13 +41,13 @@ const Page = () => {
       </div>
 
       {/* content */}
-      <div className="container-fluid py-5 bg-white">
+      <div className="container-fluid py-lg-5 py-sm-4 bg-white">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
-            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column">
-              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>overview</h3>
-              <hr />
-              <h4 className='text-center text-capitalize mb-0 '>Your ultimate choice for reliable Cab rental Services</h4>
+            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-2">
+              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center mb-3'>overview</h3>
+              {/* <hr /> */}
+              <h4 className='mb-0 text-center text-capitalize'>Your ultimate choice for reliable Cab rental Services</h4>
               <hr />
               <p className='text-justify'>Welcome to Jaipur Taxi Service, your premier destination for Cab Rental in Jaipur. Whether you&apos;re a tourist exploring the vibrant Pink City or a local needing reliable transportation, we offer the perfect cab rental solutions tailored to your needs, ensuring a convenient and stress-free travel experience.</p>
               <p className='text-justify'>
@@ -59,9 +57,8 @@ const Page = () => {
                 Customer satisfaction is paramount, evidenced by their 24/7 customer support, which addresses queries and concerns promptly. This commitment to service quality has garnered positive reviews and repeat customers, solidifying its reputation as a trustworthy taxi service in Jaipur.
               </p>
               <hr />
-              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>why our cab rentals</h3>
-              <hr />
-              <h4 className='text-center text-capitalize mb-0 '>we offer the perfect cab rental solutions tailored to your needs</h4>
+              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center mb-3'>why choose our <span className="text-tertary">cab rentals</span>?</h3>
+              <h4 className='text-center text-capitalize mb-0'>we offer the perfect cab rental solutions tailored to your needs</h4>
               <hr />
               <p className='text-justify'>At Jaipur Taxi Service, we understand that every journey is unique. Our fleet includes a wide variety of vehicles, from budget-friendly hatchbacks to luxurious sedans and spacious SUVs. This variety ensures you find the perfect cab for any occasion, making you feel catered to and special.</p>
               <p className='text-justify'>
@@ -73,6 +70,7 @@ const Page = () => {
               <p className='text-justify'>
                 <strong>Explore Jaipur with Ease:</strong> With our cab rental service, exploring Jaipur&apos;s iconic attractions, such as the Amber Fort, City Palace, Hawa Mahal, and local markets, becomes effortless. Whether planning a city tour or a trip to nearby destinations, we provide a range of flexible rental options, including hourly rentals and full-day packages, to suit your specific travel needs.
               </p>
+              <hr />
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import './globals.scss';
 import '../styles/components.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from '@/components/Footer';
+import BackToTop from '@/components/BackToTop';
 
 export const metadata = {
   title: 'Car Hire Jaipur Sightseeing Taxi | Jaipur Taxi Service',
@@ -52,16 +53,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Glens+City&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body>
         <NavBar />
         {children}
+       
         <Footer />
+
       </body>
     </html>
   );

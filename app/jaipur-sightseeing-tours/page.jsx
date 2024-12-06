@@ -3,7 +3,7 @@ import HeroBanner from '@/components/HeroBanner'
 import ToggleShowAllButton from '@/components/ToggleShowAllButton'
 import TourPackages from '@/components/TourPackages'
 import useShowAllToggle from '@/components/useShowAllToggle'
-import { JaipurDayTours, JaipurSightSeeingTours, TourPackagesByCategory } from '@/data/TourPackagesData'
+import { JaipurSightSeeingTours, TourPackagesByCategory } from '@/data/TourPackagesData'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -27,9 +27,9 @@ const Page = () => {
       <HeroBanner slides={slides} />
 
       {/* breadcrumb */}
-      <div className="container-fluid">
-        <div className="container">
-          <div className="row px-2">
+      <div className="container-fluid bg-white bread-container-fluid">
+        <div className="container bread-container">
+          <div className="row px-lg-2 px-sm-0 bread-row">
             <Breadcrumb>
               <BreadcrumbItem href="/">Home</BreadcrumbItem>
               <BreadcrumbItem href="/tour-packages-rajasthan">rajasthan tour packages</BreadcrumbItem>
@@ -43,7 +43,7 @@ const Page = () => {
       <div className="container-fluid py-5 bg-white">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
-            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column">
+            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-2">
               <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>overview</h3>
               <hr />
               <h4 className="text-center text-capitalize mb-0">
