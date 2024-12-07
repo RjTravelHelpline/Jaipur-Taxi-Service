@@ -7,7 +7,8 @@ import { FaArrowRight } from 'react-icons/fa';
 import { FaMinus, FaPlus } from 'react-icons/fa6';
 import Logo from './Logo';
 import { MdMail } from 'react-icons/md';
-import { PiFacebookLogoFill, PiInstagramLogoFill, PiPhone, PiSkypeLogoFill, PiWhatsappLogoFill } from 'react-icons/pi';
+import { PiFacebookLogoFill, PiInstagramLogoFill, PiSkypeLogoFill, PiWhatsappLogoFill } from 'react-icons/pi';
+import EnquiryModal02 from './EnquiryModal02';
 
 const Footer = () => {
     const footerLogo = '/rajasthan-travel-helpline.png';
@@ -18,6 +19,8 @@ const Footer = () => {
     const toggleSection = (section) => {
         setActiveSection(activeSection === section ? null : section);
     };
+
+    const [modalShow, setModalShow] = useState(false);
     return (
         <>
             {/* Packages and links */}
@@ -34,7 +37,11 @@ const Footer = () => {
                             <hr />
                         </div>
                         <div className="col-12 col-lg-6 d-flex justify-content-center">
-                            <button className='rounded-5 d-flex justify-content-between align-items-center gap-2 box-shadow-tertary'>Request a Ride<FaArrowRight className='bg-black p-2 text-white rounded-5 fs-3' /></button>
+                            <button className='rounded-5 d-flex justify-content-between align-items-center gap-2 box-shadow-tertary' onClick={() => setModalShow(true)}>Request a Ride<FaArrowRight className='bg-black p-2 text-white rounded-5 fs-3' /></button>
+                            <EnquiryModal02
+                                show={modalShow}
+                                onHide={() => setModalShow(false)}
+                            />
                         </div>
                     </div>
                 </div>

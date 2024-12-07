@@ -4,16 +4,17 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { RiWhatsappFill } from 'react-icons/ri';
 import Link from 'next/link';
+import EnquiryModal02 from './EnquiryModal02';
 
 const TourPackages = ({ pkg, showPrice = false }) => {
     const [show, setShow] = useState(false);
-    const [selectedPackage, setSelectedPackage] = useState('');
 
     const handleClose = () => setShow(false);
     const handleShow = (title) => {
         setSelectedPackage(title);
         setShow(true);
-    };
+    }
+    const [selectedPackage, setSelectedPackage] = useState('');
     const whatsappLink = `https://wa.me/?text=I am interested in the ${pkg.title} package for ₹${pkg.price}/-. Please provide more details.`;
 
     return (
@@ -63,7 +64,7 @@ const TourPackages = ({ pkg, showPrice = false }) => {
                                     </button>
                                 </Link>
                                 <button
-                                    className="w-100 rounded-5 text-capitalize text-white"
+                                    className="w-100 rounded-5 text-capitalize text-white" onClick={() => handleShow(pkg.title)}
                                 >
                                     Enquire
                                 </button>
@@ -80,6 +81,13 @@ const TourPackages = ({ pkg, showPrice = false }) => {
                     </div>
                 </Card>
             </div>
+
+
+            <EnquiryModal02
+                show={show}
+                onHide={handleClose}
+                title={selectedPackage}
+            />
         </>
     );
 };

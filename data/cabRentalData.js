@@ -200,6 +200,7 @@ export const CarRentalsByCategory = [
     duration: null,
     imgSrc: HatchBack,
     title: 'Hatchback Car Rental',
+    vehicles: ['Maruti Swift', 'Tata Indica', 'Hyundai i20', 'Hyundai Santro', 'Maruti WagonR'],
     navigate: '/cheapest-car-rental-jaipur',
   },
 
@@ -207,18 +208,21 @@ export const CarRentalsByCategory = [
     duration: null,
     imgSrc: Sedan,
     title: 'Sedan Car Rental',
+    vehicles: ['Maruti Swift Dzire', 'Toyota Etios', 'Ambassador', 'Maruti Ciaz', 'Hyundai Xcent', 'Honda Amaze'],
     navigate: '/sedan-car-rental-jaipur',
   },
   {
     duration: null,
     imgSrc: ToyotaInnovaCrysta,
     title: 'SUV Car Rental',
+    vehicles: ['Toyota Innova', 'Toyota Innova Crysta', 'Maruti Ertiga', 'Mahindra Marazzo', 'Mahindra Bolero', 'Mahindra Xylo', 'Force Trax Cruiser', 'Tata Safari', 'Tata Sumo', 'Mahindra Scorpio'],
     navigate: '/suv-car-rental-jaipur',
   },
   {
     duration: null,
     imgSrc: Mercedes,
     title: 'Luxury Car Rental',
+    vehicles: ['Honda City', 'Ford Endeavour','Toyota Corolla', 'Toyota Fortuner', 'Toyota Camry', 'Mercedes S Class', 'Mercedes E Class', 'BMW', 'Audi'],
 
     navigate: '/luxury-car-rental-jaipur',
   },
@@ -226,6 +230,7 @@ export const CarRentalsByCategory = [
     duration: null,
     imgSrc: TempoTraveller,
     title: 'Tempo Traveller Rental',
+    vehicles: ['8 Seater Maharaja Tempo', '10 Seater Luxury Tempo', '12 Seater Tempo', '15 Seater Tempo', '20 Seater Tempo'],
 
     navigate: '/tempo-traveller-rental-in-jaipur',
   },
@@ -233,6 +238,7 @@ export const CarRentalsByCategory = [
     duration: null,
     imgSrc: Bus,
     title: 'Bus & Coach Rental',
+    vehicles: ['18 Seater Bus', '21 Seater Bus', '27 Seater Bus', '35 Seater Bus', '41 Seater Bus', '45 Seater Bus', '52 Seater Bus'],
 
     navigate: '/bus-rental-service-in-jaipur',
   },
@@ -240,6 +246,7 @@ export const CarRentalsByCategory = [
     duration: null,
     imgSrc: LuxuryBus,
     title: 'Luxury Bus Rental',
+    vehicles: ['45 Seater Volvo Bus', '45 Seater Scania Bus'],
 
     navigate: '/luxury-bus-hire-service-in-jaipur',
   },

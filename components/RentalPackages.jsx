@@ -1,11 +1,20 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import { Card } from 'react-bootstrap';
 import Image from 'next/image';
 import { RiWhatsappFill } from 'react-icons/ri';
 import Link from 'next/link';
+import EnquiryModal from './EnquiryModal';
 
 const RentalPackages = ({ rentals }) => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const [selectedPackage, setSelectedPackage] = useState('');
+    const handleShow = (title) => {
+        setSelectedPackage(title);
+        setShow(true);
+    }
     return (
         <>
             {rentals.map((rental, index) => {
@@ -53,7 +62,7 @@ const RentalPackages = ({ rentals }) => {
                                             </button>
                                         </Link>
                                         <button
-                                            className="w-100 rounded-5 text-capitalize text-white"
+                                            className="w-100 rounded-5 text-capitalize text-white" onClick={() => handleShow(rental.title)}
                                         >
                                             Enquire
                                         </button>
@@ -71,6 +80,13 @@ const RentalPackages = ({ rentals }) => {
                     </div>
                 );
             })}
+
+
+            <EnquiryModal
+                show={show}
+                onHide={handleClose}
+                title={selectedPackage}
+            />
         </>
     )
 }

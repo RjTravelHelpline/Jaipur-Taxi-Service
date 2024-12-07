@@ -3,9 +3,9 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import { Card } from 'react-bootstrap';
 import SlickSlider from './SlickSlider';
-import { FaArrowRight } from 'react-icons/fa6';
 import { RiWhatsappFill } from 'react-icons/ri';
 import Link from 'next/link';
+import EnquiryModal02 from './EnquiryModal02';
 
 const PackagesSlider = ({ packages, href, showPrice = false }) => {
     const [show, setShow] = useState(false);
@@ -72,7 +72,7 @@ const PackagesSlider = ({ packages, href, showPrice = false }) => {
                                                 </button>
                                             </Link>
                                             <button
-                                                className="w-100 rounded-5 text-capitalize text-white"
+                                                className="w-100 rounded-5 text-capitalize text-white" onClick={() => handleShow(pkg.title)}
                                             >
                                                 Enquire
                                             </button>
@@ -92,6 +92,12 @@ const PackagesSlider = ({ packages, href, showPrice = false }) => {
                     );
                 })}
             </SlickSlider>
+            <EnquiryModal02
+                show={show}
+                onHide={handleClose}
+                title={selectedPackage}
+            />
+
         </>
     )
 }
