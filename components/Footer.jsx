@@ -6,6 +6,8 @@ import React, { useState } from 'react'
 import { FaArrowRight } from 'react-icons/fa';
 import { FaMinus, FaPlus } from 'react-icons/fa6';
 import Logo from './Logo';
+import { MdMail } from 'react-icons/md';
+import { PiFacebookLogoFill, PiInstagramLogoFill, PiPhone, PiSkypeLogoFill, PiWhatsappLogoFill } from 'react-icons/pi';
 
 const Footer = () => {
     const footerLogo = '/rajasthan-travel-helpline.png';
@@ -271,7 +273,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="container-fluid bg-black">
+            <div className="container-fluid bg-black pb-5">
                 <div className="row d-flex justify-content-center aiign-items-center pt-4">
                     <Logo childStyle='text-center text-white' parentStyle='text-center' />
                 </div>
@@ -299,8 +301,35 @@ const Footer = () => {
                     <div className="col-lg-8 col-sm-12">
                         <hr />
                     </div>
+                    <div className="col-lg-8 col-sm-12">
+                        <h3 className="web-title text-center color-border text-capitalize mb-3 fw-bold">
+                            Get in touch with us
+                        </h3>
+                    </div>
+                    <div className="col-lg-8 col-sm-12 footer-icon d-flex justify-content-center align-items-center gap-2">
+                        <a href="" className='p-lg-3 fs-4 p-sm-2 rounded-3 d-flex bg-tertary-down justify-content-center align-items-center'>
+                            <MdMail />
+                        </a>
+                        <a href="" className='p-lg-3 fs-4 p-sm-2 rounded-3 d-flex bg-tertary-down justify-content-center align-items-center'>
+                            <PiFacebookLogoFill />
+                        </a>
+                        <a href="" className='p-lg-3 fs-4 p-sm-2 rounded-3 d-flex bg-tertary-down justify-content-center align-items-center'>
+                            <PiInstagramLogoFill />
+                        </a>
+                        <a href="" className='p-lg-3 fs-4 p-sm-2 rounded-3 d-flex bg-tertary-down justify-content-center align-items-center'>
+                            <PiSkypeLogoFill />
+                        </a>
+                        <a href="" className='p-lg-3 fs-4 p-sm-2 rounded-3 d-flex bg-tertary-down justify-content-center align-items-center'>
+                            <PiWhatsappLogoFill />
+                        </a>
+                    </div>
                 </div>
-                <div className="row">
+                <div className="row py-0 d-flex justify-content-center aiign-items-center">
+                    <div className="col-lg-8 col-sm-12">
+                        <hr />
+                    </div>
+                </div>
+                <div className="row pb-5">
                     <p className="copyright text-center py-lg-2 py-sm-1 text-capitalize color-border">
                         © 2003-{mydate} | Rajasthan travel helpline. All Rights
                         Reserved.

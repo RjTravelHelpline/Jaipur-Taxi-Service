@@ -4,6 +4,7 @@ import '../styles/components.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
+import BottomSocials from '@/components/BottomSocials';
 
 export const metadata = {
   title: 'Car Hire Jaipur Sightseeing Taxi | Jaipur Taxi Service',
@@ -56,9 +57,9 @@ export default function RootLayout({ children }) {
       <body>
         <NavBar />
         {children}
-       
+        <BackToTop />
+        <BottomSocials />
         <Footer />
-
       </body>
     </html>
   );

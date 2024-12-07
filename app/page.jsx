@@ -13,7 +13,6 @@ import { useState } from 'react';
 import SearchBar from '@/components/SearchBar';
 import { FaSearch } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
-import BackToTop from '@/components/BackToTop';
 const HomeBannerFig = '/Images/Banners/home-banner-fig.jpg';
 const Home = () => {
 
@@ -24,30 +23,28 @@ const Home = () => {
   const popularRentals = getPackagesByCategory(allCabRentals, 'popular')
   return (
 
-    <>
-      
-      <div className="container-fluid home-banner px-0">
-        <Carousel fade pause={false} controls={false} interval={4000}>
-          <Carousel.Item>
-            <Image src={HomeBannerFig} alt="Rajasthan Shotmen also Camel during sunset in desert" title='India is a country of Temples, Tradition and Scenic beauty' width={1500} height={1000} priority={true} />
-            <CarouselCaption>
-              <div className="home-banner-search w-100 flex-column">
-                <h3 className='text-capitalize text-white fw-bold web-title banner-title'>Ride Through <span className='fw-bold'>Rajasthan&apos;s </span>Wonders</h3>
-                <hr />
-                <div
-                  className="pseudo-input rounded-5 bg-white text-muted d-flex justify-content-start align-items-center"
-                  onClick={handleShowSearch}
-                >
-                  <span className='me-2 text-white bg-tertary rounded-5 p-3 d-flex' >
-                    <FaSearch />
-                  </span>
-                  <p className='mb-0 text-capitalize home-banner-input'>Search for taxis, tours, and travel packages & more..</p>
-                </div>
+    <><div className="container-fluid home-banner px-0 mt-5">
+      <Carousel fade pause={false} controls={false} interval={4000}>
+        <Carousel.Item>
+          <Image src={HomeBannerFig} alt="Rajasthan Shotmen also Camel during sunset in desert" title='India is a country of Temples, Tradition and Scenic beauty' width={1500} height={1000} priority={true} />
+          <CarouselCaption>
+            <div className="home-banner-search w-100 flex-column">
+              <h3 className='text-capitalize text-white fw-bold web-title banner-title'>Ride Through <span className='fw-bold'>Rajasthan&apos;s </span>Wonders</h3>
+              <hr />
+              <div
+                className="pseudo-input rounded-5 bg-white text-muted d-flex justify-content-start align-items-center"
+                onClick={handleShowSearch}
+              >
+                <span className='me-2 text-white bg-tertary rounded-5 p-3 d-flex' >
+                  <FaSearch />
+                </span>
+                <p className='mb-0 text-capitalize home-banner-input'>Search for taxis, tours, and travel packages & more..</p>
               </div>
-            </CarouselCaption>
-          </Carousel.Item>
-        </Carousel>
-      </div>
+            </div>
+          </CarouselCaption>
+        </Carousel.Item>
+      </Carousel>
+    </div>
       <div className="container-fluid bg-white pb-4">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0">

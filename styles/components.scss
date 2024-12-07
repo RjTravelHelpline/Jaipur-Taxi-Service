@@ -1,6 +1,6 @@
 // navigation bar
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
   box-shadow: 0 16px 24px rgba(194, 194, 194, 0.075);
@@ -96,7 +96,7 @@
   }
 }
 .mobile-ham {
-  z-index: 10000 !important;
+  z-index: 999 !important;
 }
 
 .mobile-dropdown-menu {
@@ -1264,11 +1264,11 @@
   }
   .carousel-item {
     width: 100% !important;
-    height: 30vh !important;
+    height: 36vh !important;
     max-height: 600px;
     overflow: hidden;
     @media screen and (max-width: 768px) {
-      height: 24vh !important;
+      height: 30vh !important;
     }
     img {
       width: 100% !important;
@@ -1298,6 +1298,9 @@
   cursor: pointer;
   z-index: 9999;
   box-shadow: 0 16px 24px rgba(0, 0, 0, 0.15);
+  @media screen and (max-width: 768px) {
+    bottom: 64px;
+  }
 }
 
 .about-nav {
@@ -1331,4 +1334,47 @@
 section {
   min-height: 50vh;
   scroll-margin-top: 164px;
+}
+
+// bottom socials
+
+.bottom-socials {
+  position: fixed;
+  bottom: 0px;
+  left: 16px;
+  width: 250px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  flex-grow: 1;
+  @media screen and (max-width: 768px) {
+    width: 100% !important;
+    left: 0;
+    bottom: 0;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    &:hover {
+      color: var(--color-tertary);
+    }
+    &:first-child {
+      background-color: #ffffff;
+      color: #5c21f3 !important;
+      flex-grow: 1;
+    }
+    &:nth-child(2) {
+      background-color: #00d66f;
+      color: #ffffff !important;
+      flex-grow: 1;
+    }
+    &:last-child {
+      color: #ffffff !important;
+      background-color: #fe3d3c !important;
+      flex-grow: 1;
+    }
+  }
 }

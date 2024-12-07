@@ -5,10 +5,10 @@ const page = () => {
   const date = new Date()
   return (
     <>
-      <div className="container-fluid py-lg-5 py-sm-3">
-        <div className="row justify-content-center align-items-center">
+      <div className="container-fluid py-lg-5 py-sm-3 mt-5">
+        <div className="row justify-content-center align-items-center mt-lg-5 mt-sm-3">
           <div className="col-12 col-lg-8 col-sm-12 px-2">
-          <div className="insider rounded-3 px-3">
+            <div className="insider rounded-3 px-3">
               <Breadcrumb>
                 <BreadcrumbItem href="/">Home</BreadcrumbItem>
                 <BreadcrumbItem active>privacy policy</BreadcrumbItem>

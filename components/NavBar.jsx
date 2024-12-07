@@ -21,6 +21,7 @@ import { BiChevronDown, BiTaxi } from 'react-icons/bi';
 import { PiTaxiFill } from 'react-icons/pi';
 import Image from 'next/image';
 import { IoClose } from 'react-icons/io5';
+import { truncateWords } from '@/utils/utils';
 
 const NavBar = () => {
 
@@ -153,7 +154,7 @@ const NavBar = () => {
                                                 onClick={handleClose}
                                             >
                                                 <span className="text-tertary me-2">≻</span>
-                                                {item.name} {/* Use the `name` dynamically */}
+                                                {truncateWords(item.name, 6)}  {/* Use the `name` dynamically */}
                                             </Link>
                                         </li>
                                     ))}
@@ -207,7 +208,7 @@ const NavBar = () => {
                                 <p className="text-tertary fw-bolder web-title">{category.title}</p>
                                 <hr />
                                 <ul>
-                                    {category.items.map((item, idx) => (
+                                    {category.items.slice(0, 5).map((item, idx) => (
                                         <li key={idx} className="p-2">
                                             <Link
                                                 href={item.path} // Use the dynamic path here

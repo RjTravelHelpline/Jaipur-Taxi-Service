@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { PiArrowUp } from "react-icons/pi";
 
 const BackToTop = () => {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const toggleVisibility = () => {
@@ -32,12 +32,11 @@ const BackToTop = () => {
             });
         }
     };
-
     return (
         <>
             {isVisible && (
                 <button
-                    className="back-to-top p-lg-3 p-sm-2 d-flex rounded-5"
+                    className="back-to-top p-3 d-flex rounded-5"
                     onClick={scrollToTop}
                 >
                     <PiArrowUp />

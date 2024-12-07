@@ -3,7 +3,7 @@ import { Carousel, CarouselItem, CarouselCaption } from 'react-bootstrap';
 
 const HeroBanner = ({ slides }) => {
     return (
-        <div className="container-fluid car-rental-banner">
+        <div className="container-fluid car-rental-banner mt-lg-5 mt-sm-3">
             <div className="container">
                 <div className="row justify-content-center align-items-center px-lg-2 px-sm-0">
                     <Carousel fade pause={false} indicators={false} controls={false} interval={4000} className="w-100">
