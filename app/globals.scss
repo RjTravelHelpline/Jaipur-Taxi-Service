@@ -61,7 +61,7 @@ body {
 }
 // Browser scroller bar
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-tertary) !important;
+  background-color: var(--color-tertary);
   border-radius: 999px;
 }
 
@@ -72,11 +72,12 @@ body {
 
 ::-webkit-scrollbar-track {
   background-color: transparent !important;
+  padding: 8px;
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
-  max-width: 4px;
+  width: 3px !important;
+  max-width: 3px;
   max-height: 4px;
 }
 

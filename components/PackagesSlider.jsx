@@ -81,7 +81,6 @@ const PackagesSlider = ({ packages, href, showPrice = false }) => {
                                                     className="rounded-5 p-2 w-auto text-capitalize bg-black" style={{ color: '#00E777' }}
                                                 >
                                                     <RiWhatsappFill className='fs-4' />
-
                                                 </button>
                                             </a>
                                         </div>

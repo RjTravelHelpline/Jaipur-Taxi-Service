@@ -3,13 +3,22 @@ import HeroBanner from '@/components/HeroBanner'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap'
+import { Breadcrumb, BreadcrumbItem, Card } from 'react-bootstrap'
 import { MdOutlineArrowOutward } from 'react-icons/md'
 import { AiOutlineFileText } from "react-icons/ai";
 import { FaHandshake, FaRegComments } from 'react-icons/fa'
 import { RiServiceLine } from 'react-icons/ri'
+import TourPackages from '@/components/TourPackages'
+import { Services } from '@/data/TourPackagesData'
+import Image from 'next/image'
+import SlickSlider from '@/components/SlickSlider'
+import { reviewers } from '@/data/Reviews'
+import Testimonials from '@/components/Testimonials'
+import ToggleShowAllButton from '@/components/ToggleShowAllButton'
+import useShowAllToggle from '@/components/useShowAllToggle'
 
 const Page = () => {
+  const { showAll, displayedItems, toggleShowAll } = useShowAllToggle(Services, 3);
   const [activeSection, setActiveSection] = useState(null);
 
   useEffect(() => {
@@ -140,11 +149,43 @@ const Page = () => {
 
         <section id="our-services" className="container-fluid py-5 bg-white">
           <div className="container">
-            <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
+            <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0">
               <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
                 <h2 className='text-capitalize text-center fw-bold web-title'>our services</h2>
                 <p className='text-center text-capitalize'>Discover the Benefits of Choosing Our Jaipur Taxi Services</p>
               </div>
+              <div className="w-100 d-flex justify-content-center align-items-center flex-wrap px-0 bydayspackages carRentalsCard service-packages">
+                {displayedItems.map((pkg, index) => (
+                  <div
+                    key={index}
+                    className="col-12 col-sm-12 col-md-6 col-lg-4 my-2 d-flex align-items-center px-2"
+                  >
+                    <Link href={pkg.navigate} className="text-capitalize">
+                      <Card className="card bg-transparent">
+                        <Image
+                          variant="top"
+                          src={pkg.imgSrc}
+                          alt="Card Packages"
+                          className="w-100 card-image"
+                          width={600}
+                          height={800}
+                        />
+                        <Link href={pkg.navigate} className="d-flex justify-content-center  align-items-center gap-2 text-capitalize go-link bg-white p-lg-3 p-sm-2 rounded-4 d-flex" style={{ backdropFilter: 'blur(20px)' }}>Explore now<MdOutlineArrowOutward className='' /></Link>
+                        <div className="row p-3 card-content d-flex align-items-start  justfiy-content-start flex-column">
+                          <h3 className="w-100 text-capitalize web-title fw-bold text-tertary">
+                            {pkg.title}
+                          </h3>
+                          <hr />
+                          <p className="fw-normal text-white w-100 text-capitalize ">
+                            {pkg.description}
+                          </p>
+                        </div>
+                      </Card>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+              <ToggleShowAllButton showAll={showAll} toggleShowAll={toggleShowAll} />
             </div>
           </div>
         </section>
@@ -155,6 +196,19 @@ const Page = () => {
               <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
                 <h2 className='text-capitalize text-center fw-bold web-title'>guest reviews</h2>
                 <p className='text-center text-capitalize'>Discover the Benefits of Choosing Our Jaipur Taxi Services</p>
+              </div>
+            </div>
+            <div className="row d-flex align-items-stretch px-2 reviews">
+              <SlickSlider settings={{ slidesToShow: 2 }}>
+                {reviewers.map((reviewer, index) => {
+                  return <Testimonials key={index} reviewer={reviewer} />;
+                })}
+              </SlickSlider>
+              <div className="col-12 d-flex w-100 align-items-center gap-2 px-4 mt-3">
+                <hr />
+                <Link href='/guest-feedback'>
+                  <button className='bg-tertary-down rounded-5 d-flex justify-content-between align-items-center gap-2 d-flex text-nowrap text-right text-capitalize'>explore more<MdOutlineArrowOutward className='text-tertary' /></button>
+                </Link>
               </div>
             </div>
           </div>

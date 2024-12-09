@@ -4,7 +4,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import { Carousel, CarouselCaption, Modal } from 'react-bootstrap';
 import Image from 'next/image';
 import PackagesSlider from '@/components/PackagesSlider';
-import { PopularTourPackages } from '@/data/TourPackagesData';
+import { JaipurDayTours, PopularTourPackages } from '@/data/TourPackagesData';
 import Link from 'next/link';
 import { MdOutlineArrowOutward } from 'react-icons/md';
 import { getPackagesByCategory } from '@/utils/utils';
@@ -13,6 +13,9 @@ import { useState } from 'react';
 import SearchBar from '@/components/SearchBar';
 import { FaSearch } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
+import Testimonials from '@/components/Testimonials';
+import SlickSlider from '@/components/SlickSlider';
+import { reviewers } from '@/data/Reviews';
 const HomeBannerFig = '/Images/Banners/home-banner-fig.jpg';
 const Home = () => {
 
@@ -104,16 +107,35 @@ const Home = () => {
         </div>
       </div>
 
-      {/* jaipur taxi for locals */}
+      {/* day trips from jaipur */}
       <div className="container-fluid py-5 bg-linear-modal">
         <div className="container">
-          <div className="row d-flex justify-content-center align-items-center  px-lg-2 px-sm-0 why-us">
+          <div className="row d-flex justify-content-center align-items-center  px-lg-2 px-sm-0 packages">
+            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
+              <h2 className='text-capitalize text-center fw-bold web-title'>jaipur day trips</h2>
+              <p className='text-center text-capitalize'>explore Jaipur taxi tour packages & tourist cab packages</p>
+            </div>
+            <PackagesSlider packages={JaipurDayTours} showPrice={false} />
+            <div className="col-12 d-flex justify-content-between align-items-center gap-2 px-4 mt-3">
+              <hr />
+              <Link href='/tour-packages-rajasthan'>
+                <button className='bg-tertary-down rounded-5 d-flex justify-content-between align-items-center gap-2 d-flex text-nowrap text-capitalize'>explore more<MdOutlineArrowOutward className='text-tertary' /></button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* why choose us */}
+      <div className="container-fluid py-5">
+        <div className="container">
+          <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
             <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
               <h2 className='text-capitalize text-center fw-bold web-title'>why choose us</h2>
               <p className='text-center text-capitalize'>Discover the Benefits of Choosing Our Jaipur Taxi Services</p>
             </div>
             <WhyChooseUs />
-            <div className="col-12 d-flex w-100 align-items-center gap-2 px-4">
+            <div className="col-12 d-flex w-100 align-items-center gap-2 px-4 mt-2">
               <hr />
               <Link href='/why-choose-jaipur-taxi-service'>
                 <button className='bg-tertary-down rounded-5 d-flex justify-content-between align-items-center gap-2 d-flex text-nowrap text-right text-capitalize'>explore more<MdOutlineArrowOutward className='text-tertary' /></button>
@@ -122,6 +144,33 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* testimonials */}
+      <div className="container-fluid py-5 bg-linear-modal">
+        <div className="container">
+          <div className="row d-flex justify-content-center align-items-center  px-lg-2 px-sm-0 reviews">
+            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
+              <h2 className='text-capitalize text-center fw-bold web-title'>guests&apos; reviews</h2>
+              <p className='text-center text-capitalize'>Discover the Benefits of Choosing Our Jaipur Taxi Services</p>
+            </div>
+            <div className="row d-flex align-items-stretch px-2">
+              <SlickSlider settings={{ slidesToShow: 2 }}>
+                {reviewers.map((reviewer, index) => {
+                  return <Testimonials key={index} reviewer={reviewer} />;
+                })}
+              </SlickSlider>
+            </div>
+            {/* testimonials */}
+            <div className="col-12 d-flex w-100 align-items-center gap-2 px-4 mt-3">
+              <hr />
+              <Link href='/guest-feedback'>
+                <button className='bg-tertary-down rounded-5 d-flex justify-content-between align-items-center gap-2 d-flex text-nowrap text-right text-capitalize'>explore more<MdOutlineArrowOutward className='text-tertary' /></button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* search model */}
       <Modal size='xl' show={showSearch} onHide={handleCloseSearch} style={{ width: '100% !important', padding: '0 !important' }} className='search-modal'>
         <div className="w-100 d-flex justify-content-end">

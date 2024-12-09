@@ -1,3 +1,5 @@
+import { LuxuryBus, Tempo_15, ToyotaCamry } from './ImagesData';
+
 export const JaipurCityTour = '/Images/Card/jaipur-amer-fort.jpg';
 export const AjmerPushkar = '/Images/Card/ajmer-pushkar.jpg';
 export const BhangarhFort = '/Images/Card/bhangarh-ghost-fort.jpg';
@@ -1994,6 +1996,61 @@ export const PlacesToVisitInRajasthan = [
     alt: null,
     imgTitle: null,
     navigate: '/pali',
+    category: null,
+    destination: null,
+  },
+];
+
+export const Services = [
+  {
+    title: 'Cab rental service',
+    description: 'Affordable and Reliable Cabs for Every Journey',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: ToyotaCamry,
+    alt: null,
+    imgTitle: null,
+    navigate: '/car-rental-jaipur',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Tempo rental service',
+    description: 'Spacious Tempos for Comfortable Group Travel',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: Tempo_15,
+    alt: null,
+    imgTitle: null,
+    navigate: '/tempo-traveller-rental-in-jaipur',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Bus & Coach Renal Service',
+    description: 'Luxury Buses for Large Group Adventures',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: LuxuryBus,
+    alt: null,
+    imgTitle: null,
+    navigate: '/bus-rental-service-in-jaipur',
+    category: null,
+    destination: null,
+  },
+  {
+    title: 'Rajasthan Tour Packages',
+    description: 'Discover Rajasthan’s Heritage with Ease',
+    placesCovered: [''],
+    price: null,
+    duration: null,
+    imgSrc: JaipurHawaMahal,
+    alt: null,
+    imgTitle: null,
+    navigate: '/tour-packages-rajasthan',
     category: null,
     destination: null,
   },

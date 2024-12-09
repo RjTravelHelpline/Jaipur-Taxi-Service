@@ -43,18 +43,20 @@ const TourPackages = ({ pkg, showPrice = false }) => {
                             </h4>
                         </div>
                         <div className="w-100 card-header d-flex align-items-center justify-content-center pt-0 gap-2 flex-wrap">
-                            {pkg.placesCovered.length > 0 ? (
-                                <>
-                                    {pkg.placesCovered.slice(0, 4).map((item, index) => (
-                                        <p key={index} className="text-tertary covered-places">{item}</p>
-                                    ))}
-                                    {pkg.placesCovered.length > 4 && (
-                                        <p className="text-tertary covered-places">..more</p>
-                                    )}
-                                </>
-                            ) : (
-                                "No places covered mentioned."
-                            )}
+                            {
+                                pkg.placesCovered.length > 0 ? (
+                                    <>
+                                        {pkg.placesCovered.slice(0, 4).map((item, index) => (
+                                            <p key={index} className="text-tertary covered-places">{item}</p>
+                                        ))}
+                                        {pkg.placesCovered.length > 4 && (
+                                            <p className="text-tertary covered-places">..more</p>
+                                        )}
+                                    </>
+                                ) : (
+                                    "No places covered mentioned."
+                                )
+                            }
                         </div>
                         <div className="col-12 d-flex px-0">
                             <div className="w-100 d-flex justify-content-center align-items-center gap-1">
@@ -81,8 +83,6 @@ const TourPackages = ({ pkg, showPrice = false }) => {
                     </div>
                 </Card>
             </div>
-
-
             <EnquiryModal02
                 show={show}
                 onHide={handleClose}
