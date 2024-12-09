@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import { Modal } from 'react-bootstrap'
-import CabEnquiryForm from './cabEnquriyForm'
 import { IoClose } from 'react-icons/io5'
 import TourEnquiryForm from './TourEnquiryForm'
 

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Button, Modal } from 'react-bootstrap'
-import CabEnquiryForm from './cabEnquriyForm'
+import CabEnquiryForm from './CabEnquriyForm'
 import { IoClose } from 'react-icons/io5'
 
 const EnquiryModal = (props) => {
