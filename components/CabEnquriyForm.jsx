@@ -202,7 +202,7 @@ const CabEnquiryForm = ({ selectedPackage }) => {
                                         className="w-100"
                                     />
                                 </div>
-                                <div className="col-12 col-lg-6 col-md-6 my-2">
+                                <div className="col-12 col-lg-6 col-md-6 my-2 w-100">
                                     <textarea
                                         placeholder="Other Request"
                                         name="otherRequest"

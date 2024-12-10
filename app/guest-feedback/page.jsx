@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap'
 import { RiCloseFill } from 'react-icons/ri';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
+import { getLatestItems } from '@/utils/utils';
 const tourHimachal = '/Images/Reviews/tour-himachal.jpg';
 const tourHimachal02 = '/Images/Reviews/tour-himachal-02.jpg';
 const tourTamilnadu = '/Images/Reviews/tour-tamilnadu.jpg';
@@ -22,6 +23,8 @@ const tourDesert08 = '/Images/Gallery/tour-jaisalmer-08.jpeg';
 const tourDesert09 = '/Images/Gallery/tour-jaisalmer-09.jpeg';
 
 const Page = () => {
+
+  const sortedReviews = getLatestItems(reviewers)
   const images = [
     { src: tourHimachal, alt: 'Image 1' },
     { src: tourHimachal02, alt: 'Image 2' },
@@ -82,7 +85,7 @@ const Page = () => {
               <p className='text-center text-capitalize'>Discover the Benefits of Choosing Our Jaipur Taxi Services</p>
             </div>
             <div className="row d-flex justify-content-start align-items-center  review-card-screen">
-              {reviewers.map((reviewer, index) => {
+              {sortedReviews.map((reviewer, index) => {
                 return <Testimonials key={index} reviewer={reviewer} />;
               })}
             </div>
@@ -116,12 +119,12 @@ const Page = () => {
 
         {/* Modal */}
         <Modal show={showModal} onHide={handleCloseModal} size="xl" centered className='image-modal' animation={false}>
-          <button
-            className="d-flex p-3 m-3 close-button rounded-5"
-            onClick={handleCloseModal}
-            aria-label="Close"
-          ><RiCloseFill /> </button>
           <Modal.Body className="p-0">
+            <button
+              className="d-flex p-3 m-3 close-button rounded-5"
+              onClick={handleCloseModal}
+              aria-label="Close"
+            ><RiCloseFill /> </button>
             <button
               className="modal-prev-button p-3"
               onClick={() =>
@@ -148,7 +151,8 @@ const Page = () => {
             >
               <SlArrowRight />
             </button>
-            {/* <div className="mt-4 bottom-image-slider">
+
+            <div className="mt-4 bottom-image-slider">
               {images.map((image, index) => (
                 <div
                   key={index}
@@ -160,7 +164,8 @@ const Page = () => {
                   <Image src={image.src} alt={image.alt} width={100} height={75} />
                 </div>
               ))}
-            </div> */}
+            </div>
+
           </Modal.Body>
         </Modal>
       </div>

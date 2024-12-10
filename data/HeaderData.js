@@ -1,30 +1,30 @@
 export const cabRental = [
-  {
-    title: 'Hatchback Car Rental',
-    items: [
-      {
-        name: 'Maruti Swift Car',
-        path: '/maruti-swift-car-rental-in-jaipur',
-      },
-      {
-        name: 'Tata Indica Car',
-        path: '/tata-indica-car-hire-in-jaipur',
-      },
-      {
-        name: 'Hyundai i20 Car',
-        path: '/hyundai-i20-cab-hire-in-jaipur',
-      },
-      {
-        name: 'Hyundai Santro Car',
-        path: '/hyundai-santro-car-hire-in-jaipur',
-      },
-      {
-        name: 'Maruti WagonR Car',
-        path: '/maruti-wagonr-car-rental-in-jaipur',
-      },
-    ],
-    more: '/cheapest-car-rental-jaipur',
-  },
+  // {
+  //   title: 'Hatchback Car Rental',
+  //   items: [
+  //     {
+  //       name: 'Maruti Swift Car',
+  //       path: '/maruti-swift-car-rental-in-jaipur',
+  //     },
+  //     {
+  //       name: 'Tata Indica Car',
+  //       path: '/tata-indica-car-hire-in-jaipur',
+  //     },
+  //     {
+  //       name: 'Hyundai i20 Car',
+  //       path: '/hyundai-i20-cab-hire-in-jaipur',
+  //     },
+  //     {
+  //       name: 'Hyundai Santro Car',
+  //       path: '/hyundai-santro-car-hire-in-jaipur',
+  //     },
+  //     {
+  //       name: 'Maruti WagonR Car',
+  //       path: '/maruti-wagonr-car-rental-in-jaipur',
+  //     },
+  //   ],
+  //   more: '/cheapest-car-rental-jaipur',
+  // },
   {
     title: 'Sedan Car Rental',
     items: [
@@ -88,6 +88,12 @@ export const cabRental = [
         name: 'Toyota Fortuner Car',
         path: '/toyota-fortuner-car-rental-in-jaipur',
       },
+    ],
+    more: '/luxury-car-rental-jaipur',
+  },
+  {
+    title: 'premium Car Rental',
+    items: [
       { name: 'Mercedes S Class Car', path: '/mercedes-car-hire-in-jaipur' },
       { name: 'BMW Car', path: '/bmw-car-rental-in-jaipur' },
       { name: 'Audi Car', path: '/audi-car-rental-in-jaipur' },
@@ -390,5 +396,3 @@ export const placesToVisit = [
     more: '/tourist-cities-of-rajasthan',
   },
 ];
-
-

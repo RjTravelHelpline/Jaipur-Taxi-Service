@@ -18,12 +18,13 @@ import { FaSearch } from 'react-icons/fa';
 import { Modal, ModalFooter } from 'react-bootstrap';
 import SearchBar from './SearchBar';
 import { BiChevronDown, BiTaxi } from 'react-icons/bi';
-import { PiTaxiFill } from 'react-icons/pi';
+import { PiPhone, PiPhoneCallFill, PiPhoneFill, PiTaxiFill, PiWhatsappLogoFill } from 'react-icons/pi';
 import Image from 'next/image';
 import { IoClose } from 'react-icons/io5';
 import { truncateWords } from '@/utils/utils';
 import EnquiryModal from './EnquiryModal';
 import EnquiryModal02 from './EnquiryModal02';
+import { RiPhoneFill, RiWhatsappFill } from 'react-icons/ri';
 
 const NavBar = () => {
     const [modalShow, setModalShow] = useState(false);
@@ -247,6 +248,7 @@ const NavBar = () => {
                         </div>
                         {ismobile ? (
                             <div className="col-6 d-flex justify-content-end align-items-center">
+
                                 <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none me-1 search-button bg-tertary-down" onClick={handleShowSearch}>
                                     <FaSearch className=' text-tertary' />
                                 </button>
@@ -258,11 +260,18 @@ const NavBar = () => {
                                 </button>
                             </div>) : (
                             <div className="book-now col-6 d-flex justify-content-end align-items-center">
-                                <button className="d-flex justify-content-center align-items-center rounded-5 shadow-none me-2 search-button bg-gray w-50" style={{ cursor: 'text !important' }} onClick={handleShowSearch}>
-                                    <FaSearch className='me-2 text-tertary' />
-                                    <div className="w-100 d-flex justify-content-start align-items-center">
-                                        <p className='mb-0 text-capitalize w-auto'>search here</p>
-                                    </div>
+                                <div class="contact-info d-flex justify-content-center align-items-center me-2">
+                                    <a href="https://wa.me/9166555888" target="_blank" class="d-flex align-items-center bg-gray p-2 rounded-3">
+                                        <RiWhatsappFill className='me-1 fs-4' />
+                                        <span class="d-none d-lg-inline text-black"> +91-9166555888</span>
+                                    </a>
+                                    <a href="tel:+91-9024337038" class="ms-3 d-flex align-items-center bg-gray p-2 rounded-3">
+                                        <RiPhoneFill className='me-1 fs-4' />
+                                        <span class="d-none d-lg-inline text-black">+91-9024337038</span>
+                                    </a>
+                                </div>
+                                <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none me-1 search-button bg-tertary-down" onClick={handleShowSearch}>
+                                    <FaSearch className=' text-tertary' />
                                 </button>
                                 <button className="rounded-5 text-white text-capitalize d-flex align-items-center justify-content-center" style={{ fontWeight: '500' }} onClick={() => setModalShow(true)} >
                                     <PiTaxiFill className='text-black me-2' /> book now

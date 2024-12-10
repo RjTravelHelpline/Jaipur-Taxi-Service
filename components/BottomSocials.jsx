@@ -8,13 +8,13 @@ const BottomSocials = () => {
     return (
         <>
             <div className="bottom-socials rounded-top-4 overflow-hidden">
-                <a href="https://www.twitter.com" className='p-3 fs-4' target="_blank" rel="noopener noreferrer">
+                <a href="tel:+91-9024337038" className='p-3 fs-4' target="_blank" rel="noopener noreferrer">
                     <RiPhoneFill />
                 </a>
-                <a href="https://www.facebook.com" className='p-3 fs-4' target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/9166555888" className='p-3 fs-4' target="_blank" rel="noopener noreferrer">
                     <RiWhatsappFill />
                 </a>
-                <a href="https://www.instagram.com" className='p-3 fs-4' target="_blank" rel="noopener noreferrer">
+                <a href="mailto:mail@rajasthantravelhelpline.com" className='p-3 fs-4' target="_blank" rel="noopener noreferrer">
                     <MdMail />
                 </a>
             </div>

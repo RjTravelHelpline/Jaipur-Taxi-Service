@@ -9,9 +9,11 @@ import Logo from './Logo';
 import { MdMail } from 'react-icons/md';
 import { PiFacebookLogoFill, PiInstagramLogoFill, PiSkypeLogoFill, PiWhatsappLogoFill } from 'react-icons/pi';
 import EnquiryModal02 from './EnquiryModal02';
+const tripAdvisorLogo = '/Images/Logos/tripadvisor-logo.webp';
+const googleStars = '/Images/Logos/google-logo.webp';
 
 const Footer = () => {
-    const footerLogo = '/rajasthan-travel-helpline.png';
+    const footerLogo = '/profile-logo.jpg';
     const date = new Date();
     const mydate = date.getUTCFullYear();
 
@@ -23,8 +25,32 @@ const Footer = () => {
     const [modalShow, setModalShow] = useState(false);
     return (
         <>
+            <div className="container-fluid bg-white py-lg-4 py-sm-3">
+                <div className="container">
+                    <div className="row d-flex justify-content-center align-items-center footer-top-row">
+                        <div className="col-lg-6 col-sm-12 px-2">
+                            <h4 className="text-capitalize mb-0 text-black fw-bold  web-title d-flex justify-content-between">
+                                our customer recommanded on</h4>
+                        </div>
+                        <div className="col-lg-6 col-sm-12 px-2">
+                            <div className="footer-logo-container d-flex justify-content-end align-items-center w-auto">
+                                <a
+                                    href="https://www.tripadvisor.in/Attraction_Review-g304555-d24123312-Reviews-Rajasthan_Travel_Helpline-Jaipur_Jaipur_District_Rajasthan.html"
+                                    className="image-link w-auto"
+                                    target="_blank"
+                                >
+                                    <Image width={300} height={50} src={tripAdvisorLogo} alt="Trip Advisor Logo" title='Tripadvisor logo representing trusted travel reviews' />
+                                </a>
+                                <a href="" className="image-link d-inline" target="_blank">
+                                    <Image width={300} height={50} src={googleStars} alt="Google Review Logo" title='Google Review logo showcasing customer feedback' />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div >
             {/* Packages and links */}
-            <div className="container-fluid bg-black py-lg-5 py-sm-3">
+            < div className="container-fluid bg-black py-lg-5 py-sm-3">
                 <div className="container py-4">
                     <div className="row d-flex justify-content-center align-items-center flex-column">
                         <h3 className="text-capitalize mb-3 text-tertary fw-bold text-center  web-title banner-title-2">
@@ -45,7 +71,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
             <div className="container-fluid packages-footer py-3">
                 <div className="container">
                     <div className="row py-lg-4 py-sm-3">
@@ -299,7 +325,7 @@ const Footer = () => {
                                 className="d-flex justify-content-center aiign-items-center footer-link"
                                 aria-label='rajasthan travel helpline'
                             >
-                                <Image width={400} height={200} src={footerLogo} alt="Rajasthan Travel Helpline" title='Rajasthan Travel Helpline Contact Details' />
+                                <Image width={600} height={300} src={footerLogo} alt="Rajasthan Travel Helpline" title='Rajasthan Travel Helpline Contact Details' />
                             </a>
                         </div>
                     </div>
@@ -308,26 +334,21 @@ const Footer = () => {
                     <div className="col-lg-8 col-sm-12">
                         <hr />
                     </div>
-                    <div className="col-lg-8 col-sm-12">
-                        <h3 className="web-title text-center color-border text-capitalize mb-3 fw-bold">
-                            Get in touch with us
-                        </h3>
-                    </div>
                     <div className="col-lg-8 col-sm-12 footer-icon d-flex justify-content-center align-items-center gap-2">
-                        <a href="" className='p-lg-3 fs-4 p-sm-2 rounded-3 d-flex bg-tertary-down justify-content-center align-items-center'>
+                        <a href="mailto:mail@rajasthantravelhelpline.com" className='p-lg-3 fs-4 p-sm-2 rounded-5 border-gray d-flex text-hr justify-content-center align-items-center'>
                             <MdMail />
                         </a>
-                        <a href="" className='p-lg-3 fs-4 p-sm-2 rounded-3 d-flex bg-tertary-down justify-content-center align-items-center'>
+                        <a href="https://api.whatsapp.com/send?phone=919166555888" className='p-lg-3 fs-4 p-sm-2 rounded-5 border-gray d-flex text-hr justify-content-center align-items-center'>
+                            <PiWhatsappLogoFill />
+                        </a>
+                        <a href="https://www.facebook.com/rajasthantravelhelpline/" className='p-lg-3 fs-4 p-sm-2 rounded-5 border-gray d-flex text-hr justify-content-center align-items-center'>
                             <PiFacebookLogoFill />
                         </a>
-                        <a href="" className='p-lg-3 fs-4 p-sm-2 rounded-3 d-flex bg-tertary-down justify-content-center align-items-center'>
+                        <a href="https://www.instagram.com/rajasthantravelhelpline/" className='p-lg-3 fs-4 p-sm-2 rounded-5 border-gray d-flex text-hr justify-content-center align-items-center'>
                             <PiInstagramLogoFill />
                         </a>
-                        <a href="" className='p-lg-3 fs-4 p-sm-2 rounded-3 d-flex bg-tertary-down justify-content-center align-items-center'>
+                        <a href="skype:rajasthantravel?chat" className='p-lg-3 fs-4 p-sm-2 rounded-5 border-gray d-flex text-hr justify-content-center align-items-center'>
                             <PiSkypeLogoFill />
-                        </a>
-                        <a href="" className='p-lg-3 fs-4 p-sm-2 rounded-3 d-flex bg-tertary-down justify-content-center align-items-center'>
-                            <PiWhatsappLogoFill />
                         </a>
                     </div>
                 </div>

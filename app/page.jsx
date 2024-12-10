@@ -7,7 +7,7 @@ import PackagesSlider from '@/components/PackagesSlider';
 import { JaipurDayTours, PopularTourPackages } from '@/data/TourPackagesData';
 import Link from 'next/link';
 import { MdOutlineArrowOutward } from 'react-icons/md';
-import { getPackagesByCategory } from '@/utils/utils';
+import { getLatestItems, getPackagesByCategory } from '@/utils/utils';
 import { allCabRentals } from '@/data/cabRentalData';
 import { useState } from 'react';
 import SearchBar from '@/components/SearchBar';
@@ -18,6 +18,8 @@ import SlickSlider from '@/components/SlickSlider';
 import { reviewers } from '@/data/Reviews';
 const HomeBannerFig = '/Images/Banners/home-banner-fig.jpg';
 const Home = () => {
+
+  const sortedReviews = getLatestItems(reviewers)
 
   const [showSearch, setShowSearch] = useState(false);
   const handleCloseSearch = () => setShowSearch(false);
@@ -155,9 +157,10 @@ const Home = () => {
             </div>
             <div className="row d-flex align-items-stretch px-2">
               <SlickSlider settings={{ slidesToShow: 2 }}>
-                {reviewers.map((reviewer, index) => {
-                  return <Testimonials key={index} reviewer={reviewer} />;
-                })}
+                {
+                  sortedReviews.slice(0, 4).map((reviewer, index) => {
+                    return <Testimonials key={index} reviewer={reviewer} />;
+                  })}
               </SlickSlider>
             </div>
             {/* testimonials */}

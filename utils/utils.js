@@ -11,3 +11,13 @@ export const truncateWords = (text, maxWords) => {
   }
   return text;
 };
+
+// Get Items by latest date
+
+export const getLatestItems = (items) => {
+  return items.sort((a, b) => {
+    const aDate = new Date(a.date);
+    const bDate = new Date(b.date);
+    return bDate - aDate;
+  });
+};
