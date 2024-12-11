@@ -11,7 +11,8 @@ const TourEnquiryForm = ({ selectedPackage }) => {
         contact: "",
         email: "",
         travelDate: "",
-        numberOfTravellers: "",
+        numberOfAdults: "",
+        numberOfKids: "",
         vehicleType: "",
         vehicleName: "",
         otherRequest: "",
@@ -31,7 +32,6 @@ const TourEnquiryForm = ({ selectedPackage }) => {
     const formattedData = {
         ...formData,
         contact: parseInt(formData.contact),
-        numberOfTravellers: parseInt(formData.numberOfTravellers),
     };
 
     const handleChange = (e) => {
@@ -73,7 +73,8 @@ const TourEnquiryForm = ({ selectedPackage }) => {
                     contact: "",
                     email: "",
                     travelDate: "",
-                    numberOfTravellers: "",
+                    numberOfAdults: "",
+                    numberOfKids: "",
                     vehicleType: "",
                     vehicleName: "",
                     otherRequest: "",
@@ -204,12 +205,22 @@ const TourEnquiryForm = ({ selectedPackage }) => {
                                         className="w-100"
                                     />
                                 </div>
-                                <div className="col-12 col-lg-6 col-md-6 my-2 w-100">
+                                <div className="col-12 col-lg-6 col-md-6 my-2">
                                     <input
                                         type="number"
-                                        placeholder="no. of travellers"
-                                        name="numberOfTravellers"
-                                        value={formData.numberOfTravellers}
+                                        placeholder="no. of adults"
+                                        name="numberOfAdults"
+                                        value={formData.numberOfAdults}
+                                        onChange={handleChange}
+                                        className="w-100"
+                                    />
+                                </div>
+                                <div className="col-12 col-lg-6 col-md-6 my-2">
+                                    <input
+                                        type="number"
+                                        placeholder="no. of kids"
+                                        name="numberOfKids"
+                                        value={formData.numberOfKids}
                                         onChange={handleChange}
                                         className="w-100"
                                     />

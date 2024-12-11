@@ -76,7 +76,7 @@ const Home = () => {
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 packages rental-container">
             <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
-              <h2 className='text-capitalize text-center fw-bold web-title'>popular cab rental</h2>
+              <h2 className='text-capitalize text-center fw-bold web-title'>cab rental</h2>
               <p className='text-center text-capitalize'>explore Jaipur taxi tour packages & tourist cab packages</p>
             </div>
             <RentalSlider rentals={popularRentals} />

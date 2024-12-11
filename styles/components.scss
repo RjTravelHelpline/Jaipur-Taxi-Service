@@ -462,7 +462,6 @@
     button,
     a {
       text-wrap: nowrap !important;
-      font-size: clamp(0.9em, 1.58vw, 1em) !important;
     }
     p {
       font-weight: normal !important;
@@ -580,7 +579,6 @@
   .card {
     background: var(--color-primary) !important;
     .card-image-container {
-      // height: 200px !important;
       img {
         border-radius: 0;
       }
@@ -600,15 +598,14 @@
       }
       .package-duration {
         text-transform: uppercase !important;
-        color: var(--color-tertary);
+        color: var(--color-black);
         font-weight: 500 !important;
       }
       .package-category {
-        // background-color: var(--color-tertary-down) !important;
         p {
-          font-size: 0.8em !important;
           color: var(--color-black);
           font-weight: 500 !important;
+          font-size: 0.9em !important;
         }
         .icon {
           padding: 8px;
@@ -622,9 +619,9 @@
     .price-rental {
       width: 100% !important;
       padding: 8px 4px !important;
-      font-size: 0.8em !important;
+      font-size: 0.9em !important;
       background-color: var(--color-tertary-down) !important;
-      color: var(--color-tertary) !important;
+      color: var(--color-black) !important;
       font-weight: 500 !important;
     }
     .whatsapp-logo {
@@ -1660,7 +1657,6 @@ form {
   width: max-content !important;
   color: var(--color-tertary);
   background: var(--color-tertary-down);
-  font-size: clamp(0.65em, 2vw, 0.99em);
   padding: 8px 12px !important;
   border-radius: 12px;
   position: relative;
@@ -1744,12 +1740,6 @@ form {
     height: 100%;
     object-fit: cover;
     display: block;
-  }
-  .review-title {
-    font-size: clamp(0.85em, 3vw, 1.3em);
-  }
-  .review-description {
-    font-size: clamp(0.65em, 2vw, 0.99em);
   }
   img {
     border-radius: 16px;

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import React, { useEffect } from 'react'
 import { Breadcrumb, BreadcrumbItem, Table } from 'react-bootstrap'
 import { FaCarCrash, FaFirstAid, FaInfoCircle, FaMapMarkerAlt, FaMusic, FaSnowflake, FaSprayCan, FaUsers, FaUserTie } from "react-icons/fa";
-import { MdAirlineSeatReclineNormal, MdEventSeat, MdFeaturedPlayList, MdOutlineArrowOutward, MdOutlinePower, MdWindow } from "react-icons/md";
+import { MdAirlineSeatReclineNormal, MdEventSeat, MdFeaturedPlayList, MdOutlinePower, MdWindow } from "react-icons/md";
 import { FaDollarSign } from "react-icons/fa";
 import { BsImages, BsLuggageFill } from "react-icons/bs";
 import Link from 'next/link'

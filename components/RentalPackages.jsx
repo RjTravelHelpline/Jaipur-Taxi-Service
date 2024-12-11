@@ -34,23 +34,23 @@ const RentalPackages = ({ rentals }) => {
                                         {rental.title}
                                     </h4>
                                 </div>
-                                <div className="w-100 card-header d-flex justify-content-center gap-4 align-items-start py-lg-3 py-sm-2 package-category bg-linear-modal">
+                                <div className="w-100 card-header d-flex justify-content-center gap-4 align-items-start package-category">
                                     {rental.features.map((feature, index) => (
                                         <div
                                             key={index}
                                             className="d-flex flex-column justify-content-center align-items-center"
                                         >
-                                            {feature.icon}
+                                            <span className='text-tertary bg-transparent'>{feature.icon}</span>
                                             <p className="pt-2">{feature.label}</p>
                                         </div>
                                     ))}
                                 </div>
-                                <div className="w-100 card-header d-flex justify-content-between align-items-start flex-column gap-2">
-                                    <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-5">
+                                <hr className="my-1" />
+                                <div className="w-100 card-header d-flex justify-content-between align-items-start flex-column gap-2 py-0">
+                                    <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-3">
                                         Jaipur local @ ₹{rental.priceOne !== null ? rental.priceOne : "on request"} {rental.priceOne !== null && "per hour"}
                                     </p>
-
-                                    <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-5">
+                                    <p className="price-rental px-2 text-capitalize w-auto text-black text-center rounded-3">
                                         Outstation @ ₹{rental.priceTwo !== null ? rental.priceTwo : "on request"} {rental.priceTwo !== null && "per km"}
                                     </p>
                                 </div>
