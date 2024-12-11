@@ -8,7 +8,6 @@ import { MdOutlineArrowOutward } from 'react-icons/md'
 import { AiOutlineFileText } from "react-icons/ai";
 import { FaHandshake, FaRegComments } from 'react-icons/fa'
 import { RiServiceLine } from 'react-icons/ri'
-import TourPackages from '@/components/TourPackages'
 import { Services } from '@/data/TourPackagesData'
 import Image from 'next/image'
 import SlickSlider from '@/components/SlickSlider'
@@ -20,23 +19,27 @@ import useShowAllToggle from '@/components/useShowAllToggle'
 const Page = () => {
   const { showAll, displayedItems, toggleShowAll } = useShowAllToggle(Services, 3);
   const [activeSection, setActiveSection] = useState(null);
-
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+    const handleScroll = () => {
+      const sections = ["overview", "why-choose-us", "our-services", "guests-reviews"];
+      const scrollPosition = window.scrollY;
+
+      sections.forEach((sectionId) => {
+        const sectionElement = document.getElementById(sectionId);
+        if (sectionElement) {
+          const offsetTop = sectionElement.offsetTop;
+          const offsetBottom = offsetTop + sectionElement.offsetHeight;
+
+          if (scrollPosition >= offsetTop - 400 && scrollPosition < offsetBottom - 400) {
+            if (activeSection !== sectionId) {
+              setActiveSection(sectionId);
+            }
           }
-        });
-      },
-      { threshold: 1 }
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
+        }
+      });
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const slides = [
     {
@@ -70,7 +73,7 @@ const Page = () => {
             <div className="row d-flex justify-content-start align-items-center gap-2 p-lg-2 p-sm-1 rounded-3 bg-white px-2">
               <Link href="#overview" className="px-0 rounded-3">
                 <p
-                  className={`text-black rounded-3 nav-link text-capitalize mb-0 p-lg-3 p-sm-2 ${activeSection === "overview" ? "active" : ""
+                  className={`text-black rounded-3 nav-link text-capitalize mb-0 p-2 ${activeSection === "overview" ? "active" : ""
                     }`}
                 >
                   <AiOutlineFileText className='text-tertary me-2' />Overview
@@ -78,7 +81,7 @@ const Page = () => {
               </Link>
               <Link href="#why-choose-us" className="px-0 rounded-3">
                 <p
-                  className={`text-black rounded-3 nav-link text-capitalize mb-0 p-lg-3 p-sm-2 ${activeSection === "why-choose-us" ? "active" : ""
+                  className={`text-black rounded-3 nav-link text-capitalize mb-0 p-2 ${activeSection === "why-choose-us" ? "active" : ""
                     }`}
                 >
                   <FaHandshake className='text-tertary me-2' /> Why Choose Us
@@ -86,7 +89,7 @@ const Page = () => {
               </Link>
               <Link href="#our-services" className="px-0 rounded-3">
                 <p
-                  className={`text-black rounded-3 nav-link text-capitalize mb-0 p-lg-3 p-sm-2 ${activeSection === "our-services" ? "active" : ""
+                  className={`text-black rounded-3 nav-link text-capitalize mb-0 p-2 ${activeSection === "our-services" ? "active" : ""
                     }`}
                 >
                   <RiServiceLine className='text-tertary me-2' /> Our Services
@@ -94,7 +97,7 @@ const Page = () => {
               </Link>
               <Link href="#guests-reviews" className="px-0 rounded-3">
                 <p
-                  className={`text-black rounded-3 nav-link text-capitalize mb-0 p-lg-3 p-sm-2 ${activeSection === "guests-reviews" ? "active" : ""
+                  className={`text-black rounded-3 nav-link text-capitalize mb-0 p-2 ${activeSection === "guests-reviews" ? "active" : ""
                     }`}
                 >
                   <FaRegComments className='text-tertary me-2' />Guests Reviews
@@ -105,6 +108,7 @@ const Page = () => {
         </div>
 
         {/* Navigating The Sections */}
+        {/* overview */}
         <section id="overview" className="container-fluid py-lg-5 py-sm-4 bg-white">
           <div className="container">
             <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
@@ -129,6 +133,7 @@ const Page = () => {
             </div></div>
         </section>
 
+        {/* why choose us */}
         <section id="why-choose-us" className="container-fluid py-5 bg-linear-modal">
           <div className="container">
             <div className="row d-flex justify-content-center align-items-center  px-lg-2 px-sm-0 why-us">
@@ -147,6 +152,7 @@ const Page = () => {
           </div>
         </section>
 
+        {/* our services */}
         <section id="our-services" className="container-fluid py-5 bg-white">
           <div className="container">
             <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0">
@@ -190,6 +196,7 @@ const Page = () => {
           </div>
         </section>
 
+        {/* guest reviews */}
         <section id="guests-reviews" className="container-fluid py-5 bg-linear-modal">
           <div className="container">
             <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0">

@@ -1359,7 +1359,6 @@
 }
 
 section {
-  min-height: 50vh;
   scroll-margin-top: 164px;
 }
 
@@ -1900,4 +1899,19 @@ form {
 .modal.show .modal-dialog {
   transform: translateY(0) scaleY(1) !important;
   opacity: 1;
+}
+
+.cab-detail-img-slider {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: auto;
+  overflow: hidden;
+  img {
+    border-radius: 24px;
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
 }
