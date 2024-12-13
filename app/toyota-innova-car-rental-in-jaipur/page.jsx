@@ -8,7 +8,7 @@ const page = () => {
       image: '',
       alt: 'Jaipur Taxi',
       title: '',
-      heading: 'Toyota Innova Crysta',
+      heading: 'Toyota Innova Crysta Cab Hire',
       subheading: 'Comfort & Convenience for Every Journey',
     },
   ]
@@ -36,7 +36,11 @@ const page = () => {
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
             <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-2">
-              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>overview</h3>
+              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center d-flex justify-content-start align-items-center'>
+                <span className="text-tertary me-1">
+                  01
+                </span>
+                overview</h3>
               <hr />
               <p className='text-justify'>Jaipur Taxi Service offers 24 X 7 cheapest cab hiring services. We put our best efforts into providing our customers with the utmost comfort and satisfaction at the cheapest cab fares in Jaipur. Travellers from around the world come to Jaipur and start their trip to other parts of Rajasthan. Outstation cabs in Jaipur are readily available with us at the lowest prices.</p>
               <hr />
