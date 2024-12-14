@@ -131,7 +131,12 @@ h4 {
   font-family: var(--font-head) !important;
 }
 .banner-title {
-  font-size: clamp(1.8em, 4vw, 4em) !important;
+  font-size: clamp(2em, 4vw, 4em) !important;
+  letter-spacing: -3px;
+  font-weight: bolder;
+  @media screen and (max-width: 768px) {
+    letter-spacing: -1px;
+  }
 }
 .banner-title-2 {
   font-size: clamp(1.8em, 2.5vw, 2.5em) !important;
@@ -194,16 +199,37 @@ button {
 // bootstrap classes
 .breadcrumb {
   margin-bottom: 0 !important;
-  padding-block: 12px !important;
+  padding-block: 8px !important;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  border-bottom: 1px solid #6464649a;
   a {
     font-size: var(--font-size-bread) !important;
+    color: var(--color-hr) !important;
+    &:hover {
+      color: var(--color-tertary) !important;
+      text-decoration: underline !important;
+    }
   }
   .breadcrumb-item {
     font-size: var(--font-size-bread) !important;
     text-transform: capitalize;
+  }
+  .breadcrumb-item:not(.active):has(+ .active) {
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #7c7c7c;
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: '>';
+    color: #7c7c7c;
+    margin: 0 4px;
+  }
+  .breadcrumb-item.active {
+    color: #7c7c7c !important;
   }
 }
 // colors & more
