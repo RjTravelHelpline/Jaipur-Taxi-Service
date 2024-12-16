@@ -1,7 +1,7 @@
 'use client'
 import HeroBanner from '@/components/HeroBanner'
 import SlickSlider from '@/components/SlickSlider'
-import { CarRentalsByCategory, luxuryCabRentals } from '@/data/cabRentalData'
+import { CarRentalsByCategory, luxuryCabRentals, suvCabRentals } from '@/data/cabRentalData'
 import { toyota_corolla_jaipur_local_use, toyota_corolla_outstation_use } from '@/data/Charges'
 import { innova_crysta_feat } from '@/data/Features'
 import Image from 'next/image'
@@ -360,7 +360,7 @@ const Page = () => {
                 <h4 className={`web-title fw-bold text-white category bg-tertary p-3 d-flex align-items-center justify-content-between ${activeIndex === 2 ? 'rounded-top-4' : ' rounded-4'}`}>
                   <span className="text-white me-2 d-flex justify-content-center align-items-center">
                     <FaCarSide className='me-2 text-black' />
-                    Luxury Rentals
+                    SUV Rentals
                   </span>
                   <span className='cursor-pointer bg-tertary-down text-white d-flex p-1 rounded-5' onClick={() => handleShowAccord(2)} >
                     {activeIndex === 2 ? <BiChevronUp /> : <BiChevronDown />}
@@ -369,7 +369,7 @@ const Page = () => {
                 {activeIndex === 2 && (
                   <>
                     <div className="categories">
-                      {luxuryCabRentals.map((item, index) => {
+                      {suvCabRentals.map((item, index) => {
                         return (
                           <Link href={item.navigate} className="px-0" key={index}>
                             <p className='text-black nav-link rounded-4 text-capitalize mb-0 d-flex align-items-center gap-2 p-2' >
