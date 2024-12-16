@@ -261,17 +261,17 @@ const NavBar = () => {
                             </div>) : (
                             <div className="book-now col-6 d-flex justify-content-end align-items-center">
                                 <div class="contact-info d-flex justify-content-center align-items-center me-2">
-                                    <a href="https://wa.me/9166555888" target="_blank" class="d-flex align-items-center bg-gray p-2 rounded-3">
-                                        <RiWhatsappFill className='me-1 fs-4' />
+                                    <a href="https://wa.me/9166555888" target="_blank" class="d-flex align-items-center p-2 rounded-3">
+                                        <RiWhatsappFill className='me-1 fs-4 text-black' />
                                         <span class="d-none d-lg-inline text-black"> +91-9166555888</span>
                                     </a>
-                                    <a href="tel:+91-9024337038" class="ms-3 d-flex align-items-center bg-gray p-2 rounded-3">
-                                        <RiPhoneFill className='me-1 fs-4' />
+                                    <a href="tel:+91-9024337038" class="ms-3 d-flex align-items-center p-2 rounded-3">
+                                        <RiPhoneFill className='me-1 fs-4 text-black' />
                                         <span class="d-none d-lg-inline text-black">+91-9024337038</span>
                                     </a>
                                 </div>
-                                <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none me-1 search-button bg-tertary-down" onClick={handleShowSearch}>
-                                    <FaSearch className=' text-tertary' />
+                                <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none me-1 search-button bg-gray" onClick={handleShowSearch}>
+                                    <FaSearch className='text-black' />
                                 </button>
                                 <button className="rounded-5 text-white text-capitalize d-flex align-items-center justify-content-center" style={{ fontWeight: '500' }} onClick={() => setModalShow(true)} >
                                     <PiTaxiFill className='text-black me-2' /> book now
@@ -543,22 +543,16 @@ const NavBar = () => {
                     </div>
                 </div>
                 {/* search model */}
-                <Modal size='xl' show={showSearch} onHide={handleCloseSearch} style={{ width: '100% !important', padding: '0 !important' }} className='search-modal'>
+                <Modal size='xl' show={showSearch} onHide={handleCloseSearch} style={{ width: '100% !important', padding: '0 !important' }} className='search-modal' animation={false}>
                     <div className="w-100 d-flex justify-content-end">
                         <button onClick={handleCloseSearch} className='rounded-5 text-black bg-gray p-lg-3 p-sm-2 d-flex'><IoClose /></button>
                     </div>
-                    <Modal.Body style={{ width: '100%' }}>
-                        <h2 className="fw-bold web-title text-capitalize mb-3">
-                            explore more, <span className='text-tertary'>worry less</span>
-                        </h2>
-                        <SearchBar />
+                    <Modal.Body className='w-100 mt-3'>
+                        <SearchBar handleModal={handleCloseSearch} />
                     </Modal.Body>
-                    {/* <div className="image-container rounded-bottom-4" style={{ height: '200px', width: '100%', overflow: 'hidden' }}>
-                    <Image width={1200} height={200} src="/Images/Banners/home-taxi-01.jpg" alt="Image" style={{ width: '100% !important', height: '100%', objectFit: 'cover' }} />
-                </div> */}
-                    <Modal.Footer style={{ width: '100%', display: 'flex', }}>
+                    {/* <Modal.Footer style={{ width: '100%', display: 'flex', }}>
                         <p className='text-capitalize text-muted'>powered by <span className="text-tertary">jaipur taxi service</span></p>
-                    </Modal.Footer>
+                    </Modal.Footer> */}
                 </Modal >
             </div>
         </>

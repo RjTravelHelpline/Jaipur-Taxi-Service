@@ -55,7 +55,7 @@ export const innova_crysta_feat = [
   },
   {
     icon: <FaCarCrash className="fs-4" />,
-    title: 'Anti-Lock Braking System (ABS)',
+    title: 'ABS System',
   },
   {
     icon: <GiAirBalloon className="fs-4" />,

@@ -23,24 +23,18 @@ import {
 } from './TourPackagesData';
 const ToyotaInnova = '/Images/Cabs/toyota-innova.png';
 const ToyotaInnovaCrysta = '/Images/Cabs/toyota-innova-crysta.png';
-const Bmw = '/Images/Cabs/BMW.png';
-const Audi = '/Images/Cabs/audi.png';
 const SwiftDesire = '/Images/Cabs/swift-dzire.jpg';
 const Mercedes = '/Images/Cabs/mercedes-e-class.png';
-const ToyotaCorolla = '/Images/Cabs/toyota-corolla.png';
 const TempoTraveller = '/Images/Cabs/tempo-traveller.png';
-const ToyotaEtios = '/Images/Cabs/toyota-etios.png';
+const ToyotaEtios = '/Images/Cabs/toyota-etios2.jpg';
 const HatchBack = '/Images/Cabs/hyundai-i20.jpg';
 const Sedan = '/Images/Cabs/maruti-ciaz.jpg';
 const Bus = '/Images/Cabs/18-seater-bus.jpg';
 const LuxuryBus = '/Images/Cabs/45-seater-volvo-bus.jpg';
-const MarutiSwift = '/Images/Cabs/swift2.jpg';
 const TataIndica = '/Images/Cabs/tata-indica3.jpg';
 const HyundaiI20 = '/Images/Cabs/hyundai-i20.jpg';
 const HyundaiSantro = '/Images/Cabs/Hyundai-Santro.jpg';
 const MarutiWagonr = '/Images/Cabs/maruti-wagonR.jpg';
-const SwiftDesire2 = '/Images/Cabs/swift-dzire3.jpg';
-const ToyotaEtios2 = '/Images/Cabs/toyota-etios2.jpg';
 const Ambassador = '/Images/Cabs/ambassador.jpg';
 const MarutiCiaz = '/Images/Cabs/maruti-ciaz.jpg';
 const HyundaiXcent = '/Images/Cabs/hyundai-xcent.jpg';
@@ -200,7 +194,13 @@ export const CarRentalsByCategory = [
     duration: null,
     imgSrc: HatchBack,
     title: 'Hatchback Car Rental',
-    vehicles: ['Maruti Swift', 'Tata Indica', 'Hyundai i20', 'Hyundai Santro', 'Maruti WagonR'],
+    vehicles: [
+      'Maruti Swift',
+      'Tata Indica',
+      'Hyundai i20',
+      'Hyundai Santro',
+      'Maruti WagonR',
+    ],
     navigate: '/cheapest-car-rental-jaipur',
   },
 
@@ -208,21 +208,49 @@ export const CarRentalsByCategory = [
     duration: null,
     imgSrc: Sedan,
     title: 'Sedan Car Rental',
-    vehicles: ['Maruti Swift Dzire', 'Toyota Etios', 'Ambassador', 'Maruti Ciaz', 'Hyundai Xcent', 'Honda Amaze'],
+    vehicles: [
+      'Maruti Swift Dzire',
+      'Toyota Etios',
+      'Ambassador',
+      'Maruti Ciaz',
+      'Hyundai Xcent',
+      'Honda Amaze',
+    ],
     navigate: '/sedan-car-rental-jaipur',
   },
   {
     duration: null,
     imgSrc: ToyotaInnovaCrysta,
     title: 'SUV Car Rental',
-    vehicles: ['Toyota Innova', 'Toyota Innova Crysta', 'Maruti Ertiga', 'Mahindra Marazzo', 'Mahindra Bolero', 'Mahindra Xylo', 'Force Trax Cruiser', 'Tata Safari', 'Tata Sumo', 'Mahindra Scorpio'],
+    vehicles: [
+      'Toyota Innova',
+      'Toyota Innova Crysta',
+      'Maruti Ertiga',
+      'Mahindra Marazzo',
+      'Mahindra Bolero',
+      'Mahindra Xylo',
+      'Force Trax Cruiser',
+      'Tata Safari',
+      'Tata Sumo',
+      'Mahindra Scorpio',
+    ],
     navigate: '/suv-car-rental-jaipur',
   },
   {
     duration: null,
     imgSrc: Mercedes,
     title: 'Luxury Car Rental',
-    vehicles: ['Honda City', 'Ford Endeavour','Toyota Corolla', 'Toyota Fortuner', 'Toyota Camry', 'Mercedes S Class', 'Mercedes E Class', 'BMW', 'Audi'],
+    vehicles: [
+      'Honda City',
+      'Ford Endeavour',
+      'Toyota Corolla',
+      'Toyota Fortuner',
+      'Toyota Camry',
+      'Mercedes S Class',
+      'Mercedes E Class',
+      'BMW',
+      'Audi',
+    ],
 
     navigate: '/luxury-car-rental-jaipur',
   },
@@ -230,7 +258,13 @@ export const CarRentalsByCategory = [
     duration: null,
     imgSrc: TempoTraveller,
     title: 'Tempo Traveller Rental',
-    vehicles: ['8 Seater Maharaja Tempo', '10 Seater Luxury Tempo', '12 Seater Tempo', '15 Seater Tempo', '20 Seater Tempo'],
+    vehicles: [
+      '8 Seater Maharaja Tempo',
+      '10 Seater Luxury Tempo',
+      '12 Seater Tempo',
+      '15 Seater Tempo',
+      '20 Seater Tempo',
+    ],
 
     navigate: '/tempo-traveller-rental-in-jaipur',
   },
@@ -238,7 +272,15 @@ export const CarRentalsByCategory = [
     duration: null,
     imgSrc: Bus,
     title: 'Bus & Coach Rental',
-    vehicles: ['18 Seater Bus', '21 Seater Bus', '27 Seater Bus', '35 Seater Bus', '41 Seater Bus', '45 Seater Bus', '52 Seater Bus'],
+    vehicles: [
+      '18 Seater Bus',
+      '21 Seater Bus',
+      '27 Seater Bus',
+      '35 Seater Bus',
+      '41 Seater Bus',
+      '45 Seater Bus',
+      '52 Seater Bus',
+    ],
 
     navigate: '/bus-rental-service-in-jaipur',
   },

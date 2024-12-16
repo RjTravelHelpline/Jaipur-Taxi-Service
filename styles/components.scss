@@ -1271,26 +1271,87 @@
   gap: 8px;
   a {
     border-radius: 10px;
-    padding: 4px 8px;
+    padding: 12px;
     border: 1px solid var(--color-tertary);
+    color: #000 !important;
+    &:hover {
+      background-color: var(--color-tertary-down);
+      color: var(--color-tertary) !important;
+      border: 1px solid transparent;
+      img {
+        transform: scale(1.01);
+      }
+    }
+  }
+  .filter-search-image {
+    width: 100px;
+    max-width: 100px;
+    height: 60px !important;
+    border-radius: 8px;
+    flex-grow: 1;
+    background-color: var(--color-tertary);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    color: var(--color-black);
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.2s ease-in-out;
+    }
   }
 }
 
 .car-rental-banner {
-  // background: url('/Images/Cabs/innova-crysta-banner.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding-bottom: 28px;
+  position: relative;
+  z-index: 1;
+  // max-width: 1800px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      45deg,
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.555),
+      rgba(0, 0, 0, 0.2)
+    );
+    z-index: -1;
+    pointer-events: none;
+  }
   h1,
   h2 {
     text-align: left !important;
     color: var(--color-primary) !important;
   }
+  h2 {
+    color: var(--color-primary) !important;
+    opacity: 0.8;
+    position: relative;
+    &::before {
+      content: '';
+      width: 64px;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--color-tertary);
+    }
+  }
+
   .carousel-item {
     width: 100% !important;
     height: 60vh;
-    max-height: 700px;
+    max-height: 600px;
     overflow: hidden;
     @media screen and (max-width: 768px) {
       height: 40vh !important;
@@ -1299,7 +1360,7 @@
       width: 100% !important;
       height: 100% !important;
       object-fit: cover;
-      filter: brightness(1);
+      filter: brightness(0.4);
     }
   }
 }
@@ -1332,20 +1393,31 @@
   position: sticky;
   top: 114px;
   z-index: 99;
-  @media screen and (max-width: 1000px) {
-    top: 62px;
-  }
+  padding: 12px !important;
   a {
     &:hover {
-      background-color: var(--color-tertary-down);
-    }
-    p.active {
-      background-color: var(--color-primary);
-      color: var(--color-black) !important;
-      .icon {
-        color: var(--color-tertary) !important;
+      p {
+        background-color: var(--color-tertary-down) !important;
       }
     }
+    p.active {
+      background-color: var(--color-tertary-down) !important;
+      font-weight: 600;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 4px;
+        height: 10px;
+        background-color: var(--color-tertary) !important;
+      }
+    }
+  }
+  h4 {
+    transition: 0.25s ease-in-out;
   }
   .container {
     .row {
@@ -1358,8 +1430,24 @@
   }
 }
 
-section {
+.cab-insider {
   scroll-margin-top: 164px;
+}
+.cab-side-insider {
+  .categories {
+    max-height: 300px;
+    overflow-y: auto;
+    a {
+      &:hover {
+        p {
+          background-color: var(--color-tertary-down) !important;
+        }
+      }
+      p {
+        border-radius: 8px !important;
+      }
+    }
+  }
 }
 
 // bottom socials
@@ -1901,18 +1989,18 @@ form {
 .gallery-container {
   position: relative;
   overflow: hidden;
-  img{
+  img {
     &:hover {
       opacity: 0.85;
     }
   }
   button {
     position: absolute;
-    bottom: 12px;
-    right: 12px;
+    bottom: 20px;
+    right: 20px;
     z-index: 9;
     width: max-content !important;
-    box-shadow: 0 24px 24px rgba(0, 0, 0, 0.336);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.527);
     background-color: var(--color-primary);
     color: var(--color-black);
     cursor: pointer;
@@ -1929,7 +2017,7 @@ form {
   overflow: hidden;
   img {
     border-radius: 20px;
-    padding: 4px;
+    padding: 8px;
     width: 100%;
     height: 100% !important;
     object-fit: cover;

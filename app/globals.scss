@@ -206,9 +206,9 @@ button {
   border-bottom: 1px solid #6464649a;
   a {
     font-size: var(--font-size-bread) !important;
-    color: var(--color-hr) !important;
+    // color: var(--color-hr) !important;
+    color: var(--color-tertary) !important;
     &:hover {
-      color: var(--color-tertary) !important;
       text-decoration: underline !important;
     }
   }
@@ -216,13 +216,13 @@ button {
     font-size: var(--font-size-bread) !important;
     text-transform: capitalize;
   }
-  .breadcrumb-item:not(.active):has(+ .active) {
-    max-width: 120px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #7c7c7c;
-  }
+  // .breadcrumb-item:not(.active):has(+ .active) {
+  //   max-width: 120px;
+  //   white-space: nowrap;
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   color: #7c7c7c;
+  // }
   .breadcrumb-item + .breadcrumb-item::before {
     content: '>';
     color: #7c7c7c;
@@ -288,9 +288,17 @@ button {
   cursor: pointer !important;
 }
 
-.container-fluid {
-  max-width: 1800px !important;
-}
+// .container-fluid {
+//   max-width: 1800px !important;
+// }
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
 // Custom padding values
 $padding-sizes: (
   1: 4px,
@@ -304,6 +312,7 @@ $padding-sizes: (
   9: 36px,
   10: 40px,
 );
+
 
 // Generate padding classes for each type and breakpoint
 @each $key, $size in $padding-sizes {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Carousel, CarouselItem, CarouselCaption } from 'react-bootstrap';
-import { FaStar } from 'react-icons/fa';
 
 const HeroBanner = ({ slides, backgroundImage }) => {
     const bannerStyle = {
@@ -18,9 +17,8 @@ const HeroBanner = ({ slides, backgroundImage }) => {
                                         <FaStar className='me-1 text-white' />
                                         <span className='mb-0'>premium cabs</span>
                                     </p> */}
-                                    <h1 className="text-black fw-bold web-title text-left mb-0 text-capitalize banner-title">{slide.heading}</h1>
-                                    <hr style={{ width: '60%' }} />
-                                    <h2 className="text-black fw-normal">{slide.subheading}</h2>
+                                    <h1 className="fw-bold web-title text-left text-capitalize banner-title mb-3">{slide.heading}</h1>
+                                    <h2 className="fw-normal pt-3 web-title text-capitalize">{slide.subheading}</h2>
                                 </CarouselCaption>
                             </CarouselItem>
                         ))}

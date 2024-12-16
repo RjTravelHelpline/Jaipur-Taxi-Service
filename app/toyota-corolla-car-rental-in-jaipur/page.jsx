@@ -4,7 +4,7 @@ import { toyota_corolla_jaipur_local_use, toyota_corolla_outstation_use } from '
 import { innova_crysta_feat } from '@/data/Features'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { Breadcrumb, BreadcrumbItem, Table } from 'react-bootstrap'
+import { Breadcrumb, BreadcrumbItem, Modal, Table } from 'react-bootstrap'
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
 import { BsImages } from 'react-icons/bs'
 import { FaInfoCircle } from 'react-icons/fa'
@@ -237,25 +237,6 @@ const Page = () => {
                   ))}
                 </tbody>
               </Table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* gallery */}
-      <section id="gallery" className="container-fluid py-4">
-        <div className="container">
-          <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0">
-            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-2">
-              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center d-flex justify-content-start align-items-center' style={{ borderLeft: '5px solid var(--color-black)' }}>
-                <span className="text-tertary me-2 fs-1 d-flex justify-content-center align-items-center">
-                  04
-                </span>
-                cab gallery</h3>
-              <hr />
-              <p className='w-100 text-muted text-capitalize'>
-                Images will be uploaded yet.
-              </p>
             </div>
           </div>
         </div>
