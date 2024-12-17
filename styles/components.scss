@@ -1194,6 +1194,32 @@
   }
 }
 
+.lens-flare {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100% !important;
+  border-radius: 8px;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.185),
+    var(--color-tertary-down)
+  );
+  animation: lensFlare 1.5s infinite;
+}
+
+@keyframes lensFlare {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
 .modal-dialog {
   width: 100% !important;
   display: flex !important;
@@ -1435,7 +1461,7 @@
 }
 .cab-side-insider {
   .categories {
-    max-height: 300px;
+    max-height: 260px;
     overflow-y: auto;
     a {
       &:hover {
@@ -1494,7 +1520,6 @@
 }
 
 // enquiry form
-// contact form
 form {
   .package-form {
     position: absolute;
@@ -1857,9 +1882,21 @@ form {
   }
 }
 
+// Image modal
 .image-modal {
   background-color: #000000 !important;
   backdrop-filter: blur(10px);
+  .close-button {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 9999;
+    font-size: 2em;
+    cursor: pointer;
+    color: rgb(255, 255, 255) !important;
+    transition: color 0.3s;
+    background-color: #0000003d !important;
+  }
   .modal-dialog {
     display: flex !important;
     justify-content: center !important;
@@ -1868,21 +1905,9 @@ form {
   }
   .modal-content {
     background-color: transparent !important;
-    position: relative;
     border: none !important;
     margin-top: 44px;
     background-color: #00000000 !important;
-    .close-button {
-      position: absolute;
-      top: 6px;
-      right: 6px;
-      z-index: 9999;
-      font-size: 2em;
-      cursor: pointer;
-      color: rgb(255, 255, 255) !important;
-      transition: color 0.3s;
-      background-color: #0000003d !important;
-    }
   }
 }
 .modal-image-container {
@@ -2015,6 +2040,9 @@ form {
   align-items: stretch;
   height: 300px;
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    height: 150px !important;
+  }
   img {
     border-radius: 20px;
     padding: 8px;
@@ -2022,6 +2050,9 @@ form {
     height: 100% !important;
     object-fit: cover;
     transition: transform 0.3s;
+    @media screen and (max-width: 768px) {
+      padding: 4px;
+    }
   }
 }
 .cab-feature-insider {
@@ -2043,5 +2074,60 @@ form {
       height: 50px;
       background-color: var(--color-tertary);
     }
+  }
+}
+
+/* From Uiverse.io by marcelodolza */
+.book-now-comp {
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  padding: 1px !important;
+  border-radius: 24px;
+  box-shadow: 0 24px 44px #ffb13c38;
+  h4,
+  p {
+    text-align: left;
+  }
+  button {
+    box-shadow: 0 24px 24px #bd7c1b3d;
+  }
+  @media screen and (max-width: 768px) {
+    button {
+      flex-grow: 1;
+    }
+  }
+}
+
+.book-now-comp .insider {
+  border-radius: 24px;
+  background: #000000;
+  z-index: 1;
+  width: 100%;
+}
+
+.book-now-comp::before {
+  content: '';
+  position: absolute;
+  width: 100% !important;
+  height: 200px !important;
+  background: linear-gradient(
+    to top,
+    transparent,
+    #ffb13c,
+    #ff3c3c,
+    var(--color-tertary)
+  );
+  animation: rotation_9018 5s infinite linear;
+}
+
+@keyframes rotation_9018 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

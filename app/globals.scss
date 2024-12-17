@@ -25,6 +25,7 @@
   // bread crumb
   --breadCrumb-color: #ffffff80;
   --active-breadCrumb-color: #ffffff1f;
+  --active-bg-gray: #f5f5f5;
   /* Font Sizes */
   --font-size-h1: clamp(2rem, 2.4vw, 1.8rem);
   --font-size-h2: clamp(1.4rem, 2vw, 1.65rem);
@@ -155,6 +156,9 @@ h4 {
 p {
   font-size: var(--font-size-p);
 }
+tbody td {
+  font-size: var(--font-size-p);
+}
 input::placeholder {
   font-size: var(--font-size-p) !important;
 }
@@ -200,13 +204,9 @@ button {
 .breadcrumb {
   margin-bottom: 0 !important;
   padding-block: 8px !important;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   border-bottom: 1px solid #6464649a;
   a {
     font-size: var(--font-size-bread) !important;
-    // color: var(--color-hr) !important;
     color: var(--color-tertary) !important;
     &:hover {
       text-decoration: underline !important;
@@ -216,17 +216,10 @@ button {
     font-size: var(--font-size-bread) !important;
     text-transform: capitalize;
   }
-  // .breadcrumb-item:not(.active):has(+ .active) {
-  //   max-width: 120px;
-  //   white-space: nowrap;
-  //   overflow: hidden;
-  //   text-overflow: ellipsis;
-  //   color: #7c7c7c;
-  // }
   .breadcrumb-item + .breadcrumb-item::before {
     content: '>';
     color: #7c7c7c;
-    margin: 0 4px;
+    // margin-right: 2px;
   }
   .breadcrumb-item.active {
     color: #7c7c7c !important;
@@ -287,10 +280,13 @@ button {
 .cursor-pointer {
   cursor: pointer !important;
 }
+.bg-active-gray {
+  background-color: var(--active-bg-gray) !important;
+}
 
-// .container-fluid {
-//   max-width: 1800px !important;
-// }
+.container {
+  max-width: 1300px !important;
+}
 
 $container-max-widths: (
   sm: 540px,
@@ -312,7 +308,6 @@ $padding-sizes: (
   9: 36px,
   10: 40px,
 );
-
 
 // Generate padding classes for each type and breakpoint
 @each $key, $size in $padding-sizes {
