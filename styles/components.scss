@@ -1458,6 +1458,9 @@
 
 .cab-insider {
   scroll-margin-top: 164px;
+  h3 {
+    border-bottom: 2px solid var(--color-tertary);
+  }
 }
 .cab-side-insider {
   .categories {
