@@ -1,24 +1,22 @@
 import React from 'react'
-import { PiBrowserFill, PiFacebookLogoFill, PiPhone, PiPhoneCallFill, PiWhatsappLogo, PiWhatsappLogoFill } from "react-icons/pi";
-import { BiLogoInstagramAlt, BiLogoSkype, BiLogoTwitter, BiMailSend, BiWorld } from "react-icons/bi";
-import { IoBrowsers, IoMail } from 'react-icons/io5';
-import { RiMailFill, RiWhatsappFill } from 'react-icons/ri';
+import { PiFacebookLogoFill, PiPhoneCallFill } from "react-icons/pi";
+import { BiLogoInstagramAlt, BiLogoSkype, BiWorld } from "react-icons/bi";
+import { RiWhatsappFill } from 'react-icons/ri';
 import { MdMail } from 'react-icons/md';
-import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap';
+import Bread from '@/components/Bread';
 
 const page = () => {
+  const breadcrumbItems = [
+    { label: "Home", link: "/", active: false },
+    { label: "Contact Us", link: null, active: true },
+  ];
   const date = new Date()
   return (
     <>
       <div className="container-fluid py-lg-5 py-sm-3 mt-5">
         <div className="row justify-content-center align-items-center mt-lg-5 mt-sm-3">
           <div className="col-12 col-lg-8 col-sm-12 px-2">
-            <div className="insider rounded-3 px-3">
-              <Breadcrumb>
-                <BreadcrumbItem href="/">Home</BreadcrumbItem>
-                <BreadcrumbItem active>contact us</BreadcrumbItem>
-              </Breadcrumb>
-            </div>
+              <Bread items={breadcrumbItems} style='bg-white px-0' />
             <div className="insider bg-white rounded-3 p-3">
               <p className='text-tertary fw-bold text-uppercase mb-0'>Jaipur Taxi Service</p>
               <h1 className='text-capitalize web-title fw-bold'>contact us</h1>

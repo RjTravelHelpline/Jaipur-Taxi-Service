@@ -17,12 +17,7 @@ import Bread from '@/components/Bread'
 import CabScreenHeading from '@/components/CabScreenHeading'
 import BookNow from '@/components/BookNow'
 import RentalCategory from '@/components/RentalCategory'
-import CabGallery from '@/components/CabGallery'
-import { toyota_corolla_jaipur_local_use, toyota_corolla_outstation_use } from '@/data/Charges'
-import CabFareTable from '@/components/CabFairTable'
-import CabFeatures from '@/components/CabFeatures'
 import ToggleShowAllButton from '@/components/ToggleShowAllButton'
-import { innova_crysta_feat } from '@/data/Features'
 
 const Page = () => {
   const [isShowAll, setIsShowAll] = useState(false)
@@ -49,8 +44,8 @@ const Page = () => {
   const breadcrumbItems = [
     { label: "Home", link: "/", active: false },
     { label: "Jaipur Cab Rental", link: "/car-rental-jaipur", active: false },
-    { label: "Sedan Cab Rental", link: "/sedan-car-rental-jaipur", active: false },
-    { label: "ambassador", link: null, active: true },
+    { label: "Tempo Traveller Rental", link: "/sedan-car-rental-jaipur", active: false },
+    { label: "Ambassador", link: null, active: true },
   ];
 
   // tempo & bus rentals
@@ -61,9 +56,9 @@ const Page = () => {
       {/* banner */}
       <HeroBanner
         slides={[
-          { heading: "ambassador", subheading: "Travel without breaking the bank" }
+          { heading: "Ambassador", subheading: "Travel without breaking the bank" }
         ]}
-        backgroundImage="" />
+        backgroundImage="/Images/Cabs/ambassador-banneer.jpg" />
 
       {/* bread crumb */}
       <Bread items={breadcrumbItems} />
@@ -78,6 +73,8 @@ const Page = () => {
               <div className="cab-insider w-100 py-3" id="overview">
                 <CabScreenHeading icon={<IoDocumentText />} title='overview' />
                 <hr />
+                <p className="text-justify">
+                </p>
               </div>
 
               {/* section 2 */}
@@ -85,7 +82,7 @@ const Page = () => {
                 <CabScreenHeading icon={<IoSettings />} title='features & amenities' />
                 <hr />
                 <div className="row mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center">
-                  <CabFeatures features={innova_crysta_feat.slice(0, isShowAll ? innova_crysta_feat.length : 6)} />
+                  {/* <CabFeatures features={innova_crysta_feat.slice(0, isShowAll ? innova_crysta_feat.length : 6)} /> */}
                   <ToggleShowAllButton showAll={isShowAll} toggleShowAll={handleShow} />
                 </div>
               </div>
@@ -97,11 +94,11 @@ const Page = () => {
                 <div className="row">
                   <div className="col-lg-6 col-sm-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-2">
                     <h4 className='text-capitalize fw-bold bg-active-gray w-100 p-3'>Jaipur Local Use</h4>
-                    <CabFareTable rows={toyota_corolla_jaipur_local_use.rows} />
+                    {/* <CabFareTable rows={toyota_corolla_jaipur_local_use.rows} /> */}
                   </div>
                   <div className="col-lg-6 col-sm-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-2">
                     <h4 className='text-capitalize fw-bold bg-active-gray w-100 p-3 '>outstation Use</h4>
-                    <CabFareTable rows={toyota_corolla_outstation_use.rows} />
+                    {/* <CabFareTable rows={toyota_corolla_outstation_use.rows} /> */}
                   </div>
                 </div>
               </div>
@@ -110,7 +107,7 @@ const Page = () => {
               <div className="cab-insider w-100 py-3" id='gallery'>
                 <CabScreenHeading icon={<BsImages />} title='cab gallery' />
                 <hr />
-                <CabGallery images={images} />
+                {/* <CabGallery images={images} /> */}
               </div>
 
               {/* section 5 */}
@@ -119,7 +116,7 @@ const Page = () => {
                   title="Confirm Your Ride"
                   description="Instant Booking for Stress-Free and Reliable Rides"
                   buttonText="Book Now"
-                  modalTitle="Toyota Innova Crysta"
+                  modalTitle="Ambassador"
                 />
               </div>
             </div>

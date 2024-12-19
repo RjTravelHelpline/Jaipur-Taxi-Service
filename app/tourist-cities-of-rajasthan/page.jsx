@@ -1,4 +1,5 @@
 'use client'
+import Bread from '@/components/Bread'
 import HeroBanner from '@/components/HeroBanner'
 import ToggleShowAllButton from '@/components/ToggleShowAllButton'
 import useShowAllToggle from '@/components/useShowAllToggle'
@@ -6,7 +7,7 @@ import { PlacesToVisitInRajasthan, TourPackagesByCategory } from '@/data/TourPac
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Breadcrumb, BreadcrumbItem, Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import { MdOutlineArrowOutward } from 'react-icons/md'
 
 const Page = () => {
@@ -20,23 +21,18 @@ const Page = () => {
       subheading: 'Comfort & Convenience for Every Journey',
     },
   ]
+  const breadcrumbItems = [
+    { label: "Home", link: "/", active: false },
+    { label: "Rajasthan Tour Packages", link: "/tour-packages-rajasthan", active: false },
+    { label: "Tourist cities of rajasthan", link: null, active: true },
+  ];
   return (
     <>
       {/* banner */}
       <HeroBanner slides={slides} />
 
       {/* breadcrumb */}
-      <div className="container-fluid bg-white bread-container-fluid">
-        <div className="container bread-container">
-          <div className="row px-lg-2 px-sm-0 bread-row">
-            <Breadcrumb>
-              <BreadcrumbItem href="/">Home</BreadcrumbItem>
-              <BreadcrumbItem href="/tour-packages-rajasthan">rajasthan tour packages</BreadcrumbItem>
-              <BreadcrumbItem active>tourist cities of rajasthan</BreadcrumbItem>
-            </Breadcrumb>
-          </div>
-        </div>
-      </div>
+      <Bread items={breadcrumbItems} />
 
       {/* content */}
       <div className="container-fluid py-5 bg-white">

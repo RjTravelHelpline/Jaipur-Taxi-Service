@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { MdArrowOutward } from 'react-icons/md';
@@ -17,7 +16,7 @@ const RentalCategory = ({ icon, title, cabRentals, activeIndex, setActiveIndex, 
                     }`}
             >
                 <span className="d-flex justify-content-center align-items-center">
-                    <span className="me-2 text-tertary">{icon}</span>
+                    <span className="me-2 text-tertary d-flex align-items-center">{icon}</span>
                     {title}
                 </span>
                 <span

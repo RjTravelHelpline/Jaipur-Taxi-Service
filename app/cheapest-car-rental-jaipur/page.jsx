@@ -1,4 +1,5 @@
 'use client'
+import Bread from '@/components/Bread'
 import HeroBanner from '@/components/HeroBanner'
 import RentalPackages from '@/components/RentalPackages'
 import ToggleShowAllButton from '@/components/ToggleShowAllButton'
@@ -22,6 +23,12 @@ const Page = () => {
       subheading: 'Comfort & Convenience for Every Journey',
     },
   ]
+  const breadcrumbItems = [
+    { label: "Home", link: "/", active: false },
+    { label: "Jaipur Cab Rental", link: "/car-rental-jaipur", active: false },
+    { label: "Cheapest Cab Rental", link: "/cheapest-car-rental-jaipur", active: false },
+    { label: "About Jaipur Taxi Service", link: null, active: true },
+  ];
   return (
     <>
 
@@ -29,17 +36,7 @@ const Page = () => {
       <HeroBanner slides={slides} />
 
       {/* breadcrumb */}
-      <div className="container-fluid bg-white bread-container-fluid">
-        <div className="container bread-container">
-          <div className="row px-lg-2 px-sm-0 bread-row">
-            <Breadcrumb>
-              <BreadcrumbItem href="/">Home</BreadcrumbItem>
-              <BreadcrumbItem href="/car-rental-jaipur">jaipur cab rental</BreadcrumbItem>
-              <BreadcrumbItem active>cheapest car rental jaipur</BreadcrumbItem>
-            </Breadcrumb>
-          </div>
-        </div>
-      </div>
+      <Bread items={breadcrumbItems} />
 
       {/* content */}
       <div className="container-fluid py-lg-5 py-sm-4 bg-white">

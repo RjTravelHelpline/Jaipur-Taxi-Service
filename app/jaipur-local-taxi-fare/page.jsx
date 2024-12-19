@@ -1,4 +1,5 @@
 'use client'
+import Bread from '@/components/Bread'
 import HeroBanner from '@/components/HeroBanner'
 import ToggleShowAllButton from '@/components/ToggleShowAllButton'
 import useShowAllToggle from '@/components/useShowAllToggle'
@@ -20,23 +21,19 @@ const Packages = () => {
       subheading: 'Comfort & Convenience for Every Journey',
     },
   ]
+  const breadcrumbItems = [
+    { label: "Home", link: "/", active: false },
+    { label: "Jaipur Cab Rental", link: "/car-rental-jaipur", active: false },
+    { label: "Jaipur Local Taxi Fare", link: null, active: true },
+  ];
   return (
     <>
       {/* banner */}
       <HeroBanner slides={slides} />
 
       {/* breadcrumb */}
-      <div className="container-fluid bg-white bread-container-fluid">
-        <div className="container bread-container">
-          <div className="row px-lg-2 px-sm-0 bread-row">
-            <Breadcrumb>
-              <BreadcrumbItem href="/">Home</BreadcrumbItem>
-              <BreadcrumbItem href="/car-rental-jaipur">jaipur cab rental</BreadcrumbItem>
-              <BreadcrumbItem active>jaipur local taxi fare</BreadcrumbItem>
-            </Breadcrumb>
-          </div>
-        </div>
-      </div>
+      <Bread items={breadcrumbItems} />
+
 
       {/* content */}
       <div className="container-fluid py-5 bg-white">

@@ -13,12 +13,8 @@ const HeroBanner = ({ slides, backgroundImage }) => {
                         {slides.map((slide, index) => (
                             <CarouselItem key={index}>
                                 <CarouselCaption style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
-                                    {/* <p className="bg-tertary text-black fw-bold web-title text-uppercase p-1 px-2 rounded-3 d-flex justify-content-center align-items-center">
-                                        <FaStar className='me-1 text-white' />
-                                        <span className='mb-0'>premium cabs</span>
-                                    </p> */}
                                     <h1 className="fw-bold web-title text-left text-capitalize banner-title mb-3">{slide.heading}</h1>
-                                    <h2 className="fw-normal pt-3 web-title text-capitalize">{slide.subheading}</h2>
+                                    <h2 className="fw-normal pt-3 web-title text-capitalize" dangerouslySetInnerHTML={{ __html: slide.subheading }} />
                                 </CarouselCaption>
                             </CarouselItem>
                         ))}

@@ -9,6 +9,7 @@ import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap'
 import { RiCloseFill } from 'react-icons/ri';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import { getLatestItems } from '@/utils/utils';
+import Bread from '@/components/Bread';
 const tourHimachal = '/Images/Reviews/tour-himachal.jpg';
 const tourHimachal02 = '/Images/Reviews/tour-himachal-02.jpg';
 const tourTamilnadu = '/Images/Reviews/tour-tamilnadu.jpg';
@@ -60,22 +61,17 @@ const Page = () => {
       subheading: 'See why our guests trust us with their travels in Rajasthan',
     },
   ]
+  const breadcrumbItems = [
+    { label: "Home", link: "/", active: false },
+    { label: "Guest Feedback", link: null, active: true },
+  ];
   return (
     <>
       {/* banner */}
       <HeroBanner slides={slides} />
 
       {/* breadcrumb */}
-      <div className="container-fluid bg-white bread-container-fluid">
-        <div className="container bread-container">
-          <div className="row px-lg-2 px-sm-0 bread-row">
-            <Breadcrumb>
-              <BreadcrumbItem href="/">Home</BreadcrumbItem>
-              <BreadcrumbItem active>guest reviews</BreadcrumbItem>
-            </Breadcrumb>
-          </div>
-        </div>
-      </div>
+      <Bread items={breadcrumbItems} />
 
       <div className="container-fluid py-5">
         <div className="container">

@@ -437,6 +437,7 @@
     align-items: stretch;
     cursor: pointer;
     background-color: var(--color-primary) !important;
+
     .card-image-container {
       height: 220px;
       img {
@@ -455,7 +456,6 @@
       padding-block: 16px !important;
       color: var(--color-primary);
       gap: 8px;
-      flex-grow: 1; /* Allow body to expand */
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -1337,7 +1337,6 @@
   padding-bottom: 28px;
   position: relative;
   z-index: 1;
-  // max-width: 1800px;
   &::before {
     content: '';
     position: absolute;
@@ -1349,7 +1348,7 @@
       45deg,
       rgb(0, 0, 0),
       rgba(0, 0, 0, 0.555),
-      rgba(0, 0, 0, 0.2)
+      rgba(0, 0, 0, 0.25)
     );
     z-index: -1;
     pointer-events: none;
@@ -1361,7 +1360,7 @@
   }
   h2 {
     color: var(--color-primary) !important;
-    opacity: 0.8;
+    opacity: 0.9;
     position: relative;
     &::before {
       content: '';

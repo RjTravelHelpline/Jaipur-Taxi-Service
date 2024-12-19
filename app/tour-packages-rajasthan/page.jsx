@@ -1,3 +1,4 @@
+import Bread from '@/components/Bread'
 import HeroBanner from '@/components/HeroBanner'
 import PackagesSlider from '@/components/PackagesSlider'
 import { JaipurDayTours, JaipurLocalTaxiTours, JaipurSightSeeingTours, OneWayTaxiTours, OutStationTourPackages, RajasthanTourByCars, TourPackagesByCategory } from '@/data/TourPackagesData'
@@ -17,22 +18,17 @@ const page = () => {
       subheading: 'Comfort & Convenience for Every Journey',
     },
   ]
+  const breadcrumbItems = [
+    { label: "Home", link: "/", active: false },
+    { label: "Rajasthan Tour Packages", link: null, active: true },
+  ];
   return (
     <>
       {/* banner */}
       <HeroBanner slides={slides} />
 
-      {/* breadcrumb */}
-      <div className="container-fluid bg-white bread-container-fluid">
-        <div className="container bread-container">
-          <div className="row px-lg-2 px-sm-0 bread-row">
-            <Breadcrumb>
-              <BreadcrumbItem href="/">Home</BreadcrumbItem>
-              <BreadcrumbItem active>Rajasthan Tour Packages</BreadcrumbItem>
-            </Breadcrumb>
-          </div>
-        </div>
-      </div>
+      {/* bread crumb */}
+      <Bread items={breadcrumbItems} />
 
       {/* content */}
       <div className="container-fluid py-5 bg-white">

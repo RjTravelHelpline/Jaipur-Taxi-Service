@@ -1,89 +1,193 @@
 'use client'
 import HeroBanner from '@/components/HeroBanner'
-import RentalPackages from '@/components/RentalPackages'
-import useShowAllToggle from '@/components/useShowAllToggle'
-import { CarRentalsByCategory, luxuryBusRentals } from '@/data/cabRentalData'
+import { busAndCoachRentals, cheapestCabRentals, luxuryBusRentals, luxuryCabRentals, sedanCabRentals, suvCabRentals, tempoTravellerRentals } from '@/data/cabRentalData'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
-import { Breadcrumb, BreadcrumbItem, Card } from 'react-bootstrap'
-import { MdOutlineArrowOutward } from 'react-icons/md'
+import React, { useState } from 'react'
+import { Card } from 'react-bootstrap'
+import { BiSolidBusSchool } from 'react-icons/bi'
+import { BsImages } from 'react-icons/bs'
+import { FaCarRear } from 'react-icons/fa6'
+import { MdDirectionsCarFilled, MdOutlineArrowOutward } from 'react-icons/md'
+import { TourPackagesByCategory } from '@/data/TourPackagesData'
+import { FaLink, FaMoneyBillWave } from 'react-icons/fa'
+import { IoCarSportSharp, IoDocumentText, IoSettings } from 'react-icons/io5'
+import SectionNavigation from '@/components/SectionNavigation'
+import Bread from '@/components/Bread'
+import CabScreenHeading from '@/components/CabScreenHeading'
+import BookNow from '@/components/BookNow'
+import RentalCategory from '@/components/RentalCategory'
+import ToggleShowAllButton from '@/components/ToggleShowAllButton'
 
 const Page = () => {
-  const { showAll, displayedItems, toggleShowAll } = useShowAllToggle(luxuryBusRentals, 6);
-  const slides = [
-    {
-      image: '',
-      alt: 'Jaipur Taxi',
-      title: '',
-      heading: 'luxury Bus Rental service jaipur',
-      subheading: 'Comfort & Convenience for Every Journey',
-    },
-  ]
+  const [isShowAll, setIsShowAll] = useState(false)
+
+  const handleShow = () => {
+    setIsShowAll(!isShowAll);
+  };
+
+  const [activeIndex, setActiveIndex] = useState(6);
+
+  const images = [
+    "",
+  ];
+
+  // navigation
+  const sections = [
+    { id: "overview", label: "Overview", icon: <IoDocumentText /> },
+    { id: "features", label: "Features & Amenities", icon: <IoSettings /> },
+    { id: "cab-charges", label: "Cab Charges", icon: <FaMoneyBillWave /> },
+    { id: "gallery", label: "Gallery", icon: <BsImages /> },
+  ];
+
+  // breadItems
+  const breadcrumbItems = [
+    { label: "Home", link: "/", active: false },
+    { label: "Jaipur Cab Rental", link: "/car-rental-jaipur", active: false },
+    { label: "Luxury Bus Rental", link: null, active: true },
+  ];
+
+  // tempo & bus rentals
+  const tempo_and_bus_rentals = [...tempoTravellerRentals, ...busAndCoachRentals, ...luxuryBusRentals]
+
   return (
     <>
       {/* banner */}
-      <HeroBanner slides={slides} />
+      <HeroBanner
+        slides={[
+          { heading: "Luxury Bus Rental", subheading: "Travel without breaking the bank" }
+        ]}
+        backgroundImage="" />
 
-      {/* breadcrumb */}
-      <div className="container-fluid bg-white bread-container-fluid">
-        <div className="container bread-container">
-          <div className="row px-lg-2 px-sm-0 bread-row">
-            <Breadcrumb>
-              <BreadcrumbItem href="/">Home</BreadcrumbItem>
-              <BreadcrumbItem href="/car-rental-jaipur">jaipur cab rental</BreadcrumbItem>
-              <BreadcrumbItem active>luxury Bus Rental service jaipur</BreadcrumbItem>
-            </Breadcrumb>
-          </div>
-        </div>
-      </div>
+      {/* bread crumb */}
+      <Bread items={breadcrumbItems} />
 
-      {/* content */}
-      <div className="container-fluid py-5 bg-white">
+      {/*  */}
+      <div className="container-fluid">
         <div className="container">
-          <div className="row d-flex justify-content-center align-items-center px-lg-2 px-sm-0 why-us">
-            <div className="col-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-2">
-              <h3 className='text-capitalize fw-bold web-title bg-linear-modal w-100 p-lg-3 p-sm-2 text-center'>overview</h3>
-              <hr />
-              <p className='text-justify'>
-                Jaipur Bus & Coach Hire Service offers Volvo Bus & Scania Bus on hire from Jaipur, Udaipur, Jodhpur, Delhi & Agra. When you approach us for Volvo, Scania or other Super Luxury bus hire service for your trip, you will find not only our driver and helper of good nature but the interiors of the bus is also comfortable and homely. We are a leading Luxury bus & coach rental agency in Jaipur, Rajasthan. We are committed to providing you best condition bus & coach on hire for City Tours, Rajasthan Tour, Weddings, Conferences, Events, Outstation trips, Corporate movements & shootings.
-              </p>
-              <p className='text-justify'>
-                We have Tempo Traveller to Volvo & Scania buses with a seating capacity of 8 Seater to 45 Seater. All our coaches are with pushback seats & air-conditioned. You can utilize our services of corporate bus hire, wedding bus hire, luxury bus on rent in Jaipur for outstation, Volvo bus hire for holidays, tourist bus hire for Rajasthan tour and events with minimum charges as compared to others.
-              </p>
-              <p className='text-justify'>
-                Bookings and other queries for luxury bus hire service in Jaipur can be made by contacting Mr.Harsh Vardhan at +91 9166-555-888, or you can also fill out the contact form given on the site.
-              </p>
+          <div className="row d-flex justify-content-center align-items-start">
+            <div className="col-lg-9 col-sm-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-lg-3 px-sm-0">
+
+              {/* section 1 */}
+              <div className="cab-insider w-100 py-3" id="overview">
+                <CabScreenHeading icon={<IoDocumentText />} title='overview' />
+                <hr />
+                <p className="text-justify">
+                </p>
+              </div>
+
+              {/* section 2 */}
+              <div className="cab-insider w-100 py-3" id='features'>
+                <CabScreenHeading icon={<IoSettings />} title='features & amenities' />
+                <hr />
+                <div className="row mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center">
+                  {/* <CabFeatures features={innova_crysta_feat.slice(0, isShowAll ? innova_crysta_feat.length : 6)} /> */}
+                  <ToggleShowAllButton showAll={isShowAll} toggleShowAll={handleShow} />
+                </div>
+              </div>
+
+              {/* section 3 */}
+              <div className="cab-insider w-100 py-3" id='cab-charges'>
+                <CabScreenHeading icon={<FaMoneyBillWave />} title='cab charges' />
+                <hr />
+                <div className="row">
+                  <div className="col-lg-6 col-sm-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-2">
+                    <h4 className='text-capitalize fw-bold bg-active-gray w-100 p-3'>Jaipur Local Use</h4>
+                    {/* <CabFareTable rows={toyota_corolla_jaipur_local_use.rows} /> */}
+                  </div>
+                  <div className="col-lg-6 col-sm-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-2">
+                    <h4 className='text-capitalize fw-bold bg-active-gray w-100 p-3 '>outstation Use</h4>
+                    {/* <CabFareTable rows={toyota_corolla_outstation_use.rows} /> */}
+                  </div>
+                </div>
+              </div>
+
+              {/* section 4 */}
+              <div className="cab-insider w-100 py-3" id='gallery'>
+                <CabScreenHeading icon={<BsImages />} title='cab gallery' />
+                <hr />
+                {/* <CabGallery images={images} /> */}
+              </div>
+
+              {/* section 5 */}
+              <div className="cab-insider bg-black book-now w-100 p-2 rounded-4">
+                <BookNow
+                  title="Confirm Your Ride"
+                  description="Instant Booking for Stress-Free and Reliable Rides"
+                  buttonText="Book Now"
+                  modalTitle="10 Seater Luxury Tempo Traveller"
+                />
+              </div>
+            </div>
+
+            {/* sticky side content */}
+            <div className="col-lg-3 col-sm-12 py-4 about-nav bg-white px-1">
+              <RentalCategory
+                icon={<FaLink className='me-2 text-black' />}
+                title="Quick Links"
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
+                index={6}
+                isLinksSection={true}
+                otherSection={<SectionNavigation
+                  sections={sections}
+                />}
+              />
+              <RentalCategory
+                icon={<MdDirectionsCarFilled />}
+                title="Hatchback Cab Rentals"
+                cabRentals={cheapestCabRentals}
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
+                index={1}
+              />
+              <RentalCategory
+                icon={<MdDirectionsCarFilled />}
+                title="Sedan Cab Rentals"
+                cabRentals={sedanCabRentals}
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
+                index={2}
+              />
+              <RentalCategory
+                icon={<FaCarRear />}
+                title="SUV Cab Rentals"
+                cabRentals={suvCabRentals}
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
+                index={3}
+              />
+              <RentalCategory
+                icon={<IoCarSportSharp />}
+                title="Luxury Cab Rentals"
+                cabRentals={luxuryCabRentals}
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
+                index={4}
+              />
+              <RentalCategory
+                icon={<BiSolidBusSchool />}
+                title="Tempo & Bus Rentals"
+                cabRentals={tempo_and_bus_rentals}
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
+                index={5}
+              />
             </div>
           </div>
         </div>
       </div>
 
-      {/* packages */}
+      {/* featured tours */}
       <div className="container-fluid py-5 bg-linear-modal">
-        <div className="container">
-          <div className="row justify-content-center align-items-center packages rental-container">
-            <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
-              <h3 className='text-capitalize fw-bold text-center web-title'>jaipur luxury bus rental deals</h3>
-              <p className='text-center text-capitalize'>explore the beauty of Rajasthan with ease and comfort</p>
-            </div>
-            <div className="w-100 d-flex justify-content-center align-items-center flex-wrap px-0 packages rental-container">
-              <RentalPackages rentals={displayedItems} />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* categories */}
-      <div className="container-fluid py-5 bg-white">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-2">
             <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
-              <h3 className='text-capitalize fw-bold text-center web-title'>explore rentals by category</h3>
+              <h3 className='text-capitalize fw-bold text-center web-title'>featured tour packages</h3>
               <p className='text-center text-capitalize'>Curated tours designed to suit every travel need and budget</p>
             </div>
-            <div className="w-100 d-flex justify-content-between align-items-center flex-wrap px-0 bydayspackages carRentalsCard">
-              {CarRentalsByCategory.slice(0, 3).reverse().map((pkg, index) => (
+            <div className="w-100 d-flex justify-content-between align-items-center flex-wrap px-0 bydayspackages ">
+              {TourPackagesByCategory.slice(0, 6).reverse(3, 0).map((pkg, index) => (
                 <div
                   key={index}
                   className="col-12 col-sm-6 col-md-6 col-lg-4 my-2 d-flex align-items-center px-2"
@@ -109,15 +213,16 @@ const Page = () => {
                 </div>
               ))}
             </div>
-            <div className="col-12 d-flex w-100 align-items-center gap-2 mt-3">
+            <div className="col-12 d-flex justify-content-between align-items-center gap-2 mt-3">
               <hr />
-              <Link href='/car-rental-jaipur' className='explore'>
-                <button className='bg-tertary-down rounded-5 d-flex justify-content-between align-items-center gap-2 d-flex text-nowrap text-right text-capitalize'>explore more<MdOutlineArrowOutward className='text-tertary' /></button>
+              <Link href='/tour-packages-rajasthan'>
+                <button className='bg-tertary-down rounded-5 d-flex justify-content-between align-items-center gap-2 d-flex text-nowrap text-capitalize'>explore more<MdOutlineArrowOutward className='text-tertary' /></button>
               </Link>
             </div>
           </div>
         </div>
       </div>
+
     </>
   )
 }

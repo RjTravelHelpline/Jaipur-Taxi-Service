@@ -1,7 +1,6 @@
+import Bread from '@/components/Bread';
 import HeroBanner from '@/components/HeroBanner'
-import Image from 'next/image';
 import React from 'react'
-import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap';
 import { FaCar, FaMoneyBillWave, FaPlane, FaUserTie } from 'react-icons/fa6';
 import { MdSanitizer, MdSupportAgent } from 'react-icons/md';
 const HomeBanner01 = '/Images/Cabs/cab-rental-banner.jpg';
@@ -16,22 +15,17 @@ const page = () => {
       subheading: 'Discover the unmatched benefits of choosing our taxi services.',
     },
   ]
+  const breadcrumbItems = [
+    { label: "Home", link: "/", active: false },
+    { label: "Why Choose Us", link: null, active: true },
+  ];
   return (
     <>
       {/* banner */}
       <HeroBanner slides={slides} />
 
       {/* breadcrumb */}
-      <div className="container-fluid bg-white bread-container-fluid">
-        <div className="container bread-container">
-          <div className="row px-lg-2 px-sm-0 bread-row">
-            <Breadcrumb>
-              <BreadcrumbItem href="/">Home</BreadcrumbItem>
-              <BreadcrumbItem active>why choose jaipur taxi service</BreadcrumbItem>
-            </Breadcrumb>
-          </div>
-        </div>
-      </div>
+      <Bread items={breadcrumbItems} />
 
       {/* content */}
       <div className="container-fluid py-5">

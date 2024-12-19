@@ -3,9 +3,9 @@
 import React from "react";
 import { Breadcrumb, BreadcrumbItem } from "react-bootstrap";
 
-const Bread = ({ items }) => {
+const Bread = ({ items, style }) => {
   return (
-    <div className="container-fluid bg-black bread-container-fluid">
+    <div className={`container-fluid bg-black ${style} bread-container-fluid`}>
       <div className="container bread-container">
         <div className="row px-lg-2 px-sm-0 bread-row">
           <Breadcrumb>

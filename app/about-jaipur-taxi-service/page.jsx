@@ -15,6 +15,7 @@ import { reviewers } from '@/data/Reviews'
 import Testimonials from '@/components/Testimonials'
 import ToggleShowAllButton from '@/components/ToggleShowAllButton'
 import useShowAllToggle from '@/components/useShowAllToggle'
+import Bread from '@/components/Bread'
 
 const Page = () => {
   const { showAll, displayedItems, toggleShowAll } = useShowAllToggle(Services, 3);
@@ -47,25 +48,20 @@ const Page = () => {
       alt: 'Jaipur Taxi',
       title: '',
       heading: 'about us',
-      subheading: 'We are JaipurTaxiService.com, part of Rajasthan Travel Helpline, proudly serving travelers since 2002.',
+      subheading: 'We are JaipurTaxiService.com, part of Rajasthan Travel Helpline, <br />proudly serving travelers since 2002.',
     },
   ]
+  const breadcrumbItems = [
+    { label: "Home", link: "/", active: false },
+    { label: "About Jaipur Taxi Service", link: null, active: true },
+  ];
   return (
     <>
       {/* banner */}
       <HeroBanner slides={slides} />
 
       {/* breadcrumb */}
-      <div className="container-fluid bg-white bread-container-fluid">
-        <div className="container bread-container">
-          <div className="row px-lg-2 px-sm-0 bread-row">
-            <Breadcrumb>
-              <BreadcrumbItem href="/">Home</BreadcrumbItem>
-              <BreadcrumbItem active>about us</BreadcrumbItem>
-            </Breadcrumb>
-          </div>
-        </div>
-      </div>
+      <Bread items={breadcrumbItems} />
       <div>
         {/* About Navigation */}
         <div className="container-fluid py-2 about-nav bg-white">

@@ -632,7 +632,7 @@ export const suvCabRentals = [
       { icon: <FaSnowflake className="icon" />, label: 'AC' },
       { icon: <FaFire className="icon" />, label: 'Heater' },
     ],
-    navigate: '/tata-sumo-cab-hire-in-jaipur',
+    navigate: '/mahindra-scorpio-car-rental-in-jaipur',
     imgSrc: MahindraScorpio,
     alt: '',
     imgTitle: '',
@@ -1030,6 +1030,13 @@ export const allCabRentals = [
   ...sedanCabRentals,
   ...suvCabRentals,
   ...luxuryCabRentals,
+  ...tempoTravellerRentals,
+  ...busAndCoachRentals,
+  ...luxuryBusRentals,
+];
+
+// tempo & bus rentals
+export const tempo_and_bus_rentals = [
   ...tempoTravellerRentals,
   ...busAndCoachRentals,
   ...luxuryBusRentals,
