@@ -2,7 +2,7 @@ module.exports = {
   siteUrl: 'https://jaipur-taxi-service-01.vercel.app',
   generateRobotsTxt: true,
   sitemapSize: 7000,
-  exclude: ['/api', '/admin/*'],
+  exclude: ['/api/*', '/admin/*'],
   additionalSitemaps: [
     'https://jaipur-taxi-service-01.vercel.app/sitemap.xml', // Your main sitemap
   ],
@@ -25,4 +25,18 @@ module.exports = {
     };
   },
   generateIndexSitemap: false,
+
+  // custom robots
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+      {
+        userAgent: '*',
+        disallow: ['/api/*', '/admin/*'], // Exclude API and admin routes
+      },
+    ],
+  },
 };
