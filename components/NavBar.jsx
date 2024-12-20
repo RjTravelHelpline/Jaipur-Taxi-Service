@@ -294,7 +294,7 @@ const NavBar = () => {
                                     </Link>
                                 </li>
                                 <li className="nav-item text-capitalize">
-                                    <Link href="/about-jaipur-taxi-service" className="text-white p-2 px-3 nav-tab-link">
+                                    <Link href="/about-us" className="text-white p-2 px-3 nav-tab-link">
                                         about us
                                     </Link>
                                 </li>
@@ -504,7 +504,7 @@ const NavBar = () => {
                         </div>
                         <div className="nav-mobile-item cursor-pointer d-flex justify-content-center align-items-start flex-column">
                             <Link
-                                href="/about-jaipur-taxi-service"
+                                href="/about-us"
                                 onClick={() => {
                                     setShowNavigation(false);
                                 }}

@@ -18,7 +18,7 @@ module.exports = {
     }
 
     return {
-      loc: `https://jaipur-taxi-service-01.vercel.app${path}`,
+      loc: `https://jaipur-taxi-service-01.vercel.app${path}.html`,
       lastmod: new Date().toISOString(),
       changefreq: 'daily',
       priority: 0.7,

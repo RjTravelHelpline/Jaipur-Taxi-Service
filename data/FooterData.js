@@ -7,10 +7,12 @@ export const servicesData = [
 
 export const company = [
   // Company
-  { text: 'About Us', path: '/about-jaipur-taxi-service' },
+  { text: 'About Us', path: '/about-us' },
   { text: 'Privacy Policy', path: '/privacy-policy' },
   { text: 'Terms & Conditions', path: '/terms-and-conditions' },
-  { text: 'Why Choose Us', path: '/why-choose-jaipur-taxi-service' },
+  { text: 'Why Choose Us', path: '/why-choose-us' },
+  { text: 'Disclaimer', path: '/disclaimer' },
+  { text: "Do's & Don'ts", path: '/dos-and-donts' },
 ];
 
 export const carAndCoches = [

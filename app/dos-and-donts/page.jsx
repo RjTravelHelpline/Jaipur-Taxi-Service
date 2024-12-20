@@ -4,7 +4,7 @@ import React from 'react'
 const page = () => {
     const breadcrumbItems = [
         { label: "Home", link: "/", active: false },
-        { label: "do's & don'ts", link: null, active: true },
+        { label: "dos and donts", link: null, active: true },
     ];
     const date = new Date()
     return (
