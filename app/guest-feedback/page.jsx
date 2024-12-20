@@ -3,9 +3,8 @@ import HeroBanner from '@/components/HeroBanner'
 import Testimonials from '@/components/Testimonials'
 import { reviewers } from '@/data/Reviews'
 import React, { useState } from 'react';
-import { Modal } from 'react-bootstrap'; // Ensure you have react-bootstrap installed
+import { Modal } from 'react-bootstrap';
 import Image from 'next/image';
-import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap'
 import { RiCloseFill } from 'react-icons/ri';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import { getLatestItems } from '@/utils/utils';
