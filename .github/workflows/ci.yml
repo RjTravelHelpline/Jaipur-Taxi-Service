@@ -32,14 +32,10 @@ jobs:
           cp public/robots.txt out/robots.txt
 
       - name: Upload to Hostinger (FTP)
-        env:
-          FTP_HOST: ${{ secrets.ftp.taxirentaljaipur.com }}
-          FTP_USERNAME: ${{ secrets.u525176569.taxirentaljaipur }}
-          FTP_PASSWORD: ${{ secrets.Taxirentaljaipur@123 }}
         run: |
           apt-get install -y lftp
           lftp -c "
-          open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST;
+          open -u u525176569.taxirentaljaipur,Taxirentaljaipur@123 FTP_HOST;
           mirror -R out /public_html;
           bye
           "
