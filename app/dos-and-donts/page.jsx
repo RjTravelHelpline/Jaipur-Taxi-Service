@@ -16,6 +16,9 @@ const page = () => {
                         <div className="insider bg-white rounded-3 p-3">
                             <p className='text-tertary fw-bold text-uppercase mb-0'>Jaipur Taxi Service</p>
                             <h1 className='text-capitalize web-title fw-bold'>do&apos;s & don&apos;ts</h1>
+                            <h2>
+                                Essential Guidelines to Navigate the Right Way Forward
+                            </h2>
                             <hr />
                             <p className='text-right'>Last Updated: {date.toLocaleDateString('en-US', {
                                 year: 'numeric',
