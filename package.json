@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.7",
     "fs": "^0.0.1-security",
     "gh": "^2.8.9",
     "next": "15.0.3",

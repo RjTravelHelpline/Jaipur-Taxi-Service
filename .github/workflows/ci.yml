@@ -38,9 +38,9 @@ jobs:
 
     - name: Upload to Hostinger (FTP)
       env:
-        FTP_HOST: ${{ secrets.ftp.taxirentaljaipur.com }}
-        FTP_USERNAME: ${{ secrets.u525176569.taxirentaljaipur }}
-        FTP_PASSWORD: ${{ secrets.Taxirentaljaipur@123 }}
+        FTP_HOST: ${{ secrets.FTP_HOST }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
       run: |
         apt-get install -y lftp
         lftp -c "
