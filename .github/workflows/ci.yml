@@ -1,4 +1,4 @@
-name: Build and Test Workflow
+name: Build, Test & Deployment Workflow
 
 on:
   push:
@@ -28,6 +28,9 @@ jobs:
 
     - name: Build Application
       run: npm run build
+
+    - name: Post Build for Sitemap & Robots
+      run: npm run postbuild 
 
     - name: Notify Success
       if: success()
