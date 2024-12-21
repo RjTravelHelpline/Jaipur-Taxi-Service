@@ -27,9 +27,6 @@ jobs:
     - name: Build Application
       run: npm run build
 
-    - name: Export Static Files
-      run: npm run export
-
     - name: Generate Sitemap & Robots Files
       run: |
         npm run postbuild
