@@ -3,6 +3,7 @@ module.exports = {
   generateRobotsTxt: true,
   sitemapSize: 7000,
   exclude: ['/api/*', '/admin/*'],
+  outDir: './public',
   additionalSitemaps: [
     'https://jaipur-taxi-service-01.vercel.app/sitemap.xml', // Your main sitemap
   ],
