@@ -30,15 +30,15 @@ jobs:
           npm run postbuild
           cp public/sitemap.xml out/sitemap.xml
           cp public/robots.txt out/robots.txt
-
-      - name: Upload to Hostinger (FTP)
+      - name: Generate Sitemap & Robots Files
         run: |
-          sudo apt-get update
-          sudo apt-get install -y lftp
-          lftp -d -c "
-          open -u u525176569.taxirentaljaipur,Taxirentaljaipur@123 ftps://taxirentaljaipur.com:21;
-          set net:timeout 120;
-          set ftp:ssl-allow true;
-          mirror -R out /public_html;
-          bye
-          "
+          mkdir -p ~/.ssh
+          echo "${{ secrets.ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUuTOIU0Q2xxklokNHvmb92qigFGlsu7USBfAhY3qDW+Ym0vIT4s69NhRX+PnB4R4SOWq9XUt9mVPokvHhm1i47EZ0f1FCBnduBI2f4iFubQUG/M4pqTe2/qVoCAM8MZHvxPweiPyVarK2/m2Z6mWszkupJB7e1ve48sfhSTXnuEKEmBmv0CSOayvdDZZDZaO+btbNSiLe4vAPDXY6Rug3NLbm27Dn12Z3c/X0OFwLww7h1pLGtyrHj/JkESjSdWBIt3rpBi2aMcTlk1X0coIx93w6sNfY7v+fmuFxMkYw8k5axGR/0h0WnmZnJAw7S0qYSjhbHfISXq3XBseK+hup user@DESKTOP-J3ULVN5 }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          # Add the Hostinger server to known_hosts to prevent SSH warnings
+          ssh-keyscan -t rsa taxirentaljaipur.com >> ~/.ssh/known_hosts
+
+      - name: Upload to Hostinger (SSH)
+        run: |
+          # Upload using SCP
+          scp -r out/* u525176569@taxirentaljaipur.com:/home/u525176569/public_html
