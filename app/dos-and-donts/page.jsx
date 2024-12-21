@@ -15,7 +15,7 @@ const page = () => {
                         <Bread items={breadcrumbItems} style='bg-white px-0' />
                         <div className="insider bg-white rounded-3 p-3">
                             <p className='text-tertary fw-bold text-uppercase mb-0'>Jaipur Taxi Service</p>
-                            <h1 className='text-capitalize web-title fw-bold'>do&apos;s & don&apos;ts</h1>
+                            <h1 className='text-capitalize web-title fw-bold'>do&#39;s and don&#39;ts</h1>
                             <hr />
                             <p className='text-right'>Last Updated: {date.toLocaleDateString('en-US', {
                                 year: 'numeric',
