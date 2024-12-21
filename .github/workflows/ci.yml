@@ -1,5 +1,3 @@
-
-
 name: CI Workflow
 
 on:
@@ -13,35 +11,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-    - name: Install Dependencies
-      run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Build Application
-      run: npm run build
+      - name: Build Application
+        run: npm run build
 
-    - name: Generate Sitemap & Robots Files
-      run: |
-        npm run postbuild
-        cp public/sitemap.xml out/sitemap.xml
-        cp public/robots.txt out/robots.txt
+      - name: Generate Sitemap & Robots Files
+        run: |
+          npm run postbuild
+          cp public/sitemap.xml out/sitemap.xml
+          cp public/robots.txt out/robots.txt
 
-    - name: Upload to Hostinger (FTP)
-      env:
-        FTP_HOST: ${{ secrets.FTP_HOST }}
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-      run: |
-        apt-get install -y lftp
-        lftp -c "
-        open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST;
-        mirror -R out /public_html;
-        bye
-        "
+      - name: Upload to Hostinger (FTP)
+        env:
+          FTP_HOST: ${{ secrets.ftp.taxirentaljaipur.com }}
+          FTP_USERNAME: ${{ secrets.u525176569.taxirentaljaipur }}
+          FTP_PASSWORD: ${{ secrets.Taxirentaljaipur@123 }}
+        run: |
+          apt-get install -y lftp
+          lftp -c "
+          open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST;
+          mirror -R out /public_html;
+          bye
+          "
