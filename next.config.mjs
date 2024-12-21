@@ -44,6 +44,8 @@ const nextConfig = {
       permanent: true,
     }));
   },
+  // exporting
+  output: 'export',
 };
 
 export default nextConfig;
