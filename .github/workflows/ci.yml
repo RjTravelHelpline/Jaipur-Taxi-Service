@@ -33,6 +33,8 @@ jobs:
       - name: Post Build for Sitemap & Robots
         run: |
           npm run postbuild
+          git config --global user.email "yj606089@gmail.com"
+          git config --global user.name "RjTravelHelpline"
           git add public/sitemap.xml public/robots.txt
           git commit -m "Add generated sitemap.xml and robots.txt"
           git push
