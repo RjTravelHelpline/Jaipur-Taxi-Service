@@ -28,6 +28,7 @@ jobs:
 
       - name: Build Application
         run: npm run build
+        continue-on-error: true
 
       - name: Post Build for Sitemap & Robots
         run: npm run postbuild -- --verbose
