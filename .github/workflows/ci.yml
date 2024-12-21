@@ -31,7 +31,11 @@ jobs:
         continue-on-error: true
 
       - name: Post Build for Sitemap & Robots
-        run: npm run postbuild -- --verbose
+        run: |
+        npm run postbuild
+        git add public/sitemap.xml public/robots.txt
+        git commit -m "Add generated sitemap.xml and robots.txt"
+        git push
 
       - name: List Generated Files
         run: ls -la
