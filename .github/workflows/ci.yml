@@ -37,7 +37,9 @@ jobs:
           git config --global user.name "RjTravelHelpline"
           git add public/sitemap.xml public/robots.txt
           git commit -m "Add generated sitemap.xml and robots.txt"
-          git push
+          git push https://${{ secrets.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 }}@github.com/RjTravelHelpline/Jaipur-Taxi-Service.git
+        env:
+          GH_TOKEN: ${{ secrets.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 }}
 
       - name: List Generated Files
         run: ls -la
