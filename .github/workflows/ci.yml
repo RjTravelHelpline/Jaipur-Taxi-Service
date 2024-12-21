@@ -35,7 +35,7 @@ jobs:
         run: |
           sudo apt-get install -y lftp
           lftp -c "
-          open -u u525176569.taxirentaljaipur,Taxirentaljaipur@123 ftp.taxirentaljaipur.com;
+          open -u u525176569.taxirentaljaipur,Taxirentaljaipur@123 ftp://taxirentaljaipur.com;
           mirror -R out /public_html;
           bye
           "
