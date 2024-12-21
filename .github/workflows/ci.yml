@@ -30,7 +30,7 @@ jobs:
         run: npm run build
 
       - name: Post Build for Sitemap & Robots
-        run: npm run postbuild
+        run: npm run postbuild -- --verbose
 
       - name: List Generated Files
         run: ls -la
