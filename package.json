@@ -12,6 +12,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "fs": "^0.0.1-security",
+    "gh": "^2.8.9",
     "next": "15.0.3",
     "next-sitemap": "^4.2.3",
     "nextjs-google-analytics": "^2.3.7",
