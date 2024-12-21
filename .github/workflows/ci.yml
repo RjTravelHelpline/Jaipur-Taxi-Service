@@ -38,7 +38,7 @@ jobs:
           lftp -d -c "
           open -u u525176569.taxirentaljaipur,Taxirentaljaipur@123 ftps://taxirentaljaipur.com:21;
           set net:timeout 120;
+          set ftp:ssl-allow true;
           mirror -R out /public_html;
           bye
           "
-
