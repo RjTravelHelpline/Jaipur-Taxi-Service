@@ -91,9 +91,13 @@ jobs:
 
            # Remove existing files, but preserve the build output
           find . -mindepth 1 -not -name 'out' -exec rm -rf {} +
+          
 
           # Copy build output to root
           cp -R ./out/* . || echo "No files to copy"
+
+          # Clean up the 'out' directory after copying
+          rm -rf out
 
           # Push changes to `deploy` branch
           git add .
