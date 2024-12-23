@@ -71,7 +71,10 @@ jobs:
         run: |
           npm install
           npm run build
-
+      # Step 5: Export the build output (for Next.js projects)
+      - name: Export the build
+        run: |
+          npm run export  # This generates the 'out' directory
       # Step: verify the build output
       - name: Verify build output
         run: |
