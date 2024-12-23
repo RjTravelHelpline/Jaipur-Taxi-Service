@@ -72,14 +72,14 @@ jobs:
           npm install
 
       # Step 4: Ensure output: export in next.config.js
-      - name: Ensure output: export in next.config.js
+      - name: export in next.config.js
         run: |
-          if ! grep -q "output: 'export'" next.config.js; then
-            echo "Adding output: 'export' to next.config.js"
-            sed -i "/async redirects()/a \  output: 'export'," next.config.js
-          else
-            echo "output: 'export' already exists in next.config.js"
-          fi
+          # if ! grep -q "output: 'export'" next.config.js; then
+          #   echo "Adding output: 'export' to next.config.js"
+          #   sed -i "/async redirects()/a \  output: 'export'," next.config.js
+          # else
+          #   echo "output: 'export' already exists in next.config.js"
+          # fi
 
       # Step 5: Build the project
       - name: Build the project
