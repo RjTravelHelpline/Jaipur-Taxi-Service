@@ -66,15 +66,26 @@ jobs:
         with:
           node-version: 18 # Adjust Node.js version as needed
 
-      # Step 3: Install dependencies and build the project
-      - name: Install dependencies and build
+      # Step 3: Install dependencies
+      - name: Install dependencies
         run: |
           npm install
-          npm run build
-      # Step 5: Export the build output (for Next.js projects)
-      - name: Export the build
+
+      # Step 4: Ensure output: export in next.config.js
+      - name: Ensure output: export in next.config.js
         run: |
-          npm run export  # This generates the 'out' directory
+          if ! grep -q "output: 'export'" next.config.js; then
+            echo "Adding output: 'export' to next.config.js"
+            sed -i "/async redirects()/a \  output: 'export'," next.config.js
+          else
+            echo "output: 'export' already exists in next.config.js"
+          fi
+
+      # Step 5: Build the project
+      - name: Build the project
+        run: |
+          npm run build  # This should now build and export the project
+
       # Step: verify the build output
       - name: Verify build output
         run: |
