@@ -34,7 +34,7 @@ jobs:
     steps:
       - name: Deploy to Hostinger via SSH
         run: |
-          ssh -p 65002 u525176569@217.21.94.56 << 'EOF'
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 65002 u525176569@217.21.94.56 << 'EOF'
             cd domains
             cd taxirentaljaipur.com
             cd public_html
