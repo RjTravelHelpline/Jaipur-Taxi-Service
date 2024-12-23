@@ -88,12 +88,12 @@ jobs:
 
           # Switch to the `deploy` branch
           git checkout --orphan deploy
-          git reset --hard
-          git clean -fd
 
-          # Clear branch and move the `out` directory content
-          rm -rf ./*
-          cp -R ./out/* ./
+           # Remove existing files, but preserve the build output
+          find . -mindepth 1 -not -name 'out' -exec rm -rf {} +
+
+          # Copy build output to root
+          cp -R ./out/* . || echo "No files to copy"
 
           # Push changes to `deploy` branch
           git add .
