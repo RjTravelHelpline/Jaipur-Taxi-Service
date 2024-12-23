@@ -89,16 +89,19 @@ jobs:
           # Switch to the `deploy` branch
           git checkout --orphan deploy
 
-           # Remove existing files, but preserve the build output
-          find . -mindepth 1 -not -name 'out' -exec rm -rf {} +
-          
+          # Remove all files and directories except the 'out' directory
+          echo "Removing all files except 'out' directory..."
+          find . -mindepth 1 -not -name 'out' -exec rm -rf {} + || echo "Some files were not found and could not be deleted"
 
-          # Copy build output to root
-          cp -R ./out/* . || echo "No files to copy"
-
-          # Clean up the 'out' directory after copying
-          rm -rf out
-
+          # Check if the 'out' directory exists and copy its contents
+          if [ -d "./out" ]; then
+            echo "Copying contents of 'out' directory..."
+            cp -R ./out/* .
+            rm -rf out  # Clean up 'out' directory after copying
+          else
+            echo "'out' directory not found. Please make sure it's built before deployment."
+            exit 1
+          fi
           # Push changes to `deploy` branch
           git add .
           git commit -m "Update deployed build" || echo "No changes to commit"
