@@ -72,6 +72,14 @@ jobs:
           npm install
           npm run build
 
+      # Step: verify the build output
+      - name: Verify build output
+        run: |
+          if [ ! -d "./out" ]; then
+            echo "Error: Build directory 'out' does not exist."
+            exit 1
+          fi
+
       # Step 4: Copy the `out` directory to the `deploy` branch
       - name: Deploy only the `out` directory to deploy branch
         run: |
