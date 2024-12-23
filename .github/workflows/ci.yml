@@ -28,6 +28,13 @@ jobs:
       - name: Generate Sitemap & Robots Files
         run: npm run postbuild
 
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HOSTINGER_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H taxirentaljaipur.com >> ~/.ssh/known_hosts
+
       - name: Push to Hostinger
         run: |
           git remote add hostinger git@github.com:RjTravelHelpline/Jaipur-Taxi-Service.git
