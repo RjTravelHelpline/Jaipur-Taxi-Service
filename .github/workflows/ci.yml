@@ -25,12 +25,12 @@ jobs:
         run: |
           npm install
 
-      # Step 4: Install dependencies
-      - name: Install dependencies
+      # Step 4: Build the project
+      - name: Run build command
         run: |
           npm run build
 
-      # Step: verify the build output
+      # Step: Verify the build output
       - name: Verify build output
         run: |
           if [ ! -d "./out" ]; then
@@ -38,17 +38,20 @@ jobs:
             exit 1
           fi
 
-      # Step 4: Copy the `out` directory to the `deploy` branch
+      # Step 5: Deploy only the `out` directory to deploy branch
       - name: Deploy only the `out` directory to deploy branch
         run: |
+          # Make sure we're in a valid Git repository and on the correct branch
+          git status
+
+          # Configure Git user for commits
           git config user.name "RjTravelHelpline"
           git config user.email "yj606089@gmail.com"
 
-
-          # Switch to the `deploy` branch
+          # Ensure the 'deploy' branch exists and is checked out
           git checkout --orphan deploy
 
-          # Remove all files and directories except the 'out' directory
+          # Remove all files and directories except 'out'
           find . -mindepth 1 -not -path './out*' -exec rm -rf {} + || echo "Some files were not found and could not be deleted"
 
           # Check if the 'out' directory exists and copy its contents
@@ -60,7 +63,8 @@ jobs:
             echo "'out' directory not found. Please make sure it's built before deployment."
             exit 1
           fi
-          # Push changes to `deploy` branch
+
+          # Commit and push changes to the 'deploy' branch
           git add .
           git commit -m "Update deployed build" || echo "No changes to commit"
           git push origin deploy --force
