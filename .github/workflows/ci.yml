@@ -49,9 +49,7 @@ jobs:
           git checkout --orphan deploy
 
           # Remove all files and directories except the 'out' directory
-          rsync -a --exclude='./out' --delete-empty-dirs ./ /tmp/cleaned/
-          mv /tmp/cleaned/* ./
-          rm -rf /tmp/cleaned
+          find . -mindepth 1 -not -name 'out' -exec rm -rf {} + || echo "Some files were not found and could not be deleted"
 
           # Check if the 'out' directory exists and copy its contents
           if [ -d "./out" ]; then
