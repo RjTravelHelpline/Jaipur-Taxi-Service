@@ -27,11 +27,6 @@ jobs:
       - name: Generate sitemaps and robots
         run: npm run postbuild
 
-      - name: Commit and push to git
-        run: |
-          git add .
-          git commit -m "Build and deploy"
-          git push
 
   deploy:
     runs-on: ubuntu-latest
