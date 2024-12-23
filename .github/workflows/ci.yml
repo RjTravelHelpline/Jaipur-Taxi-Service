@@ -49,7 +49,7 @@ name: Build and Deploy to Hostinger
 on:
   push:
     branches:
-      - main # Trigger on pushes to the main branch
+      - master # Trigger on pushes to the main branch
 
 jobs:
   build-and-deploy:
