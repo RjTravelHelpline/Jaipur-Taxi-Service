@@ -71,16 +71,6 @@ jobs:
         run: |
           npm install
 
-      # Step 4: Ensure output: export in next.config.js
-      - name: export in next.config.js
-        run: |
-          # if ! grep -q "output: 'export'" next.config.js; then
-          #   echo "Adding output: 'export' to next.config.js"
-          #   sed -i "/async redirects()/a \  output: 'export'," next.config.js
-          # else
-          #   echo "output: 'export' already exists in next.config.js"
-          # fi
-
       # Step 5: Build the project
       - name: Build the project
         run: |
@@ -103,9 +93,6 @@ jobs:
           # Switch to the `deploy` branch
           git checkout --orphan deploy
 
-          # Remove all files and directories except the 'out' directory
-          echo "Removing all files except 'out' directory..."
-          find . -mindepth 1 -not -name 'out' -exec rm -rf {} + || echo "Some files were not found and could not be deleted"
 
           # Check if the 'out' directory exists and copy its contents
           if [ -d "./out" ]; then
