@@ -1,45 +1,94 @@
-name: Build and Deploy Next.js App
+# name: Build and Deploy Next.js App
+
+# on:
+#   push:
+#     branches:
+#       - master
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
+
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: '18'
+
+#       - name: Install dependencies
+#         run: npm install
+
+#   deploy:
+#     runs-on: ubuntu-latest
+#     needs: build
+
+#     steps:
+#       # Set up SSH key
+#       - name: Set up SSH for Hostinger
+#         run: |
+#           mkdir -p ~/.ssh
+#           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+#           chmod 600 ~/.ssh/id_rsa
+#           ssh-keyscan -H 217.21.94.56 >> ~/.ssh/known_hosts
+
+#       - name: Deploy to Hostinger via SSH
+#         run: |
+#           ssh -o StrictHostKeyChecking=no -p 65002 u525176569@217.21.94.56 << 'EOF'
+#             cd domains
+#             cd taxirentaljaipur.com
+#             cd public_html
+#             rm -rf *
+#             cp -r $GITHUB_WORKSPACE/out/* .  # Replace with actual path to build directory
+#           EOF
+
+name: Build and Deploy to Hostinger
 
 on:
   push:
     branches:
-      - master
+      - main # Trigger on pushes to the main branch
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Check out the code
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
+      # Step 2: Install Node.js
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: 18 # Adjust Node.js version as needed
 
-      - name: Install dependencies
-        run: npm install
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-      # Set up SSH key
-      - name: Set up SSH for Hostinger
+      # Step 3: Install dependencies and build the project
+      - name: Install dependencies and build
         run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H 217.21.94.56 >> ~/.ssh/known_hosts
+          npm install
+          npm run build
 
-      - name: Deploy to Hostinger via SSH
+      # Step 4: Copy the `out` directory to the `deploy` branch
+      - name: Deploy only the `out` directory to deploy branch
         run: |
-          ssh -o StrictHostKeyChecking=no -p 65002 u525176569@217.21.94.56 << 'EOF'
-            cd domains
-            cd taxirentaljaipur.com
-            cd public_html
-            rm -rf *
-            cp -r $GITHUB_WORKSPACE/out/* .  # Replace with actual path to build directory
-          EOF
+          git config user.name "RjTravelHelpline"
+          git config user.email "yj606089@gmail.com"
+
+          # Switch to the `deploy` branch
+          git fetch origin deploy
+          git checkout deploy || git checkout --orphan deploy
+          git reset --hard
+          git clean -fd
+
+          # Clear branch and move the `out` directory content
+          rm -rf ./*
+          cp -R ./out/* ./
+
+          # Push changes to `deploy` branch
+          git add .
+          git commit -m "Update deployed build" || echo "No changes to commit"
+          git push origin deploy --force
