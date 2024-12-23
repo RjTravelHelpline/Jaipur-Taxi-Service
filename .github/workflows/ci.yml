@@ -1,49 +1,3 @@
-# name: Build and Deploy Next.js App
-
-# on:
-#   push:
-#     branches:
-#       - master
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v3
-
-#       - name: Set up Node.js
-#         uses: actions/setup-node@v3
-#         with:
-#           node-version: '18'
-
-#       - name: Install dependencies
-#         run: npm install
-
-#   deploy:
-#     runs-on: ubuntu-latest
-#     needs: build
-
-#     steps:
-#       # Set up SSH key
-#       - name: Set up SSH for Hostinger
-#         run: |
-#           mkdir -p ~/.ssh
-#           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-#           chmod 600 ~/.ssh/id_rsa
-#           ssh-keyscan -H 217.21.94.56 >> ~/.ssh/known_hosts
-
-#       - name: Deploy to Hostinger via SSH
-#         run: |
-#           ssh -o StrictHostKeyChecking=no -p 65002 u525176569@217.21.94.56 << 'EOF'
-#             cd domains
-#             cd taxirentaljaipur.com
-#             cd public_html
-#             rm -rf *
-#             cp -r $GITHUB_WORKSPACE/out/* .  # Replace with actual path to build directory
-#           EOF
-
 name: Build and Deploy to Hostinger
 
 on:
@@ -71,7 +25,6 @@ jobs:
         run: |
           npm install
 
-
       # Step: verify the build output
       - name: Verify build output
         run: |
@@ -90,6 +43,8 @@ jobs:
           # Switch to the `deploy` branch
           git checkout --orphan deploy
 
+          # Remove all files and directories except the 'out' directory
+          find . -mindepth 1 -not -name 'out' -exec rm -rf {} +
 
           # Check if the 'out' directory exists and copy its contents
           if [ -d "./out" ]; then
