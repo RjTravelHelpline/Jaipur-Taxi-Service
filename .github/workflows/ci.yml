@@ -25,6 +25,11 @@ jobs:
         run: |
           npm install
 
+      # Step 4: Install dependencies
+      - name: Install dependencies
+        run: |
+          npm run build
+
       # Step: verify the build output
       - name: Verify build output
         run: |
