@@ -33,11 +33,12 @@ jobs:
 
     steps:
       # Set up SSH key
-      - name: Set up SSH key
+      - name: Set up SSH for Hostinger
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 217.21.94.56 >> ~/.ssh/known_hosts
 
       - name: Deploy to Hostinger via SSH
         run: |
