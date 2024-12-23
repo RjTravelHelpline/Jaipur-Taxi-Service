@@ -27,3 +27,8 @@ jobs:
 
       - name: Generate Sitemap & Robots Files
         run: npm run postbuild
+
+      - name: Push to Hostinger
+        run: |
+          git remote add hostinger git@github.com:RjTravelHelpline/Jaipur-Taxi-Service.git
+          git push hostinger master
