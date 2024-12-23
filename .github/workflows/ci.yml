@@ -1,4 +1,4 @@
-name: Build and Deploy to Hostinger
+name: Build and Deploy Next.js App
 
 on:
   push:
@@ -6,32 +6,42 @@ on:
       - master
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the code
-      - name: Checkout Code
-        uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      # Set up SSH key
-      - name: Set up SSH key for connection
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-      # Build your project (adjust this according to your build process)
-      - name: Build Project
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js app
         run: npm run build
 
-      # Deploy to Hostinger
-      - name: Deploy to Hostinger
+      - name: Generate sitemaps and robots
+        run: npm run postbuild
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Set up SSH private key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Deploy to Hostinger via SSH
         run: |
           ssh -o StrictHostKeyChecking=no -p 65002 u525176569@217.21.94.56 << 'EOF'
             cd domains
             cd taxirentaljaipur.com
             cd public_html
             rm -rf *
-            cp -r /path/to/your/build/* .
+            cp -r $GITHUB_WORKSPACE/out/* .  # Replace with actual path to build directory
           EOF
