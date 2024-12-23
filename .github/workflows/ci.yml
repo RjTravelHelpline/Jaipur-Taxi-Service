@@ -85,7 +85,6 @@ jobs:
         run: |
           git config user.name "RjTravelHelpline"
           git config user.email "yj606089@gmail.com"
-          git remote set-url origin https://github-actions:${{ secrets.GH_TOKEN }}@github.com/RjTravelHelpline/Jaipur-Taxi-Service.git
 
 
           # Switch to the `deploy` branch
