@@ -79,8 +79,7 @@ jobs:
           git config user.email "yj606089@gmail.com"
 
           # Switch to the `deploy` branch
-          git fetch origin deploy
-          git checkout deploy || git checkout --orphan deploy
+          git checkout --orphan deploy
           git reset --hard
           git clean -fd
 
