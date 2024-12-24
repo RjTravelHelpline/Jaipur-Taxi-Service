@@ -30,8 +30,6 @@ jobs:
       - name: Build the App
         run: |
           npm run build
-          npm run build:sitemap
-          npm run build:robots
 
       # Step 5: Notify Build Success
       - name: Notify Build Success
