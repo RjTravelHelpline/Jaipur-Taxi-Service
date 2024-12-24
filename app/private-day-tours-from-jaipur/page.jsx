@@ -8,7 +8,7 @@ import { JaipurDayTours, TourPackagesByCategory } from '@/data/TourPackagesData'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Breadcrumb, BreadcrumbItem, Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import { MdOutlineArrowOutward } from 'react-icons/md'
 
 const Page = () => {
