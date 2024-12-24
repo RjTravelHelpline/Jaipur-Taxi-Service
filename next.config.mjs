@@ -29,7 +29,7 @@ const nextConfig = {
           const routePath = `/${path
             .dirname(relativePath)
             .replace(/\\/g, '/')}`;
-          routes.push(routePath === '/index' ? '/' : routePath); // Normalize root route
+          routes.push(routePath === '/index' ? '/' : routePath);
         }
       }
 
@@ -44,8 +44,6 @@ const nextConfig = {
       permanent: true,
     }));
   },
-  // exporting
-  output: 'export',
 };
 
 export default nextConfig;
