@@ -43,9 +43,8 @@ const Page = () => {
   // breadItems
   const breadcrumbItems = [
     { label: "Home", link: "/", active: false },
-    { label: "Jaipur Cab Rental", link: "/car-rental-jaipur", active: false },
-    { label: "Tempo Traveller Rental", link: "/sedan-car-rental-jaipur", active: false },
-    { label: "10 Seater Luxury Tempo Traveller", link: null, active: true },
+    { label: "places to visit in jaipur", link: "/places-to-visit-in-jaipur", active: false },
+    { label: "walled pinkcity jaipur", link: null, active: true },
   ];
 
   // tempo & bus rentals

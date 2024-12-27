@@ -24,6 +24,7 @@ const Page = () => {
   ]
   const breadcrumbItems = [
     { label: "Home", link: "/", active: false },
+    { label: "rajasthan tour packages", link: "/rajasthan-tour-packages", active: false },
     { label: "Jaipur Sightseeing Tours", link: null, active: true },
   ];
   return (

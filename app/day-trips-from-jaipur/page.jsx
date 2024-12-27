@@ -18,14 +18,14 @@ const Page = () => {
       image: '',
       alt: 'Jaipur Taxi',
       title: '',
-      heading: 'private day tours jaipur',
+      heading: 'Day Trips From Jaipur',
       subheading: 'Comfort & Convenience for Every Journey',
     },
   ]
   const breadcrumbItems = [
     { label: "Home", link: "/", active: false },
     { label: "rajasthan tour packages", link: "/tour-packages-rajasthan", active: false },
-    { label: "private day tours from jaipur", link: null, active: true },
+    { label: "Day Trips From Jaipur", link: null, active: true },
   ];
   return (
     <>
@@ -72,7 +72,7 @@ const Page = () => {
         <div className="container">
           <div className="row justify-content-center align-items-center packages">
             <div className="col-12 col-lg-8 col-sm-10 px-5 mb-lg-3 mb-sm-2">
-              <h3 className='text-capitalize fw-bold text-center web-title'>private day tour packages</h3>
+              <h3 className='text-capitalize fw-bold text-center web-title'>day trips from jaipur</h3>
               <p className='text-center text-capitalize'>Some of the most popular day tours from Jaipur</p>
             </div>
             <div className="w-100 d-flex justify-content-center align-items-center flex-wrap px-0 packages">

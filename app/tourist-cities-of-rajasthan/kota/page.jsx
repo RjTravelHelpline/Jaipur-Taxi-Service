@@ -7,7 +7,7 @@ const Page = () => {
   // breadItems
   const breadcrumbItems = [
     { label: "Home", link: "/", active: false },
-    { label: "Rajasthan Tour Packages", link: "/tour-packages-rajasthan", active: false },
+    { label: "tourist cities of rajasthan", link: "/tourist-cities-of-rajasthan", active: false },
     { label: "kota", link: null, active: true },
   ];
 

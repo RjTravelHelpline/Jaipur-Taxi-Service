@@ -43,9 +43,8 @@ const Page = () => {
   // breadItems
   const breadcrumbItems = [
     { label: "Home", link: "/", active: false },
-    { label: "Jaipur Cab Rental", link: "/car-rental-jaipur", active: false },
-    { label: "Tempo Traveller Rental", link: "/sedan-car-rental-jaipur", active: false },
-    { label: "10 Seater Luxury Tempo Traveller", link: null, active: true },
+    { label: "tourist cities of rajasthan", link: "/tourist-cities-of-rajasthan", active: false },
+    { label: "udaipur", link: null, active: true },
   ];
 
   // tempo & bus rentals
@@ -56,9 +55,9 @@ const Page = () => {
       {/* banner */}
       <HeroBanner
         slides={[
-          { heading: "10 Seater Luxury Tempo Traveller", subheading: "Travel without breaking the bank" }
+          { heading: "udaipur", subheading: "Travel without breaking the bank" }
         ]}
-        backgroundImage="/Images/Cabs/8-seater-tempo-banner.jpg" />
+        backgroundImage="" />
 
       {/* bread crumb */}
       <Bread items={breadcrumbItems} />

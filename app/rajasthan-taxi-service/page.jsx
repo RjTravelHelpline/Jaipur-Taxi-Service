@@ -18,13 +18,13 @@ const Page = () => {
       image: '',
       alt: 'Jaipur Taxi',
       title: '',
-      heading: 'city wise cab service',
+      heading: 'rajasthan taxi service',
       subheading: 'Comfort & Convenience for Every Journey',
     },
   ]
   const breadcrumbItems = [
     { label: "Home", link: "/", active: false },
-    { label: "city wise cab service", link: null, active: true },
+    { label: "rajasthan taxi service", link: null, active: true },
   ];
   return (
     <>
