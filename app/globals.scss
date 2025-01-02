@@ -35,6 +35,7 @@
 
   /* Font Sizes + Responsive Padding Sizes */
   --font-size-a: clamp(0.9rem, 1.1vw, 1rem);
+  --font-anchor: clamp(0.8rem, 1vw, 0.9rem);
   --font-size-bread: clamp(0.8rem, 1vw, 0.9rem);
   --font-size-button: clamp(0.9rem, 1.1vw, 1rem);
   --padding-a: clamp(0.5rem, 0.5vw, 1rem);
@@ -100,6 +101,22 @@ body {
   font-weight: bold !important;
   font-family: var(--font-head);
   text-transform: uppercase;
+}
+.anchor {
+  font-size: var(--font-anchor) !important;
+}
+.anchor-underline {
+  text-decoration: underline !important;
+  &:hover {
+    text-decoration: underline !important;
+    color: var(--color-tertary) !important;
+  }
+}
+.anchor-mute {
+  color: var(--color-gray) !important;
+  &:hover {
+    color: var(--color-tertary);
+  }
 }
 
 .banner-head {

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { PiArrowUp } from "react-icons/pi";
+import { BsChevronDoubleUp } from "react-icons/bs";
 
 const BackToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -36,10 +36,10 @@ const BackToTop = () => {
         <>
             {isVisible && (
                 <button
-                    className="back-to-top p-3 d-flex rounded-5"
+                    className="back-to-top p-2 d-flex rounded-5"
                     onClick={scrollToTop}
                 >
-                    <PiArrowUp />
+                    <BsChevronDoubleUp />
                 </button>
             )}
         </>

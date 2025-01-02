@@ -6,13 +6,17 @@ export const servicesData = [
 ];
 
 export const company = [
-  // Company
-  { text: 'About Us', path: '/about-us' },
   { text: 'Privacy Policy', path: '/privacy-policy' },
   { text: 'Terms & Conditions', path: '/terms-and-conditions' },
-  { text: 'Why Choose Us', path: '/why-choose-us' },
   { text: 'Disclaimer', path: '/disclaimer' },
   { text: "Do's & Don'ts", path: '/dos-and-donts' },
+  { text: 'Blog', path: '/blog' },
+];
+export const quick_links = [
+  { text: 'About Us', path: '/about-us' },
+  { text: 'Why Choose Us', path: '/why-choose-us' },
+  { text: 'Contact Us', path: '/contact-us' },
+  { text: 'Sitemap', path: '/sitemap.xml' },
 ];
 
 export const carAndCoches = [

@@ -1,5 +1,5 @@
 "use client"
-import { carAndCoches, carRentalPackages, carRentalServices, company, oneWayCarRental, popularTours, servicesData, usefulLinks } from '@/data/FooterData';
+import { carAndCoches, carRentalPackages, carRentalServices, company, oneWayCarRental, popularTours, quick_links, servicesData, usefulLinks } from '@/data/FooterData';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
@@ -9,6 +9,7 @@ import Logo from './Logo';
 import { MdMail } from 'react-icons/md';
 import { PiFacebookLogoFill, PiInstagramLogoFill, PiSkypeLogoFill, PiWhatsappLogoFill } from 'react-icons/pi';
 import EnquiryModal02 from './EnquiryModal02';
+import { RiCustomerService2Line, RiLink, RiMailFill, RiWhatsappFill } from 'react-icons/ri';
 const tripAdvisorLogo = '/Images/Logos/tripadvisor-logo.webp';
 const googleStars = '/Images/Logos/google-logo.webp';
 
@@ -50,7 +51,7 @@ const Footer = () => {
                 </div>
             </div >
             {/* Packages and links */}
-            < div className="container-fluid bg-black py-lg-5 py-sm-3">
+            <div className="container-fluid bg-black py-lg-5 py-sm-3">
                 <div className="container py-4">
                     <div className="row d-flex justify-content-center align-items-center flex-column">
                         <h3 className="text-capitalize mb-3 text-tertary fw-bold text-center  web-title banner-title-2">
@@ -166,62 +167,6 @@ const Footer = () => {
                         <div className="col-12 col-lg-10 col-sm-12">
                             <h3
                                 className="text-capitalize web-title fw-bold bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
-                                onClick={() => toggleSection('usefulLinks')}
-                            >
-                                useful links
-                                {activeSection === 'usefulLinks' ? (
-                                    <span className="accordian-icon d-flex p-lg-2 p-sm-1"><FaMinus /></span>
-                                ) : (
-                                    <span className="accordian-icon d-flex p-lg-2 p-sm-1"><FaPlus /> </span>
-                                )}
-                            </h3>
-                            {activeSection === 'usefulLinks' && (
-                                <div className="bg-white mb-2 rounded-3 footer-links d-flex w-100 justify-content-start align-items-center flex-wrap">
-                                    {usefulLinks.map((link) => (
-                                        <Link
-                                            href={link.path}
-                                            className="footer-link text-black"
-                                            key={link.path}
-                                        >
-                                            {' '}
-                                            {link.text}
-                                        </Link>
-                                    ))}
-
-                                </div>
-                            )}
-                        </div>
-                        <div className="col-12 col-lg-10 col-sm-12">
-                            <h3
-                                className="text-capitalize web-title fw-bold bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
-                                onClick={() => toggleSection('company')}
-                            >
-                                company
-                                {activeSection === 'company' ? (
-                                    <span className="accordian-icon d-flex p-lg-2 p-sm-1"><FaMinus /></span>
-                                ) : (
-                                    <span className="accordian-icon d-flex p-lg-2 p-sm-1"><FaPlus /> </span>
-                                )}
-                            </h3>
-                            {activeSection === 'company' && (
-                                <div className="bg-white mb-2 rounded-3 footer-links d-flex w-100 justify-content-start align-items-center flex-wrap">
-                                    {company.map((link) => (
-                                        <Link
-                                            href={link.path}
-                                            className="footer-link text-black"
-                                            key={link.path}
-                                        >
-                                            {' '}
-                                            {link.text}
-                                        </Link>
-                                    ))}
-
-                                </div>
-                            )}
-                        </div>
-                        <div className="col-12 col-lg-10 col-sm-12">
-                            <h3
-                                className="text-capitalize web-title fw-bold bg-white rounded-4 align-items-center text-black d-flex justify-content-between p-3 fw-bold"
                                 onClick={() => toggleSection('oneWayCarRental')}
                             >
                                 one way car rental
@@ -306,62 +251,98 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="container-fluid bg-black pb-5">
-                <div className="row d-flex justify-content-center aiign-items-center pt-4">
-                    <Logo childStyle='text-center text-white' parentStyle='text-center' />
-                </div>
-                <div className="row py-0 d-flex justify-content-center aiign-items-center">
-                    <div className="col-lg-8 col-sm-12">
-                        <hr />
-                    </div>
-                </div>
-                <div className="row d-flex justify-content-center aiign-items-center footer-links">
-                    <p className='text-center color-border text-uppercase'>presented by</p>
-                    <div className="col-12 d-flex flex-column footer-links justify-content-center align-items-center">
-                        <div className="footer-logo w-100 d-flex justify-content-center aiign-items-center">
-                            <a
-                                href="https://rajasthantourpackages.in/"
-                                target="_blank"
-                                className="d-flex justify-content-center aiign-items-center footer-link"
-                                aria-label='rajasthan travel helpline'
-                            >
-                                <Image width={600} height={300} src={footerLogo} alt="Rajasthan Travel Helpline" title='Rajasthan Travel Helpline Contact Details' />
-                            </a>
+            <div className="container-fluid bg-black py-4">
+                <div className="container">
+                    <div className="row d-flex justify-content-start aiign-items-center footer-links py-4">
+                        <div className="col-lg-3 col-md-6 col-sm-12 py-3">
+                            <p className='text-capitalize text-white web-title fw-bold mb-0'>jaipur taxi service</p>
+                            <hr />
+                            <p className='text-capitalize text-hr web-title fw-normal anchor'>powered by</p>
+                            <div className="footer-logo d-flex justify-content-start align-items-center gap-2">
+                                <a
+                                    href="https://rajasthantourpackages.in/"
+                                    target="_blank"
+                                    className="d-flex justify-content-center aiign-items-center  border-gray p-2 rounded-5"
+                                    aria-label='rajasthan travel helpline'
+                                >
+                                    <Image width={600} height={300} src={footerLogo} alt="Rajasthan Travel Helpline" title='Rajasthan Travel Helpline Contact Details' />
+                                </a>
+                                <p className='text-capitalize text-white web-title fw-bold anchor mb-0'>Rajasthan Travel Helpline</p>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-12 py-3">
+                            <p className='text-capitalize text-white web-title fw-bold'>quick links</p>
+                            <hr />
+                            <div className='d-flex justify-content-center flex-column align-items-start'>
+                                {quick_links.map((link) => (
+                                    <Link
+                                        href={link.path}
+                                        className="text-hr w-100 py-1 anchor"
+                                        key={link.path}
+                                    >
+                                        {' '}
+                                        {link.text}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-12 py-3">
+                            <p className='text-capitalize text-white web-title fw-bold'>company</p>
+                            <hr />
+                            <div className='d-flex justify-content-center flex-column align-items-start'>
+                                {company.map((link) => (
+                                    <Link
+                                        href={link.path}
+                                        className="text-hr w-100 py-1 anchor"
+                                        key={link.path}
+                                    >
+                                        {' '}
+                                        {link.text}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-12 py-3 ">
+                            <p className='text-capitalize text-white web-title fw-bold'>get in touch</p>
+                            <hr />
+                            <div className="footer-icon d-flex justify-content-start align-items-center gap-2">
+                                <a href="mailto:mail@rajasthantravelhelpline.com" className='fs-4 p-2 rounded-5 border-gray d-flex justify-content-center align-items-center text-hr'>
+                                    <MdMail />
+                                </a>
+                                <a href="https://www.facebook.com/rajasthantravelhelpline/" className='fs-4 p-2 rounded-5 d-flex justify-content-center align-items-center text-hr border-gray'>
+                                    <PiFacebookLogoFill />
+                                </a>
+                                <a href="https://www.instagram.com/rajasthantravelhelpline/" className='fs-4 p-2 rounded-5 text-hr d-flex justify-content-center align-items-center border-gray'>
+                                    <PiInstagramLogoFill />
+                                </a>
+                                <a href="skype:rajasthantravel?chat" className='fs-4 p-2 rounded-5 d-flex justify-content-center align-items-center text-hr border-gray'>
+                                    <PiSkypeLogoFill />
+                                </a>
+                                <a href="https://www.rajasthantourpackages.in" className='fs-4 p-2 rounded-5 d-flex justify-content-center align-items-center text-hr border-gray'>
+                                    <RiLink />
+                                </a>
+                            </div>
+                            <div className='mt-2 d-flex flex-column'>
+                                <a href="tel:+91-9024337038" className='p-2 rounded-5 d-flex justify-content-center align-items-center'>
+                                    <span className='fs-4 me-2'><RiCustomerService2Line /></span>
+                                    <span className='text-hr fw-normal anchor'>(+91)-9024337038</span>
+                                </a>
+                                <a href="https://wa.me/9166555888" target="_blank" className='p-2 rounded-5 d-flex justify-content-center align-items-center '>
+                                    <span className='fs-4 me-2'><RiWhatsappFill style={{ color: '#4AB060' }} /></span>
+                                    <span className='text-hr fw-normal anchor'>(+91)-9024337038</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="row py-0 d-flex justify-content-center aiign-items-center">
-                    <div className="col-lg-8 col-sm-12">
+                <div className="container py-5">
+                    <div className="row justify-content-center align-items-center px-2">
                         <hr />
+                        <p className="text-center py-lg-2 py-sm-1 text-capitalize color-border anchor">
+                            © 2003-{mydate} | Rajasthan travel helpline | All Rights
+                            Reserved.
+                        </p>
                     </div>
-                    <div className="col-lg-8 col-sm-12 footer-icon d-flex justify-content-center align-items-center gap-2">
-                        <a href="mailto:mail@rajasthantravelhelpline.com" className='p-lg-3 fs-4 p-sm-2 rounded-5 border-gray d-flex text-hr justify-content-center align-items-center'>
-                            <MdMail />
-                        </a>
-                        <a href="https://api.whatsapp.com/send?phone=919166555888" className='p-lg-3 fs-4 p-sm-2 rounded-5 border-gray d-flex text-hr justify-content-center align-items-center'>
-                            <PiWhatsappLogoFill />
-                        </a>
-                        <a href="https://www.facebook.com/rajasthantravelhelpline/" className='p-lg-3 fs-4 p-sm-2 rounded-5 border-gray d-flex text-hr justify-content-center align-items-center'>
-                            <PiFacebookLogoFill />
-                        </a>
-                        <a href="https://www.instagram.com/rajasthantravelhelpline/" className='p-lg-3 fs-4 p-sm-2 rounded-5 border-gray d-flex text-hr justify-content-center align-items-center'>
-                            <PiInstagramLogoFill />
-                        </a>
-                        <a href="skype:rajasthantravel?chat" className='p-lg-3 fs-4 p-sm-2 rounded-5 border-gray d-flex text-hr justify-content-center align-items-center'>
-                            <PiSkypeLogoFill />
-                        </a>
-                    </div>
-                </div>
-                <div className="row py-0 d-flex justify-content-center aiign-items-center">
-                    <div className="col-lg-8 col-sm-12">
-                        <hr />
-                    </div>
-                </div>
-                <div className="row pb-5">
-                    <p className="copyright text-center py-lg-2 py-sm-1 text-capitalize color-border">
-                        © 2003-{mydate} | Rajasthan travel helpline. All Rights
-                        Reserved.
-                    </p>
                 </div>
             </div>
         </>

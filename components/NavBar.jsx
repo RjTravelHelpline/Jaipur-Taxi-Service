@@ -1,30 +1,27 @@
 "use client";
 import React, { useEffect, useState } from 'react'
 import {
-    FaArrowRightToCity,
-    FaChevronDown,
     FaGripLines,
-    FaRegBookmark,
-    FaTaxi,
 } from 'react-icons/fa6';
 import {
     IoMdArrowDropdown,
+    IoMdCall,
     IoMdClose,
 } from 'react-icons/io';
 import Logo from './Logo'
 import Link from 'next/link';
 import { cabRental, placesToVisit, taxiFares, tempoAndBus, tourData } from '@/data/HeaderData';
-import { FaSearch } from 'react-icons/fa';
 import { Modal, ModalFooter } from 'react-bootstrap';
 import SearchBar from './SearchBar';
-import { BiChevronDown, BiTaxi } from 'react-icons/bi';
-import { PiPhone, PiPhoneCallFill, PiPhoneFill, PiTaxiFill, PiWhatsappLogoFill } from 'react-icons/pi';
+import { BiChevronDown, BiSearch, BiSolidPhone } from 'react-icons/bi';
+import { PiPhone, PiPhoneCallFill, PiPhoneFill, PiTaxiFill } from 'react-icons/pi';
 import Image from 'next/image';
-import { IoClose } from 'react-icons/io5';
+import { IoClose, IoSearch } from 'react-icons/io5';
 import { truncateWords } from '@/utils/utils';
 import EnquiryModal from './EnquiryModal';
 import EnquiryModal02 from './EnquiryModal02';
-import { RiPhoneFill, RiWhatsappFill } from 'react-icons/ri';
+import { RiCustomerService2Fill, RiMenu3Line, RiPhoneFill, RiSearch2Line, RiSearchFill, RiWhatsappFill } from 'react-icons/ri';
+import { MdSearch } from 'react-icons/md';
 
 const NavBar = () => {
     const [modalShow, setModalShow] = useState(false);
@@ -241,40 +238,38 @@ const NavBar = () => {
             </div>
             <div className="w-100 nav">
                 <div className="container-fluid d-flex justify-content-center flex-column align-items-center px-0 bg-transparent">
-                    {/* header two */}
                     <div className="nav-child w-100 row bg-white px-lg-3 px-sm-2 py-lg-2 py-sm-2 justify-content-center align-items-center">
                         <div className="col-6 d-flex justify-content-start align-items-center">
                             <Logo childStyle='text-black text-center' parentStyle='text-tertary text-center' />
                         </div>
                         {ismobile ? (
                             <div className="col-6 d-flex justify-content-end align-items-center">
-
-                                <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none me-1 search-button bg-tertary-down" onClick={handleShowSearch}>
-                                    <FaSearch className=' text-tertary' />
-                                </button>
+                                <div class="contact-info d-flex justify-content-center align-items-center gap-2">
+                                    <button className="d-flex justify-content-center align-items-center shadow-none p-2 bg-tertary rounded-5" onClick={handleShowSearch}>
+                                        <BiSearch className='text-white fs-4' />
+                                    </button>
+                                </div>
                                 <button
-                                    className="d-flex justify-content-center align-items-center p-3 rounded-5 bg-black shadow-none mobile-ham w-auto"
+                                    className="d-flex justify-content-center align-items-center p-3 rounded-5 bg-transparent shadow-none mobile-ham w-auto"
                                     onClick={handleNavigation}
                                 >
-                                    <FaGripLines className='text-white' />
+                                    <RiMenu3Line className='fs-4 text-black' />
                                 </button>
                             </div>) : (
                             <div className="book-now col-6 d-flex justify-content-end align-items-center">
-                                <div class="contact-info d-flex justify-content-center align-items-center me-2">
-                                    <a href="https://wa.me/9166555888" target="_blank" class="d-flex align-items-center p-2 rounded-3">
-                                        <RiWhatsappFill className='me-1 fs-4 text-black' />
-                                        <span class="d-none d-lg-inline text-black"> +91-9166555888</span>
+                                <div class="contact-info d-flex justify-content-center align-items-center gap-2 me-2">
+                                    <button className="d-flex justify-content-center align-items-center shadow-none p-2 bg-tertary rounded-5" onClick={handleShowSearch}>
+                                        <BiSearch className='text-white fs-4' />
+                                    </button>
+                                    <a href="https://wa.me/9166555888" target="_blank" class="d-flex align-items-center p-2 rounded-5" style={{ backgroundColor: '#4AB060' }}>
+                                        <RiWhatsappFill className='fs-4 text-white' />
                                     </a>
-                                    <a href="tel:+91-9024337038" class="ms-3 d-flex align-items-center p-2 rounded-3">
-                                        <RiPhoneFill className='me-1 fs-4 text-black' />
-                                        <span class="d-none d-lg-inline text-black">+91-9024337038</span>
+                                    <a href="tel:+91-9024337038" class="d-flex align-items-center p-2 rounded-5" style={{ backgroundColor: '#000000' }}>
+                                        <IoMdCall className='fs-4 text-white' />
                                     </a>
                                 </div>
-                                <button className="d-flex justify-content-center align-items-center p-3 rounded-5 shadow-none me-1 search-button bg-gray" onClick={handleShowSearch}>
-                                    <FaSearch className='text-black' />
-                                </button>
-                                <button className="rounded-5 text-white text-capitalize d-flex align-items-center justify-content-center" style={{ fontWeight: '500' }} onClick={() => setModalShow(true)} >
-                                    <PiTaxiFill className='text-black me-2' /> book now
+                                <button className="rounded-5 text-white text-capitalize d-flex align-items-center justify-content-center bg-black" style={{ fontWeight: '500' }} onClick={() => setModalShow(true)} >
+                                    <PiTaxiFill className='text-tertary me-2' /> book now
                                     <div className="lens-flare"></div>
                                 </button>
                                 <EnquiryModal02
@@ -333,7 +328,7 @@ const NavBar = () => {
                 </div>
                 {/* mobile navigation */}
                 <div
-                    className={`container mobile-navigation  px-0 pt-5 ${showNavigation ? 'show-navigation' : ''
+                    className={`container mobile-navigation px-0 pt-5 ${showNavigation ? 'show-navigation' : ''
                         }`}
                 >
                     <button
@@ -344,9 +339,9 @@ const NavBar = () => {
                     >
                         {showNavigation ? <IoMdClose /> : <FaGripLines />}
                     </button>
-                    <div className="row flex-column gap-4 p-4 w-100 px-2">
+                    <div className="row flex-column p-4 w-100 px-2">
                         <div
-                            className={`nav-mobile-item cursor-pointer d-flex justify-content-center align-items-center flex-column ${activeIndex === 1 ? 'active' : ''
+                            className={`nav-mobile-item py-3 cursor-pointer d-flex justify-content-center align-items-center flex-column ${activeIndex === 1 ? 'active' : ''
                                 }`}
                             onClick={() => handleMobileDropdown(1)}
                         >
@@ -377,7 +372,7 @@ const NavBar = () => {
                             </div>
                         </div>
                         <div
-                            className={`nav-mobile-item cursor-pointer d-flex justify-content-center align-items-center flex-column ${activeIndex === 2 ? 'active' : ''
+                            className={`nav-mobile-item py-3 cursor-pointer d-flex justify-content-center align-items-center flex-column ${activeIndex === 2 ? 'active' : ''
                                 }`}
                             onClick={() => handleMobileDropdown(2)}
                         >
@@ -408,7 +403,7 @@ const NavBar = () => {
                             </div>
                         </div>
                         <div
-                            className={`nav-mobile-item cursor-pointer d-flex justify-content-center align-items-center flex-column ${activeIndex === 3 ? 'active' : ''
+                            className={`nav-mobile-item py-3 cursor-pointer d-flex justify-content-center align-items-center flex-column ${activeIndex === 3 ? 'active' : ''
                                 }`}
                             onClick={() => handleMobileDropdown(3)}
                         >
@@ -439,7 +434,7 @@ const NavBar = () => {
                             </div>
                         </div>
                         <div
-                            className={`nav-mobile-item cursor-pointer d-flex justify-content-center align-items-center flex-column ${activeIndex === 4 ? 'active' : ''
+                            className={`nav-mobile-item py-3 cursor-pointer d-flex justify-content-center align-items-center flex-column ${activeIndex === 4 ? 'active' : ''
                                 }`}
                             onClick={() => handleMobileDropdown(4)}
                         >
@@ -471,7 +466,7 @@ const NavBar = () => {
                             </div>
                         </div>
                         <div
-                            className={`nav-mobile-item cursor-pointer d-flex justify-content-center align-items-center flex-column ${activeIndex === 5 ? 'active' : ''}`}
+                            className={`nav-mobile-item py-3 cursor-pointer d-flex justify-content-center align-items-center flex-column ${activeIndex === 5 ? 'active' : ''}`}
                             onClick={() => handleMobileDropdown(5)}
                         >
                             <h3 className="nav-mobile-link cursor-pointer fw-normal text-capitalize mb-0 w-100 d-flex justify-content-between align-items-center">
@@ -502,7 +497,7 @@ const NavBar = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="nav-mobile-item cursor-pointer d-flex justify-content-center align-items-start flex-column">
+                        <div className="nav-mobile-item py-3 cursor-pointer d-flex justify-content-center align-items-start flex-column">
                             <Link
                                 href="/about-us"
                                 onClick={() => {
@@ -513,7 +508,29 @@ const NavBar = () => {
                                 about us
                             </Link>
                         </div>
-                        <div className="nav-mobile-item cursor-pointer d-flex justify-content-center align-items-start flex-column">
+                        <div className="nav-mobile-item py-3 cursor-pointer d-flex justify-content-center align-items-start flex-column">
+                            <Link
+                                href="/why-choose-us"
+                                onClick={() => {
+                                    setShowNavigation(false);
+                                }}
+                                className="route text-capitalize"
+                            >
+                                why choose us
+                            </Link>
+                        </div>
+                        <div className="nav-mobile-item py-3 cursor-pointer d-flex justify-content-center align-items-start flex-column">
+                            <Link
+                                href="/guest-reviews"
+                                onClick={() => {
+                                    setShowNavigation(false);
+                                }}
+                                className="route text-capitalize"
+                            >
+                                guest reviews
+                            </Link>
+                        </div>
+                        <div className="nav-mobile-item py-3 cursor-pointer d-flex justify-content-center align-items-start flex-column">
                             <Link
                                 href="/contact-us"
                                 onClick={() => {
@@ -524,15 +541,15 @@ const NavBar = () => {
                                 contact us
                             </Link>
                         </div>
-                        <div className="nav-mobile-item cursor-pointer d-flex justify-content-center align-items-start flex-column">
+                        <div className="nav-mobile-item py-3 cursor-pointer d-flex justify-content-center align-items-start flex-column">
                             <Link
-                                href="/"
+                                href="/blog"
                                 onClick={() => {
                                     setShowNavigation(false);
                                 }}
                                 className="route text-capitalize"
                             >
-                                home
+                                blog
                             </Link>
                         </div>
                         <hr />
