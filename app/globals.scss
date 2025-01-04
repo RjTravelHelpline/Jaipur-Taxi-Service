@@ -15,7 +15,7 @@
   --color-tertary: #ff9c07;
   --color-tertary-down: #ffae0038;
   --color-tertary-down2: #ffc3403d;
-  --color-border: #dadada;
+  --color-border: rgba(158, 158, 158, 0.247);
   --color-hr: #7c7c7c;
   --color-gray: #ececec2d;
   --color-forth: #21cc63;
@@ -36,7 +36,7 @@
   /* Font Sizes + Responsive Padding Sizes */
   --font-size-a: clamp(0.9rem, 1.1vw, 1rem);
   --font-anchor: clamp(0.8rem, 1vw, 0.9rem);
-  --font-size-bread: clamp(0.8rem, 1vw, 0.9rem);
+  --font-size-bread: clamp(0.6rem, 0.9vw, 0.75rem);
   --font-size-button: clamp(0.9rem, 1.1vw, 1rem);
   --padding-a: clamp(0.5rem, 0.5vw, 1rem);
   --padding-button-inline: clamp(1rem, 1.5vw, 2rem);
@@ -92,7 +92,7 @@ body {
 }
 .logo {
   font-family: var(--font-logo);
-  font-size: clamp(1.2em, 2.4vw, 2em) !important;
+  font-size: clamp(1.2em, 2vw, 2em) !important;
   text-transform: capitalize;
 }
 
@@ -169,6 +169,13 @@ h4 {
     var(--color-primary)
   ) !important;
 }
+.bg-linear-modal-02 {
+  background: linear-gradient(
+    45deg,
+    var(--color-tertary) 50%,
+    var(--color-tertary-down)
+  ) !important;
+}
 
 p {
   font-size: var(--font-size-p);
@@ -220,11 +227,14 @@ button {
 // bootstrap classes
 .breadcrumb {
   margin-bottom: 0 !important;
-  padding-block: 8px !important;
+  padding-block: 4px !important;
   border: none !important;
   overflow-x: auto;
   display: flex !important; /* Ensure flexbox behavior */
   flex-wrap: nowrap !important; /* Prevent wrapping of items */
+  @media screen and (max-width: 768px) {
+    display: none !important;
+  }
   &::-webkit-scrollbar-thumb {
     display: none;
   }

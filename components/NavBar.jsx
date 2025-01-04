@@ -238,7 +238,7 @@ const NavBar = () => {
             </div>
             <div className="w-100 nav">
                 <div className="container-fluid d-flex justify-content-center flex-column align-items-center px-0 bg-transparent">
-                    <div className="nav-child w-100 row bg-white px-lg-3 px-sm-2 py-lg-2 py-sm-2 justify-content-center align-items-center">
+                    <div className="nav-child w-100 row bg-white px-lg-3 px-sm-2 py-lg-2 py-sm-2 justify-content-center align-items-center" style={{ borderBottom: '1px solid var(--color-border)' }}>
                         <div className="col-6 d-flex justify-content-start align-items-center">
                             <Logo childStyle='text-black text-center' parentStyle='text-tertary text-center' />
                         </div>
@@ -280,7 +280,7 @@ const NavBar = () => {
                         )}
                     </div>
                     {/* header three */}
-                    <div className="nav-child row py-2 w-100 bg-white" style={{ borderTop: '1px solid var(--color-border)' }}>
+                    <div className="nav-child row py-2 w-100 bg-white" style={{ borderBottom: '1px solid var(--color-border)' }}>
                         <div className="col-4 nav-right">
                             <ul className="list-inline d-flex justify-content-start align-items-center gap-0 mb-0 px-2">
                                 <li className="nav-item text-capitalize">

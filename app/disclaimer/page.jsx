@@ -14,7 +14,6 @@ const page = () => {
                     <div className="col-12 col-lg-8 col-sm-12 px-2">
                         <Bread items={breadcrumbItems} style='bg-white px-0' />
                         <div className="insider bg-white rounded-3 p-3">
-                            <p className='text-tertary fw-bold text-uppercase mb-0'>Jaipur Taxi Service</p>
                             <h1 className='text-capitalize web-title fw-bold'>disclaimer</h1>
                             <hr />
                             <p className='text-right'>Last Updated: {date.toLocaleDateString('en-US', {

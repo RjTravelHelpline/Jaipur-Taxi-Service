@@ -220,6 +220,7 @@
 .footer-container,
 .packages-footer {
   background: linear-gradient(to right, var(--color-tertary-down) 50%, white);
+  background: rgb(17, 17, 17) !important;
   .row {
     @media screen and (max-width: 768px) {
       justify-content: center !important;
@@ -1412,7 +1413,6 @@
   position: sticky;
   top: 114px;
   z-index: 99;
-  padding: 12px !important;
   a {
     &:hover {
       p {
@@ -1452,7 +1452,7 @@
 .cab-insider {
   scroll-margin-top: 164px;
   h3 {
-    border-bottom: 2px solid var(--color-tertary);
+    border-bottom: 2px solid var(--color-black);
   }
 }
 .cab-side-insider {
@@ -2107,22 +2107,61 @@ form {
   position: absolute;
   width: 100% !important;
   height: 200px !important;
-  background: linear-gradient(
-    to top,
-    transparent,
-    #ffb13c,
-    #ff3c3c,
-    var(--color-tertary)
-  );
+  background: linear-gradient(to top, #ff3c3c, #ffb13c, var(--color-tertary));
   animation: rotation_9018 5s infinite linear;
 }
 
-@keyframes rotation_9018 {
-  0% {
-    transform: rotate(0deg);
-  }
+// @keyframes rotation_9018 {
+//   0% {
+//     transform: rotate(0deg);
+//   }
 
-  100% {
-    transform: rotate(360deg);
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// cab nav
+.cab-nav {
+  position: sticky;
+  top: 112px;
+  background-color: var(--color-primary);
+  z-index: 99;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100% !important;
+  overflow-x: scroll;
+  @media screen and (max-width: 768px) {
+    top: 70px;
+  }
+  a {
+    flex-shrink: 0;
+  }
+  p:hover {
+    color: var(--color-tertary) !important;
+  }
+  p {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      transition: 0.2s ease-in-out;
+      background-color: var(--color-tertary) !important;
+    }
+  }
+  p.active {
+    font-weight: 600;
+    &::after {
+      transform: scaleX(1);
+    }
   }
 }
+.cab-nav::-webkit-scrollbar {
+  display: none !important;
+}
+
+// error

@@ -9,14 +9,15 @@ export const company = [
   { text: 'Privacy Policy', path: '/privacy-policy' },
   { text: 'Terms & Conditions', path: '/terms-and-conditions' },
   { text: 'Disclaimer', path: '/disclaimer' },
-  { text: "Do's & Don'ts", path: '/dos-and-donts' },
-  { text: 'Blog', path: '/blog' },
+  { text: "Dos & Don'ts", path: '/dos-and-donts' },
+  { text: 'Sitemap', path: '/sitemap.xml' },
 ];
 export const quick_links = [
   { text: 'About Us', path: '/about-us' },
   { text: 'Why Choose Us', path: '/why-choose-us' },
+  { text: 'Guest Reviews', path: '/guest-feedback' },
   { text: 'Contact Us', path: '/contact-us' },
-  { text: 'Sitemap', path: '/sitemap.xml' },
+  { text: 'Blog', path: '/blog' },
 ];
 
 export const carAndCoches = [

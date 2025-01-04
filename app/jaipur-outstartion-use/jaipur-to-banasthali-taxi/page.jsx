@@ -7,8 +7,8 @@ const Page = () => {
   // breadItems
   const breadcrumbItems = [
     { label: "Home", link: "/", active: false },
-    { label: "places to visit around jaipur", link: "/places-to-around-jaipur", active: false },
-    { label: "sariska tiger reserve tour from jaipur", link: null, active: true },
+    { label: "Rajasthan Tour Packages", link: "/tour-packages-rajasthan", active: false },
+    { label: "jaipur to banasthali taxi", link: null, active: true },
   ];
 
 
@@ -17,7 +17,7 @@ const Page = () => {
       {/* banner */}
       <HeroBanner
         slides={[
-          { heading: "sariska tiger reserve tour from jaipur", subheading: "Travel without breaking the bank" }
+          { heading: "jaipur to banasthali taxi", subheading: "Travel without breaking the bank" }
         ]}
         backgroundImage="" />
 
