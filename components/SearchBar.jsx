@@ -1,8 +1,6 @@
 "use client"
-import { allCabRentals } from '@/data/cabRentalData';
-import { all_search_packages } from '@/data/GlobalSearch';
+import { all_search_packages, bus_rentals, cheapest_cabs, luxury_cabs, sedan_cabs, suv_cabs, tempo_rentals } from '@/data/GlobalSearch';
 import { getPackagesByCategory } from '@/utils/utils';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { IoClose } from 'react-icons/io5';
@@ -10,7 +8,8 @@ import { MdOutlineArrowOutward } from 'react-icons/md';
 import { RiSearch2Fill } from 'react-icons/ri';
 
 const SearchBar = ({ displaySuggestions = true, disabled = false, autoFocus = true, handleModal = true }) => {
-    const filteredSuggestions = getPackagesByCategory(allCabRentals, 'popular')
+    const all_cab_rentals = [...cheapest_cabs, ...sedan_cabs, ...suv_cabs, ...luxury_cabs, ...bus_rentals, ...tempo_rentals]
+    const filteredSuggestions = getPackagesByCategory(all_cab_rentals, 'popular')
     const [query, setQuery] = useState('');
     const [filteredBlogs, setFilteredBlogs] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(true);
@@ -66,9 +65,6 @@ const SearchBar = ({ displaySuggestions = true, disabled = false, autoFocus = tr
                     <div className="search-suggestions d-flex flex-wrap justify-content-start bg-white py-lg-3 py-sm-2">
                         {filteredSuggestions.map((suggestion, index) => (
                             <Link href={suggestion.navigate} onClick={handleModal} key={index} className="suggestion-item d-flex justify-content-between align-items-end gap-2">
-                                <span className='filter-search-image'>
-                                    <Image height={400} width={400} src={suggestion.imgSrc} />
-                                </span>
                                 {suggestion.title}
                                 <span>
                                     <MdOutlineArrowOutward className='text-black' />

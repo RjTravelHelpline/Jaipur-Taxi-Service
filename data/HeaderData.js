@@ -4,49 +4,50 @@ export const cabRental = [
   //   items: [
   //     {
   //       name: 'Maruti Swift Car',
-  //       path: '/maruti-swift-car-rental-in-jaipur',
+  //       path: '/cheapest-cab-rental-jaipur/maruti-swift-car-rental-in-jaipur',
   //     },
   //     {
   //       name: 'Tata Indica Car',
-  //       path: '/tata-indica-car-hire-in-jaipur',
+  //       path: '/cheapest-cab-rental-jaipur/tata-indica-car-hire-in-jaipur',
   //     },
   //     {
   //       name: 'Hyundai i20 Car',
-  //       path: '/hyundai-i20-cab-hire-in-jaipur',
+  //       path: '/cheapest-cab-rental-jaipur/hyundai-i20-cab-hire-in-jaipur',
   //     },
   //     {
   //       name: 'Hyundai Santro Car',
-  //       path: '/hyundai-santro-car-hire-in-jaipur',
+  //       path: '/cheapest-cab-rental-jaipur/hyundai-santro-car-hire-in-jaipur',
   //     },
   //     {
   //       name: 'Maruti WagonR Car',
-  //       path: '/maruti-wagonr-car-rental-in-jaipur',
+  //       path: '/cheapest-cab-rental-jaipur/maruti-wagonr-car-rental-in-jaipur',
   //     },
   //   ],
-  //   more: '/cheapest-car-rental-jaipur',
+  //   more: '/cheapest-cab-rental-jaipur',
   // },
+
   {
     title: 'Sedan Car Rental',
     items: [
       {
         name: 'Maruti Swift Dzire Car',
-        path: '/swift-dzire-cab-rental-in-jaipur',
+        path: '/sedan-taxi-service/swift-dzire-cab-rental-in-jaipur.html',
       },
       {
         name: 'Toyota Etios Car',
-        path: '/toyota-etios-cab-rental-jaipur',
+        path: '/sedan-taxi-service/toyota-etios-cab-rental-jaipur.html',
       },
       {
         name: 'Ambassador Car',
-        path: '/ambassador-car-hire-in-jaipur',
+        path: '/sedan-cab-rental-jaipur/ambassador-car-hire-in-jaipur',
       },
       {
         name: 'Maruti Ciaz Car',
-        path: '/maruti-ciaz-car-rental-in-jaipur',
+        path: '/sedan-taxi-service/maruti-ciaz-car-rental-in-jaipur.html',
       },
       {
         name: 'Hyundai Xcent Car',
-        path: '/hyundai-xcent-car-hire-in-jaipur',
+        path: '/sedan-taxi-service/hyundai-xcent-car-hire-in-jaipur.html',
       },
     ],
     more: '/sedan-car-rental-jaipur',

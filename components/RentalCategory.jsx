@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { MdArrowOutward } from 'react-icons/md';
-import { BiChevronUp, BiChevronDown, BiChevronRight } from 'react-icons/bi';
+import { BiChevronDown, BiChevronRight } from 'react-icons/bi';
 
 const RentalCategory = ({ icon, title, cabRentals, activeIndex, setActiveIndex, index, isLinksSection = false, otherSection }) => {
     const handleShowAccord = (id) => {
@@ -12,9 +12,9 @@ const RentalCategory = ({ icon, title, cabRentals, activeIndex, setActiveIndex, 
     return (
         <div className="cab-side-insider">
             <p
-                className={`cursor-pointer web-title fw-bold mb-0 category p-3 overflow-hidden d-flex align-items-center justify-content-between ${activeIndex === index ? 'rounded-top-4 text-tertary' : 'rounded-4'
+                className={`cursor-pointer web-title fw-bold mb-0 category p-3 overflow-hidden d-flex align-items-center justify-content-between ${activeIndex === index ? 'text-tertary' : ''
                     }`} onClick={() => handleShowAccord(index)}
-            style={{borderBottom:'1px solid var(--color-border)'}}>
+                style={{ borderBottom: '1px solid var(--color-border)' }}>
                 <span className="d-flex justify-content-center align-items-center">
                     <span className="me-2 text-black d-flex align-items-center">{icon}</span>
                     {title}

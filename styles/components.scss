@@ -45,11 +45,11 @@
   align-items: center;
   flex-direction: column;
   box-shadow: 0 44px 300px var(--color-secondary);
-  transform: scaleY(0);
-  display: hidden;
+  visibility: hidden;
+  transform: scaleY(0.9);
   transform-origin: top;
   opacity: 0;
-  transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out; /* Smooth transition */
+  transition: 0.15s ease-out; /* Smooth transition */
   ::-webkit-scrollbar {
     display: none !important;
   }
@@ -83,6 +83,7 @@
   }
 }
 .show-navigation {
+  visibility: visible;
   opacity: 1;
   transform: scaleY(1);
 }

@@ -5,10 +5,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { Card } from 'react-bootstrap'
-import { BiSolidBusSchool } from 'react-icons/bi'
+import { BiCategory, BiCategoryAlt, BiChevronUp, BiSolidBusSchool } from 'react-icons/bi'
 import { BsImages } from 'react-icons/bs'
 import { FaCarRear } from 'react-icons/fa6'
-import { MdDirectionsCarFilled, MdOutlineArrowOutward } from 'react-icons/md'
+import { MdCategory, MdDirectionsCarFilled, MdOutlineArrowOutward, MdOutlineCategory } from 'react-icons/md'
 import { TourPackagesByCategory } from '@/data/TourPackagesData'
 import { FaLink, FaMoneyBillWave } from 'react-icons/fa'
 import { IoCarSportSharp, IoDocumentText, IoSettings } from 'react-icons/io5'
@@ -23,9 +23,13 @@ import CabFareTable from '@/components/CabFairTable'
 import CabFeatures from '@/components/CabFeatures'
 import ToggleShowAllButton from '@/components/ToggleShowAllButton'
 import { innova_crysta_feat } from '@/data/Features'
+import SlickSlider from '@/components/SlickSlider'
+import SlickImageModal from '@/components/SlickImageModal'
 
 const Page = () => {
   const [isShowAll, setIsShowAll] = useState(false)
+  const [showModal, setShowModal] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleShow = () => {
     setIsShowAll(!isShowAll);
@@ -39,13 +43,20 @@ const Page = () => {
     "/Images/Cabs/innova-crysta-banner-03.jpg",
     "/Images/Cabs/innova-crysta-banner-04.jpg",
   ];
+  const handleOpenModal = (index) => {
+    setCurrentIndex(index);
+    setShowModal(true);
+  };
+
+  const handleClose = () => {
+    setShowModal(false);
+  };
 
   // navigation
   const sections = [
     { id: "overview", label: "Overview", icon: <IoDocumentText /> },
     { id: "features", label: "Features & Amenities", icon: <IoSettings /> },
     { id: "cab-charges", label: "Cab Charges", icon: <FaMoneyBillWave /> },
-    { id: "gallery", label: "Gallery", icon: <BsImages /> },
   ];
 
   // breadItems
@@ -75,10 +86,75 @@ const Page = () => {
       <div className="container-fluid">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-start">
-            <div className="col-lg-9 col-sm-12 mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center flex-column px-lg-3 px-sm-0">
+            <div className="col-12 mx-lg-3 mx-sm-0 d-flex justify-content-start cab-nav" >
+              <SectionNavigation sections={sections} />
+            </div>
+            <div className="col-lg-9 col-sm-12 d-flex justify-content-center align-items-center flex-column px-lg-3 px-sm-0 py-3">
 
               {/* section 1 */}
-              <div className="cab-insider w-100 py-3" id="overview">
+              <div className="cab-insider w-100">
+                <SlickImageModal
+                  show={showModal}
+                  handleClose={handleClose}
+                  images={images}
+                  currentIndex={currentIndex}
+                />
+                <SlickSlider settings={{
+                  slidesToShow: 2,
+                  autoplay: false,
+                }}>
+                  <div
+                    className="col-12 col-sm-12 col-md-8 col-lg-4 py-0 d-flex justify-content-between align-items-stretch rounded-3 overflow-hidden px-1" onClick={() => handleOpenModal(1)}
+                  >
+                    <Image
+                      width={1200}
+                      height={500}
+                      className="d-block w-100 h-auto rounded-4"
+                      style={{ objectFit: "cover" }}
+                      src="/Images/Cabs/innova-crysta-banner-01.jpg"
+                      alt={`Slide`}
+                    />
+                  </div>
+                  <div
+                    className="col-12 col-sm-12 col-md-8 col-lg-4 py-0 d-flex justify-content-between align-items-stretch rounded-3 overflow-hidden px-1" onClick={() => handleOpenModal(2)}
+                  >
+                    <Image
+                      width={1200}
+                      height={500}
+                      className="d-block w-100 h-auto rounded-4"
+                      style={{ objectFit: "cover" }}
+                      src="/Images/Cabs/innova-crysta-banner-02.jpg"
+                      alt={`Slide`}
+                    />
+                  </div>
+                  <div
+                    className="col-12 col-sm-12 col-md-8 col-lg-4 py-0 d-flex justify-content-between align-items-stretch rounded-3 overflow-hidden px-1" onClick={() => handleOpenModal(3)}
+                  >
+                    <Image
+                      width={1200}
+                      height={500}
+                      className="d-block w-100 h-auto rounded-4"
+                      style={{ objectFit: "cover" }}
+                      src="/Images/Cabs/innova-crysta-banner-03.jpg"
+                      alt={`Slide`}
+                    />
+                  </div>
+                  <div
+                    className="col-12 col-sm-12 col-md-8 col-lg-4 py-0 d-flex justify-content-between align-items-stretch rounded-3 overflow-hidden px-1" onClick={() => handleOpenModal(4)}
+                  >
+                    <Image
+                      width={1200}
+                      height={500}
+                      className="d-block w-100 h-auto rounded-4"
+                      style={{ objectFit: "cover" }}
+                      src="/Images/Cabs/innova-crysta-banner-04.jpg"
+                      alt={`Slide`}
+                    />
+                  </div>
+                </SlickSlider>
+              </div>
+              <div className="cab-insider w-100 pt-3" id="overview">
+
                 <CabScreenHeading icon={<IoDocumentText />} title='overview' />
                 <hr />
                 <p className="text-justify">
@@ -87,7 +163,7 @@ const Page = () => {
               </div>
 
               {/* section 2 */}
-              <div className="cab-insider w-100 py-3" id='features'>
+              <div className="cab-insider w-100 pt-3" id='features'>
                 <CabScreenHeading icon={<IoSettings />} title='features & amenities' />
                 <hr />
                 <div className="row mb-lg-3 mb-sm-2 d-flex justify-content-center align-items-center">
@@ -97,7 +173,7 @@ const Page = () => {
               </div>
 
               {/* section 3 */}
-              <div className="cab-insider w-100 py-3" id='cab-charges'>
+              <div className="cab-insider w-100 pt-3" id='cab-charges'>
                 <CabScreenHeading icon={<FaMoneyBillWave />} title='cab charges' />
                 <hr />
                 <div className="row">
@@ -112,15 +188,8 @@ const Page = () => {
                 </div>
               </div>
 
-              {/* section 4 */}
-              <div className="cab-insider w-100 py-3" id='gallery'>
-                <CabScreenHeading icon={<BsImages />} title='cab gallery' />
-                <hr />
-                <CabGallery images={images} />
-              </div>
-
               {/* section 5 */}
-              <div className="cab-insider bg-black book-now w-100 p-2 rounded-4">
+              <div className="cab-insider book-now bg-linear-modal p-0 w-100 rounded-4">
                 <BookNow
                   title="Confirm Your Ride"
                   description="Instant Booking for Stress-Free and Reliable Rides"
@@ -131,18 +200,13 @@ const Page = () => {
             </div>
 
             {/* sticky side content */}
-            <div className="col-lg-3 col-sm-12 py-4 about-nav bg-white px-1">
-              <RentalCategory
-                icon={<FaLink className='me-2 text-black' />}
-                title="Quick Links"
-                activeIndex={activeIndex}
-                setActiveIndex={setActiveIndex}
-                index={6}
-                isLinksSection={true}
-                otherSection={<SectionNavigation
-                  sections={sections}
-                />}
-              />
+            <div className="col-lg-3 col-sm-12 about-nav gap-0 bg-white py-3">
+              <h4 className={`text-capitalize fw-bold web-title bg-linear-modal-02 d-flex mb-0 p-3 text-white rounded-4`}>
+                <span className="d-flex align-items-center me-2 fw-bold text-black">
+                  <MdCategory />
+                </span>
+                explore
+              </h4>
               <RentalCategory
                 icon={<MdDirectionsCarFilled />}
                 title="Hatchback Cab Rentals"
@@ -188,7 +252,7 @@ const Page = () => {
         </div>
       </div>
 
-      {/* featured tours */}
+      {/* featured tours
       <div className="container-fluid py-5 bg-linear-modal">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center px-2">
@@ -231,7 +295,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
     </>
   )
